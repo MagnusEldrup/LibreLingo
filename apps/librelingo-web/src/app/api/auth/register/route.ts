@@ -31,8 +31,11 @@ export async function POST(request: Request) {
             return NextResponse.json({ message: error.message }, { status: 503 })
         }
 
+        const errorMessage =
+            error instanceof Error ? error.message : 'Unknown database error.'
+
         return NextResponse.json(
-            { message: 'That email is already registered.' },
+            { message: `Could not create account: ${errorMessage}` },
             { status: 409 }
         )
     }
