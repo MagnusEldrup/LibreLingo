@@ -17,6 +17,17 @@ export type AccountUser = {
     email: string
 }
 
+export type LessonFeedback = {
+    id: string
+    course_id: string
+    module_title: string
+    lesson_title: string
+    practice_href: string
+    message: string
+    user_email: string
+    created_at: string
+}
+
 const SESSION_COOKIE_NAME = 'learnsomali_session'
 const SESSION_MAX_AGE_SECONDS = 60 * 60 * 24 * 30
 const PASSWORD_ITERATIONS = 310_000
@@ -75,6 +86,19 @@ export async function ensureAccountTables() {
                 user_id TEXT PRIMARY KEY REFERENCES learn_somali_users(id) ON DELETE CASCADE,
                 progress_json JSONB NOT NULL DEFAULT '{"skills":{},"dailyActivityByCourse":{}}'::jsonb,
                 updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+            )
+        `,
+        sql`
+            CREATE TABLE IF NOT EXISTS learn_somali_lesson_feedback (
+                id TEXT PRIMARY KEY,
+                user_id TEXT REFERENCES learn_somali_users(id) ON DELETE SET NULL,
+                user_email TEXT NOT NULL,
+                course_id TEXT NOT NULL,
+                module_title TEXT NOT NULL,
+                lesson_title TEXT NOT NULL,
+                practice_href TEXT NOT NULL,
+                message TEXT NOT NULL,
+                created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
             )
         `,
     ]).then(() => {})
@@ -166,6 +190,79 @@ export async function writeAccountProgress(
             progress_json = EXCLUDED.progress_json,
             updated_at = NOW()
     `
+}
+
+export async function createLessonFeedback({
+    user,
+    courseId,
+    moduleTitle,
+    lessonTitle,
+    practiceHref,
+    message,
+}: {
+    user: AccountUser
+    courseId: string
+    moduleTitle: string
+    lessonTitle: string
+    practiceHref: string
+    message: string
+}) {
+    await ensureAccountTables()
+    const sql = getSql()
+    const feedbackId = randomUUID()
+
+    await sql`
+        INSERT INTO learn_somali_lesson_feedback (
+            id,
+            user_id,
+            user_email,
+            course_id,
+            module_title,
+            lesson_title,
+            practice_href,
+            message
+        )
+        VALUES (
+            ${feedbackId},
+            ${user.id},
+            ${user.email},
+            ${courseId},
+            ${moduleTitle},
+            ${lessonTitle},
+            ${practiceHref},
+            ${message}
+        )
+    `
+}
+
+export async function listLessonFeedback() {
+    await ensureAccountTables()
+    const sql = getSql()
+
+    return (await sql`
+        SELECT
+            id,
+            course_id,
+            module_title,
+            lesson_title,
+            practice_href,
+            message,
+            user_email,
+            created_at::text
+        FROM learn_somali_lesson_feedback
+        ORDER BY created_at DESC
+    `) as LessonFeedback[]
+}
+
+export function canExportFeedback(user: AccountUser) {
+    const adminEmails = (
+        process.env.LEARN_SOMALI_ADMIN_EMAILS ?? 'magnuseldrup@gmail.com'
+    )
+        .split(',')
+        .map((email) => normalizeEmail(email))
+        .filter(Boolean)
+
+    return adminEmails.includes(normalizeEmail(user.email))
 }
 
 export function setSessionCookie(user: AccountUser) {
