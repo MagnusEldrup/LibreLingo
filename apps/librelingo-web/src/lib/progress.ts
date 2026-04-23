@@ -21,7 +21,7 @@ type CourseDailyActivity = {
     challengeCountsByDate: Record<string, number>
 }
 
-type ProgressStore = {
+export type ProgressStore = {
     skills: Record<string, StoredSkillProgress>
     dailyActivityByCourse: Record<string, CourseDailyActivity>
 }
@@ -43,6 +43,7 @@ export type CourseProgressSummary = {
 }
 
 const STORAGE_KEY = 'learnsomali-progress-v1'
+const ACCOUNT_EMAIL_KEY = 'learnsomali-account-email'
 const PROGRESS_EVENT_NAME = 'learnsomali-progress-updated'
 const DAILY_STREAK_GOAL = 2
 
@@ -105,6 +106,34 @@ function writeProgressStore(store: ProgressStore) {
     window.dispatchEvent(new CustomEvent(PROGRESS_EVENT_NAME))
 }
 
+export function replaceProgressStore(store: ProgressStore) {
+    writeProgressStore(normalizeProgressStore(store))
+}
+
+export function clearProgressStore() {
+    writeProgressStore(createEmptyStore())
+}
+
+export function rememberAccountEmail(email: string) {
+    if (!isBrowser()) {
+        return
+    }
+
+    window.localStorage.setItem(ACCOUNT_EMAIL_KEY, email)
+}
+
+export function forgetAccountEmail() {
+    if (!isBrowser()) {
+        return
+    }
+
+    window.localStorage.removeItem(ACCOUNT_EMAIL_KEY)
+}
+
+function hasAccountSessionHint() {
+    return isBrowser() && Boolean(window.localStorage.getItem(ACCOUNT_EMAIL_KEY))
+}
+
 export function getProgressEventName() {
     return PROGRESS_EVENT_NAME
 }
@@ -133,6 +162,7 @@ export function saveSkillProgress(
     }
 
     writeProgressStore(store)
+    void syncProgressToAccount(store)
 }
 
 export function summarizeCourseProgress(
@@ -224,6 +254,140 @@ function normalizeProgressStore(value: unknown): ProgressStore {
             candidate.dailyActivityByCourse
         ),
     }
+}
+
+export function mergeProgressStores(
+    stored: ProgressStore,
+    incoming: ProgressStore
+): ProgressStore {
+    const merged: ProgressStore = {
+        skills: {
+            ...stored.skills,
+        },
+        dailyActivityByCourse: {
+            ...stored.dailyActivityByCourse,
+        },
+    }
+
+    for (const [skillKey, incomingProgress] of Object.entries(incoming.skills)) {
+        const storedProgress = merged.skills[skillKey]
+        merged.skills[skillKey] = pickMostCompleteProgress(
+            storedProgress,
+            incomingProgress
+        )
+    }
+
+    for (const [courseId, incomingActivity] of Object.entries(
+        incoming.dailyActivityByCourse
+    )) {
+        const storedActivity = merged.dailyActivityByCourse[courseId] ?? {
+            challengeCountsByDate: {},
+        }
+
+        merged.dailyActivityByCourse[courseId] = {
+            challengeCountsByDate: mergeDailyChallengeCounts(
+                storedActivity.challengeCountsByDate,
+                incomingActivity.challengeCountsByDate
+            ),
+        }
+    }
+
+    return merged
+}
+
+export async function fetchAccountProgress() {
+    if (!isBrowser()) {
+        return
+    }
+
+    try {
+        const response = await fetch('/api/progress', {
+            credentials: 'same-origin',
+        })
+
+        if (!response.ok) {
+            return
+        }
+
+        const body = (await response.json()) as { progress?: unknown }
+        return normalizeProgressStore(body.progress)
+    } catch {
+        return
+    }
+}
+
+export async function syncProgressToAccount(store = readProgressStore()) {
+    if (!hasAccountSessionHint()) {
+        return false
+    }
+
+    try {
+        const response = await fetch('/api/progress', {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json',
+            },
+            credentials: 'same-origin',
+            body: JSON.stringify({ progress: store }),
+        })
+
+        return response.ok
+    } catch {
+        return false
+    }
+}
+
+export async function mergeLocalProgressWithAccount() {
+    const serverProgress = await fetchAccountProgress()
+    const localProgress = readProgressStore()
+    const mergedProgress = serverProgress
+        ? mergeProgressStores(serverProgress, localProgress)
+        : localProgress
+
+    replaceProgressStore(mergedProgress)
+    await syncProgressToAccount(mergedProgress)
+
+    return mergedProgress
+}
+
+function pickMostCompleteProgress(
+    storedProgress: StoredSkillProgress | undefined,
+    incomingProgress: StoredSkillProgress
+) {
+    if (!storedProgress) {
+        return incomingProgress
+    }
+
+    const storedRank = getProgressRank(storedProgress)
+    const incomingRank = getProgressRank(incomingProgress)
+
+    return incomingRank > storedRank ? incomingProgress : storedProgress
+}
+
+function getProgressRank(progress: StoredSkillProgress) {
+    const lastPlayedAt = Date.parse(progress.lastPlayedAt)
+
+    return (
+        progress.completedRuns * 1_000_000_000 +
+        progress.totalPoints * 1_000_000 +
+        progress.totalChallengesCompleted * 1000 +
+        (Number.isNaN(lastPlayedAt) ? 0 : Math.floor(lastPlayedAt / 86_400_000))
+    )
+}
+
+function mergeDailyChallengeCounts(
+    storedCounts: Record<string, number>,
+    incomingCounts: Record<string, number>
+) {
+    const merged = {
+        ...storedCounts,
+    }
+
+    for (const [dateKey, incomingCount] of Object.entries(incomingCounts)) {
+        merged[dateKey] = Math.max(merged[dateKey] ?? 0, incomingCount)
+    }
+
+    return merged
 }
 
 function normalizeDailyActivityByCourse(
