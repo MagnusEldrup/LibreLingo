@@ -1,6 +1,7 @@
 'use client'
 
 import { FormEvent, useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import {
     forgetAccountEmail,
@@ -15,7 +16,12 @@ type AccountUser = {
 
 type AuthMode = 'login' | 'register'
 
-export default function AccountPanel() {
+type Props = {
+    redirectAfterAuth?: string
+}
+
+export default function AccountPanel({ redirectAfterAuth }: Props) {
+    const router = useRouter()
     const [user, setUser] = useState<AccountUser | undefined>()
     const [accountsAvailable, setAccountsAvailable] = useState(true)
     const [unavailableMessage, setUnavailableMessage] = useState<string | undefined>()
@@ -52,6 +58,9 @@ export default function AccountPanel() {
                     rememberAccountEmail(body.user.email)
                     await mergeLocalProgressWithAccount()
                     setMessage('Signed in. Progress is syncing to your account.')
+                    if (redirectAfterAuth) {
+                        router.replace(redirectAfterAuth)
+                    }
                 } else {
                     forgetAccountEmail()
                 }
@@ -71,7 +80,7 @@ export default function AccountPanel() {
         return () => {
             isMounted = false
         }
-    }, [])
+    }, [redirectAfterAuth, router])
 
     async function submitAuth(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
@@ -107,6 +116,9 @@ export default function AccountPanel() {
             await mergeLocalProgressWithAccount()
             setPassword('')
             setMessage('You are signed in. Progress is saved to your account.')
+            if (redirectAfterAuth) {
+                router.replace(redirectAfterAuth)
+            }
         } catch {
             setMessage('Could not reach the account service.')
         } finally {

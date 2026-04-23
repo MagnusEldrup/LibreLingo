@@ -1,6 +1,8 @@
 import PracticeRunner from '@/components/practice-runner'
 import { getSkillDetail, listCourseSkillParameters } from '@/data/course'
 
+export const dynamic = 'force-dynamic'
+
 type Props = {
     params: {
         sourceLanguageCode: string

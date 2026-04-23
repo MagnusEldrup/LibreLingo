@@ -9,6 +9,8 @@ import CourseProgressSummary from '@/components/course-progress-summary'
 import CourseModuleList from '@/components/course-module-list'
 import AccountPanel from '@/components/account-panel'
 
+export const dynamic = 'force-dynamic'
+
 export async function generateStaticParams() {
   const courses = await listAvailableCourses()
 
