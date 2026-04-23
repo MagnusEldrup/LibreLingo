@@ -19,7 +19,7 @@ export default function AccountPanel() {
     const [user, setUser] = useState<AccountUser | undefined>()
     const [accountsAvailable, setAccountsAvailable] = useState(true)
     const [unavailableMessage, setUnavailableMessage] = useState<string | undefined>()
-    const [mode, setMode] = useState<AuthMode>('login')
+    const [mode, setMode] = useState<AuthMode>('register')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState<string | undefined>()
@@ -93,7 +93,12 @@ export default function AccountPanel() {
             }
 
             if (!response.ok || !body.user) {
-                setMessage(body.message ?? 'Could not sign in.')
+                const firstTimeHint =
+                    mode === 'login' && response.status === 401
+                        ? ' If this is your first time here, choose Register first.'
+                        : ''
+
+                setMessage(`${body.message ?? 'Could not sign in.'}${firstTimeHint}`)
                 return
             }
 
@@ -214,7 +219,7 @@ export default function AccountPanel() {
                         Save progress
                     </p>
                     <p className="mt-1 text-lg font-semibold text-slate-900">
-                        Create an account or sign in
+                        Register first, then sign in from any device
                     </p>
                 </div>
                 <div className="flex rounded-full bg-[#eef6ff] p-1">
