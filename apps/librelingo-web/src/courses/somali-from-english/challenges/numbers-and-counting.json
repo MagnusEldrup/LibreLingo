@@ -1,0 +1,164 @@
+{
+  "id": "a487f9dc9db2",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kani waa hal buug.",
+      "meaningInSourceLanguage": "This is one book.",
+      "id": "nu-1",
+      "priority": 0,
+      "group": "one-two"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "There are",
+          "definition": "halkan waxaa yaal"
+        },
+        {
+          "word": "two books.",
+          "definition": "laba buug"
+        }
+      ],
+      "chips": [
+        "Halkan",
+        "waxaa",
+        "yaal",
+        "laba",
+        "buug.",
+        "shan"
+      ],
+      "solutions": [
+        [
+          "Halkan",
+          "waxaa",
+          "yaal",
+          "laba",
+          "buug."
+        ]
+      ],
+      "formattedSolution": "Halkan waxaa yaal laba buug.",
+      "id": "nu-2",
+      "priority": 2,
+      "group": "one-two"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Halkan waxaa yaal saddex buug.",
+      "meaningInSourceLanguage": "There are three books here.",
+      "id": "nu-3",
+      "priority": 0,
+      "group": "three-four"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waxaan arkayaa afar dal.",
+      "meaningInSourceLanguage": "I see four countries.",
+      "id": "nu-4",
+      "priority": 0,
+      "group": "three-four"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Shan koob baan rabaa.",
+      "meaningInSourceLanguage": "I want five cups.",
+      "id": "nu-5",
+      "priority": 0,
+      "group": "five-six"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "halkan waxaa yaal lix kursi"
+      ],
+      "phrase": [
+        {
+          "word": "There are",
+          "definition": "halkan waxaa yaal"
+        },
+        {
+          "word": "six chairs.",
+          "definition": "lix kursi"
+        }
+      ],
+      "id": "nu-6",
+      "priority": 1,
+      "group": "five-six"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Halkaas waxaa jooga toddoba nin.",
+      "meaningInSourceLanguage": "There are seven men there.",
+      "id": "nu-7",
+      "priority": 0,
+      "group": "seven-eight"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waxaan hayaa siddeed buug.",
+      "meaningInSourceLanguage": "I have eight books.",
+      "id": "nu-8",
+      "priority": 0,
+      "group": "seven-eight"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Fasalka waxaa jooga sagaal arday.",
+      "meaningInSourceLanguage": "There are nine students in the class.",
+      "id": "nu-9",
+      "priority": 0,
+      "group": "nine-ten"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Halkan waxaa yaal toban kab.",
+      "meaningInSourceLanguage": "There are ten shoes here.",
+      "id": "nu-10",
+      "priority": 0,
+      "group": "nine-ten"
+    },
+    {
+      "type": "freeWriting",
+      "id": "nu-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "There are three books here. I want five cups."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of numbers and quantity phrases from this skill.",
+        "Accept understandable beginner Somali even if article use is simple.",
+        "Be lenient with punctuation and spacing."
+      ],
+      "sampleAnswer": "Halkan waxaa yaal saddex buug. Shan koob baan rabaa."
+    },
+    {
+      "type": "freeWriting",
+      "id": "nu-fw-2",
+      "priority": 3,
+      "group": "writing-counting",
+      "promptKind": "guidedProduction",
+      "instruction": "Write short Somali counting sentences.",
+      "promptLines": [
+        "Write 2 short Somali sentences using numbers from this lesson."
+      ],
+      "placeholder": "You can mention books, cups, chairs, students, or shoes.",
+      "gradingNotes": [
+        "Reward active use of number words from the lesson.",
+        "Keep corrections concrete and tied to the number phrase.",
+        "Stay brief and encouraging."
+      ],
+      "sampleAnswer": "Halkan waxaa yaal laba buug. Fasalka waxaa jooga sagaal arday."
+    }
+  ]
+}

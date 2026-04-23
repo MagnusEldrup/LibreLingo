@@ -1,0 +1,149 @@
+{
+  "id": "5d62af718c34",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Qol baan doonayaa.",
+      "meaningInSourceLanguage": "I would like a room.",
+      "id": "ht-1",
+      "priority": 0,
+      "group": "want-room"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Halkan ma joogi rabtaa?",
+      "meaningInSourceLanguage": "Do you want to stay here?",
+      "id": "ht-2",
+      "priority": 0,
+      "group": "stay-here"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Baasaboorkaaga ma haysataa?",
+      "meaningInSourceLanguage": "Do you have your passport?",
+      "id": "ht-3",
+      "priority": 0,
+      "group": "have-passport"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Jeebkayga buu ku jiraa.",
+      "meaningInSourceLanguage": "It is in my pocket.",
+      "id": "ht-4",
+      "priority": 0,
+      "group": "pocket"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Baasaboorkayga baa iga lumay!",
+      "meaningInSourceLanguage": "I have lost my passport!",
+      "id": "ht-5",
+      "priority": 0,
+      "group": "lost-passport"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I found something",
+          "definition": "wax baan ka helay"
+        },
+        {
+          "word": "inside the taxi.",
+          "definition": "tagsiga dhexdiisa"
+        }
+      ],
+      "chips": [
+        "Wax",
+        "baan",
+        "tagsiga",
+        "dhexdiisa",
+        "ka",
+        "helay.",
+        "jeebka"
+      ],
+      "solutions": [
+        [
+          "Wax",
+          "baan",
+          "tagsiga",
+          "dhexdiisa",
+          "ka",
+          "helay."
+        ]
+      ],
+      "formattedSolution": "Wax baan tagsiga dhexdiisa ka helay.",
+      "id": "ht-6",
+      "priority": 2,
+      "group": "found-taxi"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Qol musqulleh ma rabtaa?",
+      "meaningInSourceLanguage": "Do you want a room with a bathroom?",
+      "id": "ht-7",
+      "priority": 0,
+      "group": "bathroom-room"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "qolkaaga nambarkiisu waa siddeed iyo toban"
+      ],
+      "phrase": [
+        {
+          "word": "Your room number",
+          "definition": "qolkaaga nambarkiisu waa"
+        },
+        {
+          "word": "eighteen.",
+          "definition": "siddeed iyo toban"
+        }
+      ],
+      "id": "ht-8",
+      "priority": 1,
+      "group": "room-number"
+    },
+    {
+      "type": "freeWriting",
+      "id": "ht-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "I would like a room. Do you have my passport?"
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct recall of check-in and passport phrases from this skill.",
+        "Accept beginner grammar when the hotel request is understandable.",
+        "Be lenient with punctuation and spelling variation."
+      ],
+      "sampleAnswer": "Qol baan doonayaa. Baasaboorkayga ma haysataa?"
+    },
+    {
+      "type": "freeWriting",
+      "id": "ht-fw-2",
+      "priority": 3,
+      "group": "writing-hotel",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali hotel check-in exchange.",
+      "promptLines": [
+        "Write 2 short Somali lines about asking for a room or talking about a passport."
+      ],
+      "placeholder": "You can mention the room, bathroom, room number, or passport.",
+      "gradingNotes": [
+        "Reward active use of the hotel phrases from this lesson.",
+        "Keep corrections concrete and focused on exact wording.",
+        "Stay concise and supportive."
+      ],
+      "sampleAnswer": "Qol musqulleh baan rabaa. Baasaboorkayga waan hayaa."
+    }
+  ]
+}

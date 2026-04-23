@@ -3,6 +3,7 @@ from librelingo_types.data_types import Course
 from .challenge_types import (
     get_cards_challenge,
     get_chips_challenge,
+    get_grammar_table_challenge,
     get_listening_challenge,
     get_options_challenge,
     get_reverse_chips_challenge,
@@ -61,6 +62,11 @@ def _get_word_challenges(word, course: Course):
     )(word, course)
 
 
+def _get_custom_challenge_challenges(custom_challenge, course: Course):
+    "Generate challenges based on a custom skill challenge"
+    return _challenge_mapper([get_grammar_table_challenge])(custom_challenge, course)
+
+
 def _get_challenges_data(skill, course: Course):
     """
     Generates challenges for a certain Skill
@@ -69,6 +75,9 @@ def _get_challenges_data(skill, course: Course):
         [
             _make_challenges_using(_get_phrase_challenges, skill.phrases, course),
             _make_challenges_using(_get_word_challenges, skill.words, course),
+            _make_challenges_using(
+                _get_custom_challenge_challenges, skill.custom_challenges, course
+            ),
         ],
         start=[],
     )

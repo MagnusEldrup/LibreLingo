@@ -1,0 +1,174 @@
+{
+  "id": "2b8a439ad301",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "grammarTable",
+      "id": "lp-1",
+      "priority": 1,
+      "group": "linking-patterns",
+      "instruction": "Apply the Somali linking chunks used in common sentence frames. The lesson screens explain what each chunk does before the practice rows switch to new cues.",
+      "tableTitle": "Linking patterns: `oo`, `inuu`, `ka`, `si uu u`",
+      "columnHeaders": {
+        "label": "Pattern",
+        "prompt": "English cue",
+        "answer": "Somali pattern"
+      },
+      "rows": [
+        {
+          "id": "lp-lesson-1",
+          "label": "oo",
+          "prompt": "Maxamed and his wife, who is called Khadra",
+          "answers": [
+            "Maxamed iyo xaaskiisa oo Khadra la yidhaahdo."
+          ]
+        },
+        {
+          "id": "lp-lesson-2",
+          "label": "inuu",
+          "prompt": "that he went",
+          "answers": [
+            "inuu tagay."
+          ]
+        },
+        {
+          "id": "lp-lesson-3",
+          "label": "ka",
+          "prompt": "I came from London.",
+          "answers": [
+            "Landhan baan ka imi.",
+            "Landhan ayaan ka imi."
+          ]
+        },
+        {
+          "id": "lp-lesson-4",
+          "label": "si uu u",
+          "prompt": "so that he may begin his work",
+          "answers": [
+            "si uu u bilaabo shaqadiisa."
+          ]
+        },
+        {
+          "id": "lp-lesson-5",
+          "label": "uu + ka",
+          "prompt": "he came from London.",
+          "answers": [
+            "Landhan ayuu ka yimid."
+          ]
+        }
+      ],
+      "lessonSlides": [
+        {
+          "id": "lp-slide-1",
+          "title": "These chunks glue ideas together",
+          "description": "Somali often uses short linking pieces that do a very specific job inside a larger sentence. Study the chunk and the full phrase together instead of memorizing the chunk in isolation.",
+          "focusPoints": [
+            "`oo` adds descriptive information",
+            "`inuu` introduces a clause like `that he ...`",
+            "`ka` often marks `from`"
+          ],
+          "rows": [
+            {
+              "id": "lp-lesson-1",
+              "label": "oo",
+              "prompt": "Maxamed and his wife, who is called Khadra",
+              "answers": [
+                "Maxamed iyo xaaskiisa oo Khadra la yidhaahdo."
+              ]
+            },
+            {
+              "id": "lp-lesson-2",
+              "label": "inuu",
+              "prompt": "that he went",
+              "answers": [
+                "inuu tagay."
+              ]
+            },
+            {
+              "id": "lp-lesson-3",
+              "label": "ka",
+              "prompt": "I came from London.",
+              "answers": [
+                "Landhan baan ka imi.",
+                "Landhan ayaan ka imi."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lp-slide-2",
+          "title": "Purpose and movement need different connectors",
+          "description": "Some chunks show purpose, while others combine with a subject marker to show movement from somewhere. The practice screen will change the cue, but the connector still has to do the same job.",
+          "focusPoints": [
+            "`si uu u` means `so that he may ...`",
+            "`ayuu ka` is a common pattern in full sentences",
+            "Learn the function of the chunk before you recall it"
+          ],
+          "rows": [
+            {
+              "id": "lp-lesson-4",
+              "label": "si uu u",
+              "prompt": "so that he may begin his work",
+              "answers": [
+                "si uu u bilaabo shaqadiisa."
+              ]
+            },
+            {
+              "id": "lp-lesson-5",
+              "label": "uu + ka",
+              "prompt": "he came from London.",
+              "answers": [
+                "Landhan ayuu ka yimid."
+              ]
+            }
+          ]
+        }
+      ],
+      "practiceRows": [
+        {
+          "id": "lp-practice-1",
+          "label": "oo",
+          "prompt": "the woman who is called Caasha",
+          "answers": [
+            "naagta oo Caasha la yidhaahdo."
+          ]
+        },
+        {
+          "id": "lp-practice-2",
+          "label": "inuu",
+          "prompt": "that he arrived early",
+          "answers": [
+            "inuu goor hore yimid.",
+            "inuu goor hore yimi."
+          ]
+        },
+        {
+          "id": "lp-practice-3",
+          "label": "ka",
+          "prompt": "I came from Mogadishu.",
+          "answers": [
+            "Muqdisho baan ka imi.",
+            "Muqdisho ayaan ka imi."
+          ]
+        },
+        {
+          "id": "lp-practice-4",
+          "label": "si uu u",
+          "prompt": "so that he may learn Somali",
+          "answers": [
+            "si uu u barto Af-Soomaali."
+          ]
+        },
+        {
+          "id": "lp-practice-5",
+          "label": "uu + ka",
+          "prompt": "he came from Hargeisa.",
+          "answers": [
+            "Hargeysa ayuu ka yimid.",
+            "Hargaysa ayuu ka yimid."
+          ]
+        }
+      ]
+    }
+  ]
+}

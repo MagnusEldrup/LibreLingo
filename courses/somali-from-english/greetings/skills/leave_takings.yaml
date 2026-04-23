@@ -1,0 +1,27 @@
+Skill:
+  Id: d663ffcd-9cad-42e4-a023-4142f962810c
+  Name: Leave Takings
+
+New words:
+  - Word: soo dhowow
+    Translation: welcome
+    Also accepted:
+      - come in
+
+  - Word: nabad gelyo
+    Translation: goodbye
+
+Phrases:
+  - Phrase: Soo dhowow.
+    Translation: Welcome.
+
+  - Phrase: Nabad gelyo.
+    Translation: Goodbye.
+
+Two-way-dictionary:
+  - come: soo
+  - welcome: soo dhowow
+  - goodbye: nabad gelyo
+  - peace: nabad
+  - safety: gelyo
+  - welcome: dhowow

@@ -1,0 +1,151 @@
+{
+  "id": "b24c6e93fa17",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waan ku faraxsanahay inaad dhakhtar tahay.",
+      "meaningInSourceLanguage": "I am glad that you are a doctor.",
+      "id": "hl-1",
+      "priority": 0,
+      "group": "doctor"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Madaxa ayaa i xanuunaya.",
+      "meaningInSourceLanguage": "My head hurts.",
+      "id": "hl-2",
+      "priority": 0,
+      "group": "head-hurts"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waan warwareerayaa.",
+      "meaningInSourceLanguage": "I feel dizzy.",
+      "id": "hl-3",
+      "priority": 0,
+      "group": "dizzy"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Ma qufcaysaa?",
+      "meaningInSourceLanguage": "Are you coughing?",
+      "id": "hl-4",
+      "priority": 0,
+      "group": "cough"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Calooshu way fiicantahay.",
+      "meaningInSourceLanguage": "My stomach is fine.",
+      "id": "hl-5",
+      "priority": 0,
+      "group": "stomach-fine"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I think",
+          "definition": "Waxaan u maleynayaa"
+        },
+        {
+          "word": "you have a cold.",
+          "definition": "in durey kugu dhacay"
+        }
+      ],
+      "chips": [
+        "Waxaan",
+        "u",
+        "maleynayaa",
+        "in",
+        "durey",
+        "kugu",
+        "dhacay.",
+        "madax"
+      ],
+      "solutions": [
+        [
+          "Waxaan",
+          "u",
+          "maleynayaa",
+          "in",
+          "durey",
+          "kugu",
+          "dhacay."
+        ]
+      ],
+      "formattedSolution": "Waxaan u maleynayaa in durey kugu dhacay.",
+      "id": "hl-6",
+      "priority": 2,
+      "group": "cold"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waa inaad caafimaadkaaga ilaaliso.",
+      "meaningInSourceLanguage": "You must protect your health.",
+      "id": "hl-7",
+      "priority": 0,
+      "group": "protect-health"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "afkaa fur"
+      ],
+      "phrase": [
+        {
+          "word": "Open",
+          "definition": "fur"
+        },
+        {
+          "word": "your mouth.",
+          "definition": "afkaa"
+        }
+      ],
+      "id": "hl-8",
+      "priority": 1,
+      "group": "open-mouth"
+    },
+    {
+      "type": "freeWriting",
+      "id": "hl-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "My head hurts. I feel dizzy."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of illness and symptom phrases from this lesson.",
+        "Accept simple beginner Somali if the symptoms are understandable.",
+        "Be lenient with punctuation and spelling variation."
+      ],
+      "sampleAnswer": "Madaxa ayaa i xanuunaya. Waan warwareerayaa."
+    },
+    {
+      "type": "freeWriting",
+      "id": "hl-fw-2",
+      "priority": 3,
+      "group": "writing-health",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali health exchange.",
+      "promptLines": [
+        "Write 2 short Somali lines about not feeling well or talking to a doctor."
+      ],
+      "placeholder": "You can mention pain, coughing, dizziness, or protecting your health.",
+      "gradingNotes": [
+        "Reward active use of the symptom phrases from this lesson.",
+        "Keep corrections tied to exact words or structures.",
+        "Stay brief and practical."
+      ],
+      "sampleAnswer": "Madaxa ayaa i xanuunaya. Ma qufcaysaa?"
+    }
+  ]
+}

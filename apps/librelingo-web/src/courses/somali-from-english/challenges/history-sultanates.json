@@ -1,0 +1,180 @@
+{
+  "id": "9b6c14de52af",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ajuraan iyo Cadaal waa saldanado.",
+      "meaningInSourceLanguage": "Ajuran and Adal were sultanates.",
+      "id": "hs-1",
+      "priority": 0,
+      "group": "sultanates"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Ajuraan iyo Cadaal waa saldanado."
+      ],
+      "phrase": [
+        {
+          "word": "Ajuran and Adal",
+          "definition": "Ajuraan iyo Cadaal"
+        },
+        {
+          "word": "were sultanates.",
+          "definition": "waa saldanado"
+        }
+      ],
+      "id": "hs-2",
+      "priority": 1,
+      "group": "sultanates"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Muqdisho magaalo ganacsi bay ahayd.",
+      "meaningInSourceLanguage": "Mogadishu was a trade city.",
+      "id": "hs-3",
+      "priority": 0,
+      "group": "mogadishu"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Mogadishu",
+          "definition": "Muqdisho"
+        },
+        {
+          "word": "was a trade city.",
+          "definition": "magaalo ganacsi bay ahayd"
+        }
+      ],
+      "chips": [
+        "Muqdisho",
+        "magaalo",
+        "ganacsi",
+        "bay",
+        "ahayd.",
+        "badda"
+      ],
+      "solutions": [
+        [
+          "Muqdisho",
+          "magaalo",
+          "ganacsi",
+          "bay",
+          "ahayd."
+        ]
+      ],
+      "formattedSolution": "Muqdisho magaalo ganacsi bay ahayd.",
+      "id": "hs-4",
+      "priority": 2,
+      "group": "mogadishu"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ciidamo way dagaallameen.",
+      "meaningInSourceLanguage": "Armies fought.",
+      "id": "hs-5",
+      "priority": 0,
+      "group": "ethiopia"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Armies",
+          "definition": "Ciidamo"
+        },
+        {
+          "word": "fought.",
+          "definition": "way dagaallameen"
+        }
+      ],
+      "chips": [
+        "Ciidamo",
+        "way",
+        "dagaallameen.",
+        "Muqdisho"
+      ],
+      "solutions": [
+        [
+          "Ciidamo",
+          "way",
+          "dagaallameen."
+        ]
+      ],
+      "formattedSolution": "Ciidamo way dagaallameen.",
+      "id": "hs-6",
+      "priority": 2,
+      "group": "ethiopia"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ganacsi badeed baa jiray.",
+      "meaningInSourceLanguage": "Sea trade existed.",
+      "id": "hs-7",
+      "priority": 0,
+      "group": "maritime-trade"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Ganacsi badeed baa jiray."
+      ],
+      "phrase": [
+        {
+          "word": "Sea trade",
+          "definition": "Ganacsi badeed"
+        },
+        {
+          "word": "existed.",
+          "definition": "baa jiray"
+        }
+      ],
+      "id": "hs-8",
+      "priority": 1,
+      "group": "maritime-trade"
+    },
+    {
+      "type": "freeWriting",
+      "id": "hs-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "Mogadishu was a trade city. Sea trade existed."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct recall of the main history facts from this lesson.",
+        "Accept beginner phrasing if the meaning stays clear.",
+        "Be lenient with minor spelling issues."
+      ],
+      "sampleAnswer": "Muqdisho magaalo ganacsi bay ahayd. Ganacsi badeed baa jiray."
+    },
+    {
+      "type": "freeWriting",
+      "id": "hs-fw-2",
+      "priority": 3,
+      "group": "writing-history",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali history summary.",
+      "promptLines": [
+        "Write 2 short Somali sentences about the sultanates or Muqdisho."
+      ],
+      "placeholder": "Use the lesson history phrases if you can.",
+      "gradingNotes": [
+        "Reward use of lesson facts and key terms like Muqdisho, Ajuraan, or ganacsi badeed.",
+        "Keep corrections phrase-level and factual.",
+        "Stay concise and supportive."
+      ],
+      "sampleAnswer": "Ajuraan iyo Cadaal waa saldanado. Muqdisho magaalo ganacsi bay ahayd."
+    }
+  ]
+}

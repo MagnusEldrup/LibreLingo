@@ -1,0 +1,258 @@
+{
+  "id": "ff1688452af0",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "grammarTable",
+      "id": "pt-1",
+      "priority": 1,
+      "group": "present-tense-tag",
+      "instruction": "Apply the Somali present tense pattern for `tag-` to fresh prompts. The practice rows reuse the same person markers, but not the exact worked examples from the lesson screens.",
+      "tableTitle": "Present tense of `tag-`",
+      "columnHeaders": {
+        "label": "Person",
+        "prompt": "English cue",
+        "answer": "Somali form"
+      },
+      "rows": [
+        {
+          "id": "pt-lesson-s-1",
+          "label": "I",
+          "prompt": "I am going.",
+          "answers": [
+            "Waan tagayaa."
+          ]
+        },
+        {
+          "id": "pt-lesson-s-2",
+          "label": "You",
+          "prompt": "You are going.",
+          "answers": [
+            "Waad tagaysaa."
+          ]
+        },
+        {
+          "id": "pt-lesson-s-3",
+          "label": "He",
+          "prompt": "He is going.",
+          "answers": [
+            "Wuu tagayaa."
+          ]
+        },
+        {
+          "id": "pt-lesson-s-4",
+          "label": "She",
+          "prompt": "She is going.",
+          "answers": [
+            "Way tagaysaa."
+          ]
+        },
+        {
+          "id": "pt-lesson-p-1",
+          "label": "We (including you)",
+          "prompt": "We are going, including you.",
+          "answers": [
+            "Waynu tagaynaa.",
+            "Waynu tagayna."
+          ]
+        },
+        {
+          "id": "pt-lesson-p-2",
+          "label": "We (not including you)",
+          "prompt": "We are going, not including you.",
+          "answers": [
+            "Waannu tagaynaa.",
+            "Waannu tagayna."
+          ]
+        },
+        {
+          "id": "pt-lesson-p-3",
+          "label": "You all",
+          "prompt": "You all are going.",
+          "answers": [
+            "Waydin tagaysaan."
+          ]
+        },
+        {
+          "id": "pt-lesson-p-4",
+          "label": "They",
+          "prompt": "They are going.",
+          "answers": [
+            "Way tagayaan."
+          ]
+        }
+      ],
+      "lessonSlides": [
+        {
+          "id": "pt-slide-1",
+          "title": "Start with the singular markers",
+          "description": "In the affirmative present tense, Somali places a short subject marker before the verb. Read these four examples aloud and notice how the marker changes with the person.",
+          "focusPoints": [
+            "`waan` = I",
+            "`waad` = you",
+            "`wuu` = he",
+            "`way` = she or they"
+          ],
+          "rows": [
+            {
+              "id": "pt-lesson-s-1",
+              "label": "I",
+              "prompt": "I am going.",
+              "answers": [
+                "Waan tagayaa."
+              ]
+            },
+            {
+              "id": "pt-lesson-s-2",
+              "label": "You",
+              "prompt": "You are going.",
+              "answers": [
+                "Waad tagaysaa."
+              ]
+            },
+            {
+              "id": "pt-lesson-s-3",
+              "label": "He",
+              "prompt": "He is going.",
+              "answers": [
+                "Wuu tagayaa."
+              ]
+            },
+            {
+              "id": "pt-lesson-s-4",
+              "label": "She",
+              "prompt": "She is going.",
+              "answers": [
+                "Way tagaysaa."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pt-slide-2",
+          "title": "Plural forms add one important split",
+          "description": "The plural pattern keeps the same idea, but Somali distinguishes between inclusive and exclusive `we`. Learn that contrast before you practice.",
+          "focusPoints": [
+            "`waynu` includes the person you are speaking to",
+            "`waannu` excludes the person you are speaking to",
+            "`waydin` marks `you all`"
+          ],
+          "rows": [
+            {
+              "id": "pt-lesson-p-1",
+              "label": "We (including you)",
+              "prompt": "We are going, including you.",
+              "answers": [
+                "Waynu tagaynaa.",
+                "Waynu tagayna."
+              ]
+            },
+            {
+              "id": "pt-lesson-p-2",
+              "label": "We (not including you)",
+              "prompt": "We are going, not including you.",
+              "answers": [
+                "Waannu tagaynaa.",
+                "Waannu tagayna."
+              ]
+            },
+            {
+              "id": "pt-lesson-p-3",
+              "label": "You all",
+              "prompt": "You all are going.",
+              "answers": [
+                "Waydin tagaysaan."
+              ]
+            },
+            {
+              "id": "pt-lesson-p-4",
+              "label": "They",
+              "prompt": "They are going.",
+              "answers": [
+                "Way tagayaan."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pt-slide-3",
+          "title": "Look for the pattern, not the sentence",
+          "description": "The goal is to recognize the subject marker and then build the full present-tense sentence. The next screen asks new questions so learners have to apply the pattern instead of copying a table.",
+          "focusPoints": [
+            "Marker first, then the present-tense verb form",
+            "The same idea works even when the cue changes",
+            "Practice rows use fresh wording"
+          ]
+        }
+      ],
+      "practiceRows": [
+        {
+          "id": "pt-practice-1",
+          "label": "I",
+          "prompt": "I am going today.",
+          "answers": [
+            "Waan tagayaa maanta."
+          ]
+        },
+        {
+          "id": "pt-practice-2",
+          "label": "You",
+          "prompt": "You are going now.",
+          "answers": [
+            "Waad tagaysaa hadda."
+          ]
+        },
+        {
+          "id": "pt-practice-3",
+          "label": "He",
+          "prompt": "He is going to the market.",
+          "answers": [
+            "Wuu tagayaa suuqa."
+          ]
+        },
+        {
+          "id": "pt-practice-4",
+          "label": "She",
+          "prompt": "She is going home.",
+          "answers": [
+            "Way tagaysaa guriga."
+          ]
+        },
+        {
+          "id": "pt-practice-5",
+          "label": "We (including you)",
+          "prompt": "We are going together, including you.",
+          "answers": [
+            "Waynu wada tagaynaa.",
+            "Waynu wada tagayna."
+          ]
+        },
+        {
+          "id": "pt-practice-6",
+          "label": "We (not including you)",
+          "prompt": "We are going together, not including you.",
+          "answers": [
+            "Waannu wada tagaynaa.",
+            "Waannu wada tagayna."
+          ]
+        },
+        {
+          "id": "pt-practice-7",
+          "label": "You all",
+          "prompt": "You all are going to school.",
+          "answers": [
+            "Waydin tagaysaan dugsiga."
+          ]
+        },
+        {
+          "id": "pt-practice-8",
+          "label": "They",
+          "prompt": "They are going tomorrow.",
+          "answers": [
+            "Way tagayaan berri."
+          ]
+        }
+      ]
+    }
+  ]
+}

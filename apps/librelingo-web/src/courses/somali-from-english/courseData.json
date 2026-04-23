@@ -1,0 +1,396 @@
+{
+  "languageName": "Somali",
+  "languageCode": "so",
+  "uiLanguage": "en",
+  "specialCharacters": [],
+  "repositoryURL": "",
+  "license": {
+    "name": {
+      "short": "CC BY-SA 4.0",
+      "full": "Attribution-ShareAlike 4.0 International"
+    },
+    "link": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  },
+  "modules": [
+    {
+      "title": "Greetings and Foundations",
+      "skills": [
+        {
+          "summary": [
+            "Subax wanaagsan.",
+            "Galab wanaagsan.",
+            "Habeen wanaagsan.",
+            "Nabad ku bari."
+          ],
+          "practiceHref": "time-greetings",
+          "id": "76e8e466150b",
+          "title": "Time Greetings",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Soo dhowow, Khadija.",
+            "Soo dhowow, fadhiiso.",
+            "Mahadsanid, Canab.",
+            "Waa yahay, nabad gelyo."
+          ],
+          "practiceHref": "leave-takings",
+          "id": "4290dd8f4570",
+          "title": "Leave Takings",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Yoonisow, is ka warran?",
+            "Ma nabad baa?",
+            "Waa la fiicanyahay, mahadsanid.",
+            "Waa nabad."
+          ],
+          "practiceHref": "wellbeing",
+          "id": "50a5880f3680",
+          "title": "Wellbeing",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Magacaygu waa Bill.",
+            "Magacaa adiga?",
+            "Xaggee baad ka timid?",
+            "Landhan baan ka imi."
+          ],
+          "practiceHref": "introductions",
+          "id": "e45b999c85e0",
+          "title": "Introductions",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Present tense of `tag-`",
+            "Waan tagayaa.",
+            "Waad tagaysaa.",
+            "Wuu tagayaa."
+          ],
+          "kind": "grammar",
+          "practiceHref": "present-tense-markers",
+          "id": "ff1688452af0",
+          "title": "Present Tense Markers",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Soomaaliya ganacsi bay lahayd.",
+            "Ganacsatadu xiriir bay la lahaayeen Masar.",
+            "Ganacsatadu badda way mari jireen.",
+            "Islaamku hore ayuu yimid."
+          ],
+          "kind": "history",
+          "practiceHref": "history-ancient-trade",
+          "id": "3d1a7bf4c201",
+          "title": "History: Ancient Trade",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "People",
+      "skills": [
+        {
+          "summary": [
+            "Qoyska ka warran?",
+            "Carruurta ka warran?",
+            "Hooyaday waa halkan.",
+            "Carruurtu dugsiga way tagayaan."
+          ],
+          "practiceHref": "family-members",
+          "id": "f932725e5f10",
+          "title": "Family Members",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Kani waa hal buug.",
+            "Halkan waxaa yaal laba buug.",
+            "Shan koob baan rabaa.",
+            "Halkan waxaa yaal toban kab."
+          ],
+          "practiceHref": "numbers-and-counting",
+          "id": "a487f9dc9db2",
+          "title": "Numbers and Counting",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Waa dhar cagaaran.",
+            "Surwaal buluug ah baan rabaa.",
+            "Ninku waa dheer yahay.",
+            "Mindidu waa cusub tahay."
+          ],
+          "practiceHref": "colours-and-descriptions",
+          "id": "c6ff4c4d8a77",
+          "title": "Colours and Descriptions",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "Daily Basics",
+      "skills": [
+        {
+          "summary": [
+            "Koob shaah ah ma doonaysaa?",
+            "Waan harraadsanahay.",
+            "Waan gaajaysanahay.",
+            "Ii keen hilib iyo bariis."
+          ],
+          "practiceHref": "food-and-drink",
+          "id": "3326a2d0baf8",
+          "title": "Food and Drink",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Raalli ahow.",
+            "Mahadsanid.",
+            "Adaa mudan.",
+            "Assalaamu calaykum."
+          ],
+          "practiceHref": "common-phrases",
+          "id": "d20cf76451e4",
+          "title": "Common Phrases",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Maanta waa isniin.",
+            "Shaleyto jaamacadda miyaad tagtay?",
+            "Haa, subaxdii waan tagay.",
+            "Berrito ardeydu waxay tegi doonaan jaamacadda."
+          ],
+          "practiceHref": "time-and-days",
+          "id": "4b9c5d94f617",
+          "title": "Time and Days",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Xaggee baad tagaysaa?",
+            "Boosta baan tagayaa.",
+            "Waddadan si toos ah u raac.",
+            "Xagga bidixda u leexo."
+          ],
+          "practiceHref": "places-and-directions",
+          "id": "7f31d465e93c",
+          "title": "Places and Directions",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "Travel and Stay",
+      "skills": [
+        {
+          "summary": [
+            "Soo dhowow.",
+            "Magacaa?",
+            "Landhan ayaan ka imi.",
+            "Toddobaad ayaan joogayaa."
+          ],
+          "practiceHref": "airport-arrival",
+          "id": "7a4d2c1e90ab",
+          "title": "Airport Arrival",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Xaggee baad tegi rabtaa?",
+            "Hudheel Djibouti i gee.",
+            "Landhan ayaan ku bartay.",
+            "Af Faransiiska in yar ayaan ka aqaan."
+          ],
+          "practiceHref": "taxi-ride",
+          "id": "8b3e51fa0c62",
+          "title": "Taxi Ride",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Qol baan doonayaa.",
+            "Baasaboorkaaga ma haysataa?",
+            "Qol musqulleh ma rabtaa?",
+            "Qolkaaga nambarkiisu waa siddeed iyo toban."
+          ],
+          "practiceHref": "hotel-check-in",
+          "id": "5d62af718c34",
+          "title": "Hotel Check-In",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Waxaan doonayaa inaan bangiga tago.",
+            "Waddadan si toos ah u raac.",
+            "Doollarkan ayaan rabaa inaan u beddelo faranka Djibouti.",
+            "Waa tan lacagtaadii."
+          ],
+          "practiceHref": "changing-money",
+          "id": "4f0a7b92de16",
+          "title": "Changing Money",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "Communication and Journey",
+      "skills": [
+        {
+          "summary": [
+            "Waxaan doondoonayaa telefoon.",
+            "Telefoon ma jiraa agagaarkan?",
+            "Yoonis ma joogaa?",
+            "In yar u kaadi."
+          ],
+          "practiceHref": "phone-calls",
+          "id": "9ac471e23fd5",
+          "title": "Phone Calls",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Maanta baa la baxayaa.",
+            "Gaadhiga bansiin waan ku shubay.",
+            "Shaagagga waan jeeg gareeyay.",
+            "Bureo waa meel Djibouti ka fog."
+          ],
+          "practiceHref": "journey-planning",
+          "id": "71d39ac4ef20",
+          "title": "Journey Planning",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "tegi doonaa",
+            "tegi doontaa",
+            "tegi doonnaa",
+            "tegi doonaan"
+          ],
+          "kind": "grammar",
+          "practiceHref": "future-tense-markers",
+          "id": "93e684a1fc22",
+          "title": "Future Tense Markers",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "imi / imid",
+            "timi / timid",
+            "yimi / yimid",
+            "yimaaddeen"
+          ],
+          "kind": "grammar",
+          "practiceHref": "past-tense-markers",
+          "id": "6ce4a1c05f4d",
+          "title": "Past Tense Markers",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Soo dhowaada.",
+            "Safar wanaagsan buu ahaa.",
+            "Waxaan aragnay waxyaabo badan oo xiiso leh.",
+            "Waraabayaal baannu aragnay."
+          ],
+          "practiceHref": "village-stay",
+          "id": "36af81d205cb",
+          "title": "Village Stay",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Madaxa ayaa i xanuunaya.",
+            "Waan warwareerayaa.",
+            "Ma qufcaysaa?",
+            "Waa inaad caafimaadkaaga ilaaliso."
+          ],
+          "practiceHref": "health-and-illness",
+          "id": "b24c6e93fa17",
+          "title": "Health and Illness",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "Grammar and Structure",
+      "skills": [
+        {
+          "summary": [
+            "oo Khadra la yidhaahdo",
+            "inuu tagay",
+            "Landhan baan ka imi",
+            "si uu u bilaabo shaqadiisa"
+          ],
+          "kind": "grammar",
+          "practiceHref": "linking-patterns",
+          "id": "2b8a439ad301",
+          "title": "Linking Patterns",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "History and Culture",
+      "skills": [
+        {
+          "summary": [
+            "Ajuraan iyo Cadaal waa saldanado.",
+            "Muqdisho magaalo ganacsi bay ahayd.",
+            "Ciidamo way dagaallameen.",
+            "Ganacsi badeed baa jiray."
+          ],
+          "kind": "history",
+          "practiceHref": "history-sultanates",
+          "id": "9b6c14de52af",
+          "title": "History: Sultanates and Power",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Britain iyo Talyaani way gumaysteen.",
+            "Labadii qaybood way midoobeen.",
+            "Soomaaliya madax bannaan bay noqotay.",
+            "Dowladdu way burburtay 1991."
+          ],
+          "kind": "history",
+          "practiceHref": "history-independence",
+          "id": "1f0b9c7a4e63",
+          "title": "History: Division and Independence",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Dagaal sokeeye baa bilowday.",
+            "Kooxo hubaysan way dagaallameen.",
+            "Dad badan way qaxeen.",
+            "Xaaladdu way adkayd."
+          ],
+          "kind": "history",
+          "practiceHref": "history-conflict",
+          "id": "8e2d5fa1b743",
+          "title": "History: Conflict and Displacement",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Soomaaliya federaal bay tahay.",
+            "Dowladdu dib bay u dhisaysaa.",
+            "Ururada caalamiga ah way taageeraan.",
+            "Gobollo maamul bay leeyihiin."
+          ],
+          "kind": "history",
+          "practiceHref": "history-recovery",
+          "id": "5ac37e9182d4",
+          "title": "History: Recovery and Federalism",
+          "levels": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+Skill:
+  Id: f3b54e69-2d42-4799-876e-39e3c207b5b3
+  Name: Introductions
+
+New words:
+  - Word: magac
+    Translation: name
+
+  - Word: xaggee
+    Translation: where
+
+  - Word: Landhan
+    Translation: London
+
+Phrases:
+  - Phrase: Magacaygu waa Bill.
+    Translation: My name is Bill.
+
+  - Phrase: Magacaa?
+    Translation: What is your name?
+
+  - Phrase: Khadija baa la yidhaahdaa.
+    Translation: I am called Khadija.
+
+  - Phrase: Landhan baan ka imi.
+    Translation: I came from London.
+
+Two-way-dictionary:
+  - name: magac
+  - where: xaggee
+  - London: Landhan
+  - my name is: magacaygu waa
+  - what is your name: magacaa
+  - i am called: baa la yidhaahdaa
+  - i came from London: Landhan baan ka imi
+  - my: kayga
+  - is: waa
+  - Bill: Bill
+  - what: maxaa
+  - your: kaaga
+  - Khadija: Khadija
+  - i: aniga
+  - am: ahay
+  - called: yidhaahdaa
+  - came: imi
+  - from: ka
+  - marker: baa
+  - impersonal: la
+  - my name: magacaygu
+  - your name: magacaa
+  - London: Landhan
+  - I: baan

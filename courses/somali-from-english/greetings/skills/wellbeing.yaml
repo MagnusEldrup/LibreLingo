@@ -1,0 +1,50 @@
+Skill:
+  Id: d0ca24ca-91c9-44cc-b8fe-72c6813bc92d
+  Name: Wellbeing
+
+New words:
+  - Word: nabad
+    Translation: peace
+    Also accepted:
+      - well-being
+
+  - Word: fiican
+    Translation: good
+    Also accepted:
+      - well
+
+Phrases:
+  - Phrase: Is ka warran?
+    Translation: How are you?
+
+  - Phrase: Ma nabad baa?
+    Translation: Are things well?
+
+  - Phrase: Waa nabad.
+    Translation: Things are well.
+
+  - Phrase: Waa la fiicanyahay.
+    Translation: I am well.
+
+Two-way-dictionary:
+  - peace: nabad
+  - well-being: nabad
+  - good: fiican
+  - well: fiican
+  - how are you: is ka warran
+  - are things well: ma nabad baa
+  - things are well: waa nabad
+  - i am well: waa la fiicanyahay
+  - how: is
+  - about: ka
+  - news: warran
+  - question: ma
+  - marker: baa
+  - is: waa
+  - are: waa
+  - impersonal: la
+  - fine: fiicanyahay
+  - you: adiga
+  - things: arrimo
+  - i: aniga
+  - am: ahay

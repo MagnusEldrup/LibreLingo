@@ -1,0 +1,145 @@
+{
+  "id": "36af81d205cb",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Soo dhowaada.",
+      "meaningInSourceLanguage": "Welcome all.",
+      "id": "vs-1",
+      "priority": 0,
+      "group": "welcome-all"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Is ka warrama.",
+      "meaningInSourceLanguage": "How are you all?",
+      "id": "vs-2",
+      "priority": 0,
+      "group": "how-all"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Safar wanaagsan buu ahaa.",
+      "meaningInSourceLanguage": "It was a good journey.",
+      "id": "vs-3",
+      "priority": 0,
+      "group": "good-journey"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waxaan aragnay waxyaabo badan oo xiiso leh.",
+      "meaningInSourceLanguage": "We saw many interesting things.",
+      "id": "vs-4",
+      "priority": 0,
+      "group": "interesting"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waraabayaal baannu aragnay.",
+      "meaningInSourceLanguage": "We saw hyenas.",
+      "id": "vs-5",
+      "priority": 0,
+      "group": "hyenas"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We passed",
+          "definition": "Waxaannu marnay"
+        },
+        {
+          "word": "a small village.",
+          "definition": "tuulo yar"
+        }
+      ],
+      "chips": [
+        "Waxaannu",
+        "marnay",
+        "tuulo",
+        "yar.",
+        "geeltoosiye"
+      ],
+      "solutions": [
+        [
+          "Waxaannu",
+          "marnay",
+          "tuulo",
+          "yar."
+        ]
+      ],
+      "formattedSolution": "Waxaannu marnay tuulo yar.",
+      "id": "vs-6",
+      "priority": 2,
+      "group": "small-village"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Halkaasoo aannu wax ka cunnay.",
+      "meaningInSourceLanguage": "Where we ate something.",
+      "id": "vs-7",
+      "priority": 0,
+      "group": "ate-there"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "halkaasna way ku baryi doonaan"
+      ],
+      "phrase": [
+        {
+          "word": "There",
+          "definition": "halkaasna"
+        },
+        {
+          "word": "they will spend the night.",
+          "definition": "way ku baryi doonaan"
+        }
+      ],
+      "id": "vs-8",
+      "priority": 1,
+      "group": "stay-night"
+    },
+    {
+      "type": "freeWriting",
+      "id": "vs-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "It was a good journey. We saw hyenas."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of village and travel observations from this skill.",
+        "Accept simple beginner Somali if the meaning is clear.",
+        "Be lenient with punctuation and spelling variation."
+      ],
+      "sampleAnswer": "Safar wanaagsan buu ahaa. Waraabayaal baannu aragnay."
+    },
+    {
+      "type": "freeWriting",
+      "id": "vs-fw-2",
+      "priority": 3,
+      "group": "writing-village",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali village-stay summary.",
+      "promptLines": [
+        "Write 2 short Somali lines about the journey, the village, or what you saw there."
+      ],
+      "placeholder": "You can mention the village, interesting things, or animals.",
+      "gradingNotes": [
+        "Reward active use of the village and travel phrases from this lesson.",
+        "Keep corrections concrete and phrase-level.",
+        "Stay supportive and brief."
+      ],
+      "sampleAnswer": "Waxaannu marnay tuulo yar. Waxaan aragnay waxyaabo badan oo xiiso leh."
+    }
+  ]
+}

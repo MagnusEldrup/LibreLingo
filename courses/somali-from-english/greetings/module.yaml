@@ -1,0 +1,9 @@
+Module:
+  Name: "Greetings"
+
+Skills:
+  - time_greetings.yaml
+  - leave_takings.yaml
+  - wellbeing.yaml
+  - introductions.yaml
+  - present_tense_markers.yaml

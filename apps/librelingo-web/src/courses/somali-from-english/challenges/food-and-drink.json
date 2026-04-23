@@ -1,0 +1,166 @@
+{
+  "id": "3326a2d0baf8",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Koob shaah ah ma doonaysaa?",
+      "meaningInSourceLanguage": "Would you like a cup of tea?",
+      "id": "fd-1",
+      "priority": 0,
+      "group": "tea-offer"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Haa, koob shaah ah baan doonayaa.",
+      "meaningInSourceLanguage": "Yes, I'd like a cup of tea.",
+      "id": "fd-2",
+      "priority": 0,
+      "group": "tea-offer"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Shaah way cabbayaan, kibisna way cunayaan.",
+      "meaningInSourceLanguage": "They are drinking tea and eating bread.",
+      "id": "fd-3",
+      "priority": 0,
+      "group": "tea-bread"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "They are drinking tea",
+          "definition": "shaah way cabbayaan"
+        },
+        {
+          "word": "and eating bread.",
+          "definition": "kibisna way cunayaan"
+        }
+      ],
+      "chips": [
+        "Shaah",
+        "way",
+        "cabbayaan,",
+        "kibisna",
+        "way",
+        "cunayaan.",
+        "biyo"
+      ],
+      "solutions": [
+        [
+          "Shaah",
+          "way",
+          "cabbayaan,",
+          "kibisna",
+          "way",
+          "cunayaan."
+        ]
+      ],
+      "formattedSolution": "Shaah way cabbayaan, kibisna way cunayaan.",
+      "id": "fd-4",
+      "priority": 2,
+      "group": "tea-bread"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waan harraadsanahay.",
+      "meaningInSourceLanguage": "I am thirsty.",
+      "id": "fd-5",
+      "priority": 0,
+      "group": "thirsty"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waan gaajaysanahay.",
+      "meaningInSourceLanguage": "I am hungry.",
+      "id": "fd-6",
+      "priority": 0,
+      "group": "hungry"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ii keen hilib iyo bariis.",
+      "meaningInSourceLanguage": "Bring me meat and rice.",
+      "id": "fd-7",
+      "priority": 0,
+      "group": "meal-request"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "ii keen hilib iyo bariis"
+      ],
+      "phrase": [
+        {
+          "word": "Bring me",
+          "definition": "ii keen"
+        },
+        {
+          "word": "meat and rice.",
+          "definition": "hilib iyo bariis"
+        }
+      ],
+      "id": "fd-8",
+      "priority": 1,
+      "group": "meal-request"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Shaah caano iyo sonkor leh baan rabaa.",
+      "meaningInSourceLanguage": "I want tea with milk and sugar.",
+      "id": "fd-9",
+      "priority": 0,
+      "group": "milk-sugar"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Biyo baan cabbayaa.",
+      "meaningInSourceLanguage": "I am drinking water.",
+      "id": "fd-10",
+      "priority": 0,
+      "group": "water"
+    },
+    {
+      "type": "freeWriting",
+      "id": "fd-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "I am thirsty. Bring me meat and rice."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of food and drink phrases from this skill.",
+        "Accept understandable beginner Somali if the request is clear.",
+        "Be lenient with punctuation and minor spelling slips."
+      ],
+      "sampleAnswer": "Waan harraadsanahay. Ii keen hilib iyo bariis."
+    },
+    {
+      "type": "freeWriting",
+      "id": "fd-fw-2",
+      "priority": 3,
+      "group": "writing-food",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali food request.",
+      "promptLines": [
+        "Write 2 short Somali sentences about what you want to eat or drink."
+      ],
+      "placeholder": "You can use tea, water, meat, rice, hungry, or thirsty.",
+      "gradingNotes": [
+        "Reward active use of the lesson food vocabulary.",
+        "Keep corrections phrase-level and practical.",
+        "Stay concise and encouraging."
+      ],
+      "sampleAnswer": "Koob shaah ah baan doonayaa. Ii keen hilib iyo bariis."
+    }
+  ]
+}

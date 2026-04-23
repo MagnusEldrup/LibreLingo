@@ -1,0 +1,144 @@
+{
+  "id": "8b3e51fa0c62",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Xaggee baad tegi rabtaa?",
+      "meaningInSourceLanguage": "Where do you want to go?",
+      "id": "tx-1",
+      "priority": 0,
+      "group": "where-go"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Hudheel Djibouti i gee.",
+      "meaningInSourceLanguage": "Take me to the Djibouti Hotel.",
+      "id": "tx-2",
+      "priority": 0,
+      "group": "hotel"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ma taqaan?",
+      "meaningInSourceLanguage": "Do you know it?",
+      "id": "tx-3",
+      "priority": 0,
+      "group": "know-it"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yes,",
+          "definition": "haa"
+        },
+        {
+          "word": "I know it.",
+          "definition": "waan aqaan"
+        }
+      ],
+      "chips": [
+        "Haa,",
+        "waan",
+        "aqaan.",
+        "maya",
+        "tagsi"
+      ],
+      "solutions": [
+        [
+          "Haa,",
+          "waan",
+          "aqaan."
+        ]
+      ],
+      "formattedSolution": "Haa, waan aqaan.",
+      "id": "tx-4",
+      "priority": 2,
+      "group": "know-it"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Landhan ayaan ku bartay.",
+      "meaningInSourceLanguage": "I learned it in London.",
+      "id": "tx-5",
+      "priority": 0,
+      "group": "learned"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Af Faransiiska in yar ayaan ka aqaan.",
+      "meaningInSourceLanguage": "I know a little French.",
+      "id": "tx-6",
+      "priority": 0,
+      "group": "french-little"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Wallaah waa kulayl.",
+      "meaningInSourceLanguage": "My goodness, it is hot.",
+      "id": "tx-7",
+      "priority": 0,
+      "group": "hot"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "halkan af soomaaliga baad ku hadli kartaa"
+      ],
+      "phrase": [
+        {
+          "word": "Here",
+          "definition": "halkan"
+        },
+        {
+          "word": "you can speak Somali.",
+          "definition": "af soomaaliga baad ku hadli kartaa"
+        }
+      ],
+      "id": "tx-8",
+      "priority": 1,
+      "group": "speak-somali"
+    },
+    {
+      "type": "freeWriting",
+      "id": "tx-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "Take me to the hotel. I know a little French."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of taxi, destination, and language phrases from this skill.",
+        "Accept beginner Somali when the core message is understandable.",
+        "Be lenient with punctuation and small spelling slips."
+      ],
+      "sampleAnswer": "Hudheelka i gee. Af Faransiiska in yar ayaan ka aqaan."
+    },
+    {
+      "type": "freeWriting",
+      "id": "tx-fw-2",
+      "priority": 3,
+      "group": "writing-taxi",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali taxi exchange.",
+      "promptLines": [
+        "Write 2 short Somali lines about where you want to go and whether the driver knows it."
+      ],
+      "placeholder": "You can mention the hotel, knowing a place, or speaking Somali.",
+      "gradingNotes": [
+        "Reward natural use of the travel phrases from this lesson.",
+        "Keep corrections concrete and phrase-level.",
+        "Stay warm and concise."
+      ],
+      "sampleAnswer": "Hudheel Djibouti i gee. Haa, waan aqaan."
+    }
+  ]
+}

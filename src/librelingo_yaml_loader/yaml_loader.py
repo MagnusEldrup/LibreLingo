@@ -304,6 +304,49 @@ def _convert_mini_dictionary(data, course: Course) -> List[tuple]:
     return dictionary
 
 
+def _convert_custom_challenges(data) -> List[dict]:
+    """
+    Handles loading custom challenge definitions from the YAML format.
+    """
+    custom_challenges = []
+
+    if "Custom challenges" not in data:
+        return custom_challenges
+
+    for raw_custom_challenge in data["Custom challenges"]:
+        challenge_type = raw_custom_challenge["Type"]
+
+        if challenge_type != "grammarTable":
+            raise RuntimeError(f'Unsupported custom challenge type "{challenge_type}"')
+
+        rows = []
+
+        for raw_row in raw_custom_challenge["Rows"]:
+            rows.append(
+                {
+                    "label": raw_row["Label"],
+                    "prompt": raw_row["Prompt"],
+                    "answers": _solution_from_yaml(
+                        raw_row, "Answer", "Also accepted"
+                    ),
+                }
+            )
+
+        custom_challenges.append(
+            {
+                "type": "grammarTable",
+                "instruction": raw_custom_challenge["Prompt"],
+                "table_title": raw_custom_challenge.get("Table title"),
+                "row_header": raw_custom_challenge.get("Row header", "Person"),
+                "prompt_header": raw_custom_challenge.get("Prompt header", "English"),
+                "answer_header": raw_custom_challenge.get("Answer header", "Somali"),
+                "rows": rows,
+            }
+        )
+
+    return custom_challenges
+
+
 def _sanitize_markdown(mdtext: str) -> str:
     "Removes unsafe text content from Markdown"
     dirty_html = markdown.markdown(mdtext)
@@ -401,6 +444,7 @@ def _load_skill(path: Path, course: Course) -> Skill:
         image_set=skill["Thumbnails"] if "Thumbnails" in skill else [],
         dictionary=_convert_mini_dictionary(data, course)
         + _convert_two_way_dictionary(data),
+        custom_challenges=_convert_custom_challenges(data),
         introduction=introduction,
     )
 

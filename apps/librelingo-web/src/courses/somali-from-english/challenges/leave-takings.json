@@ -1,0 +1,144 @@
+{
+  "id": "4290dd8f4570",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Soo dhowow, Khadija.",
+      "meaningInSourceLanguage": "Welcome, Khadija.",
+      "id": "lt-1",
+      "priority": 0,
+      "group": "welcome"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Welcome,",
+          "definition": "soo dhowow"
+        },
+        {
+          "word": "Khadija.",
+          "definition": "Khadija"
+        }
+      ],
+      "chips": [
+        "Soo",
+        "dhowow,",
+        "Khadija.",
+        "nabad",
+        "gelyo"
+      ],
+      "solutions": [
+        [
+          "Soo",
+          "dhowow,",
+          "Khadija."
+        ]
+      ],
+      "formattedSolution": "Soo dhowow, Khadija.",
+      "id": "lt-2",
+      "priority": 2,
+      "group": "welcome"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Soo dhowow, fadhiiso.",
+      "meaningInSourceLanguage": "Welcome, sit down.",
+      "id": "lt-3",
+      "priority": 0,
+      "group": "sit-down"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "soo dhowow fadhiiso"
+      ],
+      "phrase": [
+        {
+          "word": "Welcome,",
+          "definition": "soo dhowow"
+        },
+        {
+          "word": "sit down.",
+          "definition": "fadhiiso"
+        }
+      ],
+      "id": "lt-4",
+      "priority": 1,
+      "group": "sit-down"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mahadsanid, Canab.",
+      "meaningInSourceLanguage": "Thank you, Canab.",
+      "id": "lt-5",
+      "priority": 0,
+      "group": "thanks"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Adaa mudan.",
+      "meaningInSourceLanguage": "You're welcome.",
+      "id": "lt-6",
+      "priority": 0,
+      "group": "thanks"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waa yahay, nabad gelyo.",
+      "meaningInSourceLanguage": "Okay then, goodbye.",
+      "id": "lt-7",
+      "priority": 0,
+      "group": "goodbye"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Mahadsanid. Nabad gelyo.",
+      "meaningInSourceLanguage": "Thank you. Goodbye.",
+      "id": "lt-8",
+      "priority": 0,
+      "group": "goodbye"
+    },
+    {
+      "type": "freeWriting",
+      "id": "lt-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "Welcome, Khadija. Thank you. Goodbye."
+      ],
+      "placeholder": "Write 2-3 short Somali lines.",
+      "gradingNotes": [
+        "Reward correct recall of welcome, thanks, and farewell phrases.",
+        "Accept beginner punctuation and spacing if the sequence is understandable.",
+        "Be lenient with minor spelling issues."
+      ],
+      "sampleAnswer": "Soo dhowow, Khadija. Mahadsanid. Nabad gelyo."
+    },
+    {
+      "type": "freeWriting",
+      "id": "lt-fw-2",
+      "priority": 3,
+      "group": "writing-welcome-farewell",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali welcome and farewell exchange.",
+      "promptLines": [
+        "Write 2-3 short Somali lines to welcome someone and end the exchange politely."
+      ],
+      "placeholder": "You can use welcome, sit down, thank you, and goodbye phrases.",
+      "gradingNotes": [
+        "Reward natural use of the lesson phrases in a short exchange.",
+        "Do not force grammar criticism when the phrase sequence is already natural.",
+        "Keep corrections concrete and short."
+      ],
+      "sampleAnswer": "Soo dhowow. Fadhiiso. Mahadsanid. Nabad gelyo."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "4f0a7b92de16",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waxaan doonayaa inaan bangiga tago.",
+      "meaningInSourceLanguage": "I want to go to the bank.",
+      "id": "cm-1",
+      "priority": 0,
+      "group": "go-bank"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Go straight",
+          "definition": "si toos ah u raac"
+        },
+        {
+          "word": "along this road.",
+          "definition": "waddadan"
+        }
+      ],
+      "chips": [
+        "Waddadan",
+        "si",
+        "toos",
+        "ah",
+        "u",
+        "raac.",
+        "bidixda"
+      ],
+      "solutions": [
+        [
+          "Waddadan",
+          "si",
+          "toos",
+          "ah",
+          "u",
+          "raac."
+        ]
+      ],
+      "formattedSolution": "Waddadan si toos ah u raac.",
+      "id": "cm-2",
+      "priority": 2,
+      "group": "straight"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Xagga bidixda u leexo.",
+      "meaningInSourceLanguage": "Turn to the left.",
+      "id": "cm-3",
+      "priority": 0,
+      "group": "left"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Xagga midigta u leexo.",
+      "meaningInSourceLanguage": "Turn to the right.",
+      "id": "cm-4",
+      "priority": 0,
+      "group": "right"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Doollarkan ayaan rabaa inaan u beddelo faranka Djibouti.",
+      "meaningInSourceLanguage": "I want to change these dollars into Djibouti francs.",
+      "id": "cm-5",
+      "priority": 0,
+      "group": "change-dollars"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waa laba boqol oo doollar.",
+      "meaningInSourceLanguage": "It is two hundred dollars.",
+      "id": "cm-6",
+      "priority": 0,
+      "group": "two-hundred"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waan tirin doonaa.",
+      "meaningInSourceLanguage": "I will count it.",
+      "id": "cm-7",
+      "priority": 0,
+      "group": "count"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "waa tan lacagtaadii"
+      ],
+      "phrase": [
+        {
+          "word": "Here is",
+          "definition": "waa tan"
+        },
+        {
+          "word": "your money.",
+          "definition": "lacagtaadii"
+        }
+      ],
+      "id": "cm-8",
+      "priority": 1,
+      "group": "your-money"
+    },
+    {
+      "type": "freeWriting",
+      "id": "cm-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "I want to go to the bank. Here is your money."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of banking and money-exchange phrases from this skill.",
+        "Accept beginner wording if the meaning stays clear.",
+        "Be lenient with punctuation and minor spelling variation."
+      ],
+      "sampleAnswer": "Waxaan doonayaa inaan bangiga tago. Waa tan lacagtaadii."
+    },
+    {
+      "type": "freeWriting",
+      "id": "cm-fw-2",
+      "priority": 3,
+      "group": "writing-bank",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali money-exchange exchange.",
+      "promptLines": [
+        "Write 2 short Somali lines about going to the bank or changing money."
+      ],
+      "placeholder": "You can mention dollars, francs, counting, or directions.",
+      "gradingNotes": [
+        "Reward active use of the money and direction phrases from this lesson.",
+        "Keep corrections tied to specific phrases.",
+        "Stay brief and encouraging."
+      ],
+      "sampleAnswer": "Bangiga ayaan tagayaa. Doollarkan ayaan rabaa inaan u beddelo faranka Djibouti."
+    }
+  ]
+}

@@ -217,6 +217,7 @@ class Skill(
             "phrases",
             "image_set",
             "dictionary",
+            "custom_challenges",
             "introduction",
         ],
     )

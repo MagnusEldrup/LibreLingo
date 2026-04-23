@@ -3,15 +3,15 @@
     "url": "",
     "repositoryURL": "",
     "paths": {
-      "yamlFolder": "test-1",
-      "jsonFolder": "test-1"
+      "yamlFolder": "somali-from-english",
+      "jsonFolder": "somali-from-english"
     },
     "deploy": true,
     "inProduction": false,
-    "name": "test-1",
+    "name": "somali-from-english",
     "source": "English",
-    "target": "Test1",
-    "description": "Test1 for English speakers"
+    "target": "Somali",
+    "description": "Somali for English speakers"
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-ES-from-EN/archive/refs/heads/main.zip",

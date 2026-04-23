@@ -1,0 +1,161 @@
+{
+  "id": "4b9c5d94f617",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Maanta waa isniin.",
+      "meaningInSourceLanguage": "Today is Monday.",
+      "id": "td-1",
+      "priority": 0,
+      "group": "today-monday"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Tomorrow is",
+          "definition": "berrito waa"
+        },
+        {
+          "word": "Tuesday.",
+          "definition": "salaasa"
+        }
+      ],
+      "chips": [
+        "Berrito",
+        "waa",
+        "salaasa.",
+        "jimce",
+        "shaleyto"
+      ],
+      "solutions": [
+        [
+          "Berrito",
+          "waa",
+          "salaasa."
+        ]
+      ],
+      "formattedSolution": "Berrito waa salaasa.",
+      "id": "td-2",
+      "priority": 2,
+      "group": "today-monday"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Maanta waa arbaca.",
+      "meaningInSourceLanguage": "Today is Wednesday.",
+      "id": "td-3",
+      "priority": 0,
+      "group": "midweek"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Berrito waa khamiis.",
+      "meaningInSourceLanguage": "Tomorrow is Thursday.",
+      "id": "td-4",
+      "priority": 0,
+      "group": "midweek"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Maanta waa jimce.",
+      "meaningInSourceLanguage": "Today is Friday.",
+      "id": "td-5",
+      "priority": 0,
+      "group": "weekend"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Berrito waa sabti.",
+      "meaningInSourceLanguage": "Tomorrow is Saturday.",
+      "id": "td-6",
+      "priority": 0,
+      "group": "weekend"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Maanta waa axad.",
+      "meaningInSourceLanguage": "Today is Sunday.",
+      "id": "td-7",
+      "priority": 0,
+      "group": "sunday"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Shaleyto jaamacadda miyaad tagtay?",
+      "meaningInSourceLanguage": "Did you go to the university yesterday?",
+      "id": "td-8",
+      "priority": 0,
+      "group": "yesterday"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haa, subaxdii waan tagay.",
+      "meaningInSourceLanguage": "Yes, I went in the morning.",
+      "id": "td-9",
+      "priority": 0,
+      "group": "morning-answer"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "berrito ardeydu waxay tegi doonaan jaamacadda"
+      ],
+      "phrase": [
+        {
+          "word": "Tomorrow",
+          "definition": "berrito"
+        },
+        {
+          "word": "the students will go to the university.",
+          "definition": "ardeydu waxay tegi doonaan jaamacadda"
+        }
+      ],
+      "id": "td-10",
+      "priority": 1,
+      "group": "tomorrow"
+    },
+    {
+      "type": "freeWriting",
+      "id": "td-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "Today is Monday. Tomorrow is Tuesday."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of time and day expressions from this skill.",
+        "Accept simple beginner phrasing when the days are correct.",
+        "Be lenient with punctuation and spelling."
+      ],
+      "sampleAnswer": "Maanta waa isniin. Berrito waa salaasa."
+    },
+    {
+      "type": "freeWriting",
+      "id": "td-fw-2",
+      "priority": 3,
+      "group": "writing-time",
+      "promptKind": "guidedProduction",
+      "instruction": "Write short Somali time sentences.",
+      "promptLines": [
+        "Write 2 short Somali sentences about today, tomorrow, or yesterday."
+      ],
+      "placeholder": "You can use day names or simple time phrases from the lesson.",
+      "gradingNotes": [
+        "Reward active use of the lesson time vocabulary.",
+        "Keep corrections tied to exact day or time phrases.",
+        "Stay brief and supportive."
+      ],
+      "sampleAnswer": "Maanta waa jimce. Berrito waa sabti."
+    }
+  ]
+}

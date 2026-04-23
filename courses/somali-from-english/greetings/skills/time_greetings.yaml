@@ -1,0 +1,42 @@
+Skill:
+  Id: f80c17ac-cfe7-4146-a99f-b051a4a0b75f
+  Name: Time Greetings
+
+New words:
+  - Word: subax
+    Translation: morning
+
+  - Word: galab
+    Translation: afternoon
+
+  - Word: habeen
+    Translation: evening
+    Also accepted:
+      - night
+
+  - Word: maalin
+    Translation: day
+
+Phrases:
+  - Phrase: Subax wanaagsan.
+    Translation: Good morning.
+
+  - Phrase: Galab wanaagsan.
+    Translation: Good afternoon.
+
+  - Phrase: Habeen wanaagsan.
+    Translation: Good evening.
+
+  - Phrase: Maalin wanaagsan.
+    Translation: Good day.
+
+Two-way-dictionary:
+  - good: wanaagsan
+  - morning: subax
+  - afternoon: galab
+  - evening: habeen
+  - day: maalin
+  - good morning: subax wanaagsan
+  - good afternoon: galab wanaagsan
+  - good evening: habeen wanaagsan
+  - good day: maalin wanaagsan

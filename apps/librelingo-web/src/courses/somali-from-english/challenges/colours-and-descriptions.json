@@ -1,0 +1,166 @@
+{
+  "id": "c6ff4c4d8a77",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waa dhar cagaaran.",
+      "meaningInSourceLanguage": "It is a green garment.",
+      "id": "co-1",
+      "priority": 0,
+      "group": "green-red"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yes,",
+          "definition": "haa"
+        },
+        {
+          "word": "a green one or a red one.",
+          "definition": "mid cagaaran ama mid cas"
+        }
+      ],
+      "chips": [
+        "Haa,",
+        "mid",
+        "cagaaran",
+        "ama",
+        "mid",
+        "cas.",
+        "buluug"
+      ],
+      "solutions": [
+        [
+          "Haa,",
+          "mid",
+          "cagaaran",
+          "ama",
+          "mid",
+          "cas."
+        ]
+      ],
+      "formattedSolution": "Haa, mid cagaaran ama mid cas.",
+      "id": "co-2",
+      "priority": 2,
+      "group": "green-red"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Surwaal buluug ah baan rabaa.",
+      "meaningInSourceLanguage": "I want blue trousers.",
+      "id": "co-3",
+      "priority": 0,
+      "group": "blue-trousers"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Kani waa dhar cas.",
+      "meaningInSourceLanguage": "This is a red garment.",
+      "id": "co-4",
+      "priority": 0,
+      "group": "blue-trousers"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ninku waa dheer yahay.",
+      "meaningInSourceLanguage": "The man is tall.",
+      "id": "co-5",
+      "priority": 0,
+      "group": "size-shape"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Gurigani waa weyn yahay.",
+      "meaningInSourceLanguage": "This house is big.",
+      "id": "co-6",
+      "priority": 0,
+      "group": "size-shape"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mindidu waa cusub tahay.",
+      "meaningInSourceLanguage": "The knife is new.",
+      "id": "co-7",
+      "priority": 0,
+      "group": "new-cheap"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "wuu ka jaban yahay kii kale"
+      ],
+      "phrase": [
+        {
+          "word": "It is cheaper",
+          "definition": "wuu ka jaban yahay"
+        },
+        {
+          "word": "than the other one.",
+          "definition": "kii kale"
+        }
+      ],
+      "id": "co-8",
+      "priority": 1,
+      "group": "new-cheap"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Sonkor aad bay u macaan tahay.",
+      "meaningInSourceLanguage": "Sugar is very sweet.",
+      "id": "co-9",
+      "priority": 0,
+      "group": "sweet"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Buuggan waa yar yahay.",
+      "meaningInSourceLanguage": "This book is small.",
+      "id": "co-10",
+      "priority": 0,
+      "group": "small"
+    },
+    {
+      "type": "freeWriting",
+      "id": "co-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "I want blue trousers. This book is small."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of color and description phrases from this skill.",
+        "Accept simple beginner sentence structure if the meaning is clear.",
+        "Be lenient with punctuation and spelling variation."
+      ],
+      "sampleAnswer": "Surwaal buluug ah baan rabaa. Buuggan waa yar yahay."
+    },
+    {
+      "type": "freeWriting",
+      "id": "co-fw-2",
+      "priority": 3,
+      "group": "writing-descriptions",
+      "promptKind": "guidedProduction",
+      "instruction": "Describe things in Somali.",
+      "promptLines": [
+        "Write 2 short Somali sentences describing color, size, or quality."
+      ],
+      "placeholder": "You can use words like cagaaran, buluug, weyn, yar, cusub, or macaan.",
+      "gradingNotes": [
+        "Reward active use of lesson adjectives and description patterns.",
+        "Keep corrections focused on the exact phrase that could be improved.",
+        "Stay warm and concise."
+      ],
+      "sampleAnswer": "Kani waa dhar cagaaran. Gurigani waa weyn yahay."
+    }
+  ]
+}

@@ -93,6 +93,52 @@ def get_options_challenge(phrase, _):
     ]
 
 
+def get_grammar_table_challenge(custom_challenge, _):
+    if custom_challenge["type"] != "grammarTable":
+        return []
+
+    challenge_identity = {
+        "instruction": custom_challenge["instruction"],
+        "table_title": custom_challenge["table_title"],
+        "rows": custom_challenge["rows"],
+    }
+
+    return [
+        {
+            "type": "grammarTable",
+            "instruction": custom_challenge["instruction"],
+            "tableTitle": custom_challenge["table_title"],
+            "columnHeaders": {
+                "label": custom_challenge["row_header"],
+                "prompt": custom_challenge["prompt_header"],
+                "answer": custom_challenge["answer_header"],
+            },
+            "rows": [
+                {
+                    "id": get_dumb_opaque_id(
+                        "GrammarTableRow",
+                        f'{challenge_identity["instruction"]}:{index}:{row["label"]}',
+                    ),
+                    "label": remove_control_characters_for_display(row["label"]),
+                    "prompt": remove_control_characters_for_display(row["prompt"]),
+                    "answers": [
+                        remove_control_characters_for_display(answer)
+                        for answer in row["answers"]
+                    ],
+                }
+                for index, row in enumerate(custom_challenge["rows"])
+            ],
+            "id": get_dumb_opaque_id(
+                "GrammarTable", challenge_identity, "grammarTable"
+            ),
+            "priority": 1,
+            "group": get_dumb_opaque_id(
+                "GrammarTableGroup", challenge_identity, "grammarTable"
+            ),
+        }
+    ]
+
+
 def get_chips_from_string(phrase):
     return list(map(clean_word, phrase.split()))
 

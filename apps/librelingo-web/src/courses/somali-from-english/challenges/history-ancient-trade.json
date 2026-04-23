@@ -1,0 +1,186 @@
+{
+  "id": "3d1a7bf4c201",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Soomaaliya ganacsi bay lahayd.",
+      "meaningInSourceLanguage": "Somalia had trade.",
+      "id": "ha1-1",
+      "priority": 0,
+      "group": "ancient-trade"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Soomaaliya ganacsi bay lahayd."
+      ],
+      "phrase": [
+        {
+          "word": "Somalia",
+          "definition": "Soomaaliya"
+        },
+        {
+          "word": "had trade.",
+          "definition": "ganacsi bay lahayd"
+        }
+      ],
+      "id": "ha1-2",
+      "priority": 1,
+      "group": "ancient-trade"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ganacsatadu xiriir bay la lahaayeen Masar.",
+      "meaningInSourceLanguage": "Traders had links with Egypt.",
+      "id": "ha1-3",
+      "priority": 0,
+      "group": "egypt-arabia"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Traders",
+          "definition": "ganacsatadu"
+        },
+        {
+          "word": "had links with Egypt.",
+          "definition": "xiriir bay la lahaayeen Masar"
+        }
+      ],
+      "chips": [
+        "Ganacsatadu",
+        "xiriir",
+        "bay",
+        "la",
+        "lahaayeen",
+        "Masar.",
+        "badda"
+      ],
+      "solutions": [
+        [
+          "Ganacsatadu",
+          "xiriir",
+          "bay",
+          "la",
+          "lahaayeen",
+          "Masar."
+        ]
+      ],
+      "formattedSolution": "Ganacsatadu xiriir bay la lahaayeen Masar.",
+      "id": "ha1-4",
+      "priority": 2,
+      "group": "egypt-arabia"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ganacsatadu badda way mari jireen.",
+      "meaningInSourceLanguage": "Traders traveled by sea.",
+      "id": "ha1-5",
+      "priority": 0,
+      "group": "coastal-cities"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Traders",
+          "definition": "ganacsatadu"
+        },
+        {
+          "word": "traveled by sea.",
+          "definition": "badda way mari jireen"
+        }
+      ],
+      "chips": [
+        "Ganacsatadu",
+        "badda",
+        "way",
+        "mari",
+        "jireen.",
+        "hore"
+      ],
+      "solutions": [
+        [
+          "Ganacsatadu",
+          "badda",
+          "way",
+          "mari",
+          "jireen."
+        ]
+      ],
+      "formattedSolution": "Ganacsatadu badda way mari jireen.",
+      "id": "ha1-6",
+      "priority": 2,
+      "group": "coastal-cities"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Islaamku hore ayuu yimid.",
+      "meaningInSourceLanguage": "Islam arrived early.",
+      "id": "ha1-7",
+      "priority": 0,
+      "group": "islam-arrival"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Islaamku hore ayuu yimid."
+      ],
+      "phrase": [
+        {
+          "word": "Islam",
+          "definition": "Islaamku"
+        },
+        {
+          "word": "arrived early.",
+          "definition": "hore ayuu yimid"
+        }
+      ],
+      "id": "ha1-8",
+      "priority": 1,
+      "group": "islam-arrival"
+    },
+    {
+      "type": "freeWriting",
+      "id": "ha1-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "Somalia had trade. Islam arrived early."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward recall of the short history facts from this lesson.",
+        "Accept simple beginner Somali if the main meaning is correct.",
+        "Be lenient with punctuation and spacing variation."
+      ],
+      "sampleAnswer": "Soomaaliya ganacsi bay lahayd. Islaamku hore ayuu yimid."
+    },
+    {
+      "type": "freeWriting",
+      "id": "ha1-fw-2",
+      "priority": 3,
+      "group": "writing-history",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali history summary.",
+      "promptLines": [
+        "Write 2 short Somali sentences about early trade or early Islam."
+      ],
+      "placeholder": "Keep the sentences short and simple.",
+      "gradingNotes": [
+        "Reward use of the lesson facts rather than perfect grammar.",
+        "Keep corrections targeted to short phrases the learner can reuse.",
+        "Stay brief and supportive."
+      ],
+      "sampleAnswer": "Ganacsatadu xiriir bay la lahaayeen Masar. Islaamku hore ayuu yimid."
+    }
+  ]
+}

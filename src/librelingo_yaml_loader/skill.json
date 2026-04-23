@@ -89,6 +89,58 @@
                 "required": ["Phrase", "Translation"]
             }
         },
+        "Custom challenges": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Type": {
+                        "type": "string",
+                        "enum": ["grammarTable"]
+                    },
+                    "Prompt": {
+                        "type": "string"
+                    },
+                    "Table title": {
+                        "type": "string"
+                    },
+                    "Row header": {
+                        "type": "string"
+                    },
+                    "Prompt header": {
+                        "type": "string"
+                    },
+                    "Answer header": {
+                        "type": "string"
+                    },
+                    "Rows": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "Label": {
+                                    "type": "string"
+                                },
+                                "Prompt": {
+                                    "type": "string"
+                                },
+                                "Answer": {
+                                    "type": "string"
+                                },
+                                "Also accepted": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "required": ["Label", "Prompt", "Answer"]
+                        }
+                    }
+                },
+                "required": ["Type", "Prompt", "Rows"]
+            }
+        },
         "Mini-dictionary": {
             "type": "object",
             "properties": {

@@ -1,0 +1,162 @@
+{
+  "id": "d20cf76451e4",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Raalli ahow.",
+      "meaningInSourceLanguage": "Excuse me.",
+      "id": "cp-1",
+      "priority": 0,
+      "group": "excuse-me"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Mahadsanid.",
+      "meaningInSourceLanguage": "Thank you.",
+      "id": "cp-2",
+      "priority": 0,
+      "group": "thanks"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Adaa mudan.",
+      "meaningInSourceLanguage": "You're welcome.",
+      "id": "cp-3",
+      "priority": 0,
+      "group": "welcome-response"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waa yahay.",
+      "meaningInSourceLanguage": "OK.",
+      "id": "cp-4",
+      "priority": 0,
+      "group": "ok"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waa hagaag.",
+      "meaningInSourceLanguage": "All right.",
+      "id": "cp-5",
+      "priority": 0,
+      "group": "all-right"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Welcome,",
+          "definition": "soo dhowow"
+        },
+        {
+          "word": "sit down.",
+          "definition": "soo fadhiiso"
+        }
+      ],
+      "chips": [
+        "Soo",
+        "dhowow,",
+        "soo",
+        "fadhiiso.",
+        "mahadsanid"
+      ],
+      "solutions": [
+        [
+          "Soo",
+          "dhowow,",
+          "soo",
+          "fadhiiso."
+        ]
+      ],
+      "formattedSolution": "Soo dhowow, soo fadhiiso.",
+      "id": "cp-6",
+      "priority": 2,
+      "group": "welcome"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Assalaamu calaykum.",
+      "meaningInSourceLanguage": "Peace be upon you.",
+      "id": "cp-7",
+      "priority": 0,
+      "group": "peace"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Calaykum assalaam.",
+      "meaningInSourceLanguage": "And peace be upon you.",
+      "id": "cp-8",
+      "priority": 0,
+      "group": "peace"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nabad gelyo.",
+      "meaningInSourceLanguage": "Goodbye.",
+      "id": "cp-9",
+      "priority": 0,
+      "group": "goodbye"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "mahadsanid nabad gelyo"
+      ],
+      "phrase": [
+        {
+          "word": "Thank you.",
+          "definition": "mahadsanid"
+        },
+        {
+          "word": "Goodbye.",
+          "definition": "nabad gelyo"
+        }
+      ],
+      "id": "cp-10",
+      "priority": 1,
+      "group": "thanks-goodbye"
+    },
+    {
+      "type": "freeWriting",
+      "id": "cp-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "Excuse me. Thank you. Goodbye."
+      ],
+      "placeholder": "Write 3 short Somali phrases.",
+      "gradingNotes": [
+        "Reward correct recall of polite formulae from this skill.",
+        "Accept small punctuation or spacing differences.",
+        "Keep feedback concise and supportive."
+      ],
+      "sampleAnswer": "Raalli ahow. Mahadsanid. Nabad gelyo."
+    },
+    {
+      "type": "freeWriting",
+      "id": "cp-fw-2",
+      "priority": 3,
+      "group": "writing-polite-exchange",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short polite greeting and farewell in Somali.",
+      "promptLines": [
+        "Write 2-3 short Somali lines for a polite greeting and goodbye."
+      ],
+      "placeholder": "You can use peace greetings, thanks, welcome, or goodbye phrases.",
+      "gradingNotes": [
+        "Reward any polite exchange that uses course phrases naturally.",
+        "Do not over-penalize grammar if the exchange is understandable.",
+        "Keep the feedback friendly and brief."
+      ],
+      "sampleAnswer": "Assalaamu calaykum. Mahadsanid. Nabad gelyo."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "71d39ac4ef20",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Maanta baa la baxayaa.",
+      "meaningInSourceLanguage": "We are leaving today.",
+      "id": "jp-1",
+      "priority": 0,
+      "group": "leave-today"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Ma diyaar tahay?",
+      "meaningInSourceLanguage": "Are you ready?",
+      "id": "jp-2",
+      "priority": 0,
+      "group": "ready"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gaadhiga bansiin waan ku shubay.",
+      "meaningInSourceLanguage": "I put petrol in the car.",
+      "id": "jp-3",
+      "priority": 0,
+      "group": "petrol"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Shaagagga waan jeeg gareeyay.",
+      "meaningInSourceLanguage": "I checked the tyres.",
+      "id": "jp-4",
+      "priority": 0,
+      "group": "tyres"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Biyo waa in la qaado.",
+      "meaningInSourceLanguage": "Water must be taken.",
+      "id": "jp-5",
+      "priority": 0,
+      "group": "take-water"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bureo is a place",
+          "definition": "Bureo waa meel"
+        },
+        {
+          "word": "far from Djibouti.",
+          "definition": "Djibouti ka fog"
+        }
+      ],
+      "chips": [
+        "Bureo",
+        "waa",
+        "meel",
+        "Djibouti",
+        "ka",
+        "fog.",
+        "gaadhi"
+      ],
+      "solutions": [
+        [
+          "Bureo",
+          "waa",
+          "meel",
+          "Djibouti",
+          "ka",
+          "fog."
+        ]
+      ],
+      "formattedSolution": "Bureo waa meel Djibouti ka fog.",
+      "id": "jp-6",
+      "priority": 2,
+      "group": "far-place"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Sue ayaa timid.",
+      "meaningInSourceLanguage": "Sue has arrived.",
+      "id": "jp-7",
+      "priority": 0,
+      "group": "sue-came"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "maanta ayayna safarka bilaabi doonaan"
+      ],
+      "phrase": [
+        {
+          "word": "Today",
+          "definition": "maanta ayayna"
+        },
+        {
+          "word": "they will begin the journey.",
+          "definition": "safarka bilaabi doonaan"
+        }
+      ],
+      "id": "jp-8",
+      "priority": 1,
+      "group": "begin-journey"
+    },
+    {
+      "type": "freeWriting",
+      "id": "jp-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "We are leaving today. Water must be taken."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of journey-preparation phrases from this skill.",
+        "Accept beginner sentence structure if the plan is understandable.",
+        "Be lenient with punctuation and minor spelling variation."
+      ],
+      "sampleAnswer": "Maanta baa la baxayaa. Biyo waa in la qaado."
+    },
+    {
+      "type": "freeWriting",
+      "id": "jp-fw-2",
+      "priority": 3,
+      "group": "writing-journey",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali journey-preparation note.",
+      "promptLines": [
+        "Write 2 short Somali lines about leaving, checking the car, or being ready."
+      ],
+      "placeholder": "You can mention petrol, tyres, water, or being ready.",
+      "gradingNotes": [
+        "Reward active use of the journey phrases from this lesson.",
+        "Keep corrections specific to the wording used.",
+        "Stay concise and encouraging."
+      ],
+      "sampleAnswer": "Maanta baa la baxayaa. Gaadhiga bansiin waan ku shubay."
+    }
+  ]
+}

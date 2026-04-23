@@ -8,11 +8,13 @@ import regex  # type: ignore
 from librelingo_types.data_types import Course, Language, Phrase, Word
 
 
-def calculate_number_of_levels(nwords: int, nphrases: int) -> int:
+def calculate_number_of_levels(
+    nwords: int, nphrases: int, ncustom_challenges: int = 0
+) -> int:
     """
     Calculates how many levels a skill should have
     """
-    return round(1 + (nwords / 7) + (nphrases / 5))
+    return round(1 + (nwords / 7) + (nphrases / 5) + ncustom_challenges)
 
 
 def get_words_from_phrase(phrase):

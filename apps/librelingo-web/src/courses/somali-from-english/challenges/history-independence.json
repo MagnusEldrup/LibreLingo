@@ -1,0 +1,182 @@
+{
+  "id": "1f0b9c7a4e63",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Britain iyo Talyaani way gumaysteen.",
+      "meaningInSourceLanguage": "Britain and Italy colonized.",
+      "id": "hi-1",
+      "priority": 0,
+      "group": "colonized"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Britain iyo Talyaani way gumaysteen."
+      ],
+      "phrase": [
+        {
+          "word": "Britain and Italy",
+          "definition": "Britain iyo Talyaani"
+        },
+        {
+          "word": "colonized.",
+          "definition": "way gumaysteen"
+        }
+      ],
+      "id": "hi-2",
+      "priority": 1,
+      "group": "colonized"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Labadii qaybood way midoobeen.",
+      "meaningInSourceLanguage": "The two parts united.",
+      "id": "hi-3",
+      "priority": 0,
+      "group": "united-1960"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The two parts",
+          "definition": "Labadii qaybood"
+        },
+        {
+          "word": "united.",
+          "definition": "way midoobeen"
+        }
+      ],
+      "chips": [
+        "Labadii",
+        "qaybood",
+        "way",
+        "midoobeen.",
+        "1991"
+      ],
+      "solutions": [
+        [
+          "Labadii",
+          "qaybood",
+          "way",
+          "midoobeen."
+        ]
+      ],
+      "formattedSolution": "Labadii qaybood way midoobeen.",
+      "id": "hi-4",
+      "priority": 2,
+      "group": "united-1960"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Soomaaliya madax bannaan bay noqotay.",
+      "meaningInSourceLanguage": "Somalia became independent.",
+      "id": "hi-5",
+      "priority": 0,
+      "group": "independent-republic"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Somalia",
+          "definition": "Soomaaliya"
+        },
+        {
+          "word": "became independent.",
+          "definition": "madax bannaan bay noqotay"
+        }
+      ],
+      "chips": [
+        "Soomaaliya",
+        "madax",
+        "bannaan",
+        "bay",
+        "noqotay.",
+        "federaal"
+      ],
+      "solutions": [
+        [
+          "Soomaaliya",
+          "madax",
+          "bannaan",
+          "bay",
+          "noqotay."
+        ]
+      ],
+      "formattedSolution": "Soomaaliya madax bannaan bay noqotay.",
+      "id": "hi-6",
+      "priority": 2,
+      "group": "independent-republic"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Dowladdu way burburtay 1991.",
+      "meaningInSourceLanguage": "The government collapsed in 1991.",
+      "id": "hi-7",
+      "priority": 0,
+      "group": "collapsed-1991"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Dowladdu way burburtay 1991."
+      ],
+      "phrase": [
+        {
+          "word": "The government",
+          "definition": "Dowladdu"
+        },
+        {
+          "word": "collapsed in 1991.",
+          "definition": "way burburtay 1991"
+        }
+      ],
+      "id": "hi-8",
+      "priority": 1,
+      "group": "collapsed-1991"
+    },
+    {
+      "type": "freeWriting",
+      "id": "hi-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "The two parts united. Somalia became independent."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct recall of the independence timeline and vocabulary.",
+        "Accept understandable beginner Somali even if the sentence is simple.",
+        "Be lenient with punctuation and proper-noun spelling."
+      ],
+      "sampleAnswer": "Labadii qaybood way midoobeen. Soomaaliya madax bannaan bay noqotay."
+    },
+    {
+      "type": "freeWriting",
+      "id": "hi-fw-2",
+      "priority": 3,
+      "group": "writing-history",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali history summary.",
+      "promptLines": [
+        "Write 2 short Somali sentences about colonization or independence."
+      ],
+      "placeholder": "Use the lesson facts if you can.",
+      "gradingNotes": [
+        "Reward correct use of the historical facts from this lesson.",
+        "Keep corrections focused on concrete wording changes.",
+        "Stay brief and encouraging."
+      ],
+      "sampleAnswer": "Britain iyo Talyaani way gumaysteen. Labadii qaybood way midoobeen."
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "id": "93e684a1fc22",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "grammarTable",
+      "id": "fu-1",
+      "priority": 1,
+      "group": "future-tense-tegi-doon",
+      "instruction": "Apply the Somali future pattern built with `doon`. Lesson screens highlight the shared endings first, and practice then switches to new future cues.",
+      "tableTitle": "Future tense of `tegi doonaa`",
+      "columnHeaders": {
+        "label": "Person",
+        "prompt": "English cue",
+        "answer": "Somali form"
+      },
+      "rows": [
+        {
+          "id": "fu-lesson-s-1",
+          "label": "I",
+          "prompt": "I will go.",
+          "answers": [
+            "tegi doonaa"
+          ]
+        },
+        {
+          "id": "fu-lesson-s-2",
+          "label": "You",
+          "prompt": "You will go.",
+          "answers": [
+            "tegi doontaa"
+          ]
+        },
+        {
+          "id": "fu-lesson-s-3",
+          "label": "He",
+          "prompt": "He will go.",
+          "answers": [
+            "tegi doonaa"
+          ]
+        },
+        {
+          "id": "fu-lesson-s-4",
+          "label": "She",
+          "prompt": "She will go.",
+          "answers": [
+            "tegi doontaa"
+          ]
+        },
+        {
+          "id": "fu-lesson-p-1",
+          "label": "We",
+          "prompt": "We will go.",
+          "answers": [
+            "tegi doonnaa"
+          ]
+        },
+        {
+          "id": "fu-lesson-p-2",
+          "label": "You all",
+          "prompt": "You all will go.",
+          "answers": [
+            "tegi doontaan"
+          ]
+        },
+        {
+          "id": "fu-lesson-p-3",
+          "label": "They",
+          "prompt": "They will go.",
+          "answers": [
+            "tegi doonaan"
+          ]
+        }
+      ],
+      "lessonSlides": [
+        {
+          "id": "fu-slide-1",
+          "title": "Start with the singular future endings",
+          "description": "The future uses the helper `doon`, and the ending changes by person. Notice that `I` and `he` share one ending, while `you` and `she` share another.",
+          "focusPoints": [
+            "`doonaa` works with `I` and `he`",
+            "`doontaa` works with `you` and `she`",
+            "Keep the verb stem steady while you watch the ending"
+          ],
+          "rows": [
+            {
+              "id": "fu-lesson-s-1",
+              "label": "I",
+              "prompt": "I will go.",
+              "answers": [
+                "tegi doonaa"
+              ]
+            },
+            {
+              "id": "fu-lesson-s-2",
+              "label": "You",
+              "prompt": "You will go.",
+              "answers": [
+                "tegi doontaa"
+              ]
+            },
+            {
+              "id": "fu-lesson-s-3",
+              "label": "He",
+              "prompt": "He will go.",
+              "answers": [
+                "tegi doonaa"
+              ]
+            },
+            {
+              "id": "fu-lesson-s-4",
+              "label": "She",
+              "prompt": "She will go.",
+              "answers": [
+                "tegi doontaa"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fu-slide-2",
+          "title": "Plural future forms expand the ending",
+          "description": "Once the singular pairings feel clear, the plural rows become easier to predict. Read them together so the longer endings stand out.",
+          "focusPoints": [
+            "`doonnaa` = we will",
+            "`doontaan` = you all will",
+            "`doonaan` = they will"
+          ],
+          "rows": [
+            {
+              "id": "fu-lesson-p-1",
+              "label": "We",
+              "prompt": "We will go.",
+              "answers": [
+                "tegi doonnaa"
+              ]
+            },
+            {
+              "id": "fu-lesson-p-2",
+              "label": "You all",
+              "prompt": "You all will go.",
+              "answers": [
+                "tegi doontaan"
+              ]
+            },
+            {
+              "id": "fu-lesson-p-3",
+              "label": "They",
+              "prompt": "They will go.",
+              "answers": [
+                "tegi doonaan"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fu-slide-3",
+          "title": "New verbs still use the same future endings",
+          "description": "Practice is not limited to `go`. The next screen mixes in `come`, `sleep`, and `learn` so the learner has to transfer the future ending pattern to fresh cues.",
+          "focusPoints": [
+            "Find the person first",
+            "Choose the right `doon...` ending",
+            "Then complete the full future phrase"
+          ]
+        }
+      ],
+      "practiceRows": [
+        {
+          "id": "fu-practice-1",
+          "label": "I",
+          "prompt": "I will go tomorrow.",
+          "answers": [
+            "tegi doonaa berri."
+          ]
+        },
+        {
+          "id": "fu-practice-2",
+          "label": "You",
+          "prompt": "You will come tomorrow.",
+          "answers": [
+            "iman doontaa berri."
+          ]
+        },
+        {
+          "id": "fu-practice-3",
+          "label": "He",
+          "prompt": "He will come soon.",
+          "answers": [
+            "iman doonaa dhowaan."
+          ]
+        },
+        {
+          "id": "fu-practice-4",
+          "label": "She",
+          "prompt": "She will sleep tonight.",
+          "answers": [
+            "seexan doontaa caawa."
+          ]
+        },
+        {
+          "id": "fu-practice-5",
+          "label": "We",
+          "prompt": "We will go later.",
+          "answers": [
+            "tegi doonnaa goor dambe."
+          ]
+        },
+        {
+          "id": "fu-practice-6",
+          "label": "You all",
+          "prompt": "You all will learn Somali.",
+          "answers": [
+            "baran doontaan Af-Soomaali."
+          ]
+        },
+        {
+          "id": "fu-practice-7",
+          "label": "They",
+          "prompt": "They will come later.",
+          "answers": [
+            "iman doonaan goor dambe."
+          ]
+        }
+      ]
+    }
+  ]
+}

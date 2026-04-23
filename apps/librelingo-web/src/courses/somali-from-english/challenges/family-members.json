@@ -1,0 +1,144 @@
+{
+  "id": "f932725e5f10",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Qoyska ka warran?",
+      "meaningInSourceLanguage": "How is the family?",
+      "id": "fm-1",
+      "priority": 0,
+      "group": "family-question"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Carruurta ka warran?",
+      "meaningInSourceLanguage": "How are the children?",
+      "id": "fm-2",
+      "priority": 0,
+      "group": "family-question"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hooyaday waa halkan.",
+      "meaningInSourceLanguage": "My mother is here.",
+      "id": "fm-3",
+      "priority": 0,
+      "group": "mother"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My father",
+          "definition": "aabbahay"
+        },
+        {
+          "word": "is here.",
+          "definition": "waa halkan"
+        }
+      ],
+      "chips": [
+        "Aabbahay",
+        "waa",
+        "halkan.",
+        "qoyska",
+        "nabad"
+      ],
+      "solutions": [
+        [
+          "Aabbahay",
+          "waa",
+          "halkan."
+        ]
+      ],
+      "formattedSolution": "Aabbahay waa halkan.",
+      "id": "fm-4",
+      "priority": 2,
+      "group": "father"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Carruurtu dugsiga way tagayaan.",
+      "meaningInSourceLanguage": "The children are going to school.",
+      "id": "fm-5",
+      "priority": 0,
+      "group": "children-school"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "carruurtu dugsiga way tagayaan"
+      ],
+      "phrase": [
+        {
+          "word": "The children",
+          "definition": "carruurtu"
+        },
+        {
+          "word": "are going to school.",
+          "definition": "dugsiga way tagayaan"
+        }
+      ],
+      "id": "fm-6",
+      "priority": 1,
+      "group": "children-school"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Walaalkay waa guriga.",
+      "meaningInSourceLanguage": "My brother is at home.",
+      "id": "fm-7",
+      "priority": 0,
+      "group": "brother-home"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Walaashay waa halkan.",
+      "meaningInSourceLanguage": "My sister is here.",
+      "id": "fm-8",
+      "priority": 0,
+      "group": "sister-here"
+    },
+    {
+      "type": "freeWriting",
+      "id": "fm-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "My mother is here. The children are going to school."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of family words and simple present-tense phrasing.",
+        "Accept understandable beginner Somali even if word order is a little rough.",
+        "Be lenient about punctuation and small spelling mistakes."
+      ],
+      "sampleAnswer": "Hooyaday waa halkan. Carruurtu dugsiga way tagayaan."
+    },
+    {
+      "type": "freeWriting",
+      "id": "fm-fw-2",
+      "priority": 3,
+      "group": "writing-family",
+      "promptKind": "guidedProduction",
+      "instruction": "Describe your family in Somali.",
+      "promptLines": [
+        "Write 2-3 short Somali sentences about your family."
+      ],
+      "placeholder": "You can mention your mother, father, children, or where someone is.",
+      "gradingNotes": [
+        "Reward active use of family vocabulary from this skill.",
+        "Do not over-penalize missing agreement if the intended meaning is clear.",
+        "Keep the tone warm and encouraging."
+      ],
+      "sampleAnswer": "Hooyaday waa halkan. Aabbahay waa guriga. Carruurtu dugsiga way tagayaan."
+    }
+  ]
+}

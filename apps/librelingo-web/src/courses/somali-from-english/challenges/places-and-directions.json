@@ -1,0 +1,163 @@
+{
+  "id": "7f31d465e93c",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Xaggee baad tagaysaa?",
+      "meaningInSourceLanguage": "Where are you going?",
+      "id": "pd-1",
+      "priority": 0,
+      "group": "where-going"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Boosta baan tagayaa.",
+      "meaningInSourceLanguage": "I am going to the post office.",
+      "id": "pd-2",
+      "priority": 0,
+      "group": "where-going"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Suuqa baan tagayaa.",
+      "meaningInSourceLanguage": "I am going to the market.",
+      "id": "pd-3",
+      "priority": 0,
+      "group": "market"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Garoonka dayuuradaha waa fog yahay.",
+      "meaningInSourceLanguage": "The airport is far.",
+      "id": "pd-4",
+      "priority": 0,
+      "group": "airport"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waddadan si toos ah u raac.",
+      "meaningInSourceLanguage": "Go straight along this road.",
+      "id": "pd-5",
+      "priority": 0,
+      "group": "straight"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Turn",
+          "definition": "u leexo"
+        },
+        {
+          "word": "to the left.",
+          "definition": "xagga bidixda"
+        }
+      ],
+      "chips": [
+        "Xagga",
+        "bidixda",
+        "u",
+        "leexo.",
+        "midigta",
+        "halkan"
+      ],
+      "solutions": [
+        [
+          "Xagga",
+          "bidixda",
+          "u",
+          "leexo."
+        ]
+      ],
+      "formattedSolution": "Xagga bidixda u leexo.",
+      "id": "pd-6",
+      "priority": 2,
+      "group": "left"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Xagga midigta u leexo.",
+      "meaningInSourceLanguage": "Turn to the right.",
+      "id": "pd-7",
+      "priority": 0,
+      "group": "right"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Ma aragtaa bangiga?",
+      "meaningInSourceLanguage": "Do you see the bank?",
+      "id": "pd-8",
+      "priority": 0,
+      "group": "right"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Meel dhow bay deggentahay.",
+      "meaningInSourceLanguage": "She lives nearby.",
+      "id": "pd-9",
+      "priority": 0,
+      "group": "nearby"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "hudheelku halkan buu ku yaal"
+      ],
+      "phrase": [
+        {
+          "word": "The hotel",
+          "definition": "hudheelku"
+        },
+        {
+          "word": "is here.",
+          "definition": "halkan buu ku yaal"
+        }
+      ],
+      "id": "pd-10",
+      "priority": 1,
+      "group": "hotel"
+    },
+    {
+      "type": "freeWriting",
+      "id": "pd-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "I am going to the market. Turn left."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of destination phrases and direction vocabulary.",
+        "Accept close beginner phrasing if the message is understandable.",
+        "Be lenient with punctuation and spelling variation."
+      ],
+      "sampleAnswer": "Suuqa baan tagayaa. Xagga bidixda u leexo."
+    },
+    {
+      "type": "freeWriting",
+      "id": "pd-fw-2",
+      "priority": 3,
+      "group": "writing-directions",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short directions answer in Somali.",
+      "promptLines": [
+        "Write 2 short Somali sentences about where you are going and one direction."
+      ],
+      "placeholder": "You can mention the market, post office, left, right, or straight on.",
+      "gradingNotes": [
+        "Reward active use of direction and movement language from this skill.",
+        "Do not punish beginner grammar too harshly if the route is understandable.",
+        "Keep suggestions short and practical."
+      ],
+      "sampleAnswer": "Boosta baan tagayaa. Xagga bidixda u leexo."
+    }
+  ]
+}

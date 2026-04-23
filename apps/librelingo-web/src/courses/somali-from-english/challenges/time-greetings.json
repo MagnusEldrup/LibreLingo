@@ -1,0 +1,166 @@
+{
+  "id": "76e8e466150b",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waryaa Bill, subax wanaagsan.",
+      "meaningInSourceLanguage": "Good morning, Bill.",
+      "id": "tg-1",
+      "priority": 0,
+      "group": "good-morning"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good morning,",
+          "definition": "subax wanaagsan"
+        },
+        {
+          "word": "Bill.",
+          "definition": "Waryaa Bill"
+        }
+      ],
+      "chips": [
+        "Waryaa",
+        "Bill,",
+        "subax",
+        "wanaagsan.",
+        "nabad",
+        "gelyo"
+      ],
+      "solutions": [
+        [
+          "Waryaa",
+          "Bill,",
+          "subax",
+          "wanaagsan."
+        ]
+      ],
+      "formattedSolution": "Waryaa Bill, subax wanaagsan.",
+      "id": "tg-2",
+      "priority": 2,
+      "group": "good-morning"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Canabay, galab wanaagsan.",
+      "meaningInSourceLanguage": "Good afternoon, Canab.",
+      "id": "tg-3",
+      "priority": 0,
+      "group": "good-afternoon"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "canabay galab wanaagsan"
+      ],
+      "phrase": [
+        {
+          "word": "Good afternoon,",
+          "definition": "galab wanaagsan"
+        },
+        {
+          "word": "Canab.",
+          "definition": "Canabay"
+        }
+      ],
+      "id": "tg-4",
+      "priority": 1,
+      "group": "good-afternoon"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Habeen wanaagsan.",
+      "meaningInSourceLanguage": "Good evening.",
+      "id": "tg-5",
+      "priority": 0,
+      "group": "good-evening"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Subax wanaagsan. Ma nabad baa?",
+      "meaningInSourceLanguage": "Good morning. Are things well?",
+      "id": "tg-6",
+      "priority": 0,
+      "group": "good-evening"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Maalin wanaagsan.",
+      "meaningInSourceLanguage": "Good day.",
+      "id": "tg-7",
+      "priority": 0,
+      "group": "good-day"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "maalin wanaagsan"
+      ],
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "wanaagsan"
+        },
+        {
+          "word": "day.",
+          "definition": "maalin"
+        }
+      ],
+      "id": "tg-8",
+      "priority": 1,
+      "group": "good-day"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Nabad ku bari.",
+      "meaningInSourceLanguage": "Good night.",
+      "id": "tg-10",
+      "priority": 0,
+      "group": "good-night-preview"
+    },
+    {
+      "type": "freeWriting",
+      "id": "tg-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "Good morning, Amina. Good night."
+      ],
+      "placeholder": "Write 1-2 short Somali greeting lines.",
+      "gradingNotes": [
+        "Reward correct use of time-based greetings from this skill.",
+        "Accept beginner punctuation and spacing if the greeting is clear.",
+        "Be lenient with minor spelling variation in names and greetings."
+      ],
+      "sampleAnswer": "Amina, subax wanaagsan. Nabad ku bari."
+    },
+    {
+      "type": "freeWriting",
+      "id": "tg-fw-2",
+      "priority": 3,
+      "group": "writing-greetings",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali greeting sequence.",
+      "promptLines": [
+        "Write 2-3 short Somali greeting lines for different times of day."
+      ],
+      "placeholder": "You can use morning, afternoon, evening, or good night phrases.",
+      "gradingNotes": [
+        "Reward active use of the greeting formulas from this skill.",
+        "Do not over-penalize grammar when the greeting phrases are correct.",
+        "Keep feedback brief and phrase-focused."
+      ],
+      "sampleAnswer": "Subax wanaagsan. Galab wanaagsan. Nabad ku bari."
+    }
+  ]
+}

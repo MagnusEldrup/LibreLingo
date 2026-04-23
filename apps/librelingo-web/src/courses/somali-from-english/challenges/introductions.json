@@ -1,0 +1,196 @@
+{
+  "id": "e45b999c85e0",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Magacaygu waa Bill.",
+      "meaningInSourceLanguage": "My name is Bill.",
+      "id": "in-1",
+      "priority": 0,
+      "group": "my-name"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "magacaygu waa bill"
+      ],
+      "phrase": [
+        {
+          "word": "My name is",
+          "definition": "magacaygu waa"
+        },
+        {
+          "word": "Bill.",
+          "definition": "Bill"
+        }
+      ],
+      "id": "in-2",
+      "priority": 1,
+      "group": "my-name"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Magacaa adiga?",
+      "meaningInSourceLanguage": "What is your name?",
+      "id": "in-3",
+      "priority": 0,
+      "group": "your-name"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What is",
+          "definition": "magacaa"
+        },
+        {
+          "word": "your name?",
+          "definition": "adiga"
+        }
+      ],
+      "chips": [
+        "Magacaa",
+        "adiga?",
+        "Landhan",
+        "Bill."
+      ],
+      "solutions": [
+        [
+          "Magacaa",
+          "adiga?"
+        ]
+      ],
+      "formattedSolution": "Magacaa adiga?",
+      "id": "in-4",
+      "priority": 2,
+      "group": "your-name"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Khadija baa la yidhaahdaa.",
+      "meaningInSourceLanguage": "I am called Khadija.",
+      "id": "in-5",
+      "priority": 0,
+      "group": "called-name"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I am called",
+          "definition": "baa la yidhaahdaa"
+        },
+        {
+          "word": "Khadija.",
+          "definition": "Khadija"
+        }
+      ],
+      "chips": [
+        "Khadija",
+        "baa",
+        "la",
+        "yidhaahdaa.",
+        "magacaa",
+        "waa"
+      ],
+      "solutions": [
+        [
+          "Khadija",
+          "baa",
+          "la",
+          "yidhaahdaa."
+        ]
+      ],
+      "formattedSolution": "Khadija baa la yidhaahdaa.",
+      "id": "in-6",
+      "priority": 2,
+      "group": "called-name"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Xaggee baad ka timid?",
+      "meaningInSourceLanguage": "Where have you come from?",
+      "id": "in-7",
+      "priority": 0,
+      "group": "where-from-question"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Landhan baan ka imi.",
+      "meaningInSourceLanguage": "I came from London.",
+      "id": "in-8",
+      "priority": 0,
+      "group": "where-from-answer"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Magacaygu waa Bill. Landhan baan ka imi.",
+      "meaningInSourceLanguage": "My name is Bill. I came from London.",
+      "id": "in-9",
+      "priority": 0,
+      "group": "intro-two-sentences"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "landhan baan ka imi"
+      ],
+      "phrase": [
+        {
+          "word": "I came from",
+          "definition": "baan ka imi"
+        },
+        {
+          "word": "London.",
+          "definition": "Landhan"
+        }
+      ],
+      "id": "in-10",
+      "priority": 1,
+      "group": "where-from-answer"
+    },
+    {
+      "type": "freeWriting",
+      "id": "in-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "My name is Amina. I came from London."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward clear communication and vocabulary from introductions.",
+        "Accept beginner phrasing if the meaning is understandable.",
+        "Be lenient with doubled letters, punctuation, and minor spelling slips."
+      ],
+      "sampleAnswer": "Magacaygu waa Amina. Landhan baan ka imi."
+    },
+    {
+      "type": "freeWriting",
+      "id": "in-fw-2",
+      "priority": 3,
+      "group": "writing-self-intro",
+      "promptKind": "guidedProduction",
+      "instruction": "Introduce yourself in Somali.",
+      "promptLines": [
+        "Write 2-3 short Somali sentences about your name and where you come from."
+      ],
+      "placeholder": "Example topics: your name, where you come from, a simple greeting.",
+      "gradingNotes": [
+        "Reward any correct use of self-introduction phrases from this skill.",
+        "Do not punish grammar too harshly when the learner communicates successfully.",
+        "Keep feedback brief, supportive, and beginner-friendly."
+      ],
+      "sampleAnswer": "Magacaygu waa Amina. Landhan baan ka imi. Ma nabad baa?"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "7a4d2c1e90ab",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Soo dhowow.",
+      "meaningInSourceLanguage": "Welcome.",
+      "id": "aa-1",
+      "priority": 0,
+      "group": "welcome"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Mahadsanid. Is ka warran.",
+      "meaningInSourceLanguage": "Thank you. How are you?",
+      "id": "aa-2",
+      "priority": 0,
+      "group": "wellbeing"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Magacaa?",
+      "meaningInSourceLanguage": "What is your name?",
+      "id": "aa-3",
+      "priority": 0,
+      "group": "name"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "magacaygu waa bill"
+      ],
+      "phrase": [
+        {
+          "word": "My name is",
+          "definition": "magacaygu waa"
+        },
+        {
+          "word": "Bill.",
+          "definition": "Bill"
+        }
+      ],
+      "id": "aa-4",
+      "priority": 1,
+      "group": "name"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Xaggee baad ka timi?",
+      "meaningInSourceLanguage": "Where have you come from?",
+      "id": "aa-5",
+      "priority": 0,
+      "group": "where-from"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Landhan ayaan ka imi.",
+      "meaningInSourceLanguage": "I have come from London.",
+      "id": "aa-6",
+      "priority": 0,
+      "group": "where-from"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Baasaboorkaaga i tus.",
+      "meaningInSourceLanguage": "Show me your passport.",
+      "id": "aa-7",
+      "priority": 0,
+      "group": "passport"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I am staying",
+          "definition": "ayaan joogayaa"
+        },
+        {
+          "word": "one week.",
+          "definition": "toddobaad"
+        }
+      ],
+      "chips": [
+        "Toddobaad",
+        "ayaan",
+        "joogayaa.",
+        "Landhan",
+        "fiise"
+      ],
+      "solutions": [
+        [
+          "Toddobaad",
+          "ayaan",
+          "joogayaa."
+        ]
+      ],
+      "formattedSolution": "Toddobaad ayaan joogayaa.",
+      "id": "aa-8",
+      "priority": 2,
+      "group": "stay-length"
+    },
+    {
+      "type": "freeWriting",
+      "id": "aa-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "What is your name? I have come from London."
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of airport and passport-control phrases from this skill.",
+        "Accept simple beginner sentence structure if the meaning is clear.",
+        "Be lenient with punctuation and spelling variation."
+      ],
+      "sampleAnswer": "Magacaa? Landhan ayaan ka imi."
+    },
+    {
+      "type": "freeWriting",
+      "id": "aa-fw-2",
+      "priority": 3,
+      "group": "writing-arrival",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali airport exchange.",
+      "promptLines": [
+        "Write 2 short Somali lines for an arrival or passport-control conversation."
+      ],
+      "placeholder": "You can mention your name, where you came from, or showing a passport.",
+      "gradingNotes": [
+        "Reward active use of the arrival phrases from this lesson.",
+        "Keep corrections focused on concrete phrases, not generic advice.",
+        "Stay brief and supportive."
+      ],
+      "sampleAnswer": "Magacaygu waa Bill. Landhan ayaan ka imi."
+    }
+  ]
+}

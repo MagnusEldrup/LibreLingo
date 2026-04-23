@@ -1,0 +1,146 @@
+{
+  "id": "50a5880f3680",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Yoonisow, is ka warran?",
+      "meaningInSourceLanguage": "Yoonis, how are you?",
+      "id": "wb-1",
+      "priority": 0,
+      "group": "how-are-you"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yoonis,",
+          "definition": "Yoonisow"
+        },
+        {
+          "word": "how are you?",
+          "definition": "is ka warran"
+        }
+      ],
+      "chips": [
+        "Yoonisow,",
+        "is",
+        "ka",
+        "warran?",
+        "waa",
+        "nabad"
+      ],
+      "solutions": [
+        [
+          "Yoonisow,",
+          "is",
+          "ka",
+          "warran?"
+        ]
+      ],
+      "formattedSolution": "Yoonisow, is ka warran?",
+      "id": "wb-2",
+      "priority": 2,
+      "group": "how-are-you"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waryaa Yoonis, ma nabad baa?",
+      "meaningInSourceLanguage": "Hi Yoonis, are things well?",
+      "id": "wb-3",
+      "priority": 0,
+      "group": "are-things-well"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Ma nabad baa?",
+      "meaningInSourceLanguage": "Are things well?",
+      "id": "wb-4",
+      "priority": 0,
+      "group": "are-things-well"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waa la fiicanyahay, mahadsanid.",
+      "meaningInSourceLanguage": "I am well, thank you.",
+      "id": "wb-5",
+      "priority": 0,
+      "group": "i-am-well"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "waa la fiicanyahay mahadsanid"
+      ],
+      "phrase": [
+        {
+          "word": "I am well,",
+          "definition": "waa la fiicanyahay"
+        },
+        {
+          "word": "thank you.",
+          "definition": "mahadsanid"
+        }
+      ],
+      "id": "wb-6",
+      "priority": 1,
+      "group": "i-am-well"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waa nabad.",
+      "meaningInSourceLanguage": "Things are well.",
+      "id": "wb-7",
+      "priority": 0,
+      "group": "things-are-well"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waa nabad. Maxaad sheegtay?",
+      "meaningInSourceLanguage": "Things are well. And you?",
+      "id": "wb-8",
+      "priority": 0,
+      "group": "things-are-well"
+    },
+    {
+      "type": "freeWriting",
+      "id": "wb-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "Yoonis, how are you? I am well, thank you."
+      ],
+      "placeholder": "Write 1-2 short Somali lines.",
+      "gradingNotes": [
+        "Reward clear use of the wellbeing question and answer patterns from this skill.",
+        "Accept understandable beginner Somali even if punctuation is simple.",
+        "Be lenient with minor spelling variation."
+      ],
+      "sampleAnswer": "Yoonisow, is ka warran? Waa la fiicanyahay, mahadsanid."
+    },
+    {
+      "type": "freeWriting",
+      "id": "wb-fw-2",
+      "priority": 3,
+      "group": "writing-wellbeing",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali wellbeing exchange.",
+      "promptLines": [
+        "Write 2 short Somali lines asking how someone is and answering."
+      ],
+      "placeholder": "You can use is ka warran, ma nabad baa, waa nabad, or mahadsanid.",
+      "gradingNotes": [
+        "Reward active use of the core wellbeing phrases from this skill.",
+        "Do not over-penalize word choice if the exchange is understandable.",
+        "Keep feedback short and specific."
+      ],
+      "sampleAnswer": "Is ka warran? Waa la fiicanyahay, mahadsanid."
+    }
+  ]
+}

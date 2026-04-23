@@ -1,0 +1,100 @@
+Skill:
+  Id: e5746e09-7c05-41e7-8d23-e5814df0afd6
+  Name: Present Tense Markers
+
+New words: []
+
+Phrases: []
+
+Custom challenges:
+  - Type: grammarTable
+    Prompt: Complete the Somali present tense pattern for `tag-` by matching each person with the right full sentence.
+    Table title: Present tense of `tag-`
+    Row header: Person
+    Prompt header: English cue
+    Answer header: Somali form
+    Rows:
+      - Label: I
+        Prompt: I am going.
+        Answer: Waan tagayaa.
+
+      - Label: You
+        Prompt: You are going.
+        Answer: Waad tagaysaa.
+
+      - Label: He
+        Prompt: He is going.
+        Answer: Wuu tagayaa.
+
+      - Label: She
+        Prompt: She is going.
+        Answer: Way tagaysaa.
+
+      - Label: We (including you)
+        Prompt: We are going, including you.
+        Answer: Waynu tagaynaa.
+        Also accepted:
+          - Waynu tagayna.
+
+      - Label: We (not including you)
+        Prompt: We are going, not including you.
+        Answer: Waannu tagaynaa.
+        Also accepted:
+          - Waannu tagayna.
+
+      - Label: You all
+        Prompt: You all are going.
+        Answer: Waydin tagaysaan.
+
+      - Label: They
+        Prompt: They are going.
+        Answer: Way tagayaan.
+
+Two-way-dictionary:
+  - I: aniga
+  - I am: waan
+  - you: adiga
+  - You: adiga
+  - you are: waad
+  - he: isagu
+  - He: isagu
+  - he is: wuu
+  - she: iyadu
+  - She: iyadu
+  - she is: way
+  - they: iyaga
+  - They: iyaga
+  - they are: way
+  - we: annaga
+  - We: annaga
+  - we are, including you: waynu
+  - we are including you: waynu
+  - we are, not including you: waannu
+  - we are not including you: waannu
+  - you all are: waydin
+  - you are, plural: waydin
+  - am: ahay
+  - are: yihiin
+  - go: tag
+  - going: tagaya
+  - including: ku jira
+  - not: ma
+  - all: dhammaan
+  - plural: jamac
+  - going: tagaya
+  - I am going: waan tagayaa
+  - You are going: waad tagaysaa
+  - He is going: wuu tagayaa
+  - She is going: way tagaysaa
+  - We are going, including you: waynu tagaynaa
+  - We are going including you: waynu tagaynaa
+  - We are going, not including you: waannu tagaynaa
+  - We are going not including you: waannu tagaynaa
+  - You all are going: waydin tagaysaan
+  - They are going: way tagayaan
+  - am going: tagayaa
+  - are going: tagaysaa
+  - are going, including you: tagaynaa
+  - are going, not including you: tagaynaa
+  - are going, plural: tagaysaan
+  - are going, they: tagayaan

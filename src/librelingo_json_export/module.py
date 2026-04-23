@@ -19,14 +19,25 @@ def _get_module_summary(module):
             return {"introduction": f"{slugify(skill.name)}.md"}
         return {}
 
-    def get_summary(words, phrases):
+    def get_summary(words, phrases, custom_challenges):
         words = [word.in_target_language[0] for word in words]
         phrases = [phrase.in_target_language[0] for phrase in phrases]
+        custom_summary = []
 
-        return words + phrases
+        for custom_challenge in custom_challenges:
+            if custom_challenge["type"] == "grammarTable":
+                if custom_challenge.get("table_title"):
+                    custom_summary.append(custom_challenge["table_title"])
+                custom_summary.extend(
+                    row["prompt"] for row in custom_challenge["rows"][:4]
+                )
 
-    def get_levels(words, phrases):
-        return calculate_number_of_levels(len(words), len(phrases))
+        return words + phrases + custom_summary
+
+    def get_levels(words, phrases, custom_challenges):
+        return calculate_number_of_levels(
+            len(words), len(phrases), len(custom_challenges)
+        )
 
     return {
         "title": module.title,
@@ -34,11 +45,15 @@ def _get_module_summary(module):
             {
                 **(get_imageset(skill.image_set)),
                 **(get_introduction(skill)),
-                "summary": get_summary(skill.words, skill.phrases),
+                "summary": get_summary(
+                    skill.words, skill.phrases, skill.custom_challenges
+                ),
                 "practiceHref": slugify(skill.name),
                 "id": get_opaque_id(skill, "Skill"),
                 "title": skill.name,
-                "levels": get_levels(skill.words, skill.phrases),
+                "levels": get_levels(
+                    skill.words, skill.phrases, skill.custom_challenges
+                ),
             }
             for skill in module.skills
         ],

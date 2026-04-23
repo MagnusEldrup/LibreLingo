@@ -1,0 +1,144 @@
+{
+  "id": "9ac471e23fd5",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Waxaan doondoonayaa telefoon.",
+      "meaningInSourceLanguage": "I am looking for a telephone.",
+      "id": "ph-1",
+      "priority": 0,
+      "group": "looking-phone"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Telefoon ma jiraa agagaarkan?",
+      "meaningInSourceLanguage": "Is there a telephone around here?",
+      "id": "ph-2",
+      "priority": 0,
+      "group": "phone-nearby"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Boostada agteeda mid baa jira.",
+      "meaningInSourceLanguage": "There is one by the post office.",
+      "id": "ph-3",
+      "priority": 0,
+      "group": "post-office"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yes,",
+          "definition": "haa"
+        },
+        {
+          "word": "I see it.",
+          "definition": "waan arkaa"
+        }
+      ],
+      "chips": [
+        "Haa,",
+        "waan",
+        "arkaa.",
+        "maya",
+        "telefoon"
+      ],
+      "solutions": [
+        [
+          "Haa,",
+          "waan",
+          "arkaa."
+        ]
+      ],
+      "formattedSolution": "Haa, waan arkaa.",
+      "id": "ph-4",
+      "priority": 2,
+      "group": "see-it"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Yoonis ma joogaa?",
+      "meaningInSourceLanguage": "Is Yoonis there?",
+      "id": "ph-5",
+      "priority": 0,
+      "group": "yoonis-there"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "In yar u kaadi.",
+      "meaningInSourceLanguage": "Wait a moment.",
+      "id": "ph-6",
+      "priority": 0,
+      "group": "wait"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bill la hadal, Djibouti buu kaaga soo dirayaa.",
+      "meaningInSourceLanguage": "Speak to Bill, he is calling you from Djibouti.",
+      "id": "ph-7",
+      "priority": 0,
+      "group": "talk-bill"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "waryaa yoonis is ka warran"
+      ],
+      "phrase": [
+        {
+          "word": "Hi Yoonis,",
+          "definition": "Waryaa Yoonis"
+        },
+        {
+          "word": "how are you?",
+          "definition": "is ka warran"
+        }
+      ],
+      "id": "ph-8",
+      "priority": 1,
+      "group": "greeting-call"
+    },
+    {
+      "type": "freeWriting",
+      "id": "ph-fw-1",
+      "priority": 3,
+      "group": "writing-translation",
+      "promptKind": "translate",
+      "instruction": "Translate this as best you can in Somali.",
+      "promptLines": [
+        "I am looking for a telephone. Is Yoonis there?"
+      ],
+      "placeholder": "Write 1-2 short Somali sentences.",
+      "gradingNotes": [
+        "Reward correct use of telephone and call phrases from this skill.",
+        "Accept simple beginner Somali if the message is understandable.",
+        "Be lenient with punctuation and spelling."
+      ],
+      "sampleAnswer": "Waxaan doondoonayaa telefoon. Yoonis ma joogaa?"
+    },
+    {
+      "type": "freeWriting",
+      "id": "ph-fw-2",
+      "priority": 3,
+      "group": "writing-phone",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali phone-call exchange.",
+      "promptLines": [
+        "Write 2 short Somali lines about finding a phone or asking for someone on the call."
+      ],
+      "placeholder": "You can mention a telephone, waiting a moment, or speaking to Bill or Yoonis.",
+      "gradingNotes": [
+        "Reward active use of the call phrases from this lesson.",
+        "Keep corrections short, concrete, and phrase-level.",
+        "Stay supportive."
+      ],
+      "sampleAnswer": "Telefoon ma jiraa agagaarkan? In yar u kaadi."
+    }
+  ]
+}
