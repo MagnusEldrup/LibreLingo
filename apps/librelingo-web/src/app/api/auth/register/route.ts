@@ -31,12 +31,21 @@ export async function POST(request: Request) {
             return NextResponse.json({ message: error.message }, { status: 503 })
         }
 
-        const errorMessage =
-            error instanceof Error ? error.message : 'Unknown database error.'
+        const errorCode =
+            error && typeof error === 'object' && 'code' in error
+                ? String(error.code)
+                : undefined
+
+        if (errorCode === '23505') {
+            return NextResponse.json(
+                { message: 'That email is already registered.' },
+                { status: 409 }
+            )
+        }
 
         return NextResponse.json(
-            { message: `Could not create account: ${errorMessage}` },
-            { status: 409 }
+            { message: 'Could not create account right now.' },
+            { status: 500 }
         )
     }
 }
