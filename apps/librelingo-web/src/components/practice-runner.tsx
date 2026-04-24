@@ -9,9 +9,11 @@ import LessonFeedback from '@/components/lesson-feedback'
 import LevelAvatar from '@/components/level-avatar'
 import LevelProgress from '@/components/level-progress'
 import type {
+    CourseSkill,
     ConversationTurnFeedback,
     DefinitionToken,
     FreeWritingFeedback,
+    GrammarReviewSource,
     GrammarLessonSlide,
     GrammarTableRow,
     SkillChallenge,
@@ -33,8 +35,10 @@ type Props = {
     courseLanguageName: string
     moduleTitle: string
     skillTitle: string
+    skillKind?: CourseSkill['kind']
     challengeSet: SkillChallengeFile
     moduleChallengePool: SkillChallenge[]
+    previousGrammarReviewSources: GrammarReviewSource[]
     backUrl: string
 }
 
@@ -266,10 +270,104 @@ function shuffleWithSeed<T>(items: T[], seedKey: string) {
     return output
 }
 
-function buildPracticeSession(challenges: SkillChallenge[], sessionSeed: number) {
+function pickWeightedIndex(weights: number[], seedKey: string) {
+    const totalWeight = weights.reduce((sum, weight) => sum + weight, 0)
+
+    if (totalWeight <= 0) {
+        return -1
+    }
+
+    let target = hashString(seedKey) % totalWeight
+
+    for (let index = 0; index < weights.length; index += 1) {
+        target -= weights[index]
+
+        if (target < 0) {
+            return index
+        }
+    }
+
+    return weights.length - 1
+}
+
+function isStandardSkillKind(skillKind?: CourseSkill['kind']) {
+    return skillKind === undefined || skillKind === 'standard'
+}
+
+function buildGrammarReviewChallenge(
+    previousGrammarReviewSources: GrammarReviewSource[],
+    sessionSeed: number
+) {
+    if (previousGrammarReviewSources.length === 0) {
+        return undefined
+    }
+
+    const sourceIndex = pickWeightedIndex(
+        previousGrammarReviewSources.map((_, index) => index + 1),
+        `${sessionSeed}-grammar-review-source`
+    )
+
+    if (sourceIndex < 0) {
+        return undefined
+    }
+
+    const selectedSource = previousGrammarReviewSources[sourceIndex]
+    const grammarChallenges = selectedSource.challengeSet.challenges.filter(
+        (
+            challenge
+        ): challenge is Extract<SkillChallenge, { type: 'grammarTable' }> =>
+            challenge.type === 'grammarTable'
+    )
+
+    if (grammarChallenges.length === 0) {
+        return undefined
+    }
+
+    const selectedChallenge = shuffleWithSeed(
+        grammarChallenges,
+        `${sessionSeed}-${selectedSource.practiceHref}-grammar-review-challenge`
+    )[0]
+    const selectedRow = shuffleWithSeed(
+        selectedChallenge.practiceRows ?? selectedChallenge.rows,
+        `${sessionSeed}-${selectedChallenge.id}-grammar-review-row`
+    )[0]
+
+    if (!selectedRow) {
+        return undefined
+    }
+
+    return {
+        ...selectedChallenge,
+        id: `${selectedChallenge.id}-review-${selectedRow.id}`,
+        group: `grammar-review-${selectedSource.practiceHref}`,
+        priority: 0,
+        instruction: `Quick grammar review from ${selectedSource.title}.`,
+        tableTitle: 'Quick grammar review',
+        rows: [selectedRow],
+        lessonSlides: [],
+        practiceRows: [selectedRow],
+        startInPractice: true,
+        pointValue: 8,
+    } satisfies Extract<SkillChallenge, { type: 'grammarTable' }>
+}
+
+function buildPracticeSession(
+    challenges: SkillChallenge[],
+    sessionSeed: number,
+    {
+        skillKind,
+        previousGrammarReviewSources,
+    }: {
+        skillKind?: CourseSkill['kind']
+        previousGrammarReviewSources: GrammarReviewSource[]
+    }
+) {
     const answerableChallenges = challenges.filter((challenge) =>
         isAnswerablePracticeChallenge(challenge)
     )
+    const grammarReviewChallenge = isStandardSkillKind(skillKind)
+        ? buildGrammarReviewChallenge(previousGrammarReviewSources, sessionSeed)
+        : undefined
     const freeWritingChallenges = answerableChallenges
         .filter(
             (challenge): challenge is Extract<SkillChallenge, { type: 'freeWriting' }> =>
@@ -332,13 +430,18 @@ function buildPracticeSession(challenges: SkillChallenge[], sessionSeed: number)
     }
 
     const reservedWritingSlots = Math.min(2, freeWritingChallenges.length)
-    const baseChallengeLimit = Math.max(10 - reservedWritingSlots, 0)
+    const reservedGrammarReviewSlots = grammarReviewChallenge ? 1 : 0
+    const baseChallengeLimit = Math.max(
+        10 - reservedWritingSlots - reservedGrammarReviewSlots,
+        0
+    )
 
     return [
         ...interleavedChallenges.slice(
             0,
             Math.min(baseChallengeLimit, interleavedChallenges.length)
         ),
+        ...(grammarReviewChallenge ? [grammarReviewChallenge] : []),
         ...freeWritingChallenges.slice(0, reservedWritingSlots),
     ]
 }
@@ -354,12 +457,16 @@ function getPromptVariant(options: string[], key: string) {
 }
 
 function getChallengeBasePoints(challenge: SkillChallenge) {
+    if (challenge.type === 'grammarTable' && challenge.pointValue !== undefined) {
+        return challenge.pointValue
+    }
+
     const pointMap = {
         options: 6,
         chips: 7,
         cards: 5,
         shortInput: 8,
-        grammarTable: 12,
+        grammarTable: 13,
         freeWriting: 0,
         write: 0,
         conversation: 0,
@@ -2449,7 +2556,9 @@ function GrammarTableChallengeView({
     setAttemptCount: (value: number) => void
     onComplete: (completion: ChallengeCompletion) => void
 }) {
-    const [phase, setPhase] = useState<'lesson' | 'practice'>('lesson')
+    const [phase, setPhase] = useState<'lesson' | 'practice'>(
+        challenge.startInPractice ? 'practice' : 'lesson'
+    )
     const [slideIndex, setSlideIndex] = useState(0)
     const [practiceSeed, setPracticeSeed] = useState(() => createSessionSeed())
     const [lastCheckedRowId, setLastCheckedRowId] = useState<string | undefined>()
@@ -2493,12 +2602,12 @@ function GrammarTableChallengeView({
     const correctRowCount = lockedRowIds.length
 
     useEffect(() => {
-        setPhase('lesson')
+        setPhase(challenge.startInPractice ? 'practice' : 'lesson')
         setSlideIndex(0)
         setPracticeSeed(createSessionSeed())
         setLastCheckedRowId(undefined)
         setShowRuleFeedback(false)
-    }, [challenge.id])
+    }, [challenge.id, challenge.startInPractice])
 
     return (
         <div className="space-y-6">
@@ -2808,8 +2917,10 @@ export default function PracticeRunner(props: Props) {
         courseLanguageName,
         moduleTitle,
         skillTitle,
+        skillKind,
         challengeSet,
         moduleChallengePool,
+        previousGrammarReviewSources,
         backUrl,
     } = props
 
@@ -2818,7 +2929,10 @@ export default function PracticeRunner(props: Props) {
 
         return {
             seed,
-            challenges: buildPracticeSession(challengeSet.challenges, seed),
+            challenges: buildPracticeSession(challengeSet.challenges, seed, {
+                skillKind,
+                previousGrammarReviewSources,
+            }),
         }
     })
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -3072,7 +3186,11 @@ export default function PracticeRunner(props: Props) {
                                             seed,
                                             challenges: buildPracticeSession(
                                                 challengeSet.challenges,
-                                                seed
+                                                seed,
+                                                {
+                                                    skillKind,
+                                                    previousGrammarReviewSources,
+                                                }
                                             ),
                                         })
                                     }}

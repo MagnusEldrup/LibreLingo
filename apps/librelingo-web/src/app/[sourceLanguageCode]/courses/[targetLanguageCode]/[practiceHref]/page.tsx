@@ -33,8 +33,10 @@ export default async function SkillPracticePage({ params }: Props) {
             courseLanguageName={detail.course.languageName}
             moduleTitle={detail.module.title}
             skillTitle={detail.skill.title}
+            skillKind={detail.skill.kind}
             challengeSet={detail.challengeSet}
             moduleChallengePool={detail.moduleChallengePool}
+            previousGrammarReviewSources={detail.previousGrammarReviewSources}
             backUrl={backUrl}
         />
     )

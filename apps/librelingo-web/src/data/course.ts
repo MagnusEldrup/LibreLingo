@@ -175,6 +175,8 @@ export type SkillChallenge =
           rows: GrammarTableRow[]
           lessonSlides?: GrammarLessonSlide[]
           practiceRows?: GrammarTableRow[]
+          startInPractice?: boolean
+          pointValue?: number
       }
     | {
           type: 'freeWriting'
@@ -218,12 +220,19 @@ export type SkillChallengeFile = {
     challenges: SkillChallenge[]
 }
 
+export type GrammarReviewSource = {
+    practiceHref: string
+    title: string
+    challengeSet: SkillChallengeFile
+}
+
 export type SkillDetail = {
     course: CourseDetail
     module: CourseModule
     skill: CourseSkill
     challengeSet: SkillChallengeFile
     moduleChallengePool: SkillChallenge[]
+    previousGrammarReviewSources: GrammarReviewSource[]
 }
 
 function getFullJsonPath(jsonPath: string) {
@@ -437,6 +446,12 @@ export async function getSkillDetail(
 ): Promise<SkillDetail> {
     const courseId = await getCourseId(courseIdentity)
     const course = await getCourseDetail(courseId)
+    const orderedSkills = course.modules.flatMap((courseModule) =>
+        courseModule.skills.map((skill) => ({
+            module: courseModule,
+            skill,
+        }))
+    )
 
     for (const courseModule of course.modules) {
         const skill = courseModule.skills.find(
@@ -444,6 +459,13 @@ export async function getSkillDetail(
         )
 
         if (skill) {
+            const currentSkillIndex = orderedSkills.findIndex(
+                (entry) => entry.skill.practiceHref === practiceHref
+            )
+            const previousGrammarSkills = orderedSkills
+                .slice(0, currentSkillIndex)
+                .map((entry) => entry.skill)
+                .filter((candidateSkill) => candidateSkill.kind === 'grammar')
             const [challengeSet, moduleChallengeSets] = await Promise.all([
                 getCourseChallengeFileByJsonPath(courseId, practiceHref),
                 Promise.all(
@@ -455,6 +477,16 @@ export async function getSkillDetail(
                     )
                 ),
             ])
+            const previousGrammarReviewSources = await Promise.all(
+                previousGrammarSkills.map(async (grammarSkill) => ({
+                    practiceHref: grammarSkill.practiceHref,
+                    title: grammarSkill.title,
+                    challengeSet: await getCourseChallengeFileByJsonPath(
+                        courseId,
+                        grammarSkill.practiceHref
+                    ),
+                }))
+            )
 
             return {
                 course,
@@ -464,6 +496,7 @@ export async function getSkillDetail(
                 moduleChallengePool: moduleChallengeSets.flatMap(
                     (challengeFile) => challengeFile.challenges
                 ),
+                previousGrammarReviewSources,
             }
         }
     }
