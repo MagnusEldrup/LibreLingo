@@ -41,6 +41,8 @@ function SkillCard({
     const skillKind = skill.kind ?? 'standard'
     const isGrammarSkill = skillKind === 'grammar'
     const isHistorySkill = skillKind === 'history'
+    const isWriteSkill = skillKind === 'write'
+    const isConversationSkill = skillKind === 'conversation'
     let cardClasses = 'h-full border-[#bfd7f8] bg-white/95 shadow-sm'
     let moduleLabelClasses = 'text-[#4189dd]'
 
@@ -52,9 +54,17 @@ function SkillCard({
         cardClasses =
             'h-full border-[#caa25b] bg-[linear-gradient(180deg,#fff7e8_0%,#fffdf8_100%)] shadow-[0_18px_50px_-36px_rgba(202,162,91,0.55)]'
         moduleLabelClasses = 'text-[#8b5e1a]'
+    } else if (isWriteSkill) {
+        cardClasses =
+            'h-full border-[#4f8a62] bg-[linear-gradient(180deg,#ebf8ee_0%,#fbfefb_100%)] shadow-[0_18px_50px_-36px_rgba(79,138,98,0.55)]'
+        moduleLabelClasses = 'text-[#2f6b45]'
+    } else if (isConversationSkill) {
+        cardClasses =
+            'h-full border-[#8a5aa5] bg-[linear-gradient(180deg,#f7edff_0%,#fffafd_100%)] shadow-[0_18px_50px_-36px_rgba(138,90,165,0.45)]'
+        moduleLabelClasses = 'text-[#6b3d86]'
     }
 
-    const buttonVariant = isGrammarSkill ? 'default' : 'outline'
+    const buttonVariant = isGrammarSkill || isWriteSkill ? 'default' : 'outline'
 
     return (
         <Card className={cardClasses}>
@@ -72,6 +82,16 @@ function SkillCard({
                         {isHistorySkill && (
                             <div className="rounded-full bg-[#8b5e1a] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">
                                 History lesson
+                            </div>
+                        )}
+                        {isWriteSkill && (
+                            <div className="rounded-full bg-[#2f6b45] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">
+                                Writing studio
+                            </div>
+                        )}
+                        {isConversationSkill && (
+                            <div className="rounded-full bg-[#6b3d86] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">
+                                Conversation lab
                             </div>
                         )}
                     </div>

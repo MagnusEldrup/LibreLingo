@@ -78,6 +78,32 @@
         },
         {
           "summary": [
+            "Reply through a 4-turn Somali chat.",
+            "Hover the Somali line for an English hint.",
+            "Answer in Somali from the English cue.",
+            "Keep the exchange moving with greetings and introductions."
+          ],
+          "kind": "conversation",
+          "practiceHref": "first-conversation",
+          "id": "c43e921bf0ac",
+          "title": "Conversation: First Meeting",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Write 4 short Somali sentences for a first meeting.",
+            "Use a greeting, `magacaygu waa`, and `ka imi`.",
+            "Include one `waan` sentence and one `way` or `wuu` sentence.",
+            "Revise from draft feedback before the final grade."
+          ],
+          "kind": "write",
+          "practiceHref": "foundations-writing",
+          "id": "a13f54d229ab",
+          "title": "Write: Foundations Checkpoint",
+          "levels": 2
+        },
+        {
+          "summary": [
             "Soomaaliya ganacsi bay lahayd.",
             "Ganacsatadu xiriir bay la lahaayeen Masar.",
             "Ganacsatadu badda way mari jireen.",

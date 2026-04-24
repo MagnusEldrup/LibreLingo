@@ -1,0 +1,72 @@
+{
+  "id": "c43e921bf0ac",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "conversation",
+      "id": "fc-1",
+      "priority": 1,
+      "group": "first-meeting-chat",
+      "instruction": "Work through a short Somali chat inspired by the early dialogues in the course.",
+      "introductionLines": [
+        "Read the Somali message first.",
+        "Hover over the Somali line if you need the English meaning.",
+        "Then answer the English cue in Somali and keep the conversation moving."
+      ],
+      "placeholder": "Write a short Somali reply.",
+      "turns": [
+        {
+          "id": "fc-turn-1",
+          "partnerMessage": "Subax wanaagsan. Magacaygu waa Amina.",
+          "partnerMessageHint": "Good morning. My name is Amina.",
+          "englishReplyPrompt": "Greet Amina back and say your name is Yusuf.",
+          "expectedReplies": [
+            "Subax wanaagsan. Magacaygu waa Yusuf.",
+            "Subax wanaagsan, Amina. Magacaygu waa Yusuf."
+          ],
+          "sampleReply": "Subax wanaagsan, Amina. Magacaygu waa Yusuf."
+        },
+        {
+          "id": "fc-turn-2",
+          "partnerMessage": "Is ka warran? Xaggee baad ka timid?",
+          "partnerMessageHint": "How are you? Where did you come from?",
+          "englishReplyPrompt": "Say you are well and that you came from London.",
+          "expectedReplies": [
+            "Waa la fiicanyahay, mahadsanid. Landhan baan ka imi.",
+            "Waa nabad. Landhan baan ka imi."
+          ],
+          "sampleReply": "Waa la fiicanyahay, mahadsanid. Landhan baan ka imi."
+        },
+        {
+          "id": "fc-turn-3",
+          "partnerMessage": "Maanta xaggee baad tagaysaa?",
+          "partnerMessageHint": "Where are you going today?",
+          "englishReplyPrompt": "Say you are going today and that Amina is going home.",
+          "expectedReplies": [
+            "Waan tagayaa maanta. Way tagaysaa guriga.",
+            "Waan tagayaa maanta, way tagaysaa guriga."
+          ],
+          "sampleReply": "Waan tagayaa maanta. Way tagaysaa guriga."
+        },
+        {
+          "id": "fc-turn-4",
+          "partnerMessage": "Mahadsanid. Nabad gelyo.",
+          "partnerMessageHint": "Thank you. Goodbye.",
+          "englishReplyPrompt": "Say thank you and goodbye politely.",
+          "expectedReplies": [
+            "Mahadsanid. Nabad gelyo.",
+            "Waa yahay, nabad gelyo."
+          ],
+          "sampleReply": "Mahadsanid. Nabad gelyo."
+        }
+      ],
+      "gradingNotes": [
+        "Keep the learner moving through the dialogue even if the reply is imperfect.",
+        "Reward replies that fit the meaning and tone of the exchange.",
+        "Be lenient with punctuation and small spelling variation.",
+        "Keep corrections practical and phrase-level.",
+        "Stay within greetings, introductions, wellbeing, and basic present-tense patterns from the early foundations lessons."
+      ]
+    }
+  ]
+}

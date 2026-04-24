@@ -9,12 +9,14 @@ import LessonFeedback from '@/components/lesson-feedback'
 import LevelAvatar from '@/components/level-avatar'
 import LevelProgress from '@/components/level-progress'
 import type {
+    ConversationTurnFeedback,
     DefinitionToken,
     FreeWritingFeedback,
     GrammarLessonSlide,
     GrammarTableRow,
     SkillChallenge,
     SkillChallengeFile,
+    WriteFeedback,
 } from '@/data/course'
 import {
     summarizeStoredCourseProgress,
@@ -92,6 +94,31 @@ function isAnswerablePracticeChallenge(challenge: SkillChallenge) {
     if (challenge.type === 'freeWriting') {
         return challenge.promptLines.every(
             (promptLine) => !containsPromptPlaceholder(promptLine)
+        )
+    }
+
+    if (challenge.type === 'write') {
+        return (
+            challenge.promptLines.every(
+                (promptLine) => !containsPromptPlaceholder(promptLine)
+            ) &&
+            challenge.requirements.every((requirement) =>
+                requirement.expectedForms.every(
+                    (expectedForm) => !containsPromptPlaceholder(expectedForm)
+                )
+            )
+        )
+    }
+
+    if (challenge.type === 'conversation') {
+        return challenge.turns.every(
+            (turn) =>
+                !containsPromptPlaceholder(turn.partnerMessage) &&
+                !containsPromptPlaceholder(turn.partnerMessageHint) &&
+                !containsPromptPlaceholder(turn.englishReplyPrompt) &&
+                turn.expectedReplies.every(
+                    (expectedReply) => !containsPromptPlaceholder(expectedReply)
+                )
         )
     }
 
@@ -334,6 +361,8 @@ function getChallengeBasePoints(challenge: SkillChallenge) {
         shortInput: 8,
         grammarTable: 12,
         freeWriting: 0,
+        write: 0,
+        conversation: 0,
     } as const
 
     return pointMap[challenge.type]
@@ -368,6 +397,8 @@ function ChallengeTypeLabel({ challenge }: { challenge: SkillChallenge }) {
         shortInput: 'Short input',
         grammarTable: 'Grammar table',
         freeWriting: 'Writing feedback',
+        write: 'Write module',
+        conversation: 'Conversation chat',
     } as const
 
     return (
@@ -1496,6 +1527,650 @@ function FreeWritingChallengeView({
     )
 }
 
+function RequirementStatusBadge({
+    status,
+}: {
+    status: 'met' | 'partial' | 'missing'
+}) {
+    const toneClasses = {
+        met: 'bg-[#daf3e2] text-[#1e6c40]',
+        partial: 'bg-[#fff2d8] text-[#8b5e1a]',
+        missing: 'bg-[#ffe3e3] text-[#a3213a]',
+    } as const
+    const labelMap = {
+        met: 'Met',
+        partial: 'Almost there',
+        missing: 'Missing',
+    } as const
+
+    return (
+        <span
+            className={[
+                'rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em]',
+                toneClasses[status],
+            ].join(' ')}
+        >
+            {labelMap[status]}
+        </span>
+    )
+}
+
+function WriteFeedbackPanel({
+    title,
+    feedback,
+}: {
+    title: string
+    feedback: WriteFeedback
+}) {
+    return (
+        <div className="space-y-5 rounded-2xl border border-[#b7d4fb] bg-[#eef6ff] p-5">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-lg font-semibold text-[#2f6db8]">{title}</p>
+                {feedback.score !== undefined && (
+                    <span className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-[#1f5ea6] shadow-sm">
+                        Final grade {feedback.score}/5
+                    </span>
+                )}
+            </div>
+
+            <p className="text-slate-700">{feedback.summary}</p>
+
+            <div className="grid gap-4 md:grid-cols-2">
+                <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                        What worked
+                    </p>
+                    {feedback.strengths.length > 0 ? (
+                        <ul className="space-y-2 text-slate-700">
+                            {feedback.strengths.map((item) => (
+                                <li key={item}>- {item}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="text-slate-600">
+                            The draft communicated the main idea clearly.
+                        </p>
+                    )}
+                </div>
+
+                <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                        Next improvements
+                    </p>
+                    {feedback.improvements.length > 0 ? (
+                        <ul className="space-y-2 text-slate-700">
+                            {feedback.improvements.map((item) => (
+                                <li key={item}>- {item}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="text-slate-600">
+                            No major correction is needed. Keep the same structure.
+                        </p>
+                    )}
+                </div>
+            </div>
+
+            <div className="space-y-3 rounded-2xl bg-white p-4 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                    Requirement check
+                </p>
+                <div className="space-y-3">
+                    {feedback.requirementChecks.map((requirementCheck) => (
+                        <div
+                            key={requirementCheck.requirementId}
+                            className="rounded-2xl border border-[#dceafe] p-4"
+                        >
+                            <div className="flex flex-wrap items-center justify-between gap-3">
+                                <p className="font-semibold text-slate-900">
+                                    {requirementCheck.label}
+                                </p>
+                                <RequirementStatusBadge
+                                    status={requirementCheck.status}
+                                />
+                            </div>
+                            <p className="mt-2 text-sm leading-6 text-slate-600">
+                                {requirementCheck.feedback}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                    Suggested Somali revision
+                </p>
+                <p className="text-slate-900">{feedback.suggestedAnswer}</p>
+            </div>
+        </div>
+    )
+}
+
+function WriteChallengeView({
+    courseId,
+    moduleTitle,
+    lessonTitle,
+    practiceHref,
+    challenge,
+    answer,
+    setAnswer,
+    onComplete,
+}: {
+    courseId: string
+    moduleTitle: string
+    lessonTitle: string
+    practiceHref: string
+    challenge: Extract<SkillChallenge, { type: 'write' }>
+    answer: string
+    setAnswer: (value: string) => void
+    onComplete: (completion: ChallengeCompletion) => void
+}) {
+    const [draftFeedback, setDraftFeedback] = useState<WriteFeedback | undefined>()
+    const [finalFeedback, setFinalFeedback] = useState<WriteFeedback | undefined>()
+    const [requestError, setRequestError] = useState<string | undefined>()
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [lastRequestedStage, setLastRequestedStage] =
+        useState<'draft' | 'final'>('draft')
+
+    useEffect(() => {
+        setDraftFeedback(undefined)
+        setFinalFeedback(undefined)
+        setRequestError(undefined)
+        setIsSubmitting(false)
+        setLastRequestedStage('draft')
+    }, [challenge.id])
+
+    async function requestWriteFeedback(stage: 'draft' | 'final') {
+        if (normalizeText(answer).length === 0) {
+            return
+        }
+
+        setLastRequestedStage(stage)
+        setIsSubmitting(true)
+        setRequestError(undefined)
+
+        try {
+            const response = await fetch('/api/write-feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    courseId,
+                    practiceHref,
+                    challengeId: challenge.id,
+                    answer,
+                    stage,
+                }),
+            })
+            const payload = (await response.json()) as
+                | WriteFeedback
+                | { error?: string }
+
+            if (!response.ok) {
+                throw new Error(
+                    'error' in payload && payload.error
+                        ? payload.error
+                        : 'Unable to review this writing task right now.'
+                )
+            }
+
+            if ('refusal' in payload && payload.refusal) {
+                throw new Error(payload.refusal)
+            }
+
+            if (stage === 'draft') {
+                setDraftFeedback(payload as WriteFeedback)
+                return
+            }
+
+            setFinalFeedback(payload as WriteFeedback)
+        } catch (error) {
+            setRequestError(
+                error instanceof Error
+                    ? error.message
+                    : 'Unable to review this writing task right now.'
+            )
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
+
+    const isLocked = isSubmitting || finalFeedback !== undefined
+
+    return (
+        <div className="space-y-6">
+            <div className="space-y-3">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+                    {challenge.instruction}
+                </p>
+                <div className="space-y-3 rounded-2xl border border-[#c8dbfb] bg-[#f6faff] p-5">
+                    {challenge.promptLines.map((line) => (
+                        <p key={line} className="text-lg text-slate-900">
+                            {line}
+                        </p>
+                    ))}
+                </div>
+            </div>
+
+            <div className="space-y-3 rounded-2xl border border-[#d6e6fb] bg-white p-5">
+                <div className="space-y-1">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                        Required targets
+                    </p>
+                    <p className="text-sm text-slate-600">
+                        Use all five targets before you submit the final version.
+                    </p>
+                </div>
+                <div className="grid gap-3 md:grid-cols-2">
+                    {challenge.requirements.map((requirement) => (
+                        <div
+                            key={requirement.id}
+                            className="rounded-2xl border border-[#dceafe] bg-[#f8fbff] p-4"
+                        >
+                            <div className="flex flex-wrap items-center gap-2">
+                                <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#1f5ea6] ring-1 ring-[#d6e6fb]">
+                                    {requirement.kind === 'word'
+                                        ? 'Word'
+                                        : 'Structure'}
+                                </span>
+                                <p className="font-semibold text-slate-900">
+                                    {requirement.label}
+                                </p>
+                            </div>
+                            <p className="mt-2 text-sm leading-6 text-slate-600">
+                                {requirement.explanation}
+                            </p>
+                            <p className="mt-2 text-xs uppercase tracking-[0.16em] text-slate-500">
+                                Target forms: {requirement.expectedForms.join(' / ')}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div className="space-y-3">
+                <div className="space-y-1">
+                    <label className="text-sm font-medium text-slate-700">
+                        Your Somali draft
+                    </label>
+                    {draftFeedback && !finalFeedback && (
+                        <p className="text-sm text-slate-500">
+                            Revise your draft using the feedback, then submit the
+                            final version for a 1-5 grade.
+                        </p>
+                    )}
+                </div>
+                <textarea
+                    value={answer}
+                    disabled={isLocked}
+                    onChange={(event) => setAnswer(event.target.value)}
+                    placeholder={challenge.placeholder}
+                    rows={8}
+                    className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
+                />
+            </div>
+
+            {!draftFeedback && !finalFeedback && (
+                <Button
+                    disabled={isSubmitting || normalizeText(answer).length === 0}
+                    onClick={() => {
+                        void requestWriteFeedback('draft')
+                    }}
+                >
+                    {isSubmitting ? 'Reviewing draft...' : 'Get draft feedback'}
+                </Button>
+            )}
+
+            {requestError && (
+                <FeedbackPanel
+                    state="incorrect"
+                    message="Writing feedback is not available yet."
+                    supportingText={requestError}
+                    primaryLabel="Try again"
+                    onPrimary={() => {
+                        setRequestError(undefined)
+                        void requestWriteFeedback(lastRequestedStage)
+                    }}
+                    secondaryLabel="Keep editing"
+                    onSecondary={() => setRequestError(undefined)}
+                />
+            )}
+
+            {draftFeedback && !finalFeedback && (
+                <>
+                    <WriteFeedbackPanel
+                        title="Draft feedback"
+                        feedback={draftFeedback}
+                    />
+                    <div className="flex flex-wrap gap-3">
+                        <Button
+                            variant="outline"
+                            disabled={isSubmitting || normalizeText(answer).length === 0}
+                            onClick={() => {
+                                void requestWriteFeedback('draft')
+                            }}
+                        >
+                            {isSubmitting
+                                ? 'Refreshing feedback...'
+                                : 'Refresh draft feedback'}
+                        </Button>
+                        <Button
+                            disabled={isSubmitting || normalizeText(answer).length === 0}
+                            onClick={() => {
+                                void requestWriteFeedback('final')
+                            }}
+                        >
+                            {isSubmitting
+                                ? 'Scoring final version...'
+                                : 'Submit final version'}
+                        </Button>
+                    </div>
+                </>
+            )}
+
+            {finalFeedback && (
+                <div className="space-y-4">
+                    <WriteFeedbackPanel
+                        title="Final writing assessment"
+                        feedback={finalFeedback}
+                    />
+                    <div className="flex flex-wrap gap-3">
+                        <Button
+                            onClick={() =>
+                                onComplete({
+                                    solved: (finalFeedback.score ?? 0) >= 3,
+                                    firstTry: false,
+                                    attempts: 2,
+                                    points: (finalFeedback.score ?? 1) * 4,
+                                })
+                            }
+                        >
+                            Continue
+                        </Button>
+                    </div>
+                    <LessonFeedback
+                        courseId={courseId}
+                        moduleTitle={moduleTitle}
+                        lessonTitle={lessonTitle}
+                        practiceHref={practiceHref}
+                    />
+                </div>
+            )}
+        </div>
+    )
+}
+
+function ConversationFeedbackPanel({
+    feedback,
+}: {
+    feedback: ConversationTurnFeedback
+}) {
+    return (
+        <div className="space-y-4 rounded-2xl border border-[#b7d4fb] bg-[#eef6ff] p-5">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-lg font-semibold text-[#2f6db8]">
+                    Reply feedback
+                </p>
+                <span className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-[#1f5ea6] shadow-sm">
+                    {feedback.score}/5
+                </span>
+            </div>
+
+            <p className="text-slate-700">{feedback.summary}</p>
+
+            <div className="grid gap-4 md:grid-cols-2">
+                <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                        What worked
+                    </p>
+                    {feedback.strengths.length > 0 ? (
+                        <ul className="space-y-2 text-slate-700">
+                            {feedback.strengths.map((item) => (
+                                <li key={item}>- {item}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="text-slate-600">
+                            Your reply matched the conversation well enough to continue.
+                        </p>
+                    )}
+                </div>
+                <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                        Tighten this up
+                    </p>
+                    {feedback.improvements.length > 0 ? (
+                        <ul className="space-y-2 text-slate-700">
+                            {feedback.improvements.map((item) => (
+                                <li key={item}>- {item}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="text-slate-600">
+                            No major fix is needed before the next turn.
+                        </p>
+                    )}
+                </div>
+            </div>
+
+            <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                    Strong Somali reply
+                </p>
+                <p className="text-slate-900">{feedback.suggestedReply}</p>
+            </div>
+        </div>
+    )
+}
+
+function ConversationChallengeView({
+    challenge,
+    courseId,
+    practiceHref,
+    answer,
+    setAnswer,
+    onComplete,
+}: {
+    challenge: Extract<SkillChallenge, { type: 'conversation' }>
+    courseId: string
+    practiceHref: string
+    answer: string
+    setAnswer: (value: string) => void
+    onComplete: (completion: ChallengeCompletion) => void
+}) {
+    const [turnIndex, setTurnIndex] = useState(0)
+    const [turnFeedback, setTurnFeedback] =
+        useState<ConversationTurnFeedback | undefined>()
+    const [turnScores, setTurnScores] = useState<number[]>([])
+    const [requestError, setRequestError] = useState<string | undefined>()
+    const [isSubmitting, setIsSubmitting] = useState(false)
+
+    useEffect(() => {
+        setTurnIndex(0)
+        setTurnFeedback(undefined)
+        setTurnScores([])
+        setRequestError(undefined)
+        setIsSubmitting(false)
+    }, [challenge.id])
+
+    const currentTurn = challenge.turns[turnIndex]
+    const isLastTurn = turnIndex >= challenge.turns.length - 1
+    const isLocked = isSubmitting || turnFeedback !== undefined
+
+    async function submitReply() {
+        if (normalizeText(answer).length === 0) {
+            return
+        }
+
+        setIsSubmitting(true)
+        setRequestError(undefined)
+
+        try {
+            const response = await fetch('/api/conversation-feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    courseId,
+                    practiceHref,
+                    challengeId: challenge.id,
+                    turnId: currentTurn.id,
+                    answer,
+                }),
+            })
+            const payload = (await response.json()) as
+                | ConversationTurnFeedback
+                | { error?: string }
+
+            if (!response.ok) {
+                throw new Error(
+                    'error' in payload && payload.error
+                        ? payload.error
+                        : 'Unable to review this reply right now.'
+                )
+            }
+
+            if ('refusal' in payload && payload.refusal) {
+                throw new Error(payload.refusal)
+            }
+
+            setTurnFeedback(payload as ConversationTurnFeedback)
+        } catch (error) {
+            setRequestError(
+                error instanceof Error
+                    ? error.message
+                    : 'Unable to review this reply right now.'
+            )
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
+
+    function advanceConversation() {
+        if (!turnFeedback) {
+            return
+        }
+
+        const nextScores = [...turnScores, turnFeedback.score]
+
+        if (isLastTurn) {
+            const averageScore =
+                nextScores.reduce((sum, score) => sum + score, 0) /
+                Math.max(nextScores.length, 1)
+
+            onComplete({
+                solved: averageScore >= 3,
+                firstTry: false,
+                attempts: challenge.turns.length,
+                points: Math.round(averageScore * 3),
+            })
+            return
+        }
+
+        setTurnScores(nextScores)
+        setTurnIndex(turnIndex + 1)
+        setTurnFeedback(undefined)
+        setRequestError(undefined)
+        setAnswer('')
+    }
+
+    return (
+        <div className="space-y-6">
+            <div className="space-y-3">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+                    {challenge.instruction}
+                </p>
+                {challenge.introductionLines && challenge.introductionLines.length > 0 && (
+                    <div className="space-y-2 rounded-2xl border border-[#c8dbfb] bg-[#f6faff] p-5">
+                        {challenge.introductionLines.map((line) => (
+                            <p key={line} className="text-sm leading-6 text-slate-700">
+                                {line}
+                            </p>
+                        ))}
+                    </div>
+                )}
+            </div>
+
+            <div className="rounded-2xl border border-[#d6e6fb] bg-white p-5">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                        Somali message
+                    </p>
+                    <span className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                        Hover for meaning
+                    </span>
+                </div>
+                <p
+                    title={currentTurn.partnerMessageHint}
+                    className="mt-3 rounded-2xl bg-[#f8fbff] p-4 text-xl text-slate-900 underline decoration-dotted underline-offset-4"
+                >
+                    {currentTurn.partnerMessage}
+                </p>
+                <div className="mt-4 space-y-1">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                        Reply in Somali
+                    </p>
+                    <p className="text-base text-slate-700">
+                        {currentTurn.englishReplyPrompt}
+                    </p>
+                </div>
+            </div>
+
+            <div className="space-y-3">
+                <label className="text-sm font-medium text-slate-700">
+                    Your Somali reply
+                </label>
+                <textarea
+                    value={answer}
+                    disabled={isLocked}
+                    onChange={(event) => setAnswer(event.target.value)}
+                    placeholder={challenge.placeholder}
+                    rows={4}
+                    className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
+                />
+            </div>
+
+            {!turnFeedback && (
+                <Button
+                    disabled={isSubmitting || normalizeText(answer).length === 0}
+                    onClick={() => {
+                        void submitReply()
+                    }}
+                >
+                    {isSubmitting ? 'Checking reply...' : 'Send reply'}
+                </Button>
+            )}
+
+            {requestError && (
+                <FeedbackPanel
+                    state="incorrect"
+                    message="Conversation feedback is not available yet."
+                    supportingText={requestError}
+                    primaryLabel="Try again"
+                    onPrimary={() => {
+                        setRequestError(undefined)
+                        void submitReply()
+                    }}
+                    secondaryLabel="Keep editing"
+                    onSecondary={() => setRequestError(undefined)}
+                />
+            )}
+
+            {turnFeedback && (
+                <div className="space-y-4">
+                    <ConversationFeedbackPanel feedback={turnFeedback} />
+                    <Button onClick={advanceConversation}>
+                        {isLastTurn ? 'Complete conversation' : 'Next response'}
+                    </Button>
+                </div>
+            )}
+        </div>
+    )
+}
+
 function GrammarTableGrid({
     columnHeaders,
     rows,
@@ -2206,74 +2881,15 @@ export default function PracticeRunner(props: Props) {
         <main className="min-h-screen bg-[linear-gradient(180deg,#f2f7ff_0%,#e7f1ff_35%,#ffffff_100%)]">
             <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-10 md:px-8 md:py-14">
                 {topBar}
-                <div className="overflow-hidden rounded-[2rem] border border-[#bfd7f8] bg-white shadow-[0_24px_80px_-40px_rgba(65,137,221,0.45)]">
-                    <div className="grid gap-6 p-8 md:grid-cols-[minmax(0,1fr)_180px] md:items-center md:p-10">
-                        <div className="space-y-5">
-                            <div className="space-y-2">
-                                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#4189dd]">
-                                    {courseLanguageName} practice
-                                </p>
-                                <h1 className="text-5xl font-semibold text-slate-900">
-                                    {skillTitle}
-                                </h1>
-                            </div>
-                            <div className="grid gap-3 sm:grid-cols-4">
-                                <div className="rounded-2xl bg-[#eef6ff] p-4">
-                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                                        Session XP
-                                    </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
-                                        {sessionPoints}
-                                    </p>
-                                </div>
-                                <div className="rounded-2xl bg-[#eef6ff] p-4">
-                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                                        Combo streak
-                                    </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
-                                        {streak}
-                                    </p>
-                                </div>
-                                <div className="rounded-2xl bg-[#eef6ff] p-4">
-                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                                        Daily streak
-                                    </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
-                                        {courseProgress.currentDailyStreak}
-                                    </p>
-                                </div>
-                                <div className="rounded-2xl bg-[#eef6ff] p-4">
-                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                                        Today
-                                    </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
-                                        {courseProgress.todayCompletedChallenges}/
-                                        {courseProgress.dailyGoal}
-                                    </p>
-                                    <p className="mt-1 text-xs leading-5 text-slate-500">
-                                        {courseProgress.todayGoalReached
-                                            ? 'Qualified for today'
-                                            : 'Exercises needed for streak'}
-                                    </p>
-                                </div>
-                            </div>
-                            <LevelProgress totalPoints={courseProgress.totalPoints} />
-                        </div>
-
-                        <div className="flex justify-center md:justify-end">
-                            <LevelAvatar
-                                totalPoints={courseProgress.totalPoints}
-                                alt="Somali study avatar"
-                                width={220}
-                                height={220}
-                                className="max-w-[160px]"
-                                priority
-                            />
-                        </div>
-                    </div>
-                </div>
-
                 <div className="space-y-3">
+                    <div className="space-y-2">
+                        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#4189dd]">
+                            {courseLanguageName} practice
+                        </p>
+                        <h1 className="text-5xl font-semibold text-slate-900">
+                            {skillTitle}
+                        </h1>
+                    </div>
                     <div className="flex items-center justify-between text-sm text-slate-600">
                         <span>
                             Challenge {currentIndex + 1} of{' '}
@@ -2391,6 +3007,30 @@ export default function PracticeRunner(props: Props) {
                             />
                         )}
 
+                        {currentChallenge.type === 'write' && (
+                            <WriteChallengeView
+                                courseId={courseId}
+                                moduleTitle={moduleTitle}
+                                lessonTitle={skillTitle}
+                                practiceHref={practiceHref}
+                                challenge={currentChallenge}
+                                answer={textAnswer}
+                                setAnswer={setTextAnswer}
+                                onComplete={completeChallenge}
+                            />
+                        )}
+
+                        {currentChallenge.type === 'conversation' && (
+                            <ConversationChallengeView
+                                challenge={currentChallenge}
+                                courseId={courseId}
+                                practiceHref={practiceHref}
+                                answer={textAnswer}
+                                setAnswer={setTextAnswer}
+                                onComplete={completeChallenge}
+                            />
+                        )}
+
                         {shouldShowLessonFeedback && (
                             <LessonFeedback
                                 courseId={courseId}
@@ -2401,6 +3041,65 @@ export default function PracticeRunner(props: Props) {
                         )}
                     </CardContent>
                 </Card>
+
+                <div className="overflow-hidden rounded-[2rem] border border-[#bfd7f8] bg-white shadow-[0_24px_80px_-40px_rgba(65,137,221,0.45)]">
+                    <div className="grid gap-6 p-8 md:grid-cols-[minmax(0,1fr)_180px] md:items-center md:p-10">
+                        <div className="space-y-5">
+                            <div className="grid gap-3 sm:grid-cols-4">
+                                <div className="rounded-2xl bg-[#eef6ff] p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                        Session XP
+                                    </p>
+                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                        {sessionPoints}
+                                    </p>
+                                </div>
+                                <div className="rounded-2xl bg-[#eef6ff] p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                        Combo streak
+                                    </p>
+                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                        {streak}
+                                    </p>
+                                </div>
+                                <div className="rounded-2xl bg-[#eef6ff] p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                        Daily streak
+                                    </p>
+                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                        {courseProgress.currentDailyStreak}
+                                    </p>
+                                </div>
+                                <div className="rounded-2xl bg-[#eef6ff] p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                        Today
+                                    </p>
+                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                        {courseProgress.todayCompletedChallenges}/
+                                        {courseProgress.dailyGoal}
+                                    </p>
+                                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                                        {courseProgress.todayGoalReached
+                                            ? 'Qualified for today'
+                                            : 'Exercises needed for streak'}
+                                    </p>
+                                </div>
+                            </div>
+                            <LevelProgress totalPoints={courseProgress.totalPoints} />
+                        </div>
+
+                        <div className="flex justify-center md:justify-end">
+                            <LevelAvatar
+                                totalPoints={courseProgress.totalPoints}
+                                alt="Somali study avatar"
+                                width={220}
+                                height={220}
+                                className="max-w-[160px]"
+                                priority
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     )

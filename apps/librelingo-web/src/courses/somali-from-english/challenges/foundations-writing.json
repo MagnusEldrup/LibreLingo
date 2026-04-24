@@ -1,0 +1,77 @@
+{
+  "id": "a13f54d229ab",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "write",
+      "id": "fwc-1",
+      "priority": 1,
+      "group": "foundations-checkpoint",
+      "instruction": "Build a short Somali first-meeting introduction from the first five lessons.",
+      "promptLines": [
+        "Write 4 short Somali sentences for a first meeting.",
+        "Include a greeting, your name, where you came from, and two present-tense actions."
+      ],
+      "placeholder": "Example flow: greeting, name, origin, then one or two present-tense sentences.",
+      "requirements": [
+        {
+          "id": "req-greeting",
+          "label": "Greeting phrase",
+          "kind": "word",
+          "expectedForms": [
+            "subax wanaagsan",
+            "galab wanaagsan",
+            "habeen wanaagsan",
+            "maalin wanaagsan"
+          ],
+          "explanation": "Use one greeting phrase from the time-greetings lesson."
+        },
+        {
+          "id": "req-name",
+          "label": "`magacaygu waa`",
+          "kind": "word",
+          "expectedForms": [
+            "magacaygu waa"
+          ],
+          "explanation": "Introduce yourself with `magacaygu waa`."
+        },
+        {
+          "id": "req-origin",
+          "label": "Origin phrase",
+          "kind": "word",
+          "expectedForms": [
+            "baan ka imi",
+            "ayaan ka imi"
+          ],
+          "explanation": "Say where you came from with a phrase such as `Landhan baan ka imi`."
+        },
+        {
+          "id": "req-present-i",
+          "label": "First-person present tense",
+          "kind": "structure",
+          "expectedForms": [
+            "waan"
+          ],
+          "explanation": "Include one `waan` present-tense sentence such as `Waan tagayaa.`"
+        },
+        {
+          "id": "req-present-third",
+          "label": "Third-person present tense",
+          "kind": "structure",
+          "expectedForms": [
+            "way",
+            "wuu"
+          ],
+          "explanation": "Include one `way` or `wuu` present-tense sentence."
+        }
+      ],
+      "gradingNotes": [
+        "This task should recycle greetings, introductions, and present-tense markers from the first five skills.",
+        "Reward clear communication and successful use of the required targets.",
+        "Be lenient with punctuation, capitalization, and minor spelling variation.",
+        "For present-tense targets, check that the marker is used with a plausible present-tense form."
+      ],
+      "sampleAnswer": "Subax wanaagsan. Magacaygu waa Amina. Landhan baan ka imi. Waan tagayaa maanta, way tagaysaa guriga."
+    }
+  ]
+}

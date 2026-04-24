@@ -26,7 +26,7 @@ export type CourseSkill = {
     levels: number
     practiceHref: string
     summary: string[]
-    kind?: 'standard' | 'grammar' | 'history'
+    kind?: 'standard' | 'grammar' | 'history' | 'write' | 'conversation'
 }
 
 export type CourseModule = {
@@ -66,6 +66,8 @@ export type GrammarLessonSlide = {
 }
 
 export type FreeWritingPromptKind = 'translate' | 'guidedProduction'
+export type WritingRequirementKind = 'word' | 'structure'
+export type WritingRequirementStatus = 'met' | 'partial' | 'missing'
 
 export type FreeWritingFeedback = {
     score: number
@@ -73,6 +75,49 @@ export type FreeWritingFeedback = {
     strengths: string[]
     improvements: string[]
     suggestedAnswer: string
+    refusal?: string
+}
+
+export type WritingRequirement = {
+    id: string
+    label: string
+    kind: WritingRequirementKind
+    expectedForms: string[]
+    explanation: string
+}
+
+export type WritingRequirementCheck = {
+    requirementId: string
+    label: string
+    status: WritingRequirementStatus
+    feedback: string
+}
+
+export type WriteFeedback = {
+    score?: number
+    summary: string
+    strengths: string[]
+    improvements: string[]
+    requirementChecks: WritingRequirementCheck[]
+    suggestedAnswer: string
+    refusal?: string
+}
+
+export type ConversationTurn = {
+    id: string
+    partnerMessage: string
+    partnerMessageHint: string
+    englishReplyPrompt: string
+    expectedReplies: string[]
+    sampleReply?: string
+}
+
+export type ConversationTurnFeedback = {
+    score: number
+    summary: string
+    strengths: string[]
+    improvements: string[]
+    suggestedReply: string
     refusal?: string
 }
 
@@ -141,6 +186,29 @@ export type SkillChallenge =
           placeholder: string
           gradingNotes: string[]
           sampleAnswer?: string
+      }
+    | {
+          type: 'write'
+          id: string
+          priority: number
+          group: string
+          instruction: string
+          promptLines: string[]
+          placeholder: string
+          requirements: WritingRequirement[]
+          gradingNotes: string[]
+          sampleAnswer?: string
+      }
+    | {
+          type: 'conversation'
+          id: string
+          priority: number
+          group: string
+          instruction: string
+          introductionLines?: string[]
+          placeholder: string
+          turns: ConversationTurn[]
+          gradingNotes: string[]
       }
 
 export type SkillChallengeFile = {
