@@ -7,7 +7,7 @@
       "id": "pa-1",
       "priority": 1,
       "group": "past-tense-yimi",
-      "instruction": "Apply the Somali general past pattern for `yimi` (came). The explanation screens show how the verb itself changes, then practice uses new time and place cues.",
+      "instruction": "Learn how `yimi` changes in the Somali past tense, then answer mixed prompts one at a time.",
       "tableTitle": "Past tense of `yimi`",
       "columnHeaders": {
         "label": "Person",
@@ -81,11 +81,11 @@
         {
           "id": "pa-slide-1",
           "title": "The past form changes inside the verb",
-          "description": "Unlike the present-tense lesson, these examples are not mainly about a separate marker at the front. Pay attention to how the past verb itself shifts from one person to the next.",
+          "description": "Unlike the present tense, the main change is inside the past-tense verb itself. Read the examples aloud and notice which form matches each person.",
           "focusPoints": [
-            "`imi/imid` = I came",
-            "`timi/timid` is used for `you` and `she`",
-            "`yimi/yimid` marks `he`"
+            "Use `imi/imid` for `I came`",
+            "Use `timi/timid` for `you` and `she`",
+            "Use `yimi/yimid` for `he`"
           ],
           "rows": [
             {
@@ -129,11 +129,11 @@
         {
           "id": "pa-slide-2",
           "title": "Plural forms have their own endings",
-          "description": "The plural rows keep the same root idea but move to distinct plural endings. Read them as a set so the differences feel easier to notice.",
+          "description": "The plural forms use their own endings. Read them together so the differences feel easier to notice.",
           "focusPoints": [
-            "`nimi/nimid` = we came",
-            "`timaaddeen` = you all came",
-            "`yimaaddeen` = they came"
+            "Use `nimi/nimid` for `we came`",
+            "Use `timaaddeen` for `you all came`",
+            "Use `yimaaddeen` for `they came`"
           ],
           "rows": [
             {
@@ -166,11 +166,11 @@
         {
           "id": "pa-slide-3",
           "title": "Practice adds new context",
-          "description": "The next questions add words like `today`, `yesterday`, and place cues. That makes the learner produce the correct past form, not just remember a blank table.",
+          "description": "Now you will answer mixed prompts one by one. Keep the person in mind first, then build the full past-tense phrase.",
           "focusPoints": [
-            "Keep the person-person pattern in mind",
-            "Ignore the extra cue words until the past form is stable",
-            "Then build the full answer"
+            "Choose the correct past form for the person",
+            "Then add the extra cue words",
+            "Build the full answer after the core verb feels clear"
           ]
         }
       ],
@@ -179,6 +179,7 @@
           "id": "pa-practice-1",
           "label": "I",
           "prompt": "I came today.",
+          "rule": "Use `imi/imid` for the `I` form in this past-tense pattern.",
           "answers": [
             "imid maanta.",
             "imi maanta."
@@ -188,6 +189,7 @@
           "id": "pa-practice-2",
           "label": "You",
           "prompt": "You came early.",
+          "rule": "Use `timi/timid` for `you` in this past-tense pattern.",
           "answers": [
             "timid goor hore.",
             "timi goor hore."
@@ -197,6 +199,7 @@
           "id": "pa-practice-3",
           "label": "He",
           "prompt": "He came home.",
+          "rule": "Use `yimi/yimid` for `he` in this past-tense pattern.",
           "answers": [
             "yimid guriga.",
             "yimi guriga."
@@ -206,6 +209,7 @@
           "id": "pa-practice-4",
           "label": "She",
           "prompt": "She came yesterday.",
+          "rule": "Use `timi/timid` for `she` in this past-tense pattern.",
           "answers": [
             "timid shalay.",
             "timi shalay."
@@ -215,6 +219,7 @@
           "id": "pa-practice-5",
           "label": "We",
           "prompt": "We came here.",
+          "rule": "Use `nimi/nimid` for `we` in this past-tense pattern.",
           "answers": [
             "nimid halkan.",
             "nimi halkan."
@@ -224,6 +229,7 @@
           "id": "pa-practice-6",
           "label": "You all",
           "prompt": "You all came to school.",
+          "rule": "Use `timaaddeen` for `you all` in this past-tense pattern.",
           "answers": [
             "timaaddeen dugsiga."
           ]
@@ -232,6 +238,7 @@
           "id": "pa-practice-7",
           "label": "They",
           "prompt": "They came last night.",
+          "rule": "Use `yimaaddeen` for `they` in this past-tense pattern.",
           "answers": [
             "yimaaddeen xalay."
           ]

@@ -7,7 +7,7 @@
       "id": "pt-1",
       "priority": 1,
       "group": "present-tense-tag",
-      "instruction": "Apply the Somali present tense pattern for `tag-` to fresh prompts. The practice rows reuse the same person markers, but not the exact worked examples from the lesson screens.",
+      "instruction": "Learn the Somali present-tense markers for `tag-`, then answer mixed prompts one at a time.",
       "tableTitle": "Present tense of `tag-`",
       "columnHeaders": {
         "label": "Person",
@@ -86,12 +86,12 @@
         {
           "id": "pt-slide-1",
           "title": "Start with the singular markers",
-          "description": "In the affirmative present tense, Somali places a short subject marker before the verb. Read these four examples aloud and notice how the marker changes with the person.",
+          "description": "In the affirmative present tense, Somali puts a short subject marker before the verb. Read these examples aloud and notice which marker goes with each person.",
           "focusPoints": [
-            "`waan` = I",
-            "`waad` = you",
-            "`wuu` = he",
-            "`way` = she or they"
+            "Use `waan` with `I`",
+            "Use `waad` with `you`",
+            "Use `wuu` with `he`",
+            "Use `way` with `she` and often with `they`"
           ],
           "rows": [
             {
@@ -131,11 +131,11 @@
         {
           "id": "pt-slide-2",
           "title": "Plural forms add one important split",
-          "description": "The plural pattern keeps the same idea, but Somali distinguishes between inclusive and exclusive `we`. Learn that contrast before you practice.",
+          "description": "The plural forms follow the same idea, but Somali distinguishes between inclusive and exclusive `we`. Learn that contrast before you practise.",
           "focusPoints": [
             "`waynu` includes the person you are speaking to",
             "`waannu` excludes the person you are speaking to",
-            "`waydin` marks `you all`"
+            "Use `waydin` for `you all`"
           ],
           "rows": [
             {
@@ -177,11 +177,11 @@
         {
           "id": "pt-slide-3",
           "title": "Look for the pattern, not the sentence",
-          "description": "The goal is to recognize the subject marker and then build the full present-tense sentence. The next screen asks new questions so learners have to apply the pattern instead of copying a table.",
+          "description": "Now focus on the pattern rather than memorizing a whole table. In practice, you will answer mixed prompts one by one.",
           "focusPoints": [
-            "Marker first, then the present-tense verb form",
-            "The same idea works even when the cue changes",
-            "Practice rows use fresh wording"
+            "Start with the subject marker",
+            "Then add the present-tense verb form",
+            "Keep the same pattern even when the cue words change"
           ]
         }
       ],
@@ -190,6 +190,7 @@
           "id": "pt-practice-1",
           "label": "I",
           "prompt": "I am going today.",
+          "rule": "Use `waan` for `I`, then add the present-tense verb.",
           "answers": [
             "Waan tagayaa maanta."
           ]
@@ -198,6 +199,7 @@
           "id": "pt-practice-2",
           "label": "You",
           "prompt": "You are going now.",
+          "rule": "Use `waad` for `you`, then add the present-tense verb.",
           "answers": [
             "Waad tagaysaa hadda."
           ]
@@ -206,6 +208,7 @@
           "id": "pt-practice-3",
           "label": "He",
           "prompt": "He is going to the market.",
+          "rule": "Use `wuu` for `he`, then add the present-tense verb.",
           "answers": [
             "Wuu tagayaa suuqa."
           ]
@@ -214,6 +217,7 @@
           "id": "pt-practice-4",
           "label": "She",
           "prompt": "She is going home.",
+          "rule": "Use `way` for `she`, then add the present-tense verb.",
           "answers": [
             "Way tagaysaa guriga."
           ]
@@ -222,6 +226,7 @@
           "id": "pt-practice-5",
           "label": "We (including you)",
           "prompt": "We are going together, including you.",
+          "rule": "Use `waynu` when `we` includes the person you are speaking to.",
           "answers": [
             "Waynu wada tagaynaa.",
             "Waynu wada tagayna."
@@ -231,6 +236,7 @@
           "id": "pt-practice-6",
           "label": "We (not including you)",
           "prompt": "We are going together, not including you.",
+          "rule": "Use `waannu` when `we` does not include the person you are speaking to.",
           "answers": [
             "Waannu wada tagaynaa.",
             "Waannu wada tagayna."
@@ -240,6 +246,7 @@
           "id": "pt-practice-7",
           "label": "You all",
           "prompt": "You all are going to school.",
+          "rule": "Use `waydin` for `you all`, then add the present-tense verb.",
           "answers": [
             "Waydin tagaysaan dugsiga."
           ]
@@ -248,6 +255,7 @@
           "id": "pt-practice-8",
           "label": "They",
           "prompt": "They are going tomorrow.",
+          "rule": "Use `way` for `they` here, then add the plural present-tense verb.",
           "answers": [
             "Way tagayaan berri."
           ]

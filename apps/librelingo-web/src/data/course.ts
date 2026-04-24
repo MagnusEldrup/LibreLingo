@@ -55,6 +55,7 @@ export type GrammarTableRow = {
     label: string
     prompt: string
     answers: string[]
+    rule?: string
 }
 
 export type GrammarLessonSlide = {

@@ -7,7 +7,7 @@
       "id": "lp-1",
       "priority": 1,
       "group": "linking-patterns",
-      "instruction": "Apply the Somali linking chunks used in common sentence frames. The lesson screens explain what each chunk does before the practice rows switch to new cues.",
+      "instruction": "Learn these Somali linking chunks, then answer mixed prompts one at a time.",
       "tableTitle": "Linking patterns: `oo`, `inuu`, `ka`, `si uu u`",
       "columnHeaders": {
         "label": "Pattern",
@@ -61,11 +61,11 @@
         {
           "id": "lp-slide-1",
           "title": "These chunks glue ideas together",
-          "description": "Somali often uses short linking pieces that do a very specific job inside a larger sentence. Study the chunk and the full phrase together instead of memorizing the chunk in isolation.",
+          "description": "Somali often uses short linking pieces that do a specific job inside a larger sentence. Study the chunk and the full phrase together.",
           "focusPoints": [
-            "`oo` adds descriptive information",
-            "`inuu` introduces a clause like `that he ...`",
-            "`ka` often marks `from`"
+            "Use `oo` to add descriptive information",
+            "Use `inuu` for a clause like `that he ...`",
+            "Use `ka` to show `from`"
           ],
           "rows": [
             {
@@ -98,11 +98,11 @@
         {
           "id": "lp-slide-2",
           "title": "Purpose and movement need different connectors",
-          "description": "Some chunks show purpose, while others combine with a subject marker to show movement from somewhere. The practice screen will change the cue, but the connector still has to do the same job.",
+          "description": "Some chunks show purpose, while others combine with a subject marker to show movement from somewhere. In practice, the cue will change but the connector still does the same job.",
           "focusPoints": [
-            "`si uu u` means `so that he may ...`",
-            "`ayuu ka` is a common pattern in full sentences",
-            "Learn the function of the chunk before you recall it"
+            "Use `si uu u` for `so that he may ...`",
+            "Use `ayuu ka` in a full sentence for `he ... from ...`",
+            "Focus on what the chunk does in the sentence"
           ],
           "rows": [
             {
@@ -129,6 +129,7 @@
           "id": "lp-practice-1",
           "label": "oo",
           "prompt": "the woman who is called Caasha",
+          "rule": "Use `oo` to add descriptive information to the noun phrase.",
           "answers": [
             "naagta oo Caasha la yidhaahdo."
           ]
@@ -137,6 +138,7 @@
           "id": "lp-practice-2",
           "label": "inuu",
           "prompt": "that he arrived early",
+          "rule": "Use `inuu` for a clause meaning `that he ...`.",
           "answers": [
             "inuu goor hore yimid.",
             "inuu goor hore yimi."
@@ -146,6 +148,7 @@
           "id": "lp-practice-3",
           "label": "ka",
           "prompt": "I came from Mogadishu.",
+          "rule": "Use `ka` for `from`, with `baan` or `ayaan` for `I` in a full sentence.",
           "answers": [
             "Muqdisho baan ka imi.",
             "Muqdisho ayaan ka imi."
@@ -155,6 +158,7 @@
           "id": "lp-practice-4",
           "label": "si uu u",
           "prompt": "so that he may learn Somali",
+          "rule": "Use `si uu u` for `so that he may ...`.",
           "answers": [
             "si uu u barto Af-Soomaali."
           ]
@@ -163,6 +167,7 @@
           "id": "lp-practice-5",
           "label": "uu + ka",
           "prompt": "he came from Hargeisa.",
+          "rule": "Use `ayuu ka` in a full sentence for `he ... from ...`.",
           "answers": [
             "Hargeysa ayuu ka yimid.",
             "Hargaysa ayuu ka yimid."

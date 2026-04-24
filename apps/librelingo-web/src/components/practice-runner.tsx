@@ -2451,6 +2451,9 @@ function GrammarTableChallengeView({
 }) {
     const [phase, setPhase] = useState<'lesson' | 'practice'>('lesson')
     const [slideIndex, setSlideIndex] = useState(0)
+    const [practiceSeed, setPracticeSeed] = useState(() => createSessionSeed())
+    const [lastCheckedRowId, setLastCheckedRowId] = useState<string | undefined>()
+    const [showRuleFeedback, setShowRuleFeedback] = useState(false)
     const practiceRows = challenge.practiceRows ?? challenge.rows
     const lessonSlides: GrammarLessonSlide[] =
         challenge.lessonSlides && challenge.lessonSlides.length > 0
@@ -2460,11 +2463,11 @@ function GrammarTableChallengeView({
                       id: `${challenge.id}-overview`,
                       title: 'Read the pattern first',
                       description:
-                          'Study the examples before you answer. Look at how the Somali form changes by row, then switch into recall mode and apply the same idea from memory.',
+                          'Study the examples first. Notice what changes from one person or pattern to the next, then answer fresh prompts one at a time from memory.',
                       focusPoints: [
-                          'Read the worked example aloud once.',
-                          'Notice what changes from one row to the next.',
-                          'Practice starts after the lesson screens.',
+                          'Read each worked example aloud once.',
+                          'Notice the part that changes and the part that stays the same.',
+                          'Practice comes next, one prompt at a time.',
                       ],
                       rows: challenge.rows,
                   },
@@ -2472,36 +2475,30 @@ function GrammarTableChallengeView({
     const currentSlide = lessonSlides[slideIndex]
     const isLastSlide = slideIndex >= lessonSlides.length - 1
     const lockedRowSet = new Set(lockedRowIds)
-    const unresolvedRows = practiceRows.filter((row) => !lockedRowSet.has(row.id))
+    const orderedPracticeRows = shuffleWithSeed(
+        practiceRows,
+        `${challenge.id}-${practiceSeed}-grammar-practice`
+    )
+    const activeRow = orderedPracticeRows.find(
+        (row) => !lockedRowSet.has(row.id)
+    )
+    const activeAnswer = activeRow ? answers[activeRow.id] ?? '' : ''
     const canCheck =
-        unresolvedRows.length > 0 &&
-        unresolvedRows.every(
-            (row) => normalizeText(answers[row.id] ?? '').length > 0
-        )
+        activeRow !== undefined && normalizeText(activeAnswer).length > 0
     const isLocked = feedbackState === 'correct' || feedbackState === 'revealed'
+    const lastCheckedRow = lastCheckedRowId
+        ? practiceRows.find((row) => row.id === lastCheckedRowId)
+        : undefined
+
+    const correctRowCount = lockedRowIds.length
 
     useEffect(() => {
         setPhase('lesson')
         setSlideIndex(0)
+        setPracticeSeed(createSessionSeed())
+        setLastCheckedRowId(undefined)
+        setShowRuleFeedback(false)
     }, [challenge.id])
-
-    function getCorrectRowIds() {
-        return practiceRows
-            .filter((row) => {
-                if (lockedRowSet.has(row.id)) {
-                    return true
-                }
-
-                const normalizedAnswer = normalizeText(answers[row.id] ?? '')
-                return (
-                    normalizedAnswer.length > 0 &&
-                    matchesAcceptedAnswer(answers[row.id] ?? '', row.answers)
-                )
-            })
-            .map((row) => row.id)
-    }
-
-    const correctRowCount = lockedRowIds.length
 
     return (
         <div className="space-y-6">
@@ -2585,8 +2582,8 @@ function GrammarTableChallengeView({
                         </Button>
                         <p className="text-sm text-slate-600">
                             {isLastSlide
-                                ? `You will answer ${practiceRows.length} fresh prompts from memory, with correct rows locking in as you go.`
-                                : 'Move through the explanation before you switch into graded recall.'}
+                                ? `You will answer ${practiceRows.length} mixed prompts one at a time from memory.`
+                                : 'Read the pattern first, then start the practice prompts.'}
                         </p>
                     </div>
                 </div>
@@ -2594,52 +2591,134 @@ function GrammarTableChallengeView({
                 <div className="space-y-6">
                     <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-[#d6e6fb] bg-white px-5 py-4">
                         <p className="text-sm leading-6 text-slate-700">
-                            Fill the Somali column from memory. These prompts
-                            apply the pattern you just studied rather than
-                            replaying the lesson screen word for word, and
-                            correct rows stay locked so you can focus on the
-                            ones still in progress.
+                            Answer one Somali form at a time. The prompts are
+                            mixed, and if you miss one you will see the rule
+                            and the correct form before you try again.
                         </p>
                         <Button variant="outline" onClick={() => setPhase('lesson')}>
                             Review pattern
                         </Button>
                     </div>
 
-                    <GrammarTableGrid
-                        columnHeaders={challenge.columnHeaders}
-                        rows={practiceRows}
-                        answers={answers}
-                        lockedRowIds={lockedRowIds}
-                        feedbackState={feedbackState}
-                        editable={!isLocked}
-                        onAnswerChange={(rowId, value) =>
-                            setAnswers({
-                                ...answers,
-                                [rowId]: value,
-                            })
-                        }
-                    />
+                    {activeRow && (
+                        <div className="space-y-5 rounded-2xl border border-[#d6e6fb] bg-white p-5">
+                            <div className="flex flex-wrap items-center justify-between gap-3">
+                                <div>
+                                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                        Prompt {correctRowCount + 1} of {practiceRows.length}
+                                    </p>
+                                    <p className="mt-1 text-sm text-slate-600">
+                                        Correct so far: {correctRowCount}/{practiceRows.length}
+                                    </p>
+                                </div>
+                                <span className="rounded-full bg-[#eef6ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#215b9e]">
+                                    {activeRow.label}
+                                </span>
+                            </div>
+
+                            <div className="grid gap-4 md:grid-cols-[140px_minmax(0,1fr)]">
+                                <div className="rounded-2xl bg-[#f8fbff] p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                        {challenge.columnHeaders.label}
+                                    </p>
+                                    <p className="mt-2 text-lg font-semibold text-slate-900">
+                                        {activeRow.label}
+                                    </p>
+                                </div>
+                                <div className="rounded-2xl bg-[#f8fbff] p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                        {challenge.columnHeaders.prompt}
+                                    </p>
+                                    <p className="mt-2 text-lg text-slate-900">
+                                        {activeRow.prompt}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="space-y-3">
+                                <label className="text-sm font-medium text-slate-700">
+                                    {challenge.columnHeaders.answer}
+                                </label>
+                                <input
+                                    value={activeAnswer}
+                                    disabled={isLocked}
+                                    onChange={(event) =>
+                                        setAnswers({
+                                            ...answers,
+                                            [activeRow.id]: event.target.value,
+                                        })
+                                    }
+                                    placeholder="Type the Somali form"
+                                    className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
+                                />
+                            </div>
+
+                            {showRuleFeedback && lastCheckedRow && (
+                                <div className="space-y-4 rounded-2xl border border-rose-200 bg-rose-50 p-5">
+                                    <p className="text-lg font-semibold text-rose-800">
+                                        Not quite yet.
+                                    </p>
+                                    <div className="space-y-2">
+                                        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-rose-700">
+                                            Correct form
+                                        </p>
+                                        <p className="text-slate-900">
+                                            {lastCheckedRow.answers.join(' / ')}
+                                        </p>
+                                    </div>
+                                    {lastCheckedRow.rule && (
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-rose-700">
+                                                Rule reminder
+                                            </p>
+                                            <p className="text-slate-700">
+                                                {lastCheckedRow.rule}
+                                            </p>
+                                        </div>
+                                    )}
+                                    <p className="text-sm text-slate-600">
+                                        Update your answer above, then check it again.
+                                    </p>
+                                </div>
+                            )}
+                        </div>
+                    )}
 
                     {feedbackState === undefined && (
                         <Button
                             disabled={!canCheck}
                             onClick={() => {
-                                const nextLockedRowIds = getCorrectRowIds()
-
-                                if (
-                                    nextLockedRowIds.length === practiceRows.length
-                                ) {
-                                    setLockedRowIds(nextLockedRowIds)
-                                    setFeedbackState('correct')
+                                if (!activeRow) {
                                     return
                                 }
 
-                                setLockedRowIds(nextLockedRowIds)
-                                setFeedbackState('incorrect')
+                                setLastCheckedRowId(activeRow.id)
+
+                                if (
+                                    matchesAcceptedAnswer(
+                                        activeAnswer,
+                                        activeRow.answers
+                                    )
+                                ) {
+                                    const nextLockedRowIds = Array.from(
+                                        new Set([...lockedRowIds, activeRow.id])
+                                    )
+
+                                    setLockedRowIds(nextLockedRowIds)
+                                    setShowRuleFeedback(false)
+
+                                    if (nextLockedRowIds.length === practiceRows.length) {
+                                        setFeedbackState('correct')
+                                    }
+
+                                    return
+                                }
+
+                                setShowRuleFeedback(true)
                                 setAttemptCount(attemptCount + 1)
                             }}
                         >
-                            Check table
+                            Check answer
                         </Button>
                     )}
 
@@ -2658,29 +2737,6 @@ function GrammarTableChallengeView({
                                     ),
                                 })
                             }
-                        />
-                    )}
-
-                    {feedbackState === 'incorrect' && (
-                        <FeedbackPanel
-                            state="incorrect"
-                            message="Some rows still need work."
-                            supportingText={`${correctRowCount} of ${practiceRows.length} rows are locked in. Update the remaining Somali forms or reveal the full table.`}
-                            primaryLabel="Reveal table"
-                            onPrimary={() => {
-                                setLockedRowIds(practiceRows.map((row) => row.id))
-                                setAnswers(
-                                    Object.fromEntries(
-                                        practiceRows.map((row) => [
-                                            row.id,
-                                            row.answers[0],
-                                        ])
-                                    )
-                                )
-                                setFeedbackState('revealed')
-                            }}
-                            secondaryLabel="Keep editing"
-                            onSecondary={() => setFeedbackState(undefined)}
                         />
                     )}
 
