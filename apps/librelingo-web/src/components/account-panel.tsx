@@ -184,7 +184,7 @@ export default function AccountPanel({ redirectAfterAuth }: Props) {
 
     if (user) {
         return (
-            <div className="flex flex-col gap-4 rounded-3xl border border-[#bfd7f8] bg-white/90 p-5 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col gap-4 rounded-3xl border border-[#bfd7f8] bg-white/90 p-4 sm:p-5 md:flex-row md:items-center md:justify-between">
                 <div>
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#4189dd]">
                         Account
@@ -201,12 +201,13 @@ export default function AccountPanel({ redirectAfterAuth }: Props) {
                         </p>
                     )}
                 </div>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
                     <Button
                         type="button"
                         variant="outline"
                         onClick={syncNow}
                         disabled={isSubmitting}
+                        className="w-full sm:w-auto"
                     >
                         Sync now
                     </Button>
@@ -215,6 +216,7 @@ export default function AccountPanel({ redirectAfterAuth }: Props) {
                         variant="ghost"
                         onClick={logout}
                         disabled={isSubmitting}
+                        className="w-full sm:w-auto"
                     >
                         Sign out
                     </Button>
@@ -224,7 +226,7 @@ export default function AccountPanel({ redirectAfterAuth }: Props) {
     }
 
     return (
-        <div className="rounded-3xl border border-[#bfd7f8] bg-white/90 p-5">
+        <div className="rounded-3xl border border-[#bfd7f8] bg-white/90 p-4 sm:p-5">
             <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <div>
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#4189dd]">
@@ -234,10 +236,10 @@ export default function AccountPanel({ redirectAfterAuth }: Props) {
                         Register first, then sign in from any device
                     </p>
                 </div>
-                <div className="flex rounded-full bg-[#eef6ff] p-1">
+                <div className="grid w-full grid-cols-2 rounded-full bg-[#eef6ff] p-1 sm:w-auto">
                     <button
                         type="button"
-                        className={`rounded-full px-4 py-2 text-sm font-semibold ${
+                        className={`rounded-full px-3 py-2 text-sm font-semibold sm:px-4 ${
                             mode === 'login'
                                 ? 'bg-white text-[#1f5ea6] shadow-sm'
                                 : 'text-slate-600'
@@ -248,7 +250,7 @@ export default function AccountPanel({ redirectAfterAuth }: Props) {
                     </button>
                     <button
                         type="button"
-                        className={`rounded-full px-4 py-2 text-sm font-semibold ${
+                        className={`rounded-full px-3 py-2 text-sm font-semibold sm:px-4 ${
                             mode === 'register'
                                 ? 'bg-white text-[#1f5ea6] shadow-sm'
                                 : 'text-slate-600'
@@ -260,7 +262,10 @@ export default function AccountPanel({ redirectAfterAuth }: Props) {
                 </div>
             </div>
 
-            <form className="grid gap-3 md:grid-cols-[1fr_1fr_auto]" onSubmit={submitAuth}>
+            <form
+                className="grid gap-4 md:grid-cols-[1fr_1fr_auto]"
+                onSubmit={submitAuth}
+            >
                 <label className="space-y-2 text-sm font-medium text-slate-700">
                     Email
                     <input

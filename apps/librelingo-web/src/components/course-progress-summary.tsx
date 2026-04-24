@@ -61,9 +61,9 @@ export default function CourseProgressSummary(props: Props) {
         : `${summary.todayCompletedChallenges}/${summary.dailyGoal} exercises today to keep your streak going.`
 
     return (
-        <div className="space-y-4 text-sm leading-7 text-slate-700">
-            <div className="grid gap-4 lg:grid-cols-[160px_minmax(0,1fr)]">
-                <div className="rounded-[1.75rem] bg-white/80 p-4">
+        <div className="space-y-3 text-sm leading-7 text-slate-700 sm:space-y-4">
+            <div className="grid gap-3 lg:grid-cols-[160px_minmax(0,1fr)] sm:gap-4">
+                <div className="rounded-[1.5rem] bg-white/80 p-3 sm:rounded-[1.75rem] sm:p-4">
                     <LevelAvatar
                         totalPoints={summary.totalPoints}
                         alt="Course progress avatar"
@@ -72,16 +72,16 @@ export default function CourseProgressSummary(props: Props) {
                         className="mx-auto max-w-[120px]"
                     />
                 </div>
-                <div className="rounded-[1.75rem] bg-white/80 p-5">
+                <div className="rounded-[1.5rem] bg-white/80 p-4 sm:rounded-[1.75rem] sm:p-5">
                     <LevelProgress totalPoints={summary.totalPoints} />
                 </div>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
                 <div className="rounded-2xl bg-white/80 p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                         Course title
                     </p>
-                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                         {levelProgress.title}
                     </p>
                 </div>
@@ -89,7 +89,7 @@ export default function CourseProgressSummary(props: Props) {
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                         Accuracy
                     </p>
-                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                         {summary.overallAccuracy}%
                     </p>
                 </div>
@@ -97,7 +97,7 @@ export default function CourseProgressSummary(props: Props) {
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                         Skills played
                     </p>
-                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                         {summary.totalSkillsTracked}
                     </p>
                 </div>
@@ -105,7 +105,7 @@ export default function CourseProgressSummary(props: Props) {
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                         Daily streak
                     </p>
-                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                         {summary.currentDailyStreak}
                     </p>
                     <p className="mt-1 text-xs leading-5 text-slate-500">
@@ -115,7 +115,7 @@ export default function CourseProgressSummary(props: Props) {
                 </div>
             </div>
 
-            <p>
+            <p className="text-sm leading-6 sm:text-base sm:leading-7">
                 {hasProgress
                     ? `You have completed ${summary.completedRuns} run${summary.completedRuns === 1 ? '' : 's'} across ${summary.completedSkills} finished skill${summary.completedSkills === 1 ? '' : 's'} and reached the title ${levelProgress.title}. ${todayProgressLabel}`
                     : `No saved progress yet. Start a skill to begin tracking your overall course XP, accuracy, and daily streak. ${todayProgressLabel}`}

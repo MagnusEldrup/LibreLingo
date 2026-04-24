@@ -69,11 +69,11 @@ function SkillCard({
     return (
         <Card className={cardClasses}>
             <CardHeader className="space-y-3">
-                <div className="flex items-start justify-between gap-4">
-                    <CardTitle className="text-xl text-slate-900">
+                <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <CardTitle className="text-lg text-slate-900 sm:text-xl">
                         {skill.title}
                     </CardTitle>
-                    <div className="flex flex-col items-end gap-2">
+                    <div className="flex flex-wrap items-start gap-2 self-start sm:flex-col sm:items-end">
                         {isGrammarSkill && (
                             <div className="rounded-full bg-[#0f4f97] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">
                                 Grammar lesson
@@ -179,11 +179,11 @@ function HeadlineOnlyModule({
     isFirstLockedModule: boolean
 }) {
     return (
-        <section className="rounded-3xl border border-dashed border-[#cfe0f7] bg-white/70 px-6 py-5">
+        <section className="rounded-3xl border border-dashed border-[#cfe0f7] bg-white/70 px-4 py-4 sm:px-6 sm:py-5">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div className="space-y-2">
                     <div className="flex flex-wrap items-center gap-2">
-                        <h2 className="text-2xl font-semibold text-slate-900">
+                        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                             {module.title}
                         </h2>
                         <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
@@ -235,7 +235,7 @@ function ExpandedModule({
             <div className="flex flex-col gap-3 border-b border-[#d6e6fb] pb-3 md:flex-row md:items-end md:justify-between">
                 <div className="space-y-2">
                     <div className="flex flex-wrap items-center gap-2">
-                        <h2 className="text-3xl font-semibold text-slate-900">
+                        <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">
                             {module.title}
                         </h2>
                         {meta.isCompleted && (
@@ -256,7 +256,7 @@ function ExpandedModule({
                 </div>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
                 {module.skills.map((skill) => (
                     <SkillCard
                         key={skill.id}
