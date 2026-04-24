@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import LessonFeedback from '@/components/lesson-feedback'
 import LevelAvatar from '@/components/level-avatar'
 import LevelProgress from '@/components/level-progress'
 import type {
@@ -1179,6 +1180,8 @@ function ShortInputChallengeView({
 
 function FreeWritingChallengeView({
     courseId,
+    moduleTitle,
+    lessonTitle,
     practiceHref,
     challenge,
     answer,
@@ -1186,6 +1189,8 @@ function FreeWritingChallengeView({
     onComplete,
 }: {
     courseId: string
+    moduleTitle: string
+    lessonTitle: string
     practiceHref: string
     challenge: Extract<SkillChallenge, { type: 'freeWriting' }>
     answer: string
@@ -1478,6 +1483,13 @@ function FreeWritingChallengeView({
                             </Button>
                         </div>
                     )}
+
+                    <LessonFeedback
+                        courseId={courseId}
+                        moduleTitle={moduleTitle}
+                        lessonTitle={lessonTitle}
+                        practiceHref={practiceHref}
+                    />
                 </div>
             )}
         </div>
@@ -1848,6 +1860,7 @@ function GrammarTableChallengeView({
                             }
                         />
                     )}
+
                 </div>
             )}
         </div>
@@ -2185,6 +2198,9 @@ export default function PracticeRunner(props: Props) {
         currentChallenge.type === 'cards'
             ? getCardDirection(currentChallenge.id, sessionState.seed)
             : 'sourceToTarget'
+    const shouldShowLessonFeedback =
+        currentChallenge.type !== 'freeWriting' &&
+        (feedbackState === 'correct' || feedbackState === 'revealed')
 
     return (
         <main className="min-h-screen bg-[linear-gradient(180deg,#f2f7ff_0%,#e7f1ff_35%,#ffffff_100%)]">
@@ -2365,11 +2381,22 @@ export default function PracticeRunner(props: Props) {
                         {currentChallenge.type === 'freeWriting' && (
                             <FreeWritingChallengeView
                                 courseId={courseId}
+                                moduleTitle={moduleTitle}
+                                lessonTitle={skillTitle}
                                 practiceHref={practiceHref}
                                 challenge={currentChallenge}
                                 answer={textAnswer}
                                 setAnswer={setTextAnswer}
                                 onComplete={completeChallenge}
+                            />
+                        )}
+
+                        {shouldShowLessonFeedback && (
+                            <LessonFeedback
+                                courseId={courseId}
+                                moduleTitle={moduleTitle}
+                                lessonTitle={skillTitle}
+                                practiceHref={practiceHref}
                             />
                         )}
                     </CardContent>

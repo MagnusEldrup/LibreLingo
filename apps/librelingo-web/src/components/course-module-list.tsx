@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import SkillProgressSummary from '@/components/skill-progress-summary'
-import LessonFeedback from '@/components/lesson-feedback'
 import { cn } from '@/lib/utils'
 import {
     getProgressEventName,
@@ -31,13 +30,11 @@ function SkillCard({
     courseId,
     sourceLanguageCode,
     targetLanguageCode,
-    moduleTitle,
     skill,
 }: {
     courseId: string
     sourceLanguageCode: string
     targetLanguageCode: string
-    moduleTitle: string
     skill: CourseSkill
 }) {
     const practiceUrl = `/${sourceLanguageCode}/courses/${targetLanguageCode}/${skill.practiceHref}`
@@ -105,12 +102,6 @@ function SkillCard({
                 >
                     <Link href={practiceUrl}>Open practice</Link>
                 </Button>
-                <LessonFeedback
-                    courseId={courseId}
-                    moduleTitle={moduleTitle}
-                    lessonTitle={skill.title}
-                    practiceHref={skill.practiceHref}
-                />
             </CardContent>
         </Card>
     )
@@ -252,7 +243,6 @@ function ExpandedModule({
                         courseId={courseId}
                         sourceLanguageCode={sourceLanguageCode}
                         targetLanguageCode={targetLanguageCode}
-                        moduleTitle={module.title}
                         skill={skill}
                     />
                 ))}
