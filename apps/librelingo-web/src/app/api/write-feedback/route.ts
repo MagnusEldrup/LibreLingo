@@ -194,12 +194,21 @@ function buildPrompt(
         'Return exactly one requirementChecks item for each requirement id.',
         'Each requirement check must keep the same requirementId and label from the prompt.',
         'Use status=met when the target is clearly present, partial when it is attempted but inaccurate, and missing when it is absent.',
+        'Prioritize grammatical correctness and understandability over spelling perfection.',
         'Strengths rule: return at most 2 specific points.',
         'Improvements rule: return at most 3 concrete corrections.',
         'Do not invent problems just to fill the list.',
+        'If a minor spelling issue does not block understanding, do not mention it in improvements and do not lower the score just for that.',
+        'Treat errors in markers, sentence structure, agreement, tense, and meaning as more important than tiny spelling slips.',
+        'When the main issue is a Somali pattern choice, explain the rule briefly in plain English instead of only giving a corrected sentence.',
+        'If a contrast like `waan` versus `baan` is the real issue, mention that contrast directly and explain which structure fits the learner meaning.',
+        'Prefer one high-impact grammar correction over multiple low-impact spelling notes.',
         stage === 'draft'
             ? 'Draft rule: score must be null.'
             : 'Final rule: score must be an integer from 1 to 5.',
+        stage === 'draft'
+            ? 'Draft scoring guidance: focus feedback on the most important grammar or requirement gaps first.'
+            : 'Final scoring guide: use 4-5 when the answer is understandable and mostly grammatical, 3 when the meaning is clear but there is a notable grammar issue, and 1-2 only when the answer is hard to understand or misses the task.',
     ].join('\n')
 }
 
@@ -263,9 +272,12 @@ export async function POST(request: Request) {
                 'You are a warm Somali writing tutor for beginners.',
                 'Review structured Somali writing tasks that have explicit vocabulary and grammar targets.',
                 'Reward communicative success and correct use of current-course vocabulary.',
+                'Focus on whether the Somali is grammatical and understandable, not on spelling perfection.',
                 'Be lenient on punctuation, doubled letters, and minor spelling variation.',
+                'Do not nitpick minor spelling if the intended Somali is still clear.',
                 'Keep all feedback brief, practical, and encouraging.',
                 'When a target is nearly right, mark it partial instead of missing.',
+                'When a learner uses the wrong Somali structure, briefly explain the grammar pattern that should be used.',
                 'Only mention real issues you can justify from the learner answer.',
             ].join(' '),
             input: buildPrompt(challenge, answer, stage),

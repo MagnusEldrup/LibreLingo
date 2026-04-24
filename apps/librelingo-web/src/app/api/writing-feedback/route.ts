@@ -90,6 +90,7 @@ function buildPrompt(
         'Return a JSON object only.',
         'Write summary, strengths, and improvements in English.',
         'Write suggestedAnswer in Somali.',
+        'Prioritize grammatical correctness and understandability over spelling perfection.',
         'Strengths rule: return at most 1 specific, non-redundant point.',
         'Improvements rule: return 0-2 targeted corrections only.',
         'Each improvement must point to a concrete word, phrase, or structure in the learner answer and say what to change.',
@@ -97,6 +98,12 @@ function buildPrompt(
         'If the answer is already very good, improvements may be an empty array or one tiny polish point.',
         'Avoid generic praise like repeating that the answer was clear in multiple ways.',
         'Prefer corrections like "use X instead of Y" over abstract advice.',
+        'If a minor spelling issue does not block understanding, do not mention it in improvements and do not lower the score just for that.',
+        'Treat errors in markers, sentence structure, agreement, tense, and meaning as more important than tiny spelling slips.',
+        'When the main issue is a Somali pattern choice, explain the rule briefly in plain English instead of only giving a corrected sentence.',
+        'If a contrast like `waan` versus `baan` is the real issue, mention that contrast directly and explain which structure fits the learner meaning.',
+        'Prefer one high-impact grammar correction over multiple low-impact spelling notes.',
+        'Scoring guide: use 4-5 when the answer is understandable and mostly grammatical, 3 when the meaning is clear but there is a notable grammar issue, and 1-2 only when the answer is hard to understand or misses the task.',
     ].join('\n')
 }
 
@@ -156,8 +163,11 @@ export async function POST(request: Request) {
                 'You are a warm Somali writing tutor for beginners.',
                 'Grade beginner Somali writing on a 1-5 scale.',
                 'Reward communicative success and correct use of current-module vocabulary.',
+                'Focus on whether the Somali is grammatical and understandable, not on spelling perfection.',
                 'Be lenient on punctuation, doubled letters, and minor spelling variation.',
+                'Do not nitpick minor spelling if the intended Somali is still clear.',
                 'Do not punish beginner grammar too harshly if meaning is clear.',
+                'When a learner uses the wrong Somali structure, briefly explain the grammar pattern that should be used.',
                 'Keep all feedback brief, practical, and encouraging.',
                 'Only mention real issues you can justify from the learner answer.',
                 'When giving corrections, be concrete and phrase-level.',

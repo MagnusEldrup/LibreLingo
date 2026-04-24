@@ -372,19 +372,67 @@ function getChallengeScore(challenge: SkillChallenge, attempts: number) {
     return Math.max(getChallengeBasePoints(challenge) - (attempts - 1) * 2, 2)
 }
 
+function MeaningTooltip({
+    text,
+    meaning,
+    className = '',
+    tooltipClassName = '',
+    align = 'center',
+}: {
+    text: string
+    meaning: string
+    className?: string
+    tooltipClassName?: string
+    align?: 'center' | 'left'
+}) {
+    const tooltipPositionClasses =
+        align === 'left' ? 'left-0' : 'left-1/2 -translate-x-1/2'
+
+    return (
+        <span className="group/meaning relative inline-flex max-w-full">
+            <button
+                type="button"
+                className={className}
+                aria-label={`${text}. Meaning: ${meaning}`}
+            >
+                {text}
+            </button>
+            <span
+                role="tooltip"
+                className={[
+                    'pointer-events-none absolute top-full z-20 mt-3 hidden w-max max-w-[min(22rem,calc(100vw-3rem))] rounded-2xl bg-slate-900 px-4 py-3 text-left text-sm leading-6 text-white shadow-[0_18px_50px_-24px_rgba(15,23,42,0.95)]',
+                    tooltipPositionClasses,
+                    'group-hover/meaning:block group-focus-within/meaning:block',
+                    tooltipClassName,
+                ].join(' ')}
+            >
+                <span className="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-300">
+                    Meaning
+                </span>
+                <span className="mt-1 block">{meaning}</span>
+            </span>
+        </span>
+    )
+}
+
 function DefinitionRow({ tokens }: { tokens: DefinitionToken[] }) {
     return (
-        <div className="flex flex-wrap gap-3 rounded-2xl border border-[#c8dbfb] bg-[#f6faff] p-4">
-            {tokens.map((token) => (
-                <div
-                    key={`${token.word}-${token.definition}`}
-                    className="rounded-xl bg-white px-4 py-3 shadow-sm"
-                >
-                    <p className="text-sm font-semibold text-slate-900">
-                        {token.word}
-                    </p>
-                </div>
-            ))}
+        <div className="space-y-3 rounded-2xl border border-[#c8dbfb] bg-[#f6faff] p-4">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                    Hover or tap for meaning
+                </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+                {tokens.map((token) => (
+                    <MeaningTooltip
+                        key={`${token.word}-${token.definition}`}
+                        text={token.word}
+                        meaning={token.definition}
+                        className="rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-[#edf5ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4189dd] focus-visible:ring-offset-2"
+                    />
+                ))}
+            </div>
         </div>
     )
 }
@@ -1965,6 +2013,100 @@ function ConversationFeedbackPanel({
     )
 }
 
+type ConversationTranscriptTurn = {
+    turnId: string
+    partnerMessage: string
+    partnerMessageHint: string
+    learnerReply: string
+}
+
+function ConversationTranscript({
+    turns,
+    currentTurn,
+    currentAnswer,
+}: {
+    turns: ConversationTranscriptTurn[]
+    currentTurn: Extract<SkillChallenge, { type: 'conversation' }>['turns'][number]
+    currentAnswer: string
+}) {
+    const trimmedCurrentAnswer = currentAnswer.trim()
+
+    return (
+        <div className="space-y-4 rounded-2xl border border-[#d6e6fb] bg-white p-5">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                    Conversation so far
+                </p>
+                <span className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                    Hover or tap Somali for meaning
+                </span>
+            </div>
+
+            <div className="space-y-3">
+                {turns.map((turn) => (
+                    <div key={turn.turnId} className="space-y-3">
+                        <div className="flex justify-start">
+                            <div className="max-w-[85%] rounded-2xl bg-[#f8fbff] p-4">
+                                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#4189dd]">
+                                    Somali partner
+                                </p>
+                                <MeaningTooltip
+                                    text={turn.partnerMessage}
+                                    meaning={turn.partnerMessageHint}
+                                    align="left"
+                                    className="w-full text-left text-base text-slate-900 underline decoration-dotted underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4189dd] focus-visible:ring-offset-2"
+                                    tooltipClassName="max-w-[min(28rem,calc(100vw-3rem))]"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex justify-end">
+                            <div className="max-w-[85%] rounded-2xl bg-[#eef6ff] p-4">
+                                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#4189dd]">
+                                    Your reply
+                                </p>
+                                <p className="text-base text-slate-900">
+                                    {turn.learnerReply}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+
+                <div className="space-y-3 border-t border-[#e7effb] pt-3">
+                    <div className="flex justify-start">
+                        <div className="max-w-[85%] rounded-2xl bg-[#f8fbff] p-4">
+                            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#4189dd]">
+                                Somali partner
+                            </p>
+                            <MeaningTooltip
+                                text={currentTurn.partnerMessage}
+                                meaning={currentTurn.partnerMessageHint}
+                                align="left"
+                                className="w-full text-left text-base text-slate-900 underline decoration-dotted underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4189dd] focus-visible:ring-offset-2"
+                                tooltipClassName="max-w-[min(28rem,calc(100vw-3rem))]"
+                            />
+                        </div>
+                    </div>
+
+                    {trimmedCurrentAnswer.length > 0 && (
+                        <div className="flex justify-end">
+                            <div className="max-w-[85%] rounded-2xl border border-[#bfd7f8] bg-white p-4">
+                                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                                    Your draft
+                                </p>
+                                <p className="text-base text-slate-900">
+                                    {trimmedCurrentAnswer}
+                                </p>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function ConversationChallengeView({
     challenge,
     courseId,
@@ -1984,6 +2126,9 @@ function ConversationChallengeView({
     const [turnFeedback, setTurnFeedback] =
         useState<ConversationTurnFeedback | undefined>()
     const [turnScores, setTurnScores] = useState<number[]>([])
+    const [transcriptTurns, setTranscriptTurns] = useState<ConversationTranscriptTurn[]>(
+        []
+    )
     const [requestError, setRequestError] = useState<string | undefined>()
     const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -1991,6 +2136,7 @@ function ConversationChallengeView({
         setTurnIndex(0)
         setTurnFeedback(undefined)
         setTurnScores([])
+        setTranscriptTurns([])
         setRequestError(undefined)
         setIsSubmitting(false)
     }, [challenge.id])
@@ -2055,6 +2201,15 @@ function ConversationChallengeView({
         }
 
         const nextScores = [...turnScores, turnFeedback.score]
+        const nextTranscriptTurns = [
+            ...transcriptTurns,
+            {
+                turnId: currentTurn.id,
+                partnerMessage: currentTurn.partnerMessage,
+                partnerMessageHint: currentTurn.partnerMessageHint,
+                learnerReply: answer.trim(),
+            },
+        ]
 
         if (isLastTurn) {
             const averageScore =
@@ -2071,6 +2226,7 @@ function ConversationChallengeView({
         }
 
         setTurnScores(nextScores)
+        setTranscriptTurns(nextTranscriptTurns)
         setTurnIndex(turnIndex + 1)
         setTurnFeedback(undefined)
         setRequestError(undefined)
@@ -2094,21 +2250,30 @@ function ConversationChallengeView({
                 )}
             </div>
 
+            <ConversationTranscript
+                turns={transcriptTurns}
+                currentTurn={currentTurn}
+                currentAnswer={answer}
+            />
+
             <div className="rounded-2xl border border-[#d6e6fb] bg-white p-5">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                     <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                         Somali message
                     </p>
                     <span className="text-xs uppercase tracking-[0.16em] text-slate-500">
-                        Hover for meaning
+                        Hover or tap for meaning
                     </span>
                 </div>
-                <p
-                    title={currentTurn.partnerMessageHint}
-                    className="mt-3 rounded-2xl bg-[#f8fbff] p-4 text-xl text-slate-900 underline decoration-dotted underline-offset-4"
-                >
-                    {currentTurn.partnerMessage}
-                </p>
+                <div className="mt-3">
+                    <MeaningTooltip
+                        text={currentTurn.partnerMessage}
+                        meaning={currentTurn.partnerMessageHint}
+                        align="left"
+                        className="w-full rounded-2xl bg-[#f8fbff] p-4 text-left text-xl text-slate-900 underline decoration-dotted underline-offset-4 transition hover:bg-[#eef6ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4189dd] focus-visible:ring-offset-2"
+                        tooltipClassName="max-w-[min(28rem,calc(100vw-3rem))]"
+                    />
+                </div>
                 <div className="mt-4 space-y-1">
                     <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                         Reply in Somali
@@ -2191,8 +2356,8 @@ function GrammarTableGrid({
     const lockedRowSet = new Set(lockedRowIds)
 
     return (
-        <div className="overflow-hidden rounded-2xl border border-[#d6e6fb]">
-            <div className="grid grid-cols-[minmax(90px,0.7fr)_minmax(180px,1fr)_minmax(220px,1.1fr)] gap-px bg-[#d6e6fb] text-sm">
+        <div className="overflow-x-auto rounded-2xl border border-[#d6e6fb]">
+            <div className="grid min-w-[560px] grid-cols-[minmax(90px,0.7fr)_minmax(180px,1fr)_minmax(220px,1.1fr)] gap-px bg-[#d6e6fb] text-sm">
                 <div className="bg-[#eef6ff] px-4 py-3 font-semibold text-slate-700">
                     {columnHeaders.label}
                 </div>
@@ -2741,10 +2906,10 @@ export default function PracticeRunner(props: Props) {
     }
 
     const topBar = (
-        <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
             <Link
                 href={backUrl}
-                className="inline-flex items-center gap-3 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#1f5ea6] shadow-sm ring-1 ring-[#dbe9fd]"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-xs font-semibold text-[#1f5ea6] shadow-sm ring-1 ring-[#dbe9fd] sm:gap-3 sm:px-4 sm:text-sm"
             >
                 <Image
                     src="/mascot/logo1.png"
@@ -2755,26 +2920,28 @@ export default function PracticeRunner(props: Props) {
                 />
                 Exit lesson
             </Link>
-            <p className="text-sm font-medium text-slate-600">{moduleTitle}</p>
+            <p className="w-full text-xs font-medium text-slate-600 sm:w-auto sm:text-sm">
+                {moduleTitle}
+            </p>
         </div>
     )
 
     if (currentChallenge === undefined) {
         return (
             <main className="min-h-screen bg-[linear-gradient(180deg,#f2f7ff_0%,#e7f1ff_35%,#ffffff_100%)]">
-                <div className="mx-auto flex w-full max-w-4xl flex-col gap-8 px-6 py-12 md:px-8">
+                <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-4 py-8 sm:px-6 sm:py-10 md:gap-8 md:px-8 md:py-12">
                     {topBar}
-                    <div className="rounded-[2rem] border border-[#bfd7f8] bg-white p-8 shadow-[0_24px_80px_-40px_rgba(65,137,221,0.45)]">
+                    <div className="rounded-[1.5rem] border border-[#bfd7f8] bg-white p-5 shadow-[0_24px_80px_-40px_rgba(65,137,221,0.45)] sm:rounded-[2rem] sm:p-8">
                         <div className="space-y-6">
                             <div className="flex flex-wrap items-center justify-between gap-6">
                                 <div className="space-y-3">
                                     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#4189dd]">
                                         Skill complete
                                     </p>
-                                    <h1 className="text-5xl font-semibold text-slate-900">
+                                    <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl md:text-5xl">
                                         {skillTitle}
                                     </h1>
-                                    <p className="text-lg leading-8 text-slate-600">
+                                    <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
                                         You finished {completedCount} challenge
                                         {completedCount === 1 ? '' : 's'} with{' '}
                                         {sessionPoints} XP.
@@ -2796,12 +2963,12 @@ export default function PracticeRunner(props: Props) {
                                     />
                                 </div>
                             </div>
-                            <div className="grid gap-3 sm:grid-cols-4">
+                            <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                                 <div className="rounded-2xl bg-[#eef6ff] p-4">
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                                         Session XP
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {sessionPoints}
                                     </p>
                                 </div>
@@ -2809,7 +2976,7 @@ export default function PracticeRunner(props: Props) {
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                                         Solved
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {solvedCount}/{completedCount}
                                     </p>
                                 </div>
@@ -2817,7 +2984,7 @@ export default function PracticeRunner(props: Props) {
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                                         Combo best
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {bestSessionStreak}
                                     </p>
                                 </div>
@@ -2825,7 +2992,7 @@ export default function PracticeRunner(props: Props) {
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                                         Daily streak
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {courseProgress.currentDailyStreak}
                                     </p>
                                 </div>
@@ -2879,18 +3046,18 @@ export default function PracticeRunner(props: Props) {
 
     return (
         <main className="min-h-screen bg-[linear-gradient(180deg,#f2f7ff_0%,#e7f1ff_35%,#ffffff_100%)]">
-            <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-10 md:px-8 md:py-14">
+            <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 sm:gap-8 sm:px-6 sm:py-8 md:px-8 md:py-14">
                 {topBar}
                 <div className="space-y-3">
                     <div className="space-y-2">
                         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#4189dd]">
                             {courseLanguageName} practice
                         </p>
-                        <h1 className="text-5xl font-semibold text-slate-900">
+                        <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl md:text-5xl">
                             {skillTitle}
                         </h1>
                     </div>
-                    <div className="flex items-center justify-between text-sm text-slate-600">
+                    <div className="flex flex-col gap-1 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
                         <span>
                             Challenge {currentIndex + 1} of{' '}
                             {sessionState.challenges.length}
@@ -2908,18 +3075,18 @@ export default function PracticeRunner(props: Props) {
                 </div>
 
                 <Card className="border-[#bfd7f8] bg-white shadow-[0_24px_80px_-40px_rgba(15,23,42,0.3)]">
-                    <CardHeader className="space-y-4 border-b border-[#e3efff] pb-5">
+                    <CardHeader className="space-y-4 border-b border-[#e3efff] px-5 pb-4 pt-5 sm:px-6 sm:pb-5 sm:pt-6">
                         <div className="flex flex-wrap items-center gap-3">
                             <ChallengeTypeLabel challenge={currentChallenge} />
                             <span className="text-sm text-slate-500">
                                 Challenge {currentIndex + 1}
                             </span>
                         </div>
-                        <CardTitle className="text-3xl text-slate-900">
+                        <CardTitle className="text-2xl text-slate-900 sm:text-3xl">
                             Practice challenge
                         </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-8 pt-6">
+                    <CardContent className="space-y-6 px-5 pb-5 pt-5 sm:space-y-8 sm:px-6 sm:pb-6 sm:pt-6">
                         {currentChallenge.type === 'options' && (
                             <OptionsChallengeView
                                 challenge={currentChallenge}
@@ -3042,15 +3209,15 @@ export default function PracticeRunner(props: Props) {
                     </CardContent>
                 </Card>
 
-                <div className="overflow-hidden rounded-[2rem] border border-[#bfd7f8] bg-white shadow-[0_24px_80px_-40px_rgba(65,137,221,0.45)]">
-                    <div className="grid gap-6 p-8 md:grid-cols-[minmax(0,1fr)_180px] md:items-center md:p-10">
+                <div className="overflow-hidden rounded-[1.5rem] border border-[#bfd7f8] bg-white shadow-[0_24px_80px_-40px_rgba(65,137,221,0.45)] sm:rounded-[2rem]">
+                    <div className="grid gap-5 p-5 sm:gap-6 sm:p-8 md:grid-cols-[minmax(0,1fr)_180px] md:items-center md:p-10">
                         <div className="space-y-5">
-                            <div className="grid gap-3 sm:grid-cols-4">
+                            <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                                 <div className="rounded-2xl bg-[#eef6ff] p-4">
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                                         Session XP
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {sessionPoints}
                                     </p>
                                 </div>
@@ -3058,7 +3225,7 @@ export default function PracticeRunner(props: Props) {
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                                         Combo streak
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {streak}
                                     </p>
                                 </div>
@@ -3066,7 +3233,7 @@ export default function PracticeRunner(props: Props) {
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                                         Daily streak
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {courseProgress.currentDailyStreak}
                                     </p>
                                 </div>
@@ -3074,7 +3241,7 @@ export default function PracticeRunner(props: Props) {
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                                         Today
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-slate-900">
+                                    <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {courseProgress.todayCompletedChallenges}/
                                         {courseProgress.dailyGoal}
                                     </p>
@@ -3094,7 +3261,7 @@ export default function PracticeRunner(props: Props) {
                                 alt="Somali study avatar"
                                 width={220}
                                 height={220}
-                                className="max-w-[160px]"
+                                className="max-w-[128px] sm:max-w-[160px]"
                                 priority
                             />
                         </div>
