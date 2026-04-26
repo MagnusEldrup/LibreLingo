@@ -2,6 +2,7 @@ import path from 'node:path'
 import courseConfig from '@/courses/config.json'
 import fs from 'node:fs'
 import { notFound } from 'next/navigation'
+import { normalizeChallengeFile } from '@/lib/course-challenge-normalization'
 
 export type CourseIdentityDescription = {
     sourceLanguageCode: string
@@ -226,6 +227,12 @@ export type GrammarReviewSource = {
     challengeSet: SkillChallengeFile
 }
 
+export type CourseDictionaryEntry = {
+    english: string
+    somali: string[]
+    sources: string[]
+}
+
 export type SkillDetail = {
     course: CourseDetail
     module: CourseModule
@@ -260,6 +267,10 @@ function getFullChallengeDirectoryPath(jsonPath: string) {
     return path.join(process.cwd(), 'src', 'courses', jsonPath, 'challenges')
 }
 
+function getFullDictionaryPath(jsonPath: string) {
+    return path.join(process.cwd(), 'src', 'courses', jsonPath, 'wordDictionary.json')
+}
+
 async function getCourseMetadataByJsonPath(jsonPath: string) {
     const fileContent = await fs.promises.readFile(
         getFullJsonPath(jsonPath),
@@ -276,7 +287,10 @@ async function getCourseChallengeFileByJsonPath(
         getFullChallengePath(jsonPath, practiceHref),
         'utf8'
     )
-    return JSON.parse(fileContent) as SkillChallengeFile
+    return normalizeChallengeFile(
+        jsonPath,
+        JSON.parse(fileContent) as SkillChallengeFile
+    )
 }
 
 function addSkillParameterIfMissing(
@@ -390,6 +404,19 @@ export async function getCourseDetail(courseId: string): Promise<CourseDetail> {
         skillCount,
         modules,
     }
+}
+
+export async function getCourseDictionaryEntries(
+    courseId: string
+): Promise<CourseDictionaryEntry[]> {
+    const dictionaryPath = getFullDictionaryPath(courseId)
+
+    if (!fs.existsSync(dictionaryPath)) {
+        return []
+    }
+
+    const fileContent = await fs.promises.readFile(dictionaryPath, 'utf8')
+    return JSON.parse(fileContent) as CourseDictionaryEntry[]
 }
 
 export async function listCourseSkillParameters() {

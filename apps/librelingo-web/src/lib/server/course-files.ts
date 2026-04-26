@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import type { SkillChallenge, SkillChallengeFile } from '@/data/course'
+import { normalizeChallengeFile } from '@/lib/course-challenge-normalization'
 
 function getCourseRoot(courseId: string) {
     return path.join(process.cwd(), 'src', 'courses', courseId)
@@ -17,7 +18,10 @@ export async function loadCourseChallengeFile(
     const challengePath = getChallengePath(courseId, practiceHref)
     const rawContent = await fs.readFile(challengePath, 'utf8')
 
-    return JSON.parse(rawContent) as SkillChallengeFile
+    return normalizeChallengeFile(
+        courseId,
+        JSON.parse(rawContent) as SkillChallengeFile
+    )
 }
 
 export async function loadSkillChallenge(
