@@ -104,10 +104,10 @@
         },
         {
           "summary": [
-            "Soomaaliya ganacsi bay lahayd.",
-            "Ganacsatadu xiriir bay la lahaayeen Masar.",
-            "Ganacsatadu badda way mari jireen.",
-            "Islaamku hore ayuu yimid."
+            "Waagii hore Soomaaliya ganacsi bay lahayd.",
+            "Ganacsato waxay ka iman jireen Masar iyo Carabta.",
+            "Dadka Soomaaliyeed badda way mari jireen.",
+            "Islaamku goor hore ayuu yimid."
           ],
           "kind": "history",
           "practiceHref": "history-ancient-trade",
@@ -366,10 +366,10 @@
       "skills": [
         {
           "summary": [
-            "Ajuraan iyo Cadaal waa saldanado.",
-            "Muqdisho magaalo ganacsi bay ahayd.",
-            "Ciidamo way dagaallameen.",
-            "Ganacsi badeed baa jiray."
+            "Markaas saldanado Soomaaliyeed baa jiray.",
+            "Ajuraan iyo Cadaal waxay ahaayeen saldanado waaweyn.",
+            "Muqdisho waxay ahayd magaalo ganacsi oo weyn.",
+            "Maraakiib badan way iman jireen."
           ],
           "kind": "history",
           "practiceHref": "history-sultanates",
@@ -379,10 +379,10 @@
         },
         {
           "summary": [
-            "Britain iyo Talyaani way gumaysteen.",
-            "Labadii qaybood way midoobeen.",
-            "Soomaaliya madax bannaan bay noqotay.",
-            "Dowladdu way burburtay 1991."
+            "Britain waxay qabsatay waqooyi.",
+            "Talyaani waxay qabsatay koonfur.",
+            "1960 labadii qaybood way midoobeen.",
+            "Soomaaliya madax bannaan bay noqotay."
           ],
           "kind": "history",
           "practiceHref": "history-independence",
@@ -392,10 +392,10 @@
         },
         {
           "summary": [
+            "1991 dowladdii way burburtay.",
             "Dagaal sokeeye baa bilowday.",
             "Kooxo hubaysan way dagaallameen.",
-            "Dad badan way qaxeen.",
-            "Xaaladdu way adkayd."
+            "Dad badan way qaxeen."
           ],
           "kind": "history",
           "practiceHref": "history-conflict",
@@ -405,10 +405,10 @@
         },
         {
           "summary": [
-            "Soomaaliya federaal bay tahay.",
-            "Dowladdu dib bay u dhisaysaa.",
-            "Ururada caalamiga ah way taageeraan.",
-            "Gobollo maamul bay leeyihiin."
+            "Maanta Soomaaliya federaal bay tahay.",
+            "Gobollo maamul bay leeyihiin.",
+            "Dowladdu dib bay u dhisaysaa dalka.",
+            "Ururada caalamiga ah way caawiyaan."
           ],
           "kind": "history",
           "practiceHref": "history-recovery",
