@@ -18,7 +18,7 @@ export type StoredSkillProgress = {
 }
 
 type CourseDailyActivity = {
-    challengeCountsByDate: Record<string, number>
+    sessionCountsByDate: Record<string, number>
 }
 
 export type ProgressStore = {
@@ -36,7 +36,7 @@ export type CourseProgressSummary = {
     completedRuns: number
     currentDailyStreak: number
     bestDailyStreak: number
-    todayCompletedChallenges: number
+    todayCompletedSessions: number
     dailyGoal: number
     todayGoalReached: boolean
     lastPlayedAt?: string
@@ -62,7 +62,7 @@ function createEmptyCourseSummary(): CourseProgressSummary {
         completedRuns: 0,
         currentDailyStreak: 0,
         bestDailyStreak: 0,
-        todayCompletedChallenges: 0,
+        todayCompletedSessions: 0,
         dailyGoal: DAILY_STREAK_GOAL,
         todayGoalReached: false,
     }
@@ -146,19 +146,19 @@ export function getSkillProgress(courseId: string, practiceHref: string) {
 export function saveSkillProgress(
     progress: StoredSkillProgress,
     options?: {
-        recordExerciseCompletion?: boolean
+        recordSessionCompletion?: boolean
         completedAt?: Date
     }
 ) {
     const store = readProgressStore()
     store.skills[getSkillKey(progress.courseId, progress.practiceHref)] = progress
 
-    if (options?.recordExerciseCompletion) {
+    if (options?.recordSessionCompletion) {
         const dateKey = getLocalDateKey(options.completedAt ?? new Date())
         const courseActivity = getOrCreateCourseDailyActivity(store, progress.courseId)
 
-        courseActivity.challengeCountsByDate[dateKey] =
-            (courseActivity.challengeCountsByDate[dateKey] ?? 0) + 1
+        courseActivity.sessionCountsByDate[dateKey] =
+            (courseActivity.sessionCountsByDate[dateKey] ?? 0) + 1
     }
 
     writeProgressStore(store)
@@ -281,13 +281,13 @@ export function mergeProgressStores(
         incoming.dailyActivityByCourse
     )) {
         const storedActivity = merged.dailyActivityByCourse[courseId] ?? {
-            challengeCountsByDate: {},
+            sessionCountsByDate: {},
         }
 
         merged.dailyActivityByCourse[courseId] = {
-            challengeCountsByDate: mergeDailyChallengeCounts(
-                storedActivity.challengeCountsByDate,
-                incomingActivity.challengeCountsByDate
+            sessionCountsByDate: mergeDailySessionCounts(
+                storedActivity.sessionCountsByDate,
+                incomingActivity.sessionCountsByDate
             ),
         }
     }
@@ -375,7 +375,7 @@ function getProgressRank(progress: StoredSkillProgress) {
     )
 }
 
-function mergeDailyChallengeCounts(
+function mergeDailySessionCounts(
     storedCounts: Record<string, number>,
     incomingCounts: Record<string, number>
 ) {
@@ -401,10 +401,10 @@ function normalizeDailyActivityByCourse(
         Object.entries(value).map(([courseId, activity]) => [
             courseId,
             {
-                challengeCountsByDate:
-                    activity?.challengeCountsByDate &&
-                    typeof activity.challengeCountsByDate === 'object'
-                        ? activity.challengeCountsByDate
+                sessionCountsByDate:
+                    activity?.sessionCountsByDate &&
+                    typeof activity.sessionCountsByDate === 'object'
+                        ? activity.sessionCountsByDate
                         : {},
             },
         ])
@@ -419,7 +419,7 @@ function getOrCreateCourseDailyActivity(store: ProgressStore, courseId: string) 
     }
 
     const emptyActivity: CourseDailyActivity = {
-        challengeCountsByDate: {},
+        sessionCountsByDate: {},
     }
     store.dailyActivityByCourse[courseId] = emptyActivity
     return emptyActivity
@@ -444,12 +444,12 @@ function addDays(date: Date, days: number) {
     return nextDate
 }
 
-function getQualifiedChallengeCount(count: number | undefined) {
+function getQualifiedSessionCount(count: number | undefined) {
     return (count ?? 0) >= DAILY_STREAK_GOAL
 }
 
 function calculateCurrentDailyStreak(
-    challengeCountsByDate: Record<string, number>,
+    sessionCountsByDate: Record<string, number>,
     referenceDate: Date
 ) {
     const today = new Date(
@@ -462,9 +462,9 @@ function calculateCurrentDailyStreak(
     const yesterdayKey = getLocalDateKey(yesterday)
 
     let cursor =
-        getQualifiedChallengeCount(challengeCountsByDate[todayKey])
+        getQualifiedSessionCount(sessionCountsByDate[todayKey])
             ? today
-            : (getQualifiedChallengeCount(challengeCountsByDate[yesterdayKey])
+            : (getQualifiedSessionCount(sessionCountsByDate[yesterdayKey])
                   ? yesterday
                   : undefined)
 
@@ -475,8 +475,8 @@ function calculateCurrentDailyStreak(
     let streak = 0
 
     while (
-        getQualifiedChallengeCount(
-            challengeCountsByDate[getLocalDateKey(cursor)]
+        getQualifiedSessionCount(
+            sessionCountsByDate[getLocalDateKey(cursor)]
         )
     ) {
         streak += 1
@@ -486,9 +486,9 @@ function calculateCurrentDailyStreak(
     return streak
 }
 
-function calculateBestDailyStreak(challengeCountsByDate: Record<string, number>) {
-    const qualifiedDates = Object.entries(challengeCountsByDate)
-        .filter(([, count]) => getQualifiedChallengeCount(count))
+function calculateBestDailyStreak(sessionCountsByDate: Record<string, number>) {
+    const qualifiedDates = Object.entries(sessionCountsByDate)
+        .filter(([, count]) => getQualifiedSessionCount(count))
         .map(([dateKey]) => dateKey)
         .sort()
 
@@ -521,23 +521,23 @@ function summarizeCourseDailyActivity(
     CourseProgressSummary,
     | 'currentDailyStreak'
     | 'bestDailyStreak'
-    | 'todayCompletedChallenges'
+    | 'todayCompletedSessions'
     | 'dailyGoal'
     | 'todayGoalReached'
 > {
-    const challengeCountsByDate =
-        store.dailyActivityByCourse[courseId]?.challengeCountsByDate ?? {}
+    const sessionCountsByDate =
+        store.dailyActivityByCourse[courseId]?.sessionCountsByDate ?? {}
     const todayKey = getLocalDateKey(new Date())
-    const todayCompletedChallenges = challengeCountsByDate[todayKey] ?? 0
+    const todayCompletedSessions = sessionCountsByDate[todayKey] ?? 0
 
     return {
         currentDailyStreak: calculateCurrentDailyStreak(
-            challengeCountsByDate,
+            sessionCountsByDate,
             new Date()
         ),
-        bestDailyStreak: calculateBestDailyStreak(challengeCountsByDate),
-        todayCompletedChallenges,
+        bestDailyStreak: calculateBestDailyStreak(sessionCountsByDate),
+        todayCompletedSessions,
         dailyGoal: DAILY_STREAK_GOAL,
-        todayGoalReached: todayCompletedChallenges >= DAILY_STREAK_GOAL,
+        todayGoalReached: todayCompletedSessions >= DAILY_STREAK_GOAL,
     }
 }

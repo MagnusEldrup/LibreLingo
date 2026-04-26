@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import LessonFeedback from '@/components/lesson-feedback'
 import LevelAvatar from '@/components/level-avatar'
 import LevelProgress from '@/components/level-progress'
+import { getLevelProgress } from '@/lib/levels'
 import type {
     CourseSkill,
     ConversationTurnFeedback,
@@ -279,8 +280,9 @@ function pickWeightedIndex(weights: number[], seedKey: string) {
 
     let target = hashString(seedKey) % totalWeight
 
-    for (let index = 0; index < weights.length; index += 1) {
-        target -= weights[index]
+    for (const [indexAsString, weight] of Object.entries(weights)) {
+        target -= weight
+        const index = Number(indexAsString)
 
         if (target < 0) {
             return index
@@ -299,7 +301,7 @@ function buildGrammarReviewChallenge(
     sessionSeed: number
 ) {
     if (previousGrammarReviewSources.length === 0) {
-        return undefined
+        return
     }
 
     const sourceIndex = pickWeightedIndex(
@@ -308,7 +310,7 @@ function buildGrammarReviewChallenge(
     )
 
     if (sourceIndex < 0) {
-        return undefined
+        return
     }
 
     const selectedSource = previousGrammarReviewSources[sourceIndex]
@@ -320,7 +322,7 @@ function buildGrammarReviewChallenge(
     )
 
     if (grammarChallenges.length === 0) {
-        return undefined
+        return
     }
 
     const selectedChallenge = shuffleWithSeed(
@@ -333,7 +335,7 @@ function buildGrammarReviewChallenge(
     )[0]
 
     if (!selectedRow) {
-        return undefined
+        return
     }
 
     return {
@@ -2852,9 +2854,11 @@ function GrammarTableChallengeView({
                                         activeRow.answers
                                     )
                                 ) {
-                                    const nextLockedRowIds = Array.from(
-                                        new Set([...lockedRowIds, activeRow.id])
+                                    const nextLockedRowIds = lockedRowIds.includes(
+                                        activeRow.id
                                     )
+                                        ? lockedRowIds
+                                        : [...lockedRowIds, activeRow.id]
 
                                     setLockedRowIds(nextLockedRowIds)
                                     setShowRuleFeedback(false)
@@ -2947,7 +2951,7 @@ function createEmptyCourseSummary(): CourseProgressSummary {
         completedRuns: 0,
         currentDailyStreak: 0,
         bestDailyStreak: 0,
-        todayCompletedChallenges: 0,
+        todayCompletedSessions: 0,
         dailyGoal: 2,
         todayGoalReached: false,
     }
@@ -3001,12 +3005,22 @@ export default function PracticeRunner(props: Props) {
     const [courseProgress, setCourseProgress] = useState<CourseProgressSummary>(
         createEmptyCourseSummary()
     )
+    const [sessionStartingCoursePoints, setSessionStartingCoursePoints] = useState<
+        number | undefined
+    >()
 
     const currentChallenge = sessionState.challenges[currentIndex]
+    const startingLevelProgress = getLevelProgress(
+        sessionStartingCoursePoints ?? courseProgress.totalPoints
+    )
+    const currentLevelProgress = getLevelProgress(courseProgress.totalPoints)
+    const leveledUpThisSession =
+        currentLevelProgress.level > startingLevelProgress.level
 
     useEffect(() => {
         const refresh = () => {
             const storedProgress = getSkillProgress(courseId, practiceHref)
+            const nextCourseProgress = summarizeStoredCourseProgress(courseId)
             setSavedProgress(
                 storedProgress ?? {
                     ...createEmptyProgress(),
@@ -3016,7 +3030,10 @@ export default function PracticeRunner(props: Props) {
                     moduleTitle,
                 }
             )
-            setCourseProgress(summarizeStoredCourseProgress(courseId))
+            setCourseProgress(nextCourseProgress)
+            setSessionStartingCoursePoints(
+                (currentPoints) => currentPoints ?? nextCourseProgress.totalPoints
+            )
         }
 
         refresh()
@@ -3103,7 +3120,7 @@ export default function PracticeRunner(props: Props) {
         }
 
         saveSkillProgress(updatedProgress, {
-            recordExerciseCompletion: updatesProgress,
+            recordSessionCompletion: isFinalChallenge,
             completedAt: completionTimestamp,
         })
         setSavedProgress(updatedProgress)
@@ -3161,8 +3178,8 @@ export default function PracticeRunner(props: Props) {
                                     </p>
                                     <p className="text-base leading-7 text-slate-600">
                                         {courseProgress.todayGoalReached
-                                            ? `Daily streak secured. You have completed ${courseProgress.todayCompletedChallenges} exercise${courseProgress.todayCompletedChallenges === 1 ? '' : 's'} today and your streak is now ${courseProgress.currentDailyStreak} day${courseProgress.currentDailyStreak === 1 ? '' : 's'}.`
-                                            : `You are ${courseProgress.todayCompletedChallenges}/${courseProgress.dailyGoal} of the way to today’s streak goal.`}
+                                            ? `Daily streak secured. You have completed ${courseProgress.todayCompletedSessions} session${courseProgress.todayCompletedSessions === 1 ? '' : 's'} today and your streak is now ${courseProgress.currentDailyStreak} day${courseProgress.currentDailyStreak === 1 ? '' : 's'}.`
+                                            : `You are ${courseProgress.todayCompletedSessions}/${courseProgress.dailyGoal} of the way to today’s streak goal.`}
                                     </p>
                                 </div>
                                 <div className="flex justify-center">
@@ -3176,6 +3193,66 @@ export default function PracticeRunner(props: Props) {
                                     />
                                 </div>
                             </div>
+                            {leveledUpThisSession ? (
+                                <div className="rounded-[1.75rem] border border-[#f6d28b] bg-[linear-gradient(135deg,#fff5d9_0%,#fff9ed_48%,#ffffff_100%)] p-5 shadow-[0_24px_80px_-50px_rgba(196,142,27,0.55)] sm:p-6">
+                                    <div className="space-y-5">
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#b7791f]">
+                                                New level reached
+                                            </p>
+                                            <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
+                                                Congratulations, you climbed from level{' '}
+                                                {startingLevelProgress.level} to level{' '}
+                                                {currentLevelProgress.level}.
+                                            </h2>
+                                            <p className="text-base leading-7 text-slate-700">
+                                                Your title changed from{' '}
+                                                {startingLevelProgress.title} to{' '}
+                                                {currentLevelProgress.title}.
+                                            </p>
+                                        </div>
+                                        <div className="grid gap-4 sm:grid-cols-2">
+                                            <div className="rounded-[1.5rem] bg-white/90 p-4 text-center ring-1 ring-[#f3dfb8]">
+                                                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b7791f]">
+                                                    Previous avatar
+                                                </p>
+                                                <Image
+                                                    src={startingLevelProgress.avatarSrc}
+                                                    alt={`Avatar for level ${startingLevelProgress.level}`}
+                                                    width={180}
+                                                    height={180}
+                                                    className="mx-auto mt-4 h-auto w-full max-w-[120px] object-contain sm:max-w-[150px]"
+                                                />
+                                                <p className="mt-3 text-lg font-semibold text-slate-900">
+                                                    Level {startingLevelProgress.level}
+                                                </p>
+                                                <p className="text-sm text-slate-600">
+                                                    {startingLevelProgress.title}
+                                                </p>
+                                            </div>
+                                            <div className="rounded-[1.5rem] bg-white p-4 text-center ring-2 ring-[#f0c56a]">
+                                                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b7791f]">
+                                                    New avatar
+                                                </p>
+                                                <Image
+                                                    src={currentLevelProgress.avatarSrc}
+                                                    alt={`Avatar for level ${currentLevelProgress.level}`}
+                                                    width={180}
+                                                    height={180}
+                                                    className="mx-auto mt-4 h-auto w-full max-w-[120px] object-contain sm:max-w-[150px]"
+                                                    priority
+                                                />
+                                                <p className="mt-3 text-lg font-semibold text-slate-900">
+                                                    Level {currentLevelProgress.level}
+                                                </p>
+                                                <p className="text-sm text-slate-600">
+                                                    {currentLevelProgress.title}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : undefined}
                             <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                                 <div className="rounded-2xl bg-[#eef6ff] p-4">
                                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
@@ -3216,6 +3293,8 @@ export default function PracticeRunner(props: Props) {
                                     variant="outline"
                                     onClick={() => {
                                         const seed = createSessionSeed()
+                                        const nextStartingPoints =
+                                            summarizeStoredCourseProgress(courseId).totalPoints
 
                                         resetInteraction()
                                         setCompletedCount(0)
@@ -3225,6 +3304,9 @@ export default function PracticeRunner(props: Props) {
                                         setStreak(0)
                                         setBestSessionStreak(0)
                                         setCurrentIndex(0)
+                                        setSessionStartingCoursePoints(
+                                            nextStartingPoints
+                                        )
                                         setSessionState({
                                             seed,
                                             challenges: buildPracticeSession(
@@ -3459,13 +3541,13 @@ export default function PracticeRunner(props: Props) {
                                         Today
                                     </p>
                                     <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
-                                        {courseProgress.todayCompletedChallenges}/
+                                        {courseProgress.todayCompletedSessions}/
                                         {courseProgress.dailyGoal}
                                     </p>
                                     <p className="mt-1 text-xs leading-5 text-slate-500">
                                         {courseProgress.todayGoalReached
                                             ? 'Qualified for today'
-                                            : 'Exercises needed for streak'}
+                                            : 'Sessions needed for streak'}
                                     </p>
                                 </div>
                             </div>

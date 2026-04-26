@@ -26,7 +26,7 @@ function createEmptySummary(): CourseProgressSummary {
         completedRuns: 0,
         currentDailyStreak: 0,
         bestDailyStreak: 0,
-        todayCompletedChallenges: 0,
+        todayCompletedSessions: 0,
         dailyGoal: 2,
         todayGoalReached: false,
     }
@@ -57,8 +57,8 @@ export default function CourseProgressSummary(props: Props) {
     const hasProgress = summary.totalSkillsTracked > 0
     const levelProgress = getLevelProgress(summary.totalPoints)
     const todayProgressLabel = summary.todayGoalReached
-        ? `Qualified today with ${summary.todayCompletedChallenges} exercise${summary.todayCompletedChallenges === 1 ? '' : 's'}.`
-        : `${summary.todayCompletedChallenges}/${summary.dailyGoal} exercises today to keep your streak going.`
+        ? `Qualified today with ${summary.todayCompletedSessions} session${summary.todayCompletedSessions === 1 ? '' : 's'}.`
+        : `${summary.todayCompletedSessions}/${summary.dailyGoal} sessions today to keep your streak going.`
 
     return (
         <div className="space-y-3 text-sm leading-7 text-slate-700 sm:space-y-4">
