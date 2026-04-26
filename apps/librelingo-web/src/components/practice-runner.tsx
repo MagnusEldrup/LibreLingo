@@ -763,6 +763,37 @@ function FeedbackPanel({
     )
 }
 
+function getWritingFeedbackErrorDetails(
+    requestError: string,
+    unavailableMessage: string
+) {
+    const normalizedError = requestError.toLowerCase()
+
+    if (normalizedError.includes('missing openai api key')) {
+        return {
+            message: 'AI feedback is not configured on this server yet.',
+            supportingText:
+                'The writing grader could not find its OpenAI API key. If you are running locally, restart after setting OPENAI_API_KEY or keep the key in apps/librelingo-web/APIKEY.',
+        }
+    }
+
+    if (
+        normalizedError.includes('incomplete') ||
+        normalizedError.includes('no response content')
+    ) {
+        return {
+            message: 'The AI feedback was interrupted.',
+            supportingText:
+                'The grader started responding but did not finish cleanly. Try again in a moment.',
+        }
+    }
+
+    return {
+        message: unavailableMessage,
+        supportingText: requestError,
+    }
+}
+
 function AutoAdvanceNotice({
     active,
     message,
@@ -1391,6 +1422,12 @@ function FreeWritingChallengeView({
         'correct' | 'incorrect' | undefined
     >()
     const isLocked = isSubmitting || feedback !== undefined
+    const feedbackErrorDetails = requestError
+        ? getWritingFeedbackErrorDetails(
+              requestError,
+              'Feedback is not available yet.'
+          )
+        : undefined
 
     useEffect(() => {
         setFeedback(undefined)
@@ -1511,11 +1548,11 @@ function FreeWritingChallengeView({
                 </Button>
             )}
 
-            {requestError && (
+            {requestError && feedbackErrorDetails && (
                 <FeedbackPanel
                     state="incorrect"
-                    message="Feedback is not available yet."
-                    supportingText={requestError}
+                    message={feedbackErrorDetails.message}
+                    supportingText={feedbackErrorDetails.supportingText}
                     primaryLabel="Try again"
                     onPrimary={() => {
                         setRequestError(undefined)
@@ -1893,6 +1930,12 @@ function WriteChallengeView({
     }
 
     const isLocked = isSubmitting || finalFeedback !== undefined
+    const feedbackErrorDetails = requestError
+        ? getWritingFeedbackErrorDetails(
+              requestError,
+              'Writing feedback is not available yet.'
+          )
+        : undefined
 
     return (
         <div className="space-y-6">
@@ -1978,11 +2021,11 @@ function WriteChallengeView({
                 </Button>
             )}
 
-            {requestError && (
+            {requestError && feedbackErrorDetails && (
                 <FeedbackPanel
                     state="incorrect"
-                    message="Writing feedback is not available yet."
-                    supportingText={requestError}
+                    message={feedbackErrorDetails.message}
+                    supportingText={feedbackErrorDetails.supportingText}
                     primaryLabel="Try again"
                     onPrimary={() => {
                         setRequestError(undefined)
