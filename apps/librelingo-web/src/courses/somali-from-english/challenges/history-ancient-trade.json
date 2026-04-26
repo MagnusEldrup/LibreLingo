@@ -4,8 +4,8 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Soomaaliya ganacsi bay lahayd.",
-      "meaningInSourceLanguage": "Somalia had trade.",
+      "formInTargetLanguage": "Waagii hore Soomaaliya ganacsi bay lahayd.",
+      "meaningInSourceLanguage": "In earlier times, Somalia had trade.",
       "id": "ha1-1",
       "priority": 0,
       "group": "ancient-trade"
@@ -14,16 +14,16 @@
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [
-        "Soomaaliya ganacsi bay lahayd."
+        "Waagii hore Soomaaliya ganacsi bay lahayd."
       ],
       "phrase": [
         {
-          "word": "Somalia",
-          "definition": "Soomaaliya"
+          "word": "In earlier times,",
+          "definition": "Waagii hore"
         },
         {
-          "word": "had trade.",
-          "definition": "ganacsi bay lahayd"
+          "word": "Somalia had trade.",
+          "definition": "Soomaaliya ganacsi bay lahayd"
         }
       ],
       "id": "ha1-2",
@@ -32,8 +32,8 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ganacsatadu xiriir bay la lahaayeen Masar.",
-      "meaningInSourceLanguage": "Traders had links with Egypt.",
+      "formInTargetLanguage": "Ganacsato waxay ka iman jireen Masar iyo Carabta.",
+      "meaningInSourceLanguage": "Traders used to come from Egypt and Arabia.",
       "id": "ha1-3",
       "priority": 0,
       "group": "egypt-arabia"
@@ -44,41 +44,44 @@
       "phrase": [
         {
           "word": "Traders",
-          "definition": "ganacsatadu"
+          "definition": "Ganacsato"
         },
         {
-          "word": "had links with Egypt.",
-          "definition": "xiriir bay la lahaayeen Masar"
+          "word": "used to come from Egypt and Arabia.",
+          "definition": "waxay ka iman jireen Masar iyo Carabta"
         }
       ],
       "chips": [
-        "Ganacsatadu",
-        "xiriir",
-        "bay",
-        "la",
-        "lahaayeen",
-        "Masar.",
-        "badda"
+        "Ganacsato",
+        "waxay",
+        "ka",
+        "iman",
+        "jireen",
+        "Masar",
+        "iyo",
+        "Carabta."
       ],
       "solutions": [
         [
-          "Ganacsatadu",
-          "xiriir",
-          "bay",
-          "la",
-          "lahaayeen",
-          "Masar."
+          "Ganacsato",
+          "waxay",
+          "ka",
+          "iman",
+          "jireen",
+          "Masar",
+          "iyo",
+          "Carabta."
         ]
       ],
-      "formattedSolution": "Ganacsatadu xiriir bay la lahaayeen Masar.",
+      "formattedSolution": "Ganacsato waxay ka iman jireen Masar iyo Carabta.",
       "id": "ha1-4",
       "priority": 2,
       "group": "egypt-arabia"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ganacsatadu badda way mari jireen.",
-      "meaningInSourceLanguage": "Traders traveled by sea.",
+      "formInTargetLanguage": "Dadka Soomaaliyeed badda way mari jireen.",
+      "meaningInSourceLanguage": "Somali people traveled by sea.",
       "id": "ha1-5",
       "priority": 0,
       "group": "coastal-cities"
@@ -88,8 +91,8 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Traders",
-          "definition": "ganacsatadu"
+          "word": "Somali people",
+          "definition": "Dadka Soomaaliyeed"
         },
         {
           "word": "traveled by sea.",
@@ -97,30 +100,31 @@
         }
       ],
       "chips": [
-        "Ganacsatadu",
+        "Dadka",
+        "Soomaaliyeed",
         "badda",
         "way",
         "mari",
-        "jireen.",
-        "hore"
+        "jireen."
       ],
       "solutions": [
         [
-          "Ganacsatadu",
+          "Dadka",
+          "Soomaaliyeed",
           "badda",
           "way",
           "mari",
           "jireen."
         ]
       ],
-      "formattedSolution": "Ganacsatadu badda way mari jireen.",
+      "formattedSolution": "Dadka Soomaaliyeed badda way mari jireen.",
       "id": "ha1-6",
       "priority": 2,
       "group": "coastal-cities"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Islaamku hore ayuu yimid.",
+      "formInTargetLanguage": "Islaamku goor hore ayuu yimid.",
       "meaningInSourceLanguage": "Islam arrived early.",
       "id": "ha1-7",
       "priority": 0,
@@ -130,7 +134,7 @@
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [
-        "Islaamku hore ayuu yimid."
+        "Islaamku goor hore ayuu yimid."
       ],
       "phrase": [
         {
@@ -139,7 +143,7 @@
         },
         {
           "word": "arrived early.",
-          "definition": "hore ayuu yimid"
+          "definition": "goor hore ayuu yimid"
         }
       ],
       "id": "ha1-8",
@@ -154,15 +158,15 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Somalia had trade. Islam arrived early."
+        "In earlier times, Somalia had trade. Islam arrived early."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
-        "Reward recall of the short history facts from this lesson.",
+        "Reward recall of the short history story from this lesson.",
         "Accept simple beginner Somali if the main meaning is correct.",
         "Be lenient with punctuation and spacing variation."
       ],
-      "sampleAnswer": "Soomaaliya ganacsi bay lahayd. Islaamku hore ayuu yimid."
+      "sampleAnswer": "Waagii hore Soomaaliya ganacsi bay lahayd. Islaamku goor hore ayuu yimid."
     },
     {
       "type": "freeWriting",
@@ -172,15 +176,15 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali history summary.",
       "promptLines": [
-        "Write 2 short Somali sentences about early trade or early Islam."
+        "Write 2 short Somali sentences about early trade or early Islam in Somalia."
       ],
       "placeholder": "Keep the sentences short and simple.",
       "gradingNotes": [
-        "Reward use of the lesson facts rather than perfect grammar.",
+        "Reward use of the lesson story and key facts rather than perfect grammar.",
         "Keep corrections targeted to short phrases the learner can reuse.",
         "Stay brief and supportive."
       ],
-      "sampleAnswer": "Ganacsatadu xiriir bay la lahaayeen Masar. Islaamku hore ayuu yimid."
+      "sampleAnswer": "Ganacsato waxay ka iman jireen Masar iyo Carabta. Islaamku goor hore ayuu yimid."
     }
   ]
 }

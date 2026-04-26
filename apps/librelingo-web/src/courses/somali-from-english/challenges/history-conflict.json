@@ -4,8 +4,8 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Dagaal sokeeye baa bilowday.",
-      "meaningInSourceLanguage": "Civil war began.",
+      "formInTargetLanguage": "1991 dowladdii way burburtay.",
+      "meaningInSourceLanguage": "In 1991, the government collapsed.",
       "id": "hc-1",
       "priority": 0,
       "group": "civil-war"
@@ -14,8 +14,33 @@
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [
-        "Dagaal sokeeye baa bilowday."
+        "1991 dowladdii way burburtay."
       ],
+      "phrase": [
+        {
+          "word": "In 1991,",
+          "definition": "1991"
+        },
+        {
+          "word": "the government collapsed.",
+          "definition": "dowladdii way burburtay"
+        }
+      ],
+      "id": "hc-2",
+      "priority": 1,
+      "group": "civil-war"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Dagaal sokeeye baa bilowday.",
+      "meaningInSourceLanguage": "Civil war began.",
+      "id": "hc-3",
+      "priority": 0,
+      "group": "armed-groups"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
       "phrase": [
         {
           "word": "Civil war",
@@ -26,17 +51,32 @@
           "definition": "baa bilowday"
         }
       ],
-      "id": "hc-2",
-      "priority": 1,
-      "group": "civil-war"
+      "chips": [
+        "Dagaal",
+        "sokeeye",
+        "baa",
+        "bilowday."
+      ],
+      "solutions": [
+        [
+          "Dagaal",
+          "sokeeye",
+          "baa",
+          "bilowday."
+        ]
+      ],
+      "formattedSolution": "Dagaal sokeeye baa bilowday.",
+      "id": "hc-4",
+      "priority": 2,
+      "group": "armed-groups"
     },
     {
       "type": "options",
       "formInTargetLanguage": "Kooxo hubaysan way dagaallameen.",
       "meaningInSourceLanguage": "Armed groups fought.",
-      "id": "hc-3",
+      "id": "hc-5",
       "priority": 0,
-      "group": "armed-groups"
+      "group": "fled-neighbors"
     },
     {
       "type": "chips",
@@ -55,8 +95,7 @@
         "Kooxo",
         "hubaysan",
         "way",
-        "dagaallameen.",
-        "deriska"
+        "dagaallameen."
       ],
       "solutions": [
         [
@@ -67,55 +106,14 @@
         ]
       ],
       "formattedSolution": "Kooxo hubaysan way dagaallameen.",
-      "id": "hc-4",
-      "priority": 2,
-      "group": "armed-groups"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Dad badan way qaxeen.",
-      "meaningInSourceLanguage": "Many people fled.",
-      "id": "hc-5",
-      "priority": 0,
-      "group": "fled-neighbors"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Many people",
-          "definition": "Dad badan"
-        },
-        {
-          "word": "fled.",
-          "definition": "way qaxeen"
-        }
-      ],
-      "chips": [
-        "Dad",
-        "badan",
-        "way",
-        "qaxeen.",
-        "xasilloon"
-      ],
-      "solutions": [
-        [
-          "Dad",
-          "badan",
-          "way",
-          "qaxeen."
-        ]
-      ],
-      "formattedSolution": "Dad badan way qaxeen.",
       "id": "hc-6",
       "priority": 2,
       "group": "fled-neighbors"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Xaaladdu way adkayd.",
-      "meaningInSourceLanguage": "The situation was hard.",
+      "formInTargetLanguage": "Dad badan way qaxeen.",
+      "meaningInSourceLanguage": "Many people fled.",
       "id": "hc-7",
       "priority": 0,
       "group": "unstable"
@@ -124,16 +122,16 @@
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [
-        "Xaaladdu way adkayd."
+        "Dad badan way qaxeen."
       ],
       "phrase": [
         {
-          "word": "The situation",
-          "definition": "Xaaladdu"
+          "word": "Many people",
+          "definition": "Dad badan"
         },
         {
-          "word": "was hard.",
-          "definition": "way adkayd"
+          "word": "fled.",
+          "definition": "way qaxeen"
         }
       ],
       "id": "hc-8",
@@ -148,7 +146,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Civil war began. Many people fled."
+        "The government collapsed in 1991. Many people fled."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -156,7 +154,7 @@
         "Accept simpler Somali if the meaning remains clear.",
         "Be lenient with punctuation and small spelling variation."
       ],
-      "sampleAnswer": "Dagaal sokeeye baa bilowday. Dad badan way qaxeen."
+      "sampleAnswer": "1991 dowladdii way burburtay. Dad badan way qaxeen."
     },
     {
       "type": "freeWriting",
@@ -166,15 +164,15 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali history summary.",
       "promptLines": [
-        "Write 2 short Somali sentences about conflict or displacement."
+        "Write 2 short Somali sentences about the conflict or people leaving their homes."
       ],
       "placeholder": "Use the lesson facts if you can.",
       "gradingNotes": [
-        "Reward use of the history vocabulary from this skill.",
+        "Reward use of the short history story from this skill.",
         "Keep corrections tied to real words or phrases that can be improved.",
         "Stay supportive and concise."
       ],
-      "sampleAnswer": "Kooxo hubaysan way dagaallameen. Dad badan way qaxeen."
+      "sampleAnswer": "Dagaal sokeeye baa bilowday. Dad badan way qaxeen."
     }
   ]
 }

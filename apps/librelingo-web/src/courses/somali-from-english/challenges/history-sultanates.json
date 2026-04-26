@@ -4,8 +4,8 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Ajuraan iyo Cadaal waa saldanado.",
-      "meaningInSourceLanguage": "Ajuran and Adal were sultanates.",
+      "formInTargetLanguage": "Markaas saldanado Soomaaliyeed baa jiray.",
+      "meaningInSourceLanguage": "At that time, Somali sultanates existed.",
       "id": "hs-1",
       "priority": 0,
       "group": "sultanates"
@@ -14,16 +14,16 @@
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [
-        "Ajuraan iyo Cadaal waa saldanado."
+        "Markaas saldanado Soomaaliyeed baa jiray."
       ],
       "phrase": [
         {
-          "word": "Ajuran and Adal",
-          "definition": "Ajuraan iyo Cadaal"
+          "word": "At that time,",
+          "definition": "Markaas"
         },
         {
-          "word": "were sultanates.",
-          "definition": "waa saldanado"
+          "word": "Somali sultanates existed.",
+          "definition": "saldanado Soomaaliyeed baa jiray"
         }
       ],
       "id": "hs-2",
@@ -32,11 +32,57 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Muqdisho magaalo ganacsi bay ahayd.",
-      "meaningInSourceLanguage": "Mogadishu was a trade city.",
+      "formInTargetLanguage": "Ajuraan iyo Cadaal waxay ahaayeen saldanado waaweyn.",
+      "meaningInSourceLanguage": "Ajuran and Adal were large sultanates.",
       "id": "hs-3",
       "priority": 0,
       "group": "mogadishu"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Ajuran and Adal",
+          "definition": "Ajuraan iyo Cadaal"
+        },
+        {
+          "word": "were large sultanates.",
+          "definition": "waxay ahaayeen saldanado waaweyn"
+        }
+      ],
+      "chips": [
+        "Ajuraan",
+        "iyo",
+        "Cadaal",
+        "waxay",
+        "ahaayeen",
+        "saldanado",
+        "waaweyn."
+      ],
+      "solutions": [
+        [
+          "Ajuraan",
+          "iyo",
+          "Cadaal",
+          "waxay",
+          "ahaayeen",
+          "saldanado",
+          "waaweyn."
+        ]
+      ],
+      "formattedSolution": "Ajuraan iyo Cadaal waxay ahaayeen saldanado waaweyn.",
+      "id": "hs-4",
+      "priority": 2,
+      "group": "mogadishu"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Muqdisho waxay ahayd magaalo ganacsi oo weyn.",
+      "meaningInSourceLanguage": "Mogadishu was a large trade city.",
+      "id": "hs-5",
+      "priority": 0,
+      "group": "ethiopia"
     },
     {
       "type": "chips",
@@ -47,75 +93,39 @@
           "definition": "Muqdisho"
         },
         {
-          "word": "was a trade city.",
-          "definition": "magaalo ganacsi bay ahayd"
+          "word": "was a large trade city.",
+          "definition": "waxay ahayd magaalo ganacsi oo weyn"
         }
       ],
       "chips": [
         "Muqdisho",
+        "waxay",
+        "ahayd",
         "magaalo",
         "ganacsi",
-        "bay",
-        "ahayd.",
-        "badda"
+        "oo",
+        "weyn."
       ],
       "solutions": [
         [
           "Muqdisho",
+          "waxay",
+          "ahayd",
           "magaalo",
           "ganacsi",
-          "bay",
-          "ahayd."
+          "oo",
+          "weyn."
         ]
       ],
-      "formattedSolution": "Muqdisho magaalo ganacsi bay ahayd.",
-      "id": "hs-4",
-      "priority": 2,
-      "group": "mogadishu"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Ciidamo way dagaallameen.",
-      "meaningInSourceLanguage": "Armies fought.",
-      "id": "hs-5",
-      "priority": 0,
-      "group": "ethiopia"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Armies",
-          "definition": "Ciidamo"
-        },
-        {
-          "word": "fought.",
-          "definition": "way dagaallameen"
-        }
-      ],
-      "chips": [
-        "Ciidamo",
-        "way",
-        "dagaallameen.",
-        "Muqdisho"
-      ],
-      "solutions": [
-        [
-          "Ciidamo",
-          "way",
-          "dagaallameen."
-        ]
-      ],
-      "formattedSolution": "Ciidamo way dagaallameen.",
+      "formattedSolution": "Muqdisho waxay ahayd magaalo ganacsi oo weyn.",
       "id": "hs-6",
       "priority": 2,
       "group": "ethiopia"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ganacsi badeed baa jiray.",
-      "meaningInSourceLanguage": "Sea trade existed.",
+      "formInTargetLanguage": "Maraakiib badan way iman jireen.",
+      "meaningInSourceLanguage": "Many ships used to arrive.",
       "id": "hs-7",
       "priority": 0,
       "group": "maritime-trade"
@@ -124,16 +134,16 @@
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [
-        "Ganacsi badeed baa jiray."
+        "Maraakiib badan way iman jireen."
       ],
       "phrase": [
         {
-          "word": "Sea trade",
-          "definition": "Ganacsi badeed"
+          "word": "Many ships",
+          "definition": "Maraakiib badan"
         },
         {
-          "word": "existed.",
-          "definition": "baa jiray"
+          "word": "used to arrive.",
+          "definition": "way iman jireen"
         }
       ],
       "id": "hs-8",
@@ -148,15 +158,15 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Mogadishu was a trade city. Sea trade existed."
+        "Mogadishu was a large trade city. Many ships used to arrive."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
-        "Reward correct recall of the main history facts from this lesson.",
+        "Reward correct recall of the main history story from this lesson.",
         "Accept beginner phrasing if the meaning stays clear.",
         "Be lenient with minor spelling issues."
       ],
-      "sampleAnswer": "Muqdisho magaalo ganacsi bay ahayd. Ganacsi badeed baa jiray."
+      "sampleAnswer": "Muqdisho waxay ahayd magaalo ganacsi oo weyn. Maraakiib badan way iman jireen."
     },
     {
       "type": "freeWriting",
@@ -166,15 +176,15 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali history summary.",
       "promptLines": [
-        "Write 2 short Somali sentences about the sultanates or Muqdisho."
+        "Write 2 short Somali sentences about the sultanates, Muqdisho, or sea trade."
       ],
       "placeholder": "Use the lesson history phrases if you can.",
       "gradingNotes": [
-        "Reward use of lesson facts and key terms like Muqdisho, Ajuraan, or ganacsi badeed.",
+        "Reward use of the lesson story and key terms like Muqdisho, Ajuraan, or saldanado.",
         "Keep corrections phrase-level and factual.",
         "Stay concise and supportive."
       ],
-      "sampleAnswer": "Ajuraan iyo Cadaal waa saldanado. Muqdisho magaalo ganacsi bay ahayd."
+      "sampleAnswer": "Ajuraan iyo Cadaal waxay ahaayeen saldanado waaweyn. Muqdisho waxay ahayd magaalo ganacsi oo weyn."
     }
   ]
 }

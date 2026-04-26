@@ -4,8 +4,8 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Soomaaliya federaal bay tahay.",
-      "meaningInSourceLanguage": "Somalia is federal.",
+      "formInTargetLanguage": "Maanta Soomaaliya federaal bay tahay.",
+      "meaningInSourceLanguage": "Today, Somalia is federal.",
       "id": "hr-1",
       "priority": 0,
       "group": "federal-republic"
@@ -14,16 +14,16 @@
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [
-        "Soomaaliya federaal bay tahay."
+        "Maanta Soomaaliya federaal bay tahay."
       ],
       "phrase": [
         {
-          "word": "Somalia",
-          "definition": "Soomaaliya"
+          "word": "Today,",
+          "definition": "Maanta"
         },
         {
-          "word": "is federal.",
-          "definition": "federaal bay tahay"
+          "word": "Somalia is federal.",
+          "definition": "Soomaaliya federaal bay tahay"
         }
       ],
       "id": "hr-2",
@@ -32,11 +32,51 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Dowladdu dib bay u dhisaysaa.",
-      "meaningInSourceLanguage": "The government is rebuilding.",
+      "formInTargetLanguage": "Gobollo maamul bay leeyihiin.",
+      "meaningInSourceLanguage": "Regions have administration.",
       "id": "hr-3",
       "priority": 0,
       "group": "rebuild-institutions"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Regions",
+          "definition": "Gobollo"
+        },
+        {
+          "word": "have administration.",
+          "definition": "maamul bay leeyihiin"
+        }
+      ],
+      "chips": [
+        "Gobollo",
+        "maamul",
+        "bay",
+        "leeyihiin."
+      ],
+      "solutions": [
+        [
+          "Gobollo",
+          "maamul",
+          "bay",
+          "leeyihiin."
+        ]
+      ],
+      "formattedSolution": "Gobollo maamul bay leeyihiin.",
+      "id": "hr-4",
+      "priority": 2,
+      "group": "rebuild-institutions"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Dowladdu dib bay u dhisaysaa dalka.",
+      "meaningInSourceLanguage": "The government is rebuilding the country.",
+      "id": "hr-5",
+      "priority": 0,
+      "group": "development"
     },
     {
       "type": "chips",
@@ -47,8 +87,8 @@
           "definition": "Dowladdu"
         },
         {
-          "word": "is rebuilding.",
-          "definition": "dib bay u dhisaysaa"
+          "word": "is rebuilding the country.",
+          "definition": "dib bay u dhisaysaa dalka"
         }
       ],
       "chips": [
@@ -56,8 +96,8 @@
         "dib",
         "bay",
         "u",
-        "dhisaysaa.",
-        "gobollada"
+        "dhisaysaa",
+        "dalka."
       ],
       "solutions": [
         [
@@ -65,61 +105,19 @@
           "dib",
           "bay",
           "u",
-          "dhisaysaa."
+          "dhisaysaa",
+          "dalka."
         ]
       ],
-      "formattedSolution": "Dowladdu dib bay u dhisaysaa.",
-      "id": "hr-4",
-      "priority": 2,
-      "group": "rebuild-institutions"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Ururada caalamiga ah way taageeraan.",
-      "meaningInSourceLanguage": "International organizations support.",
-      "id": "hr-5",
-      "priority": 0,
-      "group": "development"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "International organizations",
-          "definition": "Ururada caalamiga ah"
-        },
-        {
-          "word": "support.",
-          "definition": "way taageeraan"
-        }
-      ],
-      "chips": [
-        "Ururada",
-        "caalamiga",
-        "ah",
-        "way",
-        "taageeraan.",
-        "federaal"
-      ],
-      "solutions": [
-        [
-          "Ururada",
-          "caalamiga",
-          "ah",
-          "way",
-          "taageeraan."
-        ]
-      ],
-      "formattedSolution": "Ururada caalamiga ah way taageeraan.",
+      "formattedSolution": "Dowladdu dib bay u dhisaysaa dalka.",
       "id": "hr-6",
       "priority": 2,
       "group": "development"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gobollo maamul bay leeyihiin.",
-      "meaningInSourceLanguage": "Regions have administration.",
+      "formInTargetLanguage": "Ururada caalamiga ah way caawiyaan.",
+      "meaningInSourceLanguage": "International organizations help.",
       "id": "hr-7",
       "priority": 0,
       "group": "own-administrations"
@@ -128,16 +126,16 @@
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [
-        "Gobollo maamul bay leeyihiin."
+        "Ururada caalamiga ah way caawiyaan."
       ],
       "phrase": [
         {
-          "word": "Regions",
-          "definition": "Gobollo"
+          "word": "International organizations",
+          "definition": "Ururada caalamiga ah"
         },
         {
-          "word": "have administration.",
-          "definition": "maamul bay leeyihiin"
+          "word": "help.",
+          "definition": "way caawiyaan"
         }
       ],
       "id": "hr-8",
@@ -152,7 +150,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Somalia is federal. International organizations support."
+        "Today, Somalia is federal. The government is rebuilding the country."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -160,7 +158,7 @@
         "Accept beginner phrasing if the meaning is understandable.",
         "Be lenient with punctuation and spelling variation."
       ],
-      "sampleAnswer": "Soomaaliya federaal bay tahay. Ururada caalamiga ah way taageeraan."
+      "sampleAnswer": "Maanta Soomaaliya federaal bay tahay. Dowladdu dib bay u dhisaysaa dalka."
     },
     {
       "type": "freeWriting",
@@ -170,15 +168,15 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali recovery summary.",
       "promptLines": [
-        "Write 2 short Somali sentences about rebuilding or federalism."
+        "Write 2 short Somali sentences about federalism, rebuilding, or help from outside."
       ],
       "placeholder": "Use the lesson vocabulary if you can.",
       "gradingNotes": [
-        "Reward active use of the lesson facts and terms like federaal or maamul.",
+        "Reward active use of the lesson story and terms like federaal, maamul, or dib u dhisaysaa.",
         "Keep corrections phrase-level and concrete.",
         "Stay warm and concise."
       ],
-      "sampleAnswer": "Dowladdu dib bay u dhisaysaa. Gobollo maamul bay leeyihiin."
+      "sampleAnswer": "Gobollo maamul bay leeyihiin. Dowladdu dib bay u dhisaysaa dalka."
     }
   ]
 }
