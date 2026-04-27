@@ -97,6 +97,23 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Waa maxay cinwaaku?",
+      "meaningInSourceLanguage": "What is the address?",
+      "id": "pd-11",
+      "priority": 0,
+      "group": "address"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waxay ka soo horjeeddaa boostada.",
+      "meaningInSourceLanguage": "It is across the street from the post office.",
+      "id": "pd-12",
+      "priority": 0,
+      "group": "post-office-location"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Meel dhow bay deggentahay.",
       "meaningInSourceLanguage": "She lives nearby.",
       "id": "pd-9",

@@ -1,0 +1,275 @@
+[
+  {
+    "english": "I don't understand.",
+    "somali": "Ma fahmin.",
+    "theme": "language-barrier",
+    "sourcePage": 10,
+    "lessonHints": ["airport-arrival", "phone-calls"]
+  },
+  {
+    "english": "Please speak slowly.",
+    "somali": "Fadlan aayar u hadal.",
+    "theme": "language-barrier",
+    "sourcePage": 10,
+    "lessonHints": ["airport-arrival", "phone-calls"]
+  },
+  {
+    "english": "Please say that again.",
+    "somali": "Fadlan mar kale dheh.",
+    "theme": "language-barrier",
+    "sourcePage": 10,
+    "lessonHints": ["airport-arrival", "phone-calls"]
+  },
+  {
+    "english": "What does this word mean?",
+    "somali": "Kelmaddan macnaheedu muxuu yahay?",
+    "theme": "language-barrier",
+    "sourcePage": 11,
+    "lessonHints": ["common-phrases", "airport-arrival"]
+  },
+  {
+    "english": "What does this sentence mean?",
+    "somali": "Weedhan macnaheedu muxuu yahay?",
+    "theme": "language-barrier",
+    "sourcePage": 11,
+    "lessonHints": ["common-phrases", "airport-arrival"]
+  },
+  {
+    "english": "How do you spell your name?",
+    "somali": "Sidee u higgaadisaa magacaaga?",
+    "theme": "introductions",
+    "sourcePage": 12,
+    "lessonHints": ["introductions", "airport-arrival"]
+  },
+  {
+    "english": "I am pleased to meet you.",
+    "somali": "Waan ku faraxsanahay inaan kula kulmo.",
+    "theme": "etiquette",
+    "sourcePage": 14,
+    "lessonHints": ["introductions", "common-phrases"]
+  },
+  {
+    "english": "Please come in.",
+    "somali": "Fadlan soo gal.",
+    "theme": "etiquette",
+    "sourcePage": 14,
+    "lessonHints": ["common-phrases", "leave-takings"]
+  },
+  {
+    "english": "Please sit down.",
+    "somali": "Fadlan fadhiiso.",
+    "theme": "etiquette",
+    "sourcePage": 14,
+    "lessonHints": ["common-phrases", "leave-takings"]
+  },
+  {
+    "english": "Would you like something to drink?",
+    "somali": "Ma rabtaa cabbitaan?",
+    "theme": "etiquette",
+    "sourcePage": 14,
+    "lessonHints": ["food-and-drink", "common-phrases"]
+  },
+  {
+    "english": "I am sorry.",
+    "somali": "Waan ka xumahay.",
+    "theme": "etiquette",
+    "sourcePage": 14,
+    "lessonHints": ["common-phrases", "health-and-illness"]
+  },
+  {
+    "english": "See you later.",
+    "somali": "Hadhow baynu is arki doonnaa.",
+    "theme": "farewell",
+    "sourcePage": 15,
+    "lessonHints": ["leave-takings", "common-phrases"]
+  },
+  {
+    "english": "Take care.",
+    "somali": "Is ilaali.",
+    "theme": "farewell",
+    "sourcePage": 15,
+    "lessonHints": ["leave-takings", "common-phrases"]
+  },
+  {
+    "english": "May I help you?",
+    "somali": "Ma ku caawiyaa?",
+    "theme": "etiquette",
+    "sourcePage": 15,
+    "lessonHints": ["common-phrases", "phone-calls"]
+  },
+  {
+    "english": "You can call me Ali.",
+    "somali": "Waxaad iigu yeedhi kartaa Cali.",
+    "theme": "introductions",
+    "sourcePage": 16,
+    "lessonHints": ["introductions"]
+  },
+  {
+    "english": "What is the address?",
+    "somali": "Waa maxay cinwaaku?",
+    "theme": "directions",
+    "sourcePage": 40,
+    "lessonHints": ["places-and-directions", "changing-money"]
+  },
+  {
+    "english": "Where is this place located?",
+    "somali": "Meeshani halkee bay ku taallaa?",
+    "theme": "directions",
+    "sourcePage": 40,
+    "lessonHints": ["places-and-directions"]
+  },
+  {
+    "english": "It is across the street from the post office.",
+    "somali": "Waxay ka soo horjeeddaa boostada.",
+    "theme": "directions",
+    "sourcePage": 40,
+    "lessonHints": ["places-and-directions", "phone-calls"]
+  },
+  {
+    "english": "How long do I have to wait?",
+    "somali": "Intee in le'eg baan sugayaa?",
+    "theme": "waiting",
+    "sourcePage": 47,
+    "lessonHints": ["phone-calls", "hotel-check-in", "health-and-illness"]
+  },
+  {
+    "english": "Could you send a cab, please?",
+    "somali": "Ma u soo diri kartaa tagsi, fadlan?",
+    "theme": "transport",
+    "sourcePage": 67,
+    "lessonHints": ["phone-calls", "taxi-ride"]
+  },
+  {
+    "english": "One way or round trip?",
+    "somali": "Mid socod keliya ah mise mid sii socod iyo soo socodba ah?",
+    "theme": "transport",
+    "sourcePage": 67,
+    "lessonHints": ["journey-planning"]
+  },
+  {
+    "english": "Do you have health insurance?",
+    "somali": "Miyaad leedahay caymiska caafimaadka?",
+    "theme": "health",
+    "sourcePage": 78,
+    "lessonHints": ["health-and-illness"]
+  },
+  {
+    "english": "How much will it cost?",
+    "somali": "Imisa weeye qiimuhu?",
+    "theme": "health",
+    "sourcePage": 78,
+    "lessonHints": ["health-and-illness", "changing-money", "hotel-check-in"]
+  },
+  {
+    "english": "I have a fever.",
+    "somali": "Waxaa i haysa qandho.",
+    "theme": "health",
+    "sourcePage": 79,
+    "lessonHints": ["health-and-illness"]
+  },
+  {
+    "english": "I have a bad cough.",
+    "somali": "Waxaa i haya qufac xun.",
+    "theme": "health",
+    "sourcePage": 79,
+    "lessonHints": ["health-and-illness"]
+  },
+  {
+    "english": "Open your mouth and say, \"Aaaah.\"",
+    "somali": "Afkaaga fur oo dheh, \"Aaaah.\"",
+    "theme": "health",
+    "sourcePage": 80,
+    "lessonHints": ["health-and-illness"]
+  },
+  {
+    "english": "Is there a pharmacy near here?",
+    "somali": "Ma jiraa farmasi u dhow halkan?",
+    "theme": "health",
+    "sourcePage": 81,
+    "lessonHints": ["health-and-illness", "places-and-directions"]
+  },
+  {
+    "english": "Do you have anything for a cough?",
+    "somali": "Ma haysaa wax qufaca loo qaato?",
+    "theme": "health",
+    "sourcePage": 81,
+    "lessonHints": ["health-and-illness"]
+  },
+  {
+    "english": "This food is delicious.",
+    "somali": "Cuntadani way macaantahay.",
+    "theme": "food",
+    "sourcePage": 87,
+    "lessonHints": ["food-and-drink"]
+  },
+  {
+    "english": "Would you like something to eat?",
+    "somali": "Ma rabtaa wax aad cunto?",
+    "theme": "food",
+    "sourcePage": 87,
+    "lessonHints": ["food-and-drink"]
+  },
+  {
+    "english": "May I have a cup of coffee?",
+    "somali": "Ma isiin kartaa koob bun ah?",
+    "theme": "food",
+    "sourcePage": 88,
+    "lessonHints": ["food-and-drink"]
+  },
+  {
+    "english": "With or without sugar?",
+    "somali": "Ma sonkor baad ku rabtaa mise sonkor la'aan?",
+    "theme": "food",
+    "sourcePage": 88,
+    "lessonHints": ["food-and-drink"]
+  },
+  {
+    "english": "I would like a cup of hot tea.",
+    "somali": "Waxaan rabaa koob kulul oo shaah ah.",
+    "theme": "food",
+    "sourcePage": 88,
+    "lessonHints": ["food-and-drink"]
+  },
+  {
+    "english": "Where do I pay?",
+    "somali": "Xagee ka bixiyaa?",
+    "theme": "food",
+    "sourcePage": 89,
+    "lessonHints": ["food-and-drink", "hotel-check-in", "changing-money"]
+  },
+  {
+    "english": "For here or to go?",
+    "somali": "Halkan mise qaadasho?",
+    "theme": "food",
+    "sourcePage": 89,
+    "lessonHints": ["food-and-drink"]
+  },
+  {
+    "english": "Shall I wrap it up for you?",
+    "somali": "Miyaan kuu duubaa?",
+    "theme": "food",
+    "sourcePage": 89,
+    "lessonHints": ["food-and-drink"]
+  },
+  {
+    "english": "I would like a single room.",
+    "somali": "Waxaan rabaa qol keligiis ah.",
+    "theme": "hotel",
+    "sourcePage": 99,
+    "lessonHints": ["hotel-check-in"]
+  },
+  {
+    "english": "What is the checkout time?",
+    "somali": "Goorma ayaa laga baxayaa?",
+    "theme": "hotel",
+    "sourcePage": 99,
+    "lessonHints": ["hotel-check-in"]
+  },
+  {
+    "english": "I would like to see the manager, please.",
+    "somali": "Waxaan rabaa inaan arko maamulaha, fadlan.",
+    "theme": "housing",
+    "sourcePage": 98,
+    "lessonHints": ["hotel-check-in"]
+  }
+]

@@ -233,6 +233,28 @@ export type CourseDictionaryEntry = {
     sources: string[]
 }
 
+export type CoursePhraseDictionaryEntry = {
+    english: string
+    somali: string
+    sources: string[]
+}
+
+export type CourseGrammarDictionaryRow = {
+    label: string
+    prompt: string
+    somali: string[]
+    note?: string
+}
+
+export type CourseGrammarDictionarySection = {
+    id: string
+    tense: 'present' | 'past'
+    title: string
+    summary: string
+    rows: CourseGrammarDictionaryRow[]
+    sources: string[]
+}
+
 export type SkillDetail = {
     course: CourseDetail
     module: CourseModule
@@ -269,6 +291,26 @@ function getFullChallengeDirectoryPath(jsonPath: string) {
 
 function getFullDictionaryPath(jsonPath: string) {
     return path.join(process.cwd(), 'src', 'courses', jsonPath, 'wordDictionary.json')
+}
+
+function getFullPhraseDictionaryPath(jsonPath: string) {
+    return path.join(
+        process.cwd(),
+        'src',
+        'courses',
+        jsonPath,
+        'phraseDictionary.json'
+    )
+}
+
+function getFullGrammarDictionaryPath(jsonPath: string) {
+    return path.join(
+        process.cwd(),
+        'src',
+        'courses',
+        jsonPath,
+        'grammarDictionary.json'
+    )
 }
 
 async function getCourseMetadataByJsonPath(jsonPath: string) {
@@ -417,6 +459,32 @@ export async function getCourseDictionaryEntries(
 
     const fileContent = await fs.promises.readFile(dictionaryPath, 'utf8')
     return JSON.parse(fileContent) as CourseDictionaryEntry[]
+}
+
+export async function getCoursePhraseDictionaryEntries(
+    courseId: string
+): Promise<CoursePhraseDictionaryEntry[]> {
+    const dictionaryPath = getFullPhraseDictionaryPath(courseId)
+
+    if (!fs.existsSync(dictionaryPath)) {
+        return []
+    }
+
+    const fileContent = await fs.promises.readFile(dictionaryPath, 'utf8')
+    return JSON.parse(fileContent) as CoursePhraseDictionaryEntry[]
+}
+
+export async function getCourseGrammarDictionarySections(
+    courseId: string
+): Promise<CourseGrammarDictionarySection[]> {
+    const dictionaryPath = getFullGrammarDictionaryPath(courseId)
+
+    if (!fs.existsSync(dictionaryPath)) {
+        return []
+    }
+
+    const fileContent = await fs.promises.readFile(dictionaryPath, 'utf8')
+    return JSON.parse(fileContent) as CourseGrammarDictionarySection[]
 }
 
 export async function listCourseSkillParameters() {

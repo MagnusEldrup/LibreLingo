@@ -112,6 +112,23 @@
       "group": "open-mouth"
     },
     {
+      "type": "options",
+      "formInTargetLanguage": "Waxaa i haysa qandho.",
+      "meaningInSourceLanguage": "I have a fever.",
+      "id": "hl-9",
+      "priority": 0,
+      "group": "fever"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Ma jiraa farmasi u dhow halkan?",
+      "meaningInSourceLanguage": "Is there a pharmacy near here?",
+      "id": "hl-10",
+      "priority": 0,
+      "group": "pharmacy"
+    },
+    {
       "type": "freeWriting",
       "id": "hl-fw-1",
       "priority": 3,
