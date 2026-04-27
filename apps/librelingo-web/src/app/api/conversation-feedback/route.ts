@@ -42,12 +42,32 @@ const feedbackSchema = {
             type: 'string',
         },
     },
-    required: ['score', 'summary', 'strengths', 'improvements', 'suggestedReply'],
+    required: [
+        'score',
+        'summary',
+        'strengths',
+        'improvements',
+        'suggestedReply',
+    ],
     additionalProperties: false,
 } as const
 
+const CONVERSATION_FEEDBACK_MAX_OUTPUT_TOKENS = 450
+
 function isSafeIdentifier(value: string) {
     return /^[\dA-Za-z-]+$/.test(value)
+}
+
+function normalizeForComparison(value: string) {
+    return value
+        .toLowerCase()
+        .replace(/[`'".,!?;:()[\]{}]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+}
+
+function tokenize(value: string) {
+    return normalizeForComparison(value).split(' ').filter(Boolean)
 }
 
 function normalizeFeedback(feedback: ConversationTurnFeedback) {
@@ -83,6 +103,131 @@ function normalizeFeedback(feedback: ConversationTurnFeedback) {
         improvements,
         suggestedReply: feedback.suggestedReply.trim(),
     } satisfies ConversationTurnFeedback
+}
+
+function buildFallbackConversationFeedback(
+    turn: Extract<SkillChallenge, { type: 'conversation' }>['turns'][number],
+    answer: string
+): ConversationTurnFeedback {
+    const normalizedAnswer = normalizeForComparison(answer)
+    const answerTokens = tokenize(answer)
+    const expectedReplies = turn.expectedReplies.map(normalizeForComparison)
+    const hasExactExpectedReply = expectedReplies.some(
+        (expectedReply) =>
+            expectedReply.length > 0 && normalizedAnswer.includes(expectedReply)
+    )
+    const expectedTokens = turn.expectedReplies.flatMap(tokenize)
+    const matchingTokenCount = answerTokens.filter((token) =>
+        expectedTokens.includes(token)
+    ).length
+    const hasUsefulOverlap =
+        expectedTokens.length > 0 &&
+        matchingTokenCount >= Math.max(1, Math.ceil(expectedTokens.length / 3))
+
+    return normalizeFeedback({
+        score: hasExactExpectedReply ? 5 : hasUsefulOverlap ? 3 : 2,
+        summary: hasExactExpectedReply
+            ? 'Your reply fits the conversation well.'
+            : hasUsefulOverlap
+              ? 'Your reply has some useful Somali, but the pattern needs checking.'
+              : 'Your reply needs more of the expected Somali pattern.',
+        strengths:
+            answerTokens.length > 0
+                ? ['You replied in Somali and kept the exchange moving.']
+                : [],
+        improvements: [
+            turn.sampleReply
+                ? `Compare your reply with: ${turn.sampleReply}`
+                : 'Check that your reply matches the English cue and uses a complete Somali phrase.',
+        ],
+        suggestedReply:
+            turn.sampleReply?.trim() ||
+            turn.expectedReplies[0] ||
+            answer.trim(),
+    })
+}
+
+function extractRefusal(response: {
+    output?: Array<{
+        type: string
+        content?: Array<{
+            type: string
+            refusal?: string
+        }>
+    }>
+}) {
+    return response.output
+        ?.filter((item) => item.type === 'message')
+        .flatMap((item) => item.content ?? [])
+        .find((item) => item.type === 'refusal')
+}
+
+async function requestConversationFeedback(
+    client: Awaited<ReturnType<typeof getOpenAIClient>>,
+    challenge: Extract<SkillChallenge, { type: 'conversation' }>,
+    turn: Extract<SkillChallenge, { type: 'conversation' }>['turns'][number],
+    answer: string
+): Promise<{ feedback: ConversationTurnFeedback } | { refusal: string }> {
+    try {
+        const response = await client.responses.create({
+            model: WRITING_FEEDBACK_MODEL,
+            reasoning: {
+                effort: WRITING_FEEDBACK_REASONING_EFFORT,
+            },
+            store: false,
+            instructions: [
+                'You are a warm Somali conversation tutor for beginners.',
+                'Review one short Somali reply in context.',
+                'Reward replies that fit the meaning and tone of the exchange.',
+                'Focus on grammatical and understandable Somali, not spelling perfection.',
+                'Be lenient on punctuation, doubled letters, and minor spelling variation.',
+                'Do not nitpick minor spelling if the intended Somali is still clear.',
+                'When a reply uses the wrong Somali structure, briefly explain the grammar pattern that should be used.',
+                'Keep all feedback brief, practical, and encouraging.',
+                'If the learner reply is understandable, do not over-correct.',
+                'Keep summary to one short sentence.',
+                'Return at most 1 strength and at most 2 improvements.',
+            ].join(' '),
+            input: buildPrompt(challenge, turn, answer),
+            max_output_tokens: CONVERSATION_FEEDBACK_MAX_OUTPUT_TOKENS,
+            text: {
+                format: {
+                    type: 'json_schema',
+                    name: 'conversation_feedback',
+                    strict: true,
+                    schema: feedbackSchema,
+                },
+            },
+        })
+
+        const refusalContent = extractRefusal(response)
+
+        if (refusalContent?.refusal) {
+            return { refusal: refusalContent.refusal }
+        }
+
+        if (response.output_text) {
+            try {
+                return {
+                    feedback: JSON.parse(
+                        response.output_text
+                    ) as ConversationTurnFeedback,
+                }
+            } catch {
+                return {
+                    feedback: buildFallbackConversationFeedback(turn, answer),
+                }
+            }
+        }
+
+        return {
+            feedback: buildFallbackConversationFeedback(turn, answer),
+        }
+    } catch {
+        return {
+            feedback: buildFallbackConversationFeedback(turn, answer),
+        }
+    }
 }
 
 function buildPrompt(
@@ -126,7 +271,10 @@ export async function POST(request: Request) {
     try {
         payload = (await request.json()) as ConversationFeedbackRequest
     } catch {
-        return NextResponse.json({ error: 'Invalid JSON body.' }, { status: 400 })
+        return NextResponse.json(
+            { error: 'Invalid JSON body.' },
+            { status: 400 }
+        )
     }
 
     const courseId = payload.courseId?.trim()
@@ -157,7 +305,11 @@ export async function POST(request: Request) {
     }
 
     try {
-        const challenge = await loadSkillChallenge(courseId, practiceHref, challengeId)
+        const challenge = await loadSkillChallenge(
+            courseId,
+            practiceHref,
+            challengeId
+        )
 
         if (!challenge || challenge.type !== 'conversation') {
             return NextResponse.json(
@@ -166,7 +318,9 @@ export async function POST(request: Request) {
             )
         }
 
-        const turn = challenge.turns.find((candidateTurn) => candidateTurn.id === turnId)
+        const turn = challenge.turns.find(
+            (candidateTurn) => candidateTurn.id === turnId
+        )
 
         if (!turn) {
             return NextResponse.json(
@@ -176,74 +330,25 @@ export async function POST(request: Request) {
         }
 
         const client = await getOpenAIClient()
-        const response = await client.responses.create({
-            model: WRITING_FEEDBACK_MODEL,
-            reasoning: {
-                effort: WRITING_FEEDBACK_REASONING_EFFORT,
-            },
-            store: false,
-            instructions: [
-                'You are a warm Somali conversation tutor for beginners.',
-                'Review one short Somali reply in context.',
-                'Reward replies that fit the meaning and tone of the exchange.',
-                'Focus on whether the Somali is grammatical and understandable, not on spelling perfection.',
-                'Be lenient on punctuation, doubled letters, and minor spelling variation.',
-                'Do not nitpick minor spelling if the intended Somali is still clear.',
-                'When a reply uses the wrong Somali structure, briefly explain the grammar pattern that should be used.',
-                'Keep all feedback brief, practical, and encouraging.',
-                'If the learner reply is understandable, do not over-correct.',
-            ].join(' '),
-            input: buildPrompt(challenge, turn, answer),
-            max_output_tokens: 300,
-            text: {
-                format: {
-                    type: 'json_schema',
-                    name: 'conversation_feedback',
-                    strict: true,
-                    schema: feedbackSchema,
-                },
-            },
-        })
+        const result = await requestConversationFeedback(
+            client,
+            challenge,
+            turn,
+            answer
+        )
 
-        if (
-            response.status === 'incomplete' &&
-            response.incomplete_details?.reason === 'max_output_tokens'
-        ) {
-            throw new Error('The conversation feedback response was incomplete.')
-        }
-
-        if (response.output_text) {
-            const parsedFeedback = JSON.parse(
-                response.output_text
-            ) as ConversationTurnFeedback
-
-            return NextResponse.json(normalizeFeedback(parsedFeedback))
-        }
-
-        const messageOutputs = response.output as Array<{
-            type: string
-            content?: Array<{
-                type: string
-                refusal?: string
-            }>
-        }>
-        const refusalContent = messageOutputs
-            .filter((item) => item.type === 'message')
-            .flatMap((item) => item.content ?? [])
-            .find((item) => item.type === 'refusal')
-
-        if (refusalContent) {
+        if ('refusal' in result) {
             return NextResponse.json({
                 score: 1,
                 summary: '',
                 strengths: [],
                 improvements: [],
                 suggestedReply: '',
-                refusal: refusalContent.refusal,
+                refusal: result.refusal,
             } satisfies ConversationTurnFeedback)
         }
 
-        throw new Error('No response content was returned.')
+        return NextResponse.json(normalizeFeedback(result.feedback))
     } catch (error) {
         const message =
             error instanceof Error
