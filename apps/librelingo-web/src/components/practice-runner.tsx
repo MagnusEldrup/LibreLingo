@@ -149,7 +149,10 @@ function getEditDistance(left: string, right: string) {
         return left.length
     }
 
-    const previousRow = Array.from({ length: right.length + 1 }, (_, index) => index)
+    const previousRow = Array.from(
+        { length: right.length + 1 },
+        (_, index) => index
+    )
     let leftIndex = 0
 
     while (leftIndex < left.length) {
@@ -161,8 +164,7 @@ function getEditDistance(left: string, right: string) {
         while (rightIndex < right.length) {
             const rightCharacter = right.charAt(rightIndex)
             const temporary = previousRow[rightIndex + 1]
-            const substitutionCost =
-                leftCharacter === rightCharacter ? 0 : 1
+            const substitutionCost = leftCharacter === rightCharacter ? 0 : 1
 
             previousRow[rightIndex + 1] = Math.min(
                 previousRow[rightIndex + 1] + 1,
@@ -219,8 +221,9 @@ function matchesAcceptedAnswer(candidate: string, acceptedAnswers: string[]) {
         const normalizedAccepted = normalizeText(accepted)
 
         if (
-            Math.abs(candidateWordCount - normalizedAccepted.split(' ').length) >
-            1
+            Math.abs(
+                candidateWordCount - normalizedAccepted.split(' ').length
+            ) > 1
         ) {
             continue
         }
@@ -377,7 +380,9 @@ function buildPracticeSession(
         : undefined
     const freeWritingChallenges = answerableChallenges
         .filter(
-            (challenge): challenge is Extract<SkillChallenge, { type: 'freeWriting' }> =>
+            (
+                challenge
+            ): challenge is Extract<SkillChallenge, { type: 'freeWriting' }> =>
                 challenge.type === 'freeWriting'
         )
         .sort((left, right) => {
@@ -453,7 +458,10 @@ function buildPracticeSession(
     ]
 }
 
-function getCardDirection(challengeId: string, sessionSeed: number): CardDirection {
+function getCardDirection(
+    challengeId: string,
+    sessionSeed: number
+): CardDirection {
     return hashString(`${sessionSeed}-${challengeId}-card-direction`) % 2 === 0
         ? 'sourceToTarget'
         : 'targetToSource'
@@ -464,7 +472,10 @@ function getPromptVariant(options: string[], key: string) {
 }
 
 function getChallengeBasePoints(challenge: SkillChallenge) {
-    if (challenge.type === 'grammarTable' && challenge.pointValue !== undefined) {
+    if (
+        challenge.type === 'grammarTable' &&
+        challenge.pointValue !== undefined
+    ) {
         return challenge.pointValue
     }
 
@@ -624,11 +635,19 @@ function buildOptionsPrompt(
 
     return usesQuestionMeaning
         ? getPromptVariant(
-              ['Pick the best meaning', 'Choose the matching question', 'What does this ask?'],
+              [
+                  'Pick the best meaning',
+                  'Choose the matching question',
+                  'What does this ask?',
+              ],
               `${sessionSeed}-${challenge.id}-options-question`
           )
         : getPromptVariant(
-              ['Pick the best meaning', 'Choose the English meaning', 'What does this mean?'],
+              [
+                  'Pick the best meaning',
+                  'Choose the English meaning',
+                  'What does this mean?',
+              ],
               `${sessionSeed}-${challenge.id}-options-statement`
           )
 }
@@ -639,23 +658,43 @@ function buildChipsPrompt(
 ) {
     return challenge.translatesToSourceLanguage
         ? getPromptVariant(
-              ['Build the English answer', 'Build the English sentence', 'Put the English words in order'],
+              [
+                  'Build the English answer',
+                  'Build the English sentence',
+                  'Put the English words in order',
+              ],
               `${sessionSeed}-${challenge.id}-chips-source`
           )
         : getPromptVariant(
-              ['Build the Somali answer', 'Build the Somali sentence', 'Put the Somali words in order'],
+              [
+                  'Build the Somali answer',
+                  'Build the Somali sentence',
+                  'Put the Somali words in order',
+              ],
               `${sessionSeed}-${challenge.id}-chips-target`
           )
 }
 
-function buildCardsPrompt(direction: CardDirection, challengeId: string, sessionSeed: number) {
+function buildCardsPrompt(
+    direction: CardDirection,
+    challengeId: string,
+    sessionSeed: number
+) {
     return direction === 'sourceToTarget'
         ? getPromptVariant(
-              ['Choose the Somali sentence', 'Pick the Somali match', 'Which Somali fits?'],
+              [
+                  'Choose the Somali sentence',
+                  'Pick the Somali match',
+                  'Which Somali fits?',
+              ],
               `${sessionSeed}-${challengeId}-cards-source`
           )
         : getPromptVariant(
-              ['Choose the English sentence', 'Pick the English match', 'What does this mean?'],
+              [
+                  'Choose the English sentence',
+                  'Pick the English match',
+                  'What does this mean?',
+              ],
               `${sessionSeed}-${challengeId}-cards-target`
           )
 }
@@ -675,11 +714,14 @@ function buildCardChoices(
                     SkillChallenge,
                     { type: 'options' | 'cards' }
                 > =>
-                    (candidate.type === 'options' || candidate.type === 'cards') &&
+                    (candidate.type === 'options' ||
+                        candidate.type === 'cards') &&
                     candidate.id !== challenge.id
             )
             .map((candidate) => candidate.formInTargetLanguage)
-            .filter((candidate, index, items) => items.indexOf(candidate) === index)
+            .filter(
+                (candidate, index, items) => items.indexOf(candidate) === index
+            )
             .filter((candidate) => candidate !== challenge.formInTargetLanguage)
 
         const shuffledDistractors = shuffleWithSeed(
@@ -725,11 +767,19 @@ function buildShortInputPrompt(
 ) {
     return challenge.phrase.length === 1
         ? getPromptVariant(
-              ['Type the Somali word', 'Write the Somali word', 'Answer in Somali'],
+              [
+                  'Type the Somali word',
+                  'Write the Somali word',
+                  'Answer in Somali',
+              ],
               `${sessionSeed}-${challenge.id}-short-word`
           )
         : getPromptVariant(
-              ['Type the Somali phrase', 'Write the phrase in Somali', 'Answer in Somali'],
+              [
+                  'Type the Somali phrase',
+                  'Write the phrase in Somali',
+                  'Answer in Somali',
+              ],
               `${sessionSeed}-${challenge.id}-short-phrase`
           )
 }
@@ -797,9 +847,9 @@ function getWritingFeedbackErrorDetails(
         normalizedError.includes('no response content')
     ) {
         return {
-            message: 'The AI feedback was interrupted.',
+            message: 'Feedback took too long to finish.',
             supportingText:
-                'The grader started responding but did not finish cleanly. Try again in a moment.',
+                'The grader did not return a complete response. Try again, or keep editing your answer and submit once more.',
         }
     }
 
@@ -843,7 +893,9 @@ function AutoAdvanceNotice({
     return (
         <div className="space-y-2 rounded-2xl border border-[#b7d4fb] bg-[#eef6ff] p-5">
             <p className="text-lg font-semibold text-[#2f6db8]">{message}</p>
-            <p className="text-sm text-slate-700">Moving to the next challenge...</p>
+            <p className="text-sm text-slate-700">
+                Moving to the next challenge...
+            </p>
         </div>
     )
 }
@@ -891,10 +943,13 @@ function OptionsChallengeView({
                         choice === challenge.meaningInSourceLanguage
                     const isSelected = choice === selectedOption
                     const showCorrect =
-                        (feedbackState === 'correct' || feedbackState === 'revealed') &&
+                        (feedbackState === 'correct' ||
+                            feedbackState === 'revealed') &&
                         isCorrect
                     const showIncorrect =
-                        feedbackState === 'incorrect' && isSelected && !isCorrect
+                        feedbackState === 'incorrect' &&
+                        isSelected &&
+                        !isCorrect
                     let stateClasses =
                         'border-slate-200 bg-white text-slate-900 hover:border-[#6aa5ea] hover:bg-[#f6faff]'
 
@@ -1011,12 +1066,12 @@ function ChipsChallengeView({
         challenge.chips,
         `${sessionSeed}-${challenge.id}-chips`
     )
-    const selectedChips = selectedChipIndexes.map((index) => displayedChips[index])
+    const selectedChips = selectedChipIndexes.map(
+        (index) => displayedChips[index]
+    )
     const selectedText = normalizeText(selectedChips.join(' '))
     const acceptedSolutions = new Set(
-        challenge.solutions.map((solution) =>
-            normalizeText(solution.join(' '))
-        )
+        challenge.solutions.map((solution) => normalizeText(solution.join(' ')))
     )
     const isLocked = feedbackState === 'correct' || feedbackState === 'revealed'
 
@@ -1210,7 +1265,9 @@ function CardsChallengeView({
                             feedbackState === 'revealed') &&
                         isCorrect
                     const showIncorrect =
-                        feedbackState === 'incorrect' && isSelected && !isCorrect
+                        feedbackState === 'incorrect' &&
+                        isSelected &&
+                        !isCorrect
                     let stateClasses =
                         'border-slate-200 bg-white text-slate-900 hover:border-[#6aa5ea] hover:bg-[#f6faff]'
 
@@ -1571,7 +1628,9 @@ function FreeWritingChallengeView({
 
             {!feedback && (
                 <Button
-                    disabled={isSubmitting || normalizeText(answer).length === 0}
+                    disabled={
+                        isSubmitting || normalizeText(answer).length === 0
+                    }
                     onClick={() => {
                         void submitForFeedback()
                     }}
@@ -1638,7 +1697,8 @@ function FreeWritingChallengeView({
                                 </ul>
                             ) : (
                                 <p className="text-slate-600">
-                                    No important correction needed here. Keep using the same pattern.
+                                    No important correction needed here. Keep
+                                    using the same pattern.
                                 </p>
                             )}
                         </div>
@@ -1648,7 +1708,9 @@ function FreeWritingChallengeView({
                         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
                             Suggested Somali rewrite
                         </p>
-                        <p className="text-slate-900">{feedback.suggestedAnswer}</p>
+                        <p className="text-slate-900">
+                            {feedback.suggestedAnswer}
+                        </p>
                     </div>
 
                     {normalizeText(feedback.suggestedAnswer).length > 0 &&
@@ -1659,8 +1721,9 @@ function FreeWritingChallengeView({
                                         Type the corrected Somali for +5 XP
                                     </p>
                                     <p className="text-sm text-slate-600">
-                                        Copy the suggested rewrite as closely as you
-                                        can. Minor spelling variation is still accepted.
+                                        Copy the suggested rewrite as closely as
+                                        you can. Minor spelling variation is
+                                        still accepted.
                                     </p>
                                 </div>
                                 <textarea
@@ -1668,7 +1731,9 @@ function FreeWritingChallengeView({
                                     onChange={(event) => {
                                         setCorrectedAnswer(event.target.value)
                                         if (correctionFeedbackState) {
-                                            setCorrectionFeedbackState(undefined)
+                                            setCorrectionFeedbackState(
+                                                undefined
+                                            )
                                         }
                                     }}
                                     placeholder="Type the corrected Somali here"
@@ -1678,13 +1743,14 @@ function FreeWritingChallengeView({
                                 />
                                 {correctionFeedbackState === 'incorrect' && (
                                     <p className="text-sm text-rose-700">
-                                        Not quite yet. Follow the suggested Somali
-                                        rewrite and try again.
+                                        Not quite yet. Follow the suggested
+                                        Somali rewrite and try again.
                                     </p>
                                 )}
                                 <Button
                                     disabled={
-                                        normalizeText(correctedAnswer).length === 0
+                                        normalizeText(correctedAnswer)
+                                            .length === 0
                                     }
                                     onClick={submitCorrectedAnswer}
                                 >
@@ -1830,7 +1896,8 @@ function WriteFeedbackPanel({
                         </ul>
                     ) : (
                         <p className="text-slate-600">
-                            No major correction is needed. Keep the same structure.
+                            No major correction is needed. Keep the same
+                            structure.
                         </p>
                     )}
                 </div>
@@ -1891,12 +1958,17 @@ function WriteChallengeView({
     setAnswer: (value: string) => void
     onComplete: (completion: ChallengeCompletion) => void
 }) {
-    const [draftFeedback, setDraftFeedback] = useState<WriteFeedback | undefined>()
-    const [finalFeedback, setFinalFeedback] = useState<WriteFeedback | undefined>()
+    const [draftFeedback, setDraftFeedback] = useState<
+        WriteFeedback | undefined
+    >()
+    const [finalFeedback, setFinalFeedback] = useState<
+        WriteFeedback | undefined
+    >()
     const [requestError, setRequestError] = useState<string | undefined>()
     const [isSubmitting, setIsSubmitting] = useState(false)
-    const [lastRequestedStage, setLastRequestedStage] =
-        useState<'draft' | 'final'>('draft')
+    const [lastRequestedStage, setLastRequestedStage] = useState<
+        'draft' | 'final'
+    >('draft')
 
     useEffect(() => {
         setDraftFeedback(undefined)
@@ -1991,7 +2063,8 @@ function WriteChallengeView({
                         Required targets
                     </p>
                     <p className="text-sm text-slate-600">
-                        Use all five targets before you submit the final version.
+                        Use all five targets before you submit the final
+                        version.
                     </p>
                 </div>
                 <div className="grid gap-3 md:grid-cols-2">
@@ -2014,7 +2087,8 @@ function WriteChallengeView({
                                 {requirement.explanation}
                             </p>
                             <p className="mt-2 text-xs uppercase tracking-[0.16em] text-slate-500">
-                                Target forms: {requirement.expectedForms.join(' / ')}
+                                Target forms:{' '}
+                                {requirement.expectedForms.join(' / ')}
                             </p>
                         </div>
                     ))}
@@ -2028,8 +2102,8 @@ function WriteChallengeView({
                     </label>
                     {draftFeedback && !finalFeedback && (
                         <p className="text-sm text-slate-500">
-                            Revise your draft using the feedback, then submit the
-                            final version for a 1-5 grade.
+                            Revise your draft using the feedback, then submit
+                            the final version for a 1-5 grade.
                         </p>
                     )}
                 </div>
@@ -2046,7 +2120,9 @@ function WriteChallengeView({
 
             {!draftFeedback && !finalFeedback && (
                 <Button
-                    disabled={isSubmitting || normalizeText(answer).length === 0}
+                    disabled={
+                        isSubmitting || normalizeText(answer).length === 0
+                    }
                     onClick={() => {
                         void requestWriteFeedback('draft')
                     }}
@@ -2079,7 +2155,10 @@ function WriteChallengeView({
                     <div className="flex flex-wrap gap-3">
                         <Button
                             variant="outline"
-                            disabled={isSubmitting || normalizeText(answer).length === 0}
+                            disabled={
+                                isSubmitting ||
+                                normalizeText(answer).length === 0
+                            }
                             onClick={() => {
                                 void requestWriteFeedback('draft')
                             }}
@@ -2089,7 +2168,10 @@ function WriteChallengeView({
                                 : 'Refresh draft feedback'}
                         </Button>
                         <Button
-                            disabled={isSubmitting || normalizeText(answer).length === 0}
+                            disabled={
+                                isSubmitting ||
+                                normalizeText(answer).length === 0
+                            }
                             onClick={() => {
                                 void requestWriteFeedback('final')
                             }}
@@ -2165,7 +2247,8 @@ function ConversationFeedbackPanel({
                         </ul>
                     ) : (
                         <p className="text-slate-600">
-                            Your reply matched the conversation well enough to continue.
+                            Your reply matched the conversation well enough to
+                            continue.
                         </p>
                     )}
                 </div>
@@ -2210,7 +2293,10 @@ function ConversationTranscript({
     currentAnswer,
 }: {
     turns: ConversationTranscriptTurn[]
-    currentTurn: Extract<SkillChallenge, { type: 'conversation' }>['turns'][number]
+    currentTurn: Extract<
+        SkillChallenge,
+        { type: 'conversation' }
+    >['turns'][number]
     currentAnswer: string
 }) {
     const trimmedCurrentAnswer = currentAnswer.trim()
@@ -2307,12 +2393,13 @@ function ConversationChallengeView({
     onComplete: (completion: ChallengeCompletion) => void
 }) {
     const [turnIndex, setTurnIndex] = useState(0)
-    const [turnFeedback, setTurnFeedback] =
-        useState<ConversationTurnFeedback | undefined>()
+    const [turnFeedback, setTurnFeedback] = useState<
+        ConversationTurnFeedback | undefined
+    >()
     const [turnScores, setTurnScores] = useState<number[]>([])
-    const [transcriptTurns, setTranscriptTurns] = useState<ConversationTranscriptTurn[]>(
-        []
-    )
+    const [transcriptTurns, setTranscriptTurns] = useState<
+        ConversationTranscriptTurn[]
+    >([])
     const [requestError, setRequestError] = useState<string | undefined>()
     const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -2423,15 +2510,19 @@ function ConversationChallengeView({
                 <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
                     {challenge.instruction}
                 </p>
-                {challenge.introductionLines && challenge.introductionLines.length > 0 && (
-                    <div className="space-y-2 rounded-2xl border border-[#c8dbfb] bg-[#f6faff] p-5">
-                        {challenge.introductionLines.map((line) => (
-                            <p key={line} className="text-sm leading-6 text-slate-700">
-                                {line}
-                            </p>
-                        ))}
-                    </div>
-                )}
+                {challenge.introductionLines &&
+                    challenge.introductionLines.length > 0 && (
+                        <div className="space-y-2 rounded-2xl border border-[#c8dbfb] bg-[#f6faff] p-5">
+                            {challenge.introductionLines.map((line) => (
+                                <p
+                                    key={line}
+                                    className="text-sm leading-6 text-slate-700"
+                                >
+                                    {line}
+                                </p>
+                            ))}
+                        </div>
+                    )}
             </div>
 
             <ConversationTranscript
@@ -2485,7 +2576,9 @@ function ConversationChallengeView({
 
             {!turnFeedback && (
                 <Button
-                    disabled={isSubmitting || normalizeText(answer).length === 0}
+                    disabled={
+                        isSubmitting || normalizeText(answer).length === 0
+                    }
                     onClick={() => {
                         void submitReply()
                     }}
@@ -2530,7 +2623,10 @@ function GrammarTableGrid({
     editable,
     onAnswerChange,
 }: {
-    columnHeaders: Extract<SkillChallenge, { type: 'grammarTable' }>['columnHeaders']
+    columnHeaders: Extract<
+        SkillChallenge,
+        { type: 'grammarTable' }
+    >['columnHeaders']
     rows: GrammarTableRow[]
     answers: Record<string, string>
     lockedRowIds: string[]
@@ -2560,7 +2656,7 @@ function GrammarTableGrid({
                         !editable || isRowLocked || isRowRevealed
                     const rowValue = shouldShowAnswer
                         ? row.answers[0]
-                        : answers[row.id] ?? ''
+                        : (answers[row.id] ?? '')
                     const acceptedAnswers = row.answers.join(' / ')
                     let answerStateClasses =
                         'border-[#aac8f3] bg-white text-slate-900'
@@ -2589,7 +2685,10 @@ function GrammarTableGrid({
                                     value={rowValue}
                                     disabled={!editable || isRowLocked}
                                     onChange={(event) =>
-                                        onAnswerChange?.(row.id, event.target.value)
+                                        onAnswerChange?.(
+                                            row.id,
+                                            event.target.value
+                                        )
                                     }
                                     placeholder="Type the Somali form"
                                     className={[
@@ -2639,7 +2738,9 @@ function GrammarTableChallengeView({
     )
     const [slideIndex, setSlideIndex] = useState(0)
     const [practiceSeed, setPracticeSeed] = useState(() => createSessionSeed())
-    const [lastCheckedRowId, setLastCheckedRowId] = useState<string | undefined>()
+    const [lastCheckedRowId, setLastCheckedRowId] = useState<
+        string | undefined
+    >()
     const [showRuleFeedback, setShowRuleFeedback] = useState(false)
     const practiceRows = challenge.practiceRows ?? challenge.rows
     const lessonSlides: GrammarLessonSlide[] =
@@ -2669,7 +2770,7 @@ function GrammarTableChallengeView({
     const activeRow = orderedPracticeRows.find(
         (row) => !lockedRowSet.has(row.id)
     )
-    const activeAnswer = activeRow ? answers[activeRow.id] ?? '' : ''
+    const activeAnswer = activeRow ? (answers[activeRow.id] ?? '') : ''
     const canCheck =
         activeRow !== undefined && normalizeText(activeAnswer).length > 0
     const isLocked = feedbackState === 'correct' || feedbackState === 'revealed'
@@ -2739,7 +2840,9 @@ function GrammarTableChallengeView({
                             columnHeaders={challenge.columnHeaders}
                             rows={currentSlide.rows}
                             answers={{}}
-                            lockedRowIds={currentSlide.rows.map((row) => row.id)}
+                            lockedRowIds={currentSlide.rows.map(
+                                (row) => row.id
+                            )}
                             feedbackState={undefined}
                             editable={false}
                         />
@@ -2779,10 +2882,13 @@ function GrammarTableChallengeView({
                     <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-[#d6e6fb] bg-white px-5 py-4">
                         <p className="text-sm leading-6 text-slate-700">
                             Answer one Somali form at a time. The prompts are
-                            mixed, and if you miss one you will see the rule
-                            and the correct form before you try again.
+                            mixed, and if you miss one you will see the rule and
+                            the correct form before you try again.
                         </p>
-                        <Button variant="outline" onClick={() => setPhase('lesson')}>
+                        <Button
+                            variant="outline"
+                            onClick={() => setPhase('lesson')}
+                        >
                             Review pattern
                         </Button>
                     </div>
@@ -2792,10 +2898,12 @@ function GrammarTableChallengeView({
                             <div className="flex flex-wrap items-center justify-between gap-3">
                                 <div>
                                     <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                                        Prompt {correctRowCount + 1} of {practiceRows.length}
+                                        Prompt {correctRowCount + 1} of{' '}
+                                        {practiceRows.length}
                                     </p>
                                     <p className="mt-1 text-sm text-slate-600">
-                                        Correct so far: {correctRowCount}/{practiceRows.length}
+                                        Correct so far: {correctRowCount}/
+                                        {practiceRows.length}
                                     </p>
                                 </div>
                                 <span className="rounded-full bg-[#eef6ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#215b9e]">
@@ -2865,7 +2973,8 @@ function GrammarTableChallengeView({
                                         </div>
                                     )}
                                     <p className="text-sm text-slate-600">
-                                        Update your answer above, then check it again.
+                                        Update your answer above, then check it
+                                        again.
                                     </p>
                                 </div>
                             )}
@@ -2895,7 +3004,10 @@ function GrammarTableChallengeView({
                                     setLockedRowIds(nextLockedRowIds)
                                     setShowRuleFeedback(false)
 
-                                    if (nextLockedRowIds.length === practiceRows.length) {
+                                    if (
+                                        nextLockedRowIds.length ===
+                                        practiceRows.length
+                                    ) {
                                         setFeedbackState('correct')
                                     }
 
@@ -2944,7 +3056,6 @@ function GrammarTableChallengeView({
                             }
                         />
                     )}
-
                 </div>
             )}
         </div>
@@ -3025,8 +3136,7 @@ export default function PracticeRunner(props: Props) {
         Record<string, string>
     >({})
     const [lockedGrammarRows, setLockedGrammarRows] = useState<string[]>([])
-    const [feedbackState, setFeedbackState] =
-        useState<ChallengeFeedbackState>()
+    const [feedbackState, setFeedbackState] = useState<ChallengeFeedbackState>()
     const [attemptCount, setAttemptCount] = useState(1)
     const [completedCount, setCompletedCount] = useState(0)
     const [trackedCompletedCount, setTrackedCompletedCount] = useState(0)
@@ -3091,7 +3201,9 @@ export default function PracticeRunner(props: Props) {
         const nextSessionPoints =
             sessionPoints + (awardsPoints ? completion.points : 0)
         const nextStreak = updatesProgress
-            ? (completion.firstTry ? streak + 1 : 0)
+            ? completion.firstTry
+                ? streak + 1
+                : 0
             : streak
         const nextBestSessionStreak = updatesProgress
             ? Math.max(bestSessionStreak, nextStreak)
@@ -3115,16 +3227,20 @@ export default function PracticeRunner(props: Props) {
         const updatedProgress: StoredSkillProgress = {
             ...existingProgress,
             totalChallengesCompleted:
-                existingProgress.totalChallengesCompleted + (updatesProgress ? 1 : 0),
+                existingProgress.totalChallengesCompleted +
+                (updatesProgress ? 1 : 0),
             totalAttempts:
-                existingProgress.totalAttempts + (updatesProgress ? completion.attempts : 0),
+                existingProgress.totalAttempts +
+                (updatesProgress ? completion.attempts : 0),
             totalSolved:
                 existingProgress.totalSolved +
                 (updatesProgress && completion.solved ? 1 : 0),
             firstTrySolved:
                 existingProgress.firstTrySolved +
                 (updatesProgress && completion.firstTry ? 1 : 0),
-            totalPoints: existingProgress.totalPoints + (awardsPoints ? completion.points : 0),
+            totalPoints:
+                existingProgress.totalPoints +
+                (awardsPoints ? completion.points : 0),
             completedRuns:
                 existingProgress.completedRuns + (isFinalChallenge ? 1 : 0),
             bestRunScore: Math.max(
@@ -3195,8 +3311,9 @@ export default function PracticeRunner(props: Props) {
                                     </h1>
                                     <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
                                         You finished {completedCount} challenge
-                                        {completedCount === 1 ? '' : 's'} with{' '}
-                                        {sessionPoints} XP.
+                                        {completedCount === 1
+                                            ? ''
+                                            : 's'} with {sessionPoints} XP.
                                     </p>
                                     <p className="text-base leading-7 text-slate-600">
                                         {courseProgress.todayGoalReached
@@ -3249,7 +3366,9 @@ export default function PracticeRunner(props: Props) {
                                     </p>
                                 </div>
                             </div>
-                            <LevelProgress totalPoints={courseProgress.totalPoints} />
+                            <LevelProgress
+                                totalPoints={courseProgress.totalPoints}
+                            />
                             <div className="flex flex-wrap gap-3">
                                 <Button
                                     variant="outline"
@@ -3522,7 +3641,9 @@ export default function PracticeRunner(props: Props) {
                                     </p>
                                 </div>
                             </div>
-                            <LevelProgress totalPoints={courseProgress.totalPoints} />
+                            <LevelProgress
+                                totalPoints={courseProgress.totalPoints}
+                            />
                         </div>
 
                         <div className="flex justify-center md:justify-end">
