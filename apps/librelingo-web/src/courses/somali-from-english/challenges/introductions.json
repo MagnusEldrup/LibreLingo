@@ -137,6 +137,23 @@
       "group": "intro-two-sentences"
     },
     {
+      "type": "options",
+      "formInTargetLanguage": "Waan ku faraxsanahay inaan kula kulmo.",
+      "meaningInSourceLanguage": "I am pleased to meet you.",
+      "id": "in-11",
+      "priority": 0,
+      "group": "meet-you"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waxaad iigu yeedhi kartaa Cali.",
+      "meaningInSourceLanguage": "You can call me Ali.",
+      "id": "in-12",
+      "priority": 0,
+      "group": "call-me"
+    },
+    {
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [

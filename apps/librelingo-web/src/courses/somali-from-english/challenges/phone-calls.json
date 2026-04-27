@@ -78,6 +78,23 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Ma u soo diri kartaa tagsi, fadlan?",
+      "meaningInSourceLanguage": "Could you send a cab, please?",
+      "id": "ph-9",
+      "priority": 0,
+      "group": "call-cab"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Ma ku caawiyaa?",
+      "meaningInSourceLanguage": "May I help you?",
+      "id": "ph-10",
+      "priority": 0,
+      "group": "help"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Bill la hadal, Djibouti buu kaaga soo dirayaa.",
       "meaningInSourceLanguage": "Speak to Bill, he is calling you from Djibouti.",
       "id": "ph-7",

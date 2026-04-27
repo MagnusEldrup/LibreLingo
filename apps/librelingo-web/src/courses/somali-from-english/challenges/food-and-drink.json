@@ -127,6 +127,23 @@
       "group": "water"
     },
     {
+      "type": "options",
+      "formInTargetLanguage": "Waxaan rabaa koob kulul oo shaah ah.",
+      "meaningInSourceLanguage": "I would like a cup of hot tea.",
+      "id": "fd-11",
+      "priority": 0,
+      "group": "hot-tea"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Ma sonkor baad ku rabtaa mise sonkor la'aan?",
+      "meaningInSourceLanguage": "With or without sugar?",
+      "id": "fd-12",
+      "priority": 0,
+      "group": "sugar-choice"
+    },
+    {
       "type": "freeWriting",
       "id": "fd-fw-1",
       "priority": 3,

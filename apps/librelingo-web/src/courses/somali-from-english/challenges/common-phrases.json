@@ -103,6 +103,32 @@
       "group": "goodbye"
     },
     {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waan ka xumahay.",
+      "meaningInSourceLanguage": "I am sorry.",
+      "id": "cp-11",
+      "priority": 0,
+      "group": "sorry"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Fadlan soo gal.",
+      "meaningInSourceLanguage": "Please come in.",
+      "id": "cp-12",
+      "priority": 0,
+      "group": "come-in"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Fadlan fadhiiso.",
+      "meaningInSourceLanguage": "Please sit down.",
+      "id": "cp-13",
+      "priority": 0,
+      "group": "sit-down"
+    },
+    {
       "type": "shortInput",
       "pictures": null,
       "formInTargetLanguage": [

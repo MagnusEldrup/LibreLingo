@@ -1,0 +1,151 @@
+[
+  {
+    "id": "present-tense",
+    "tense": "present",
+    "title": "Present tense of `tag-`",
+    "summary": "Core present-tense subject-marker patterns currently taught in the course.",
+    "rows": [
+      {
+        "label": "I",
+        "prompt": "I am going.",
+        "somali": [
+          "Waan tagayaa."
+        ],
+        "note": "Use `waan` for `I`, then add the present-tense verb."
+      },
+      {
+        "label": "You",
+        "prompt": "You are going.",
+        "somali": [
+          "Waad tagaysaa."
+        ],
+        "note": "Use `waad` for `you`, then add the present-tense verb."
+      },
+      {
+        "label": "He",
+        "prompt": "He is going.",
+        "somali": [
+          "Wuu tagayaa."
+        ],
+        "note": "Use `wuu` for `he`, then add the present-tense verb."
+      },
+      {
+        "label": "She",
+        "prompt": "She is going.",
+        "somali": [
+          "Way tagaysaa."
+        ],
+        "note": "Use `way` for `she`, then add the present-tense verb."
+      },
+      {
+        "label": "We (including you)",
+        "prompt": "We are going, including you.",
+        "somali": [
+          "Waynu tagaynaa.",
+          "Waynu tagayna."
+        ],
+        "note": "Use `waynu` when `we` includes the person you are speaking to."
+      },
+      {
+        "label": "We (not including you)",
+        "prompt": "We are going, not including you.",
+        "somali": [
+          "Waannu tagaynaa.",
+          "Waannu tagayna."
+        ],
+        "note": "Use `waannu` when `we` does not include the person you are speaking to."
+      },
+      {
+        "label": "You all",
+        "prompt": "You all are going.",
+        "somali": [
+          "Waydin tagaysaan."
+        ],
+        "note": "Use `waydin` for `you all`, then add the present-tense verb."
+      },
+      {
+        "label": "They",
+        "prompt": "They are going.",
+        "somali": [
+          "Way tagayaan."
+        ],
+        "note": "Use `way` for `they` here, then add the plural present-tense verb."
+      }
+    ],
+    "sources": [
+      "challenge:present-tense-markers.json:pt-1"
+    ]
+  },
+  {
+    "id": "past-tense",
+    "tense": "past",
+    "title": "Past tense of `yimi`",
+    "summary": "Core past-tense verb-form patterns currently taught in the course.",
+    "rows": [
+      {
+        "label": "I",
+        "prompt": "I came.",
+        "somali": [
+          "imi",
+          "imid"
+        ],
+        "note": "Use `imi/imid` for the `I` form in this past-tense pattern."
+      },
+      {
+        "label": "You",
+        "prompt": "You came.",
+        "somali": [
+          "timi",
+          "timid"
+        ],
+        "note": "Use `timi/timid` for `you` in this past-tense pattern."
+      },
+      {
+        "label": "He",
+        "prompt": "He came.",
+        "somali": [
+          "yimi",
+          "yimid"
+        ],
+        "note": "Use `yimi/yimid` for `he` in this past-tense pattern."
+      },
+      {
+        "label": "She",
+        "prompt": "She came.",
+        "somali": [
+          "timi",
+          "timid"
+        ],
+        "note": "Use `timi/timid` for `she` in this past-tense pattern."
+      },
+      {
+        "label": "We",
+        "prompt": "We came.",
+        "somali": [
+          "nimi",
+          "nimid"
+        ],
+        "note": "Use `nimi/nimid` for `we` in this past-tense pattern."
+      },
+      {
+        "label": "You all",
+        "prompt": "You all came.",
+        "somali": [
+          "timaaddeen"
+        ],
+        "note": "Use `timaaddeen` for `you all` in this past-tense pattern."
+      },
+      {
+        "label": "They",
+        "prompt": "They came.",
+        "somali": [
+          "yimaaddeen"
+        ],
+        "note": "Use `yimaaddeen` for `they` in this past-tense pattern."
+      }
+    ],
+    "sources": [
+      "challenge:past-tense-markers.json:pa-1"
+    ]
+  }
+]

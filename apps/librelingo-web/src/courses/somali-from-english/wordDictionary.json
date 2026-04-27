@@ -1,0 +1,2585 @@
+[
+  {
+    "english": "about",
+    "somali": [
+      "ka"
+    ],
+    "sources": [
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "afternoon",
+    "somali": [
+      "galab"
+    ],
+    "sources": [
+      "draft:01_hello_and_goodbye.md",
+      "draft:09_time_and_days.md",
+      "yaml:time_greetings.yaml"
+    ]
+  },
+  {
+    "english": "airport",
+    "somali": [
+      "garoonka dayuuradaha"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md"
+    ]
+  },
+  {
+    "english": "all",
+    "somali": [
+      "dan",
+      "dhammaan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json",
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "am",
+    "somali": [
+      "ahay"
+    ],
+    "sources": [
+      "yaml:introductions.yaml",
+      "yaml:present_tense_markers.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "animal",
+    "somali": [
+      "xoolo"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "are",
+    "somali": [
+      "waa",
+      "yihiin"
+    ],
+    "sources": [
+      "yaml:present_tense_markers.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "ash",
+    "somali": [
+      "danbas"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "back",
+    "somali": [
+      "dabar"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "bad",
+    "somali": [
+      "xun"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "bank",
+    "somali": [
+      "bangi"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md"
+    ]
+  },
+  {
+    "english": "bark (of a tree)",
+    "somali": [
+      "qolfo"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "beautiful",
+    "somali": [
+      "quruxsan"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md"
+    ]
+  },
+  {
+    "english": "belly",
+    "somali": [
+      "calool"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "big",
+    "somali": [
+      "weyn"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Bill",
+    "somali": [
+      "Bill"
+    ],
+    "sources": [
+      "challenge:airport-arrival.json:aa-4",
+      "challenge:introductions.json:in-2",
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "bird",
+    "somali": [
+      "shimbir"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "black",
+    "somali": [
+      "madow"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "blood",
+    "somali": [
+      "diig"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "blue",
+    "somali": [
+      "buluug"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md"
+    ]
+  },
+  {
+    "english": "bone",
+    "somali": [
+      "laf"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "bread",
+    "somali": [
+      "kibis"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "breakfast",
+    "somali": [
+      "quraac"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "breast",
+    "somali": [
+      "xabad"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Britain",
+    "somali": [
+      "Britain"
+    ],
+    "sources": [
+      "challenge:history-independence.json:hi-2"
+    ]
+  },
+  {
+    "english": "brother",
+    "somali": [
+      "walaal"
+    ],
+    "sources": [
+      "draft:04_family_members.md"
+    ]
+  },
+  {
+    "english": "called",
+    "somali": [
+      "yidhaahdaa"
+    ],
+    "sources": [
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "came",
+    "somali": [
+      "imi"
+    ],
+    "sources": [
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "Canab",
+    "somali": [
+      "Canabay"
+    ],
+    "sources": [
+      "challenge:time-greetings.json:tg-4"
+    ]
+  },
+  {
+    "english": "cheap",
+    "somali": [
+      "jaban"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md"
+    ]
+  },
+  {
+    "english": "child",
+    "somali": [
+      "cunug"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "children",
+    "somali": [
+      "carruur"
+    ],
+    "sources": [
+      "draft:04_family_members.md"
+    ]
+  },
+  {
+    "english": "cloud",
+    "somali": [
+      "cadhar",
+      "daruur"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "cold",
+    "somali": [
+      "qabow"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "come",
+    "somali": [
+      "soo"
+    ],
+    "sources": [
+      "yaml:leave_takings.yaml"
+    ]
+  },
+  {
+    "english": "correct",
+    "somali": [
+      "sax"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "day",
+    "somali": [
+      "maalin"
+    ],
+    "sources": [
+      "challenge:time-greetings.json:tg-8",
+      "draft:01_hello_and_goodbye.md",
+      "supplement:wordDictionarySupplement.json",
+      "yaml:time_greetings.yaml"
+    ]
+  },
+  {
+    "english": "dirty",
+    "somali": [
+      "wasakh"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "dog",
+    "somali": [
+      "ay"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "dry",
+    "somali": [
+      "qalaayl"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "dust",
+    "somali": [
+      "bus"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "ear",
+    "somali": [
+      "deg"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "earth",
+    "somali": [
+      "caro"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "egg",
+    "somali": [
+      "ukun"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "eight",
+    "somali": [
+      "siddeed"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md"
+    ]
+  },
+  {
+    "english": "evening",
+    "somali": [
+      "habeen"
+    ],
+    "sources": [
+      "draft:01_hello_and_goodbye.md",
+      "draft:09_time_and_days.md",
+      "yaml:time_greetings.yaml"
+    ]
+  },
+  {
+    "english": "expensive",
+    "somali": [
+      "qaali"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md"
+    ]
+  },
+  {
+    "english": "eye",
+    "somali": [
+      "il"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "family",
+    "somali": [
+      "qoys"
+    ],
+    "sources": [
+      "draft:04_family_members.md"
+    ]
+  },
+  {
+    "english": "far",
+    "somali": [
+      "fog"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "fat (noun)",
+    "somali": [
+      "baruur"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "father",
+    "somali": [
+      "aabbe",
+      "aabo"
+    ],
+    "sources": [
+      "draft:04_family_members.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "feather",
+    "somali": [
+      "baal"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "few",
+    "somali": [
+      "wax yer"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "fine",
+    "somali": [
+      "fiicanyahay"
+    ],
+    "sources": [
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "fingernail",
+    "somali": [
+      "ciddi"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "fire",
+    "somali": [
+      "dab"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "fish",
+    "somali": [
+      "malay"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "five",
+    "somali": [
+      "shan"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "flower",
+    "somali": [
+      "ubax"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "foot",
+    "somali": [
+      "cag"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "forest",
+    "somali": [
+      "duur"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "four",
+    "somali": [
+      "afar"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Friday",
+    "somali": [
+      "jimce"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "from",
+    "somali": [
+      "ka"
+    ],
+    "sources": [
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "fruit",
+    "somali": [
+      "furuut",
+      "miro"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "full",
+    "somali": [
+      "buux"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "go",
+    "somali": [
+      "tag"
+    ],
+    "sources": [
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "going",
+    "somali": [
+      "tagaya"
+    ],
+    "sources": [
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "good",
+    "somali": [
+      "fiican",
+      "wanaagsan"
+    ],
+    "sources": [
+      "challenge:time-greetings.json:tg-8",
+      "draft:02_how_are_you.md",
+      "supplement:wordDictionarySupplement.json",
+      "yaml:time_greetings.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "goodbye",
+    "somali": [
+      "nabad gelyo"
+    ],
+    "sources": [
+      "draft:01_hello_and_goodbye.md",
+      "yaml:leave_takings.yaml"
+    ]
+  },
+  {
+    "english": "grass",
+    "somali": [
+      "caws"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "green",
+    "somali": [
+      "cagaar",
+      "cagaaran"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "hair",
+    "somali": [
+      "timo"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "hand",
+    "somali": [
+      "gacan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "he",
+    "somali": [
+      "asaga",
+      "isagu"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json",
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "head",
+    "somali": [
+      "madax"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "heart",
+    "somali": [
+      "galb",
+      "wadno"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "heavy",
+    "somali": [
+      "culeys"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "here",
+    "somali": [
+      "halkan",
+      "inta"
+    ],
+    "sources": [
+      "challenge:taxi-ride.json:tx-8",
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "horn",
+    "somali": [
+      "gees"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "hotel",
+    "somali": [
+      "hudheel"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md"
+    ]
+  },
+  {
+    "english": "house",
+    "somali": [
+      "guri"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md"
+    ]
+  },
+  {
+    "english": "how",
+    "somali": [
+      "is",
+      "see"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "hungry",
+    "somali": [
+      "gaajaysan"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "husband",
+    "somali": [
+      "nin"
+    ],
+    "sources": [
+      "draft:04_family_members.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I",
+    "somali": [
+      "aniga",
+      "baan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json",
+      "yaml:introductions.yaml",
+      "yaml:present_tense_markers.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "ice",
+    "somali": [
+      "baraf"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "impersonal",
+    "somali": [
+      "la"
+    ],
+    "sources": [
+      "yaml:introductions.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "including",
+    "somali": [
+      "ku jira"
+    ],
+    "sources": [
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "is",
+    "somali": [
+      "waa"
+    ],
+    "sources": [
+      "yaml:introductions.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "Islam",
+    "somali": [
+      "Islaamku"
+    ],
+    "sources": [
+      "challenge:history-ancient-trade.json:ha1-8"
+    ]
+  },
+  {
+    "english": "Italy",
+    "somali": [
+      "Talyaani"
+    ],
+    "sources": [
+      "challenge:history-independence.json:hi-4"
+    ]
+  },
+  {
+    "english": "Khadija",
+    "somali": [
+      "Khadija"
+    ],
+    "sources": [
+      "challenge:introductions.json:in-6",
+      "challenge:leave-takings.json:lt-2",
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "knee",
+    "somali": [
+      "jilib"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "leaf",
+    "somali": [
+      "caleen"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "left",
+    "somali": [
+      "bidix"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md"
+    ]
+  },
+  {
+    "english": "leg",
+    "somali": [
+      "lug"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "liver",
+    "somali": [
+      "beer"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "London",
+    "somali": [
+      "Landhan"
+    ],
+    "sources": [
+      "challenge:introductions.json:in-10",
+      "draft:03_my_name_is.md",
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "long",
+    "somali": [
+      "dheer"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "louse",
+    "somali": [
+      "cinjir"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "lunch",
+    "somali": [
+      "qado"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "man",
+    "somali": [
+      "nin"
+    ],
+    "sources": [
+      "draft:04_family_members.md"
+    ]
+  },
+  {
+    "english": "man (adult male)",
+    "somali": [
+      "nin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "man (human being)",
+    "somali": [
+      "beni adam"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "many",
+    "somali": [
+      "badan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "marker",
+    "somali": [
+      "baa"
+    ],
+    "sources": [
+      "yaml:introductions.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "market",
+    "somali": [
+      "suuq"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md"
+    ]
+  },
+  {
+    "english": "meat",
+    "somali": [
+      "hilib"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "milk",
+    "somali": [
+      "caano"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "Mogadishu",
+    "somali": [
+      "Muqdisho"
+    ],
+    "sources": [
+      "challenge:history-sultanates.json:hs-6"
+    ]
+  },
+  {
+    "english": "Monday",
+    "somali": [
+      "isniin"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "month",
+    "somali": [
+      "bil"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "moon",
+    "somali": [
+      "dayax"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "morning",
+    "somali": [
+      "subax"
+    ],
+    "sources": [
+      "draft:01_hello_and_goodbye.md",
+      "draft:09_time_and_days.md",
+      "yaml:time_greetings.yaml"
+    ]
+  },
+  {
+    "english": "mother",
+    "somali": [
+      "hooyo"
+    ],
+    "sources": [
+      "draft:04_family_members.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "mountain",
+    "somali": [
+      "buur"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "mouth",
+    "somali": [
+      "af"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "my",
+    "somali": [
+      "kayga"
+    ],
+    "sources": [
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "name",
+    "somali": [
+      "magac"
+    ],
+    "sources": [
+      "draft:03_my_name_is.md",
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "narrow",
+    "somali": [
+      "ciriiri"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "near",
+    "somali": [
+      "dhow"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "neck",
+    "somali": [
+      "duun"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "new",
+    "somali": [
+      "cusayb",
+      "cusub"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "news",
+    "somali": [
+      "warran"
+    ],
+    "sources": [
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "night",
+    "somali": [
+      "habeen"
+    ],
+    "sources": [
+      "draft:01_hello_and_goodbye.md",
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json",
+      "yaml:time_greetings.yaml"
+    ]
+  },
+  {
+    "english": "nine",
+    "somali": [
+      "sagaal"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md"
+    ]
+  },
+  {
+    "english": "nose",
+    "somali": [
+      "san"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "not",
+    "somali": [
+      "ma"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json",
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "old",
+    "somali": [
+      "duug"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "one",
+    "somali": [
+      "hal",
+      "kow"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Open",
+    "somali": [
+      "fur"
+    ],
+    "sources": [
+      "challenge:health-and-illness.json:hl-8"
+    ]
+  },
+  {
+    "english": "other",
+    "somali": [
+      "kale"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "peace",
+    "somali": [
+      "nabad"
+    ],
+    "sources": [
+      "draft:02_how_are_you.md",
+      "yaml:leave_takings.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "plural",
+    "somali": [
+      "jamac"
+    ],
+    "sources": [
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "question",
+    "somali": [
+      "ma"
+    ],
+    "sources": [
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "rain",
+    "somali": [
+      "roob"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "red",
+    "somali": [
+      "cas",
+      "casaan",
+      "gaduud"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Regions",
+    "somali": [
+      "Gobollo"
+    ],
+    "sources": [
+      "challenge:history-recovery.json:hr-4"
+    ]
+  },
+  {
+    "english": "rice",
+    "somali": [
+      "bariis"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "right",
+    "somali": [
+      "midig"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "river",
+    "somali": [
+      "webi"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "road",
+    "somali": [
+      "jid",
+      "waddo"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "rope",
+    "somali": [
+      "xarig"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "rotten",
+    "somali": [
+      "balal"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "safety",
+    "somali": [
+      "gelyo"
+    ],
+    "sources": [
+      "yaml:leave_takings.yaml"
+    ]
+  },
+  {
+    "english": "salt",
+    "somali": [
+      "cusbo"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Saturday",
+    "somali": [
+      "sabti"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "sea",
+    "somali": [
+      "bad"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "seed",
+    "somali": [
+      "miro"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "seven",
+    "somali": [
+      "toddoba"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md"
+    ]
+  },
+  {
+    "english": "she",
+    "somali": [
+      "iyadu"
+    ],
+    "sources": [
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "short",
+    "somali": [
+      "gaaban"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "sister",
+    "somali": [
+      "walaal"
+    ],
+    "sources": [
+      "draft:04_family_members.md"
+    ]
+  },
+  {
+    "english": "six",
+    "somali": [
+      "lix"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md"
+    ]
+  },
+  {
+    "english": "skin",
+    "somali": [
+      "jir"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "sky",
+    "somali": [
+      "cir",
+      "samo"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "small",
+    "somali": [
+      "yar"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "smoke",
+    "somali": [
+      "qiiq"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "snake",
+    "somali": [
+      "mas"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "snow",
+    "somali": [
+      "baraf"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Somalia",
+    "somali": [
+      "Soomaaliya"
+    ],
+    "sources": [
+      "challenge:history-independence.json:hi-8"
+    ]
+  },
+  {
+    "english": "some",
+    "somali": [
+      "xoogaa"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "star",
+    "somali": [
+      "xiddig"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "stick",
+    "somali": [
+      "ul"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "stone",
+    "somali": [
+      "dagax"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "straight",
+    "somali": [
+      "toos"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "street",
+    "somali": [
+      "waddo"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md"
+    ]
+  },
+  {
+    "english": "sugar",
+    "somali": [
+      "sonkor"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "sun",
+    "somali": [
+      "cadceedeed",
+      "qorrax"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Sunday",
+    "somali": [
+      "axad"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "sweet",
+    "somali": [
+      "macaan"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md"
+    ]
+  },
+  {
+    "english": "tail",
+    "somali": [
+      "seyn"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "tall",
+    "somali": [
+      "dheer"
+    ],
+    "sources": [
+      "draft:06_colours_and_descriptions.md"
+    ]
+  },
+  {
+    "english": "tea",
+    "somali": [
+      "shaah"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "ten",
+    "somali": [
+      "toban"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md"
+    ]
+  },
+  {
+    "english": "that",
+    "somali": [
+      "kaas"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "there",
+    "somali": [
+      "halkaas",
+      "halkaasna",
+      "xaggaas"
+    ],
+    "sources": [
+      "challenge:village-stay.json:vs-8",
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "they",
+    "somali": [
+      "ayaga",
+      "iyaga"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json",
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "thin",
+    "somali": [
+      "caato"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "things",
+    "somali": [
+      "arrimo"
+    ],
+    "sources": [
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "thirsty",
+    "somali": [
+      "harraadsan"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "this",
+    "somali": [
+      "kan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "three",
+    "somali": [
+      "saddex",
+      "sadex"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Thursday",
+    "somali": [
+      "khamiis"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "to bite",
+    "somali": [
+      "qaniin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to blow",
+    "somali": [
+      "afuuf"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to breathe",
+    "somali": [
+      "neefsan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to burn",
+    "somali": [
+      "gubid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to come",
+    "somali": [
+      "imaan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to count",
+    "somali": [
+      "tirin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to cut",
+    "somali": [
+      "jari"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to die",
+    "somali": [
+      "diman"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to dig",
+    "somali": [
+      "qodid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to drink",
+    "somali": [
+      "cab"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to eat",
+    "somali": [
+      "cun"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to fall",
+    "somali": [
+      "daci"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to fear",
+    "somali": [
+      "baqdin",
+      "baqid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to fight",
+    "somali": [
+      "dagaal"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to flow",
+    "somali": [
+      "soocan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to fly",
+    "somali": [
+      "duulid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to give",
+    "somali": [
+      "siin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to hear",
+    "somali": [
+      "maqlid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to hit",
+    "somali": [
+      "ku dufan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to hold",
+    "somali": [
+      "hay"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to kill",
+    "somali": [
+      "dilid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to know",
+    "somali": [
+      "ogaan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to laugh",
+    "somali": [
+      "qosol"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to lie (as in a bed)",
+    "somali": [
+      "jiifsan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to live",
+    "somali": [
+      "noolaan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to play",
+    "somali": [
+      "ciyaarid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to pull",
+    "somali": [
+      "jiidid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to push",
+    "somali": [
+      "riixi"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to rub",
+    "somali": [
+      "marin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to say",
+    "somali": [
+      "sheegid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to scratch",
+    "somali": [
+      "xagan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to see",
+    "somali": [
+      "arkid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to sew",
+    "somali": [
+      "tolid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to sing",
+    "somali": [
+      "heesid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to sit",
+    "somali": [
+      "fariisan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to sleep",
+    "somali": [
+      "hurdo"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to smell",
+    "somali": [
+      "urin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to spit",
+    "somali": [
+      "tuf"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to split",
+    "somali": [
+      "qaybin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to stab",
+    "somali": [
+      "toogan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to stand",
+    "somali": [
+      "staagin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to suck",
+    "somali": [
+      "nuug"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to swell",
+    "somali": [
+      "barar"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to swim",
+    "somali": [
+      "dabaalan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to think",
+    "somali": [
+      "fakarid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to throw",
+    "somali": [
+      "tuuris"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to tie",
+    "somali": [
+      "xirid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to turn (intransitive)",
+    "somali": [
+      "leexan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to vomit",
+    "somali": [
+      "matag"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to walk",
+    "somali": [
+      "socod"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to wash",
+    "somali": [
+      "dhiqid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to wipe",
+    "somali": [
+      "tirtirid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "today",
+    "somali": [
+      "Maanta"
+    ],
+    "sources": [
+      "challenge:history-recovery.json:hr-2",
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "tomorrow",
+    "somali": [
+      "berrito"
+    ],
+    "sources": [
+      "challenge:time-and-days.json:td-10",
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "tongue (organ)",
+    "somali": [
+      "carab"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "tooth",
+    "somali": [
+      "ilig"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Traders",
+    "somali": [
+      "Ganacsato"
+    ],
+    "sources": [
+      "challenge:history-ancient-trade.json:ha1-4"
+    ]
+  },
+  {
+    "english": "tree",
+    "somali": [
+      "geed"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Tuesday",
+    "somali": [
+      "salaasa"
+    ],
+    "sources": [
+      "challenge:time-and-days.json:td-2",
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "two",
+    "somali": [
+      "laba",
+      "labo"
+    ],
+    "sources": [
+      "draft:05_numbers_1_to_10.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "vegetables",
+    "somali": [
+      "khudrad"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md"
+    ]
+  },
+  {
+    "english": "warm",
+    "somali": [
+      "dugsi"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "water",
+    "somali": [
+      "biyo"
+    ],
+    "sources": [
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "we",
+    "somali": [
+      "anaga",
+      "annaga"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json",
+      "yaml:present_tense_markers.yaml"
+    ]
+  },
+  {
+    "english": "Wednesday",
+    "somali": [
+      "arbaca"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "week",
+    "somali": [
+      "toddobaad"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "welcome",
+    "somali": [
+      "dhowow",
+      "soo dhowow"
+    ],
+    "sources": [
+      "draft:01_hello_and_goodbye.md",
+      "yaml:leave_takings.yaml"
+    ]
+  },
+  {
+    "english": "well",
+    "somali": [
+      "fiican"
+    ],
+    "sources": [
+      "draft:02_how_are_you.md",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "well-being",
+    "somali": [
+      "nabad"
+    ],
+    "sources": [
+      "draft:02_how_are_you.md",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "wet",
+    "somali": [
+      "qoyaan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "what",
+    "somali": [
+      "maxaa"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json",
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "when",
+    "somali": [
+      "markee"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "where",
+    "somali": [
+      "xaggee"
+    ],
+    "sources": [
+      "draft:03_my_name_is.md",
+      "supplement:wordDictionarySupplement.json",
+      "yaml:introductions.yaml"
+    ]
+  },
+  {
+    "english": "white",
+    "somali": [
+      "cadaan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "who",
+    "somali": [
+      "kee",
+      "yaa"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "wide",
+    "somali": [
+      "balaar"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "wife",
+    "somali": [
+      "naag",
+      "xaas"
+    ],
+    "sources": [
+      "draft:04_family_members.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "wind",
+    "somali": [
+      "dabayl"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "wing",
+    "somali": [
+      "baal"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "woman",
+    "somali": [
+      "naag"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "year",
+    "somali": [
+      "sanad"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "yellow",
+    "somali": [
+      "huruud",
+      "jaale"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Yes",
+    "somali": [
+      "haa"
+    ],
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-2",
+      "challenge:phone-calls.json:ph-4",
+      "challenge:taxi-ride.json:tx-4"
+    ]
+  },
+  {
+    "english": "yesterday",
+    "somali": [
+      "shaleyto"
+    ],
+    "sources": [
+      "draft:09_time_and_days.md"
+    ]
+  },
+  {
+    "english": "Yoonis",
+    "somali": [
+      "Yoonisow"
+    ],
+    "sources": [
+      "challenge:wellbeing.json:wb-2"
+    ]
+  },
+  {
+    "english": "you",
+    "somali": [
+      "adiga"
+    ],
+    "sources": [
+      "yaml:present_tense_markers.yaml",
+      "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "you (plural)",
+    "somali": [
+      "idinka"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "you (singular)",
+    "somali": [
+      "adiga"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "your",
+    "somali": [
+      "kaaga"
+    ],
+    "sources": [
+      "yaml:introductions.yaml"
+    ]
+  }
+]

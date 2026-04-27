@@ -5,10 +5,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import FloatingDictionary from '@/components/floating-dictionary'
 import LessonFeedback from '@/components/lesson-feedback'
 import LevelAvatar from '@/components/level-avatar'
 import LevelProgress from '@/components/level-progress'
 import type {
+    CourseDictionaryEntry,
+    CourseGrammarDictionarySection,
+    CoursePhraseDictionaryEntry,
     CourseSkill,
     ConversationTurnFeedback,
     DefinitionToken,
@@ -39,6 +43,9 @@ type Props = {
     challengeSet: SkillChallengeFile
     moduleChallengePool: SkillChallenge[]
     previousGrammarReviewSources: GrammarReviewSource[]
+    dictionaryEntries: CourseDictionaryEntry[]
+    phraseDictionaryEntries: CoursePhraseDictionaryEntry[]
+    grammarDictionarySections: CourseGrammarDictionarySection[]
     backUrl: string
 }
 
@@ -563,6 +570,14 @@ function ChallengeTypeLabel({ challenge }: { challenge: SkillChallenge }) {
     )
 }
 
+function usesFloatingDictionary(challenge: SkillChallenge) {
+    return (
+        challenge.type === 'freeWriting' ||
+        challenge.type === 'write' ||
+        challenge.type === 'conversation'
+    )
+}
+
 function buildOptionChoices(
     challenge: Extract<SkillChallenge, { type: 'options' }>,
     challengePool: SkillChallenge[],
@@ -792,6 +807,12 @@ function getWritingFeedbackErrorDetails(
         message: unavailableMessage,
         supportingText: requestError,
     }
+}
+
+const somaliTextInputProps = {
+    spellCheck: false,
+    autoCorrect: 'off',
+    autoCapitalize: 'none' as const,
 }
 
 function AutoAdvanceNotice({
@@ -1304,6 +1325,20 @@ function ShortInputChallengeView({
 }) {
     const isLocked = feedbackState === 'correct' || feedbackState === 'revealed'
 
+    function checkShortInputAnswer() {
+        if (isLocked || normalizeText(answer).length === 0) {
+            return
+        }
+
+        if (matchesAcceptedAnswer(answer, challenge.formInTargetLanguage)) {
+            setFeedbackState('correct')
+            return
+        }
+
+        setFeedbackState('incorrect')
+        setAttemptCount(attemptCount + 1)
+    }
+
     return (
         <div className="space-y-6">
             <div className="space-y-3">
@@ -1321,7 +1356,16 @@ function ShortInputChallengeView({
                     value={answer}
                     disabled={isLocked}
                     onChange={(event) => setAnswer(event.target.value)}
+                    onKeyDown={(event) => {
+                        if (event.key !== 'Enter') {
+                            return
+                        }
+
+                        event.preventDefault()
+                        checkShortInputAnswer()
+                    }}
                     placeholder={buildShortInputHint(challenge)}
+                    {...somaliTextInputProps}
                     className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
                 />
             </div>
@@ -1329,20 +1373,7 @@ function ShortInputChallengeView({
             {feedbackState === undefined && (
                 <Button
                     disabled={normalizeText(answer).length === 0}
-                    onClick={() => {
-                        if (
-                            matchesAcceptedAnswer(
-                                answer,
-                                challenge.formInTargetLanguage
-                            )
-                        ) {
-                            setFeedbackState('correct')
-                            return
-                        }
-
-                        setFeedbackState('incorrect')
-                        setAttemptCount(attemptCount + 1)
-                    }}
+                    onClick={checkShortInputAnswer}
                 >
                     Check answer
                 </Button>
@@ -1533,6 +1564,7 @@ function FreeWritingChallengeView({
                     onChange={(event) => setAnswer(event.target.value)}
                     placeholder={challenge.placeholder}
                     rows={6}
+                    {...somaliTextInputProps}
                     className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
                 />
             </div>
@@ -1641,6 +1673,7 @@ function FreeWritingChallengeView({
                                     }}
                                     placeholder="Type the corrected Somali here"
                                     rows={4}
+                                    {...somaliTextInputProps}
                                     className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
                                 />
                                 {correctionFeedbackState === 'incorrect' && (
@@ -2006,6 +2039,7 @@ function WriteChallengeView({
                     onChange={(event) => setAnswer(event.target.value)}
                     placeholder={challenge.placeholder}
                     rows={8}
+                    {...somaliTextInputProps}
                     className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
                 />
             </div>
@@ -2444,6 +2478,7 @@ function ConversationChallengeView({
                     onChange={(event) => setAnswer(event.target.value)}
                     placeholder={challenge.placeholder}
                     rows={4}
+                    {...somaliTextInputProps}
                     className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
                 />
             </div>
@@ -2801,6 +2836,7 @@ function GrammarTableChallengeView({
                                         })
                                     }
                                     placeholder="Type the Somali form"
+                                    {...somaliTextInputProps}
                                     className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
                                 />
                             </div>
@@ -2964,6 +3000,9 @@ export default function PracticeRunner(props: Props) {
         challengeSet,
         moduleChallengePool,
         previousGrammarReviewSources,
+        dictionaryEntries,
+        phraseDictionaryEntries,
+        grammarDictionarySections,
         backUrl,
     } = props
 
@@ -3260,6 +3299,11 @@ export default function PracticeRunner(props: Props) {
     const shouldShowLessonFeedback =
         currentChallenge.type !== 'freeWriting' &&
         (feedbackState === 'correct' || feedbackState === 'revealed')
+    const shouldShowFloatingDictionary =
+        usesFloatingDictionary(currentChallenge) &&
+        (dictionaryEntries.length > 0 ||
+            phraseDictionaryEntries.length > 0 ||
+            grammarDictionarySections.length > 0)
 
     return (
         <main className="min-h-screen bg-[linear-gradient(180deg,#f2f7ff_0%,#e7f1ff_35%,#ffffff_100%)]">
@@ -3425,6 +3469,15 @@ export default function PracticeRunner(props: Props) {
                         )}
                     </CardContent>
                 </Card>
+
+                {shouldShowFloatingDictionary && (
+                    <FloatingDictionary
+                        wordEntries={dictionaryEntries}
+                        phraseEntries={phraseDictionaryEntries}
+                        grammarSections={grammarDictionarySections}
+                        courseLanguageName={courseLanguageName}
+                    />
+                )}
 
                 <div className="overflow-hidden rounded-[1.5rem] border border-[#bfd7f8] bg-white shadow-[0_24px_80px_-40px_rgba(65,137,221,0.45)] sm:rounded-[2rem]">
                     <div className="grid gap-5 p-5 sm:gap-6 sm:p-8 md:grid-cols-[minmax(0,1fr)_180px] md:items-center md:p-10">

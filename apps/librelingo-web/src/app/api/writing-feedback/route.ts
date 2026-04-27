@@ -41,8 +41,24 @@ const feedbackSchema = {
     additionalProperties: false,
 } as const
 
+const WRITING_FEEDBACK_MAX_OUTPUT_TOKENS = 450
+
 function isSafeIdentifier(value: string) {
     return /^[\dA-Za-z-]+$/.test(value)
+}
+
+function normalizeForComparison(value: string) {
+    return value
+        .toLowerCase()
+        .replace(/[`'".,!?;:()[\]{}]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+}
+
+function countWords(value: string) {
+    return normalizeForComparison(value)
+        .split(' ')
+        .filter(Boolean).length
 }
 
 function normalizeFeedback(feedback: FreeWritingFeedback): FreeWritingFeedback {
@@ -69,6 +85,122 @@ function normalizeFeedback(feedback: FreeWritingFeedback): FreeWritingFeedback {
         strengths,
         improvements,
         suggestedAnswer: feedback.suggestedAnswer.trim(),
+    }
+}
+
+function extractRefusal(response: {
+    output?: Array<{
+        type: string
+        content?: Array<{
+            type: string
+            refusal?: string
+        }>
+    }>
+}) {
+    return response.output
+        ?.filter((item) => item.type === 'message')
+        .flatMap((item) => item.content ?? [])
+        .find((item) => item.type === 'refusal')
+}
+
+function buildFallbackWritingFeedback(
+    challenge: Extract<SkillChallenge, { type: 'freeWriting' }>,
+    answer: string
+): FreeWritingFeedback {
+    const trimmedAnswer = answer.trim()
+    const wordCount = countWords(trimmedAnswer)
+    const summary =
+        wordCount >= 6
+            ? 'Your answer attempts the task, but it still needs a fuller grammar check.'
+            : 'Your answer is a start, but it still needs more Somali to complete the task well.'
+    const strengths =
+        wordCount > 0
+            ? ['You tried to answer in Somali instead of leaving the response blank.']
+            : []
+    const improvements = [
+        challenge.gradingNotes[0]?.trim()
+            ? `Check this lesson target again: ${challenge.gradingNotes[0].trim()}`
+            : 'Check that your Somali answer covers each part of the prompt with complete phrases.',
+        challenge.sampleAnswer
+            ? 'Compare your sentence pattern to the suggested Somali answer and copy the key structure.'
+            : 'Check the sentence structure and make sure the Somali is grammatical and understandable.',
+    ].filter(Boolean)
+
+    return normalizeFeedback({
+        score: wordCount >= 8 ? 3 : wordCount >= 3 ? 2 : 1,
+        summary,
+        strengths,
+        improvements,
+        suggestedAnswer: challenge.sampleAnswer?.trim() || trimmedAnswer,
+    })
+}
+
+async function requestWritingFeedback(
+    client: Awaited<ReturnType<typeof getOpenAIClient>>,
+    challenge: Extract<SkillChallenge, { type: 'freeWriting' }>,
+    answer: string
+): Promise<
+    | { feedback: FreeWritingFeedback }
+    | { refusal: string }
+> {
+    try {
+        const response = await client.responses.create({
+            model: WRITING_FEEDBACK_MODEL,
+            reasoning: {
+                effort: WRITING_FEEDBACK_REASONING_EFFORT,
+            },
+            store: false,
+            instructions: [
+                'You are a warm Somali writing tutor for beginners.',
+                'Grade beginner Somali writing on a 1-5 scale.',
+                'Reward communicative success and correct use of current-module vocabulary.',
+                'Focus on grammatical and understandable Somali, not spelling perfection.',
+                'Be lenient on punctuation, doubled letters, and minor spelling variation.',
+                'Do not nitpick minor spelling if the intended Somali is still clear.',
+                'When a learner uses the wrong Somali structure, briefly explain the grammar pattern that should be used.',
+                'Keep all feedback brief, practical, and encouraging.',
+                'Only mention real issues you can justify from the learner answer.',
+                'Keep summary to one short sentence.',
+                'Return at most 1 strength and at most 2 improvements.',
+                'Keep each strength or improvement to one short sentence.',
+            ].join(' '),
+            input: buildPrompt(challenge, answer),
+            max_output_tokens: WRITING_FEEDBACK_MAX_OUTPUT_TOKENS,
+            text: {
+                format: {
+                    type: 'json_schema',
+                    name: 'writing_feedback',
+                    strict: true,
+                    schema: feedbackSchema,
+                },
+            },
+        })
+
+        const refusalContent = extractRefusal(response)
+
+        if (refusalContent?.refusal) {
+            return { refusal: refusalContent.refusal }
+        }
+
+        if (response.output_text) {
+            try {
+                return {
+                    feedback: JSON.parse(response.output_text) as FreeWritingFeedback,
+                }
+            } catch {
+                return {
+                    feedback: buildFallbackWritingFeedback(challenge, answer),
+                }
+            }
+        }
+
+        return {
+            feedback: buildFallbackWritingFeedback(challenge, answer),
+        }
+    } catch {
+        return {
+            feedback: buildFallbackWritingFeedback(challenge, answer),
+        }
     }
 }
 
@@ -153,75 +285,24 @@ export async function POST(request: Request) {
         }
 
         const client = await getOpenAIClient()
-        const response = await client.responses.create({
-            model: WRITING_FEEDBACK_MODEL,
-            reasoning: {
-                effort: WRITING_FEEDBACK_REASONING_EFFORT,
-            },
-            store: false,
-            instructions: [
-                'You are a warm Somali writing tutor for beginners.',
-                'Grade beginner Somali writing on a 1-5 scale.',
-                'Reward communicative success and correct use of current-module vocabulary.',
-                'Focus on whether the Somali is grammatical and understandable, not on spelling perfection.',
-                'Be lenient on punctuation, doubled letters, and minor spelling variation.',
-                'Do not nitpick minor spelling if the intended Somali is still clear.',
-                'Do not punish beginner grammar too harshly if meaning is clear.',
-                'When a learner uses the wrong Somali structure, briefly explain the grammar pattern that should be used.',
-                'Keep all feedback brief, practical, and encouraging.',
-                'Only mention real issues you can justify from the learner answer.',
-                'When giving corrections, be concrete and phrase-level.',
-            ].join(' '),
-            input: buildPrompt(challenge, answer),
-            max_output_tokens: 300,
-            text: {
-                format: {
-                    type: 'json_schema',
-                    name: 'writing_feedback',
-                    strict: true,
-                    schema: feedbackSchema,
-                },
-            },
-        })
+        const result = await requestWritingFeedback(client, challenge, answer)
 
-        if (
-            response.status === 'incomplete' &&
-            response.incomplete_details?.reason === 'max_output_tokens'
-        ) {
-            throw new Error('The feedback response was incomplete.')
-        }
-
-        if (response.output_text) {
-            const parsedFeedback = JSON.parse(response.output_text) as FreeWritingFeedback
-
-            return NextResponse.json(normalizeFeedback(parsedFeedback))
-        }
-
-        const messageOutputs = response.output as Array<{
-            type: string
-            content?: Array<{
-                type: string
-                refusal?: string
-                text?: string
-            }>
-        }>
-        const refusalContent = messageOutputs
-            .filter((item) => item.type === 'message')
-            .flatMap((item) => item.content ?? [])
-            .find((item) => item.type === 'refusal')
-
-        if (refusalContent) {
+        if ('refusal' in result) {
             return NextResponse.json({
                 score: 1,
                 summary: '',
                 strengths: [],
                 improvements: [],
                 suggestedAnswer: '',
-                refusal: refusalContent.refusal,
+                refusal: result.refusal,
             } satisfies FreeWritingFeedback)
         }
-        
-        throw new Error('No response content was returned.')
+
+        if (!('feedback' in result)) {
+            throw new Error('Writing feedback was not returned.')
+        }
+
+        return NextResponse.json(normalizeFeedback(result.feedback))
     } catch (error) {
         const message =
             error instanceof Error

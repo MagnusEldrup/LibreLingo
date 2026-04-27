@@ -1,5 +1,11 @@
 import PracticeRunner from '@/components/practice-runner'
-import { getSkillDetail, listCourseSkillParameters } from '@/data/course'
+import {
+    getCourseDictionaryEntries,
+    getCourseGrammarDictionarySections,
+    getCoursePhraseDictionaryEntries,
+    getSkillDetail,
+    listCourseSkillParameters,
+} from '@/data/course'
 
 export const dynamic = 'force-dynamic'
 
@@ -23,7 +29,12 @@ export default async function SkillPracticePage({ params }: Props) {
         },
         params.practiceHref
     )
-
+    const [dictionaryEntries, phraseDictionaryEntries, grammarDictionarySections] =
+        await Promise.all([
+            getCourseDictionaryEntries(detail.course.id),
+            getCoursePhraseDictionaryEntries(detail.course.id),
+            getCourseGrammarDictionarySections(detail.course.id),
+        ])
     const backUrl = `/${params.sourceLanguageCode}/courses/${params.targetLanguageCode}`
 
     return (
@@ -37,6 +48,9 @@ export default async function SkillPracticePage({ params }: Props) {
             challengeSet={detail.challengeSet}
             moduleChallengePool={detail.moduleChallengePool}
             previousGrammarReviewSources={detail.previousGrammarReviewSources}
+            dictionaryEntries={dictionaryEntries}
+            phraseDictionaryEntries={phraseDictionaryEntries}
+            grammarDictionarySections={grammarDictionarySections}
             backUrl={backUrl}
         />
     )

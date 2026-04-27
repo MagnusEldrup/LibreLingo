@@ -1,0 +1,1499 @@
+[
+  {
+    "english": "Ajuran and Adal were large sultanates.",
+    "somali": "Ajuraan iyo Cadaal waxay ahaayeen saldanado waaweyn.",
+    "sources": [
+      "challenge:history-sultanates.json:hs-3",
+      "challenge:history-sultanates.json:hs-4"
+    ]
+  },
+  {
+    "english": "All right.",
+    "somali": "Waa hagaag.",
+    "sources": [
+      "challenge:common-phrases.json:cp-5"
+    ]
+  },
+  {
+    "english": "And peace be upon you.",
+    "somali": "Calaykum assalaam.",
+    "sources": [
+      "challenge:common-phrases.json:cp-8"
+    ]
+  },
+  {
+    "english": "Are things well?",
+    "somali": "Ma nabad baa?",
+    "sources": [
+      "challenge:wellbeing.json:wb-4"
+    ]
+  },
+  {
+    "english": "Are you coughing?",
+    "somali": "Ma qufcaysaa?",
+    "sources": [
+      "challenge:health-and-illness.json:hl-4"
+    ]
+  },
+  {
+    "english": "Are you ready?",
+    "somali": "Ma diyaar tahay?",
+    "sources": [
+      "challenge:journey-planning.json:jp-2"
+    ]
+  },
+  {
+    "english": "Armed groups fought.",
+    "somali": "Kooxo hubaysan way dagaallameen.",
+    "sources": [
+      "challenge:history-conflict.json:hc-5",
+      "challenge:history-conflict.json:hc-6"
+    ]
+  },
+  {
+    "english": "At that time, Somali sultanates existed.",
+    "somali": "Markaas saldanado Soomaaliyeed baa jiray.",
+    "sources": [
+      "challenge:history-sultanates.json:hs-1",
+      "challenge:history-sultanates.json:hs-2"
+    ]
+  },
+  {
+    "english": "Bring me meat and rice.",
+    "somali": "Ii keen hilib iyo bariis.",
+    "sources": [
+      "challenge:food-and-drink.json:fd-7",
+      "challenge:food-and-drink.json:fd-8"
+    ]
+  },
+  {
+    "english": "Britain took the north.",
+    "somali": "Britain waxay qabsatay waqooyi.",
+    "sources": [
+      "challenge:history-independence.json:hi-1",
+      "challenge:history-independence.json:hi-2"
+    ]
+  },
+  {
+    "english": "Bureo is a place far from Djibouti.",
+    "somali": "Bureo waa meel Djibouti ka fog.",
+    "sources": [
+      "challenge:journey-planning.json:jp-6"
+    ]
+  },
+  {
+    "english": "Civil war began.",
+    "somali": "Dagaal sokeeye baa bilowday.",
+    "sources": [
+      "challenge:history-conflict.json:hc-3",
+      "challenge:history-conflict.json:hc-4"
+    ]
+  },
+  {
+    "english": "Could you send a cab, please?",
+    "somali": "Ma u soo diri kartaa tagsi, fadlan?",
+    "sources": [
+      "challenge:phone-calls.json:ph-9",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Did you go to the university yesterday?",
+    "somali": "Shaleyto jaamacadda miyaad tagtay?",
+    "sources": [
+      "challenge:time-and-days.json:td-8"
+    ]
+  },
+  {
+    "english": "Do you have anything for a cough?",
+    "somali": "Ma haysaa wax qufaca loo qaato?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Do you have health insurance?",
+    "somali": "Miyaad leedahay caymiska caafimaadka?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Do you have your passport?",
+    "somali": "Baasaboorkaaga ma haysataa?",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-3"
+    ]
+  },
+  {
+    "english": "Do you know it?",
+    "somali": "Ma taqaan?",
+    "sources": [
+      "challenge:taxi-ride.json:tx-3"
+    ]
+  },
+  {
+    "english": "Do you see the bank?",
+    "somali": "Ma aragtaa bangiga?",
+    "sources": [
+      "challenge:places-and-directions.json:pd-8"
+    ]
+  },
+  {
+    "english": "Do you want a room with a bathroom?",
+    "somali": "Qol musqulleh ma rabtaa?",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-7"
+    ]
+  },
+  {
+    "english": "Do you want to stay here?",
+    "somali": "Halkan ma joogi rabtaa?",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-2"
+    ]
+  },
+  {
+    "english": "Excuse me.",
+    "somali": "Raalli ahow.",
+    "sources": [
+      "challenge:common-phrases.json:cp-1"
+    ]
+  },
+  {
+    "english": "For here or to go?",
+    "somali": "Halkan mise qaadasho?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Go straight along this road.",
+    "somali": "Waddadan si toos ah u raac.",
+    "sources": [
+      "challenge:changing-money.json:cm-2",
+      "challenge:places-and-directions.json:pd-5"
+    ]
+  },
+  {
+    "english": "Good afternoon, Canab.",
+    "somali": "Canabay, galab wanaagsan.",
+    "sources": [
+      "challenge:time-greetings.json:tg-3",
+      "challenge:time-greetings.json:tg-4"
+    ]
+  },
+  {
+    "english": "Good day.",
+    "somali": "Maalin wanaagsan.",
+    "sources": [
+      "challenge:time-greetings.json:tg-7",
+      "challenge:time-greetings.json:tg-8"
+    ]
+  },
+  {
+    "english": "Good evening.",
+    "somali": "Habeen wanaagsan.",
+    "sources": [
+      "challenge:time-greetings.json:tg-5"
+    ]
+  },
+  {
+    "english": "Good morning, Bill.",
+    "somali": "Waryaa Bill, subax wanaagsan.",
+    "sources": [
+      "challenge:time-greetings.json:tg-1",
+      "challenge:time-greetings.json:tg-2"
+    ]
+  },
+  {
+    "english": "Good morning. Are things well?",
+    "somali": "Subax wanaagsan. Ma nabad baa?",
+    "sources": [
+      "challenge:time-greetings.json:tg-6"
+    ]
+  },
+  {
+    "english": "Good night.",
+    "somali": "Nabad ku bari.",
+    "sources": [
+      "challenge:time-greetings.json:tg-10"
+    ]
+  },
+  {
+    "english": "Goodbye.",
+    "somali": "Nabad gelyo.",
+    "sources": [
+      "challenge:common-phrases.json:cp-9"
+    ]
+  },
+  {
+    "english": "Here is your money.",
+    "somali": "waa tan lacagtaadii",
+    "sources": [
+      "challenge:changing-money.json:cm-8"
+    ]
+  },
+  {
+    "english": "Here you can speak Somali.",
+    "somali": "halkan af soomaaliga baad ku hadli kartaa",
+    "sources": [
+      "challenge:taxi-ride.json:tx-8"
+    ]
+  },
+  {
+    "english": "Hi Yoonis, are things well?",
+    "somali": "Waryaa Yoonis, ma nabad baa?",
+    "sources": [
+      "challenge:wellbeing.json:wb-3"
+    ]
+  },
+  {
+    "english": "Hi Yoonis, how are you?",
+    "somali": "waryaa yoonis is ka warran",
+    "sources": [
+      "challenge:phone-calls.json:ph-8"
+    ]
+  },
+  {
+    "english": "How are the children?",
+    "somali": "Carruurta ka warran?",
+    "sources": [
+      "challenge:family-members.json:fm-2"
+    ]
+  },
+  {
+    "english": "How are you all?",
+    "somali": "Is ka warrama.",
+    "sources": [
+      "challenge:village-stay.json:vs-2"
+    ]
+  },
+  {
+    "english": "How do you spell your name?",
+    "somali": "Sidee u higgaadisaa magacaaga?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "How is the family?",
+    "somali": "Qoyska ka warran?",
+    "sources": [
+      "challenge:family-members.json:fm-1"
+    ]
+  },
+  {
+    "english": "How long do I have to wait?",
+    "somali": "Intee in le'eg baan sugayaa?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "How much will it cost?",
+    "somali": "Imisa weeye qiimuhu?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I am called Khadija.",
+    "somali": "Khadija baa la yidhaahdaa.",
+    "sources": [
+      "challenge:introductions.json:in-5",
+      "challenge:introductions.json:in-6"
+    ]
+  },
+  {
+    "english": "I am drinking water.",
+    "somali": "Biyo baan cabbayaa.",
+    "sources": [
+      "challenge:food-and-drink.json:fd-10"
+    ]
+  },
+  {
+    "english": "I am glad that you are a doctor.",
+    "somali": "Waan ku faraxsanahay inaad dhakhtar tahay.",
+    "sources": [
+      "challenge:health-and-illness.json:hl-1"
+    ]
+  },
+  {
+    "english": "I am going to the market.",
+    "somali": "Suuqa baan tagayaa.",
+    "sources": [
+      "challenge:places-and-directions.json:pd-3"
+    ]
+  },
+  {
+    "english": "I am going to the post office.",
+    "somali": "Boosta baan tagayaa.",
+    "sources": [
+      "challenge:places-and-directions.json:pd-2"
+    ]
+  },
+  {
+    "english": "I am hungry.",
+    "somali": "Waan gaajaysanahay.",
+    "sources": [
+      "challenge:food-and-drink.json:fd-6"
+    ]
+  },
+  {
+    "english": "I am looking for a telephone.",
+    "somali": "Waxaan doondoonayaa telefoon.",
+    "sources": [
+      "challenge:phone-calls.json:ph-1"
+    ]
+  },
+  {
+    "english": "I am pleased to meet you.",
+    "somali": "Waan ku faraxsanahay inaan kula kulmo.",
+    "sources": [
+      "challenge:introductions.json:in-11",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I am sorry.",
+    "somali": "Waan ka xumahay.",
+    "sources": [
+      "challenge:common-phrases.json:cp-11",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I am staying one week.",
+    "somali": "Toddobaad ayaan joogayaa.",
+    "sources": [
+      "challenge:airport-arrival.json:aa-8"
+    ]
+  },
+  {
+    "english": "I am thirsty.",
+    "somali": "Waan harraadsanahay.",
+    "sources": [
+      "challenge:food-and-drink.json:fd-5"
+    ]
+  },
+  {
+    "english": "I am well, thank you.",
+    "somali": "Waa la fiicanyahay, mahadsanid.",
+    "sources": [
+      "challenge:wellbeing.json:wb-5",
+      "challenge:wellbeing.json:wb-6"
+    ]
+  },
+  {
+    "english": "I came from London.",
+    "somali": "Landhan baan ka imi.",
+    "sources": [
+      "challenge:introductions.json:in-10",
+      "challenge:introductions.json:in-8"
+    ]
+  },
+  {
+    "english": "I checked the tyres.",
+    "somali": "Shaagagga waan jeeg gareeyay.",
+    "sources": [
+      "challenge:journey-planning.json:jp-4"
+    ]
+  },
+  {
+    "english": "I don't understand.",
+    "somali": "Ma fahmin.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I feel dizzy.",
+    "somali": "Waan warwareerayaa.",
+    "sources": [
+      "challenge:health-and-illness.json:hl-3"
+    ]
+  },
+  {
+    "english": "I found something inside the taxi.",
+    "somali": "Wax baan tagsiga dhexdiisa ka helay.",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-6"
+    ]
+  },
+  {
+    "english": "I have a bad cough.",
+    "somali": "Waxaa i haya qufac xun.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I have a fever.",
+    "somali": "Waxaa i haysa qandho.",
+    "sources": [
+      "challenge:health-and-illness.json:hl-9",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I have come from London.",
+    "somali": "Landhan ayaan ka imi.",
+    "sources": [
+      "challenge:airport-arrival.json:aa-6"
+    ]
+  },
+  {
+    "english": "I have eight books.",
+    "somali": "Waxaan hayaa siddeed buug.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-8"
+    ]
+  },
+  {
+    "english": "I have lost my passport!",
+    "somali": "Baasaboorkayga baa iga lumay!",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-5"
+    ]
+  },
+  {
+    "english": "I know a little French.",
+    "somali": "Af Faransiiska in yar ayaan ka aqaan.",
+    "sources": [
+      "challenge:taxi-ride.json:tx-6"
+    ]
+  },
+  {
+    "english": "I learned it in London.",
+    "somali": "Landhan ayaan ku bartay.",
+    "sources": [
+      "challenge:taxi-ride.json:tx-5"
+    ]
+  },
+  {
+    "english": "I put petrol in the car.",
+    "somali": "Gaadhiga bansiin waan ku shubay.",
+    "sources": [
+      "challenge:journey-planning.json:jp-3"
+    ]
+  },
+  {
+    "english": "I see four countries.",
+    "somali": "Waxaan arkayaa afar dal.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-4"
+    ]
+  },
+  {
+    "english": "I think you have a cold.",
+    "somali": "Waxaan u maleynayaa in durey kugu dhacay.",
+    "sources": [
+      "challenge:health-and-illness.json:hl-6"
+    ]
+  },
+  {
+    "english": "I want blue trousers.",
+    "somali": "Surwaal buluug ah baan rabaa.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-3"
+    ]
+  },
+  {
+    "english": "I want five cups.",
+    "somali": "Shan koob baan rabaa.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-5"
+    ]
+  },
+  {
+    "english": "I want tea with milk and sugar.",
+    "somali": "Shaah caano iyo sonkor leh baan rabaa.",
+    "sources": [
+      "challenge:food-and-drink.json:fd-9"
+    ]
+  },
+  {
+    "english": "I want to change these dollars into Djibouti francs.",
+    "somali": "Doollarkan ayaan rabaa inaan u beddelo faranka Djibouti.",
+    "sources": [
+      "challenge:changing-money.json:cm-5"
+    ]
+  },
+  {
+    "english": "I want to go to the bank.",
+    "somali": "Waxaan doonayaa inaan bangiga tago.",
+    "sources": [
+      "challenge:changing-money.json:cm-1"
+    ]
+  },
+  {
+    "english": "I will count it.",
+    "somali": "Waan tirin doonaa.",
+    "sources": [
+      "challenge:changing-money.json:cm-7"
+    ]
+  },
+  {
+    "english": "I would like a cup of hot tea.",
+    "somali": "Waxaan rabaa koob kulul oo shaah ah.",
+    "sources": [
+      "challenge:food-and-drink.json:fd-11",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I would like a room.",
+    "somali": "Qol baan doonayaa.",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-1"
+    ]
+  },
+  {
+    "english": "I would like a single room.",
+    "somali": "Waxaan rabaa qol keligiis ah.",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-9",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I would like to see the manager, please.",
+    "somali": "Waxaan rabaa inaan arko maamulaha, fadlan.",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-10",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "In 1960, the two parts united.",
+    "somali": "1960 labadii qaybood way midoobeen.",
+    "sources": [
+      "challenge:history-independence.json:hi-5",
+      "challenge:history-independence.json:hi-6"
+    ]
+  },
+  {
+    "english": "In 1991, the government collapsed.",
+    "somali": "1991 dowladdii way burburtay.",
+    "sources": [
+      "challenge:history-conflict.json:hc-1",
+      "challenge:history-conflict.json:hc-2"
+    ]
+  },
+  {
+    "english": "In earlier times, Somalia had trade.",
+    "somali": "Waagii hore Soomaaliya ganacsi bay lahayd.",
+    "sources": [
+      "challenge:history-ancient-trade.json:ha1-1",
+      "challenge:history-ancient-trade.json:ha1-2"
+    ]
+  },
+  {
+    "english": "International organizations help.",
+    "somali": "Ururada caalamiga ah way caawiyaan.",
+    "sources": [
+      "challenge:history-recovery.json:hr-7",
+      "challenge:history-recovery.json:hr-8"
+    ]
+  },
+  {
+    "english": "Is there a pharmacy near here?",
+    "somali": "Ma jiraa farmasi u dhow halkan?",
+    "sources": [
+      "challenge:health-and-illness.json:hl-10",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Is there a telephone around here?",
+    "somali": "Telefoon ma jiraa agagaarkan?",
+    "sources": [
+      "challenge:phone-calls.json:ph-2"
+    ]
+  },
+  {
+    "english": "Is Yoonis there?",
+    "somali": "Yoonis ma joogaa?",
+    "sources": [
+      "challenge:phone-calls.json:ph-5"
+    ]
+  },
+  {
+    "english": "Islam arrived early.",
+    "somali": "Islaamku goor hore ayuu yimid.",
+    "sources": [
+      "challenge:history-ancient-trade.json:ha1-7",
+      "challenge:history-ancient-trade.json:ha1-8"
+    ]
+  },
+  {
+    "english": "It is a green garment.",
+    "somali": "Waa dhar cagaaran.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-1"
+    ]
+  },
+  {
+    "english": "It is across the street from the post office.",
+    "somali": "Waxay ka soo horjeeddaa boostada.",
+    "sources": [
+      "challenge:places-and-directions.json:pd-12",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "It is cheaper than the other one.",
+    "somali": "wuu ka jaban yahay kii kale",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-8"
+    ]
+  },
+  {
+    "english": "It is in my pocket.",
+    "somali": "Jeebkayga buu ku jiraa.",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-4"
+    ]
+  },
+  {
+    "english": "It is two hundred dollars.",
+    "somali": "Waa laba boqol oo doollar.",
+    "sources": [
+      "challenge:changing-money.json:cm-6"
+    ]
+  },
+  {
+    "english": "It was a good journey.",
+    "somali": "Safar wanaagsan buu ahaa.",
+    "sources": [
+      "challenge:village-stay.json:vs-3"
+    ]
+  },
+  {
+    "english": "Italy took the south.",
+    "somali": "Talyaani waxay qabsatay koonfur.",
+    "sources": [
+      "challenge:history-independence.json:hi-3",
+      "challenge:history-independence.json:hi-4"
+    ]
+  },
+  {
+    "english": "Many people fled.",
+    "somali": "Dad badan way qaxeen.",
+    "sources": [
+      "challenge:history-conflict.json:hc-7",
+      "challenge:history-conflict.json:hc-8"
+    ]
+  },
+  {
+    "english": "Many ships used to arrive.",
+    "somali": "Maraakiib badan way iman jireen.",
+    "sources": [
+      "challenge:history-sultanates.json:hs-7",
+      "challenge:history-sultanates.json:hs-8"
+    ]
+  },
+  {
+    "english": "May I have a cup of coffee?",
+    "somali": "Ma isiin kartaa koob bun ah?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "May I help you?",
+    "somali": "Ma ku caawiyaa?",
+    "sources": [
+      "challenge:phone-calls.json:ph-10",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Mogadishu was a large trade city.",
+    "somali": "Muqdisho waxay ahayd magaalo ganacsi oo weyn.",
+    "sources": [
+      "challenge:history-sultanates.json:hs-5",
+      "challenge:history-sultanates.json:hs-6"
+    ]
+  },
+  {
+    "english": "My brother is at home.",
+    "somali": "Walaalkay waa guriga.",
+    "sources": [
+      "challenge:family-members.json:fm-7"
+    ]
+  },
+  {
+    "english": "My father is here.",
+    "somali": "Aabbahay waa halkan.",
+    "sources": [
+      "challenge:family-members.json:fm-4"
+    ]
+  },
+  {
+    "english": "My goodness, it is hot.",
+    "somali": "Wallaah waa kulayl.",
+    "sources": [
+      "challenge:taxi-ride.json:tx-7"
+    ]
+  },
+  {
+    "english": "My head hurts.",
+    "somali": "Madaxa ayaa i xanuunaya.",
+    "sources": [
+      "challenge:health-and-illness.json:hl-2"
+    ]
+  },
+  {
+    "english": "My mother is here.",
+    "somali": "Hooyaday waa halkan.",
+    "sources": [
+      "challenge:family-members.json:fm-3"
+    ]
+  },
+  {
+    "english": "My name is Bill.",
+    "somali": "magacaygu waa bill",
+    "sources": [
+      "challenge:airport-arrival.json:aa-4",
+      "challenge:introductions.json:in-1",
+      "challenge:introductions.json:in-2"
+    ]
+  },
+  {
+    "english": "My name is Bill. I came from London.",
+    "somali": "Magacaygu waa Bill. Landhan baan ka imi.",
+    "sources": [
+      "challenge:introductions.json:in-9"
+    ]
+  },
+  {
+    "english": "My sister is here.",
+    "somali": "Walaashay waa halkan.",
+    "sources": [
+      "challenge:family-members.json:fm-8"
+    ]
+  },
+  {
+    "english": "My stomach is fine.",
+    "somali": "Calooshu way fiicantahay.",
+    "sources": [
+      "challenge:health-and-illness.json:hl-5"
+    ]
+  },
+  {
+    "english": "OK.",
+    "somali": "Waa yahay.",
+    "sources": [
+      "challenge:common-phrases.json:cp-4"
+    ]
+  },
+  {
+    "english": "Okay then, goodbye.",
+    "somali": "Waa yahay, nabad gelyo.",
+    "sources": [
+      "challenge:leave-takings.json:lt-7"
+    ]
+  },
+  {
+    "english": "One way or round trip?",
+    "somali": "Mid socod keliya ah mise mid sii socod iyo soo socodba ah?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Open your mouth and say, \"Aaaah.\"",
+    "somali": "Afkaaga fur oo dheh, \"Aaaah.\"",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Open your mouth.",
+    "somali": "afkaa fur",
+    "sources": [
+      "challenge:health-and-illness.json:hl-8"
+    ]
+  },
+  {
+    "english": "Peace be upon you.",
+    "somali": "Assalaamu calaykum.",
+    "sources": [
+      "challenge:common-phrases.json:cp-7"
+    ]
+  },
+  {
+    "english": "Please come in.",
+    "somali": "Fadlan soo gal.",
+    "sources": [
+      "challenge:common-phrases.json:cp-12",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Please say that again.",
+    "somali": "Fadlan mar kale dheh.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Please sit down.",
+    "somali": "Fadlan fadhiiso.",
+    "sources": [
+      "challenge:common-phrases.json:cp-13",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Please speak slowly.",
+    "somali": "Fadlan aayar u hadal.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Regions have administration.",
+    "somali": "Gobollo maamul bay leeyihiin.",
+    "sources": [
+      "challenge:history-recovery.json:hr-3",
+      "challenge:history-recovery.json:hr-4"
+    ]
+  },
+  {
+    "english": "See you later.",
+    "somali": "Hadhow baynu is arki doonnaa.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Shall I wrap it up for you?",
+    "somali": "Miyaan kuu duubaa?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "She lives nearby.",
+    "somali": "Meel dhow bay deggentahay.",
+    "sources": [
+      "challenge:places-and-directions.json:pd-9"
+    ]
+  },
+  {
+    "english": "Show me your passport.",
+    "somali": "Baasaboorkaaga i tus.",
+    "sources": [
+      "challenge:airport-arrival.json:aa-7"
+    ]
+  },
+  {
+    "english": "Somali people traveled by sea.",
+    "somali": "Dadka Soomaaliyeed badda way mari jireen.",
+    "sources": [
+      "challenge:history-ancient-trade.json:ha1-5",
+      "challenge:history-ancient-trade.json:ha1-6"
+    ]
+  },
+  {
+    "english": "Somalia became independent.",
+    "somali": "Soomaaliya madax bannaan bay noqotay.",
+    "sources": [
+      "challenge:history-independence.json:hi-7",
+      "challenge:history-independence.json:hi-8"
+    ]
+  },
+  {
+    "english": "Speak to Bill, he is calling you from Djibouti.",
+    "somali": "Bill la hadal, Djibouti buu kaaga soo dirayaa.",
+    "sources": [
+      "challenge:phone-calls.json:ph-7"
+    ]
+  },
+  {
+    "english": "Sue has arrived.",
+    "somali": "Sue ayaa timid.",
+    "sources": [
+      "challenge:journey-planning.json:jp-7"
+    ]
+  },
+  {
+    "english": "Sugar is very sweet.",
+    "somali": "Sonkor aad bay u macaan tahay.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-9"
+    ]
+  },
+  {
+    "english": "Take care.",
+    "somali": "Is ilaali.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Take me to the Djibouti Hotel.",
+    "somali": "Hudheel Djibouti i gee.",
+    "sources": [
+      "challenge:taxi-ride.json:tx-2"
+    ]
+  },
+  {
+    "english": "Thank you, Canab.",
+    "somali": "Mahadsanid, Canab.",
+    "sources": [
+      "challenge:leave-takings.json:lt-5"
+    ]
+  },
+  {
+    "english": "Thank you.",
+    "somali": "Mahadsanid.",
+    "sources": [
+      "challenge:common-phrases.json:cp-2"
+    ]
+  },
+  {
+    "english": "Thank you. Goodbye.",
+    "somali": "mahadsanid nabad gelyo",
+    "sources": [
+      "challenge:common-phrases.json:cp-10",
+      "challenge:leave-takings.json:lt-8"
+    ]
+  },
+  {
+    "english": "Thank you. How are you?",
+    "somali": "Mahadsanid. Is ka warran.",
+    "sources": [
+      "challenge:airport-arrival.json:aa-2"
+    ]
+  },
+  {
+    "english": "The airport is far.",
+    "somali": "Garoonka dayuuradaha waa fog yahay.",
+    "sources": [
+      "challenge:places-and-directions.json:pd-4"
+    ]
+  },
+  {
+    "english": "The children are going to school.",
+    "somali": "Carruurtu dugsiga way tagayaan.",
+    "sources": [
+      "challenge:family-members.json:fm-5",
+      "challenge:family-members.json:fm-6"
+    ]
+  },
+  {
+    "english": "The government is rebuilding the country.",
+    "somali": "Dowladdu dib bay u dhisaysaa dalka.",
+    "sources": [
+      "challenge:history-recovery.json:hr-5",
+      "challenge:history-recovery.json:hr-6"
+    ]
+  },
+  {
+    "english": "The hotel is here.",
+    "somali": "hudheelku halkan buu ku yaal",
+    "sources": [
+      "challenge:places-and-directions.json:pd-10"
+    ]
+  },
+  {
+    "english": "The knife is new.",
+    "somali": "Mindidu waa cusub tahay.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-7"
+    ]
+  },
+  {
+    "english": "The man is tall.",
+    "somali": "Ninku waa dheer yahay.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-5"
+    ]
+  },
+  {
+    "english": "There are nine students in the class.",
+    "somali": "Fasalka waxaa jooga sagaal arday.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-9"
+    ]
+  },
+  {
+    "english": "There are seven men there.",
+    "somali": "Halkaas waxaa jooga toddoba nin.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-7"
+    ]
+  },
+  {
+    "english": "There are six chairs.",
+    "somali": "halkan waxaa yaal lix kursi",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-6"
+    ]
+  },
+  {
+    "english": "There are ten shoes here.",
+    "somali": "Halkan waxaa yaal toban kab.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-10"
+    ]
+  },
+  {
+    "english": "There are three books here.",
+    "somali": "Halkan waxaa yaal saddex buug.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-3"
+    ]
+  },
+  {
+    "english": "There are two books.",
+    "somali": "Halkan waxaa yaal laba buug.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-2"
+    ]
+  },
+  {
+    "english": "There is one by the post office.",
+    "somali": "Boostada agteeda mid baa jira.",
+    "sources": [
+      "challenge:phone-calls.json:ph-3"
+    ]
+  },
+  {
+    "english": "There they will spend the night.",
+    "somali": "halkaasna way ku baryi doonaan",
+    "sources": [
+      "challenge:village-stay.json:vs-8"
+    ]
+  },
+  {
+    "english": "They are drinking tea and eating bread.",
+    "somali": "Shaah way cabbayaan, kibisna way cunayaan.",
+    "sources": [
+      "challenge:food-and-drink.json:fd-3",
+      "challenge:food-and-drink.json:fd-4"
+    ]
+  },
+  {
+    "english": "Things are well.",
+    "somali": "Waa nabad.",
+    "sources": [
+      "challenge:wellbeing.json:wb-7"
+    ]
+  },
+  {
+    "english": "Things are well. And you?",
+    "somali": "Waa nabad. Maxaad sheegtay?",
+    "sources": [
+      "challenge:wellbeing.json:wb-8"
+    ]
+  },
+  {
+    "english": "This book is small.",
+    "somali": "Buuggan waa yar yahay.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-10"
+    ]
+  },
+  {
+    "english": "This food is delicious.",
+    "somali": "Cuntadani way macaantahay.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "This house is big.",
+    "somali": "Gurigani waa weyn yahay.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-6"
+    ]
+  },
+  {
+    "english": "This is a red garment.",
+    "somali": "Kani waa dhar cas.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-4"
+    ]
+  },
+  {
+    "english": "This is one book.",
+    "somali": "Kani waa hal buug.",
+    "sources": [
+      "challenge:numbers-and-counting.json:nu-1"
+    ]
+  },
+  {
+    "english": "Today is Friday.",
+    "somali": "Maanta waa jimce.",
+    "sources": [
+      "challenge:time-and-days.json:td-5"
+    ]
+  },
+  {
+    "english": "Today is Monday.",
+    "somali": "Maanta waa isniin.",
+    "sources": [
+      "challenge:time-and-days.json:td-1"
+    ]
+  },
+  {
+    "english": "Today is Sunday.",
+    "somali": "Maanta waa axad.",
+    "sources": [
+      "challenge:time-and-days.json:td-7"
+    ]
+  },
+  {
+    "english": "Today is Wednesday.",
+    "somali": "Maanta waa arbaca.",
+    "sources": [
+      "challenge:time-and-days.json:td-3"
+    ]
+  },
+  {
+    "english": "Today they will begin the journey.",
+    "somali": "maanta ayayna safarka bilaabi doonaan",
+    "sources": [
+      "challenge:journey-planning.json:jp-8"
+    ]
+  },
+  {
+    "english": "Today, Somalia is federal.",
+    "somali": "Maanta Soomaaliya federaal bay tahay.",
+    "sources": [
+      "challenge:history-recovery.json:hr-1",
+      "challenge:history-recovery.json:hr-2"
+    ]
+  },
+  {
+    "english": "Tomorrow is Saturday.",
+    "somali": "Berrito waa sabti.",
+    "sources": [
+      "challenge:time-and-days.json:td-6"
+    ]
+  },
+  {
+    "english": "Tomorrow is Thursday.",
+    "somali": "Berrito waa khamiis.",
+    "sources": [
+      "challenge:time-and-days.json:td-4"
+    ]
+  },
+  {
+    "english": "Tomorrow is Tuesday.",
+    "somali": "Berrito waa salaasa.",
+    "sources": [
+      "challenge:time-and-days.json:td-2"
+    ]
+  },
+  {
+    "english": "Tomorrow the students will go to the university.",
+    "somali": "berrito ardeydu waxay tegi doonaan jaamacadda",
+    "sources": [
+      "challenge:time-and-days.json:td-10"
+    ]
+  },
+  {
+    "english": "Traders used to come from Egypt and Arabia.",
+    "somali": "Ganacsato waxay ka iman jireen Masar iyo Carabta.",
+    "sources": [
+      "challenge:history-ancient-trade.json:ha1-3",
+      "challenge:history-ancient-trade.json:ha1-4"
+    ]
+  },
+  {
+    "english": "Turn to the left.",
+    "somali": "Xagga bidixda u leexo.",
+    "sources": [
+      "challenge:changing-money.json:cm-3",
+      "challenge:places-and-directions.json:pd-6"
+    ]
+  },
+  {
+    "english": "Turn to the right.",
+    "somali": "Xagga midigta u leexo.",
+    "sources": [
+      "challenge:changing-money.json:cm-4",
+      "challenge:places-and-directions.json:pd-7"
+    ]
+  },
+  {
+    "english": "Wait a moment.",
+    "somali": "In yar u kaadi.",
+    "sources": [
+      "challenge:phone-calls.json:ph-6"
+    ]
+  },
+  {
+    "english": "Water must be taken.",
+    "somali": "Biyo waa in la qaado.",
+    "sources": [
+      "challenge:journey-planning.json:jp-5"
+    ]
+  },
+  {
+    "english": "We are leaving today.",
+    "somali": "Maanta baa la baxayaa.",
+    "sources": [
+      "challenge:journey-planning.json:jp-1"
+    ]
+  },
+  {
+    "english": "We passed a small village.",
+    "somali": "Waxaannu marnay tuulo yar.",
+    "sources": [
+      "challenge:village-stay.json:vs-6"
+    ]
+  },
+  {
+    "english": "We saw hyenas.",
+    "somali": "Waraabayaal baannu aragnay.",
+    "sources": [
+      "challenge:village-stay.json:vs-5"
+    ]
+  },
+  {
+    "english": "We saw many interesting things.",
+    "somali": "Waxaan aragnay waxyaabo badan oo xiiso leh.",
+    "sources": [
+      "challenge:village-stay.json:vs-4"
+    ]
+  },
+  {
+    "english": "Welcome all.",
+    "somali": "Soo dhowaada.",
+    "sources": [
+      "challenge:village-stay.json:vs-1"
+    ]
+  },
+  {
+    "english": "Welcome, Khadija.",
+    "somali": "Soo dhowow, Khadija.",
+    "sources": [
+      "challenge:leave-takings.json:lt-1",
+      "challenge:leave-takings.json:lt-2"
+    ]
+  },
+  {
+    "english": "Welcome, sit down.",
+    "somali": "Soo dhowow, fadhiiso.",
+    "sources": [
+      "challenge:leave-takings.json:lt-3",
+      "challenge:leave-takings.json:lt-4"
+    ]
+  },
+  {
+    "english": "Welcome, sit down.",
+    "somali": "Soo dhowow, soo fadhiiso.",
+    "sources": [
+      "challenge:common-phrases.json:cp-6"
+    ]
+  },
+  {
+    "english": "Welcome.",
+    "somali": "Soo dhowow.",
+    "sources": [
+      "challenge:airport-arrival.json:aa-1"
+    ]
+  },
+  {
+    "english": "What does this sentence mean?",
+    "somali": "Weedhan macnaheedu muxuu yahay?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "What does this word mean?",
+    "somali": "Kelmaddan macnaheedu muxuu yahay?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "What is the address?",
+    "somali": "Waa maxay cinwaaku?",
+    "sources": [
+      "challenge:places-and-directions.json:pd-11",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "What is the checkout time?",
+    "somali": "Goorma ayaa laga baxayaa?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "What is your name?",
+    "somali": "Magacaa adiga?",
+    "sources": [
+      "challenge:introductions.json:in-3",
+      "challenge:introductions.json:in-4"
+    ]
+  },
+  {
+    "english": "What is your name?",
+    "somali": "Magacaa?",
+    "sources": [
+      "challenge:airport-arrival.json:aa-3"
+    ]
+  },
+  {
+    "english": "Where are you going?",
+    "somali": "Xaggee baad tagaysaa?",
+    "sources": [
+      "challenge:places-and-directions.json:pd-1"
+    ]
+  },
+  {
+    "english": "Where do I pay?",
+    "somali": "Xagee ka bixiyaa?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Where do you want to go?",
+    "somali": "Xaggee baad tegi rabtaa?",
+    "sources": [
+      "challenge:taxi-ride.json:tx-1"
+    ]
+  },
+  {
+    "english": "Where have you come from?",
+    "somali": "Xaggee baad ka timi?",
+    "sources": [
+      "challenge:airport-arrival.json:aa-5"
+    ]
+  },
+  {
+    "english": "Where have you come from?",
+    "somali": "Xaggee baad ka timid?",
+    "sources": [
+      "challenge:introductions.json:in-7"
+    ]
+  },
+  {
+    "english": "Where is this place located?",
+    "somali": "Meeshani halkee bay ku taallaa?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Where we ate something.",
+    "somali": "Halkaasoo aannu wax ka cunnay.",
+    "sources": [
+      "challenge:village-stay.json:vs-7"
+    ]
+  },
+  {
+    "english": "With or without sugar?",
+    "somali": "Ma sonkor baad ku rabtaa mise sonkor la'aan?",
+    "sources": [
+      "challenge:food-and-drink.json:fd-12",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Would you like a cup of tea?",
+    "somali": "Koob shaah ah ma doonaysaa?",
+    "sources": [
+      "challenge:food-and-drink.json:fd-1"
+    ]
+  },
+  {
+    "english": "Would you like something to drink?",
+    "somali": "Ma rabtaa cabbitaan?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Would you like something to eat?",
+    "somali": "Ma rabtaa wax aad cunto?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Yes, a green one or a red one.",
+    "somali": "Haa, mid cagaaran ama mid cas.",
+    "sources": [
+      "challenge:colours-and-descriptions.json:co-2"
+    ]
+  },
+  {
+    "english": "Yes, I know it.",
+    "somali": "Haa, waan aqaan.",
+    "sources": [
+      "challenge:taxi-ride.json:tx-4"
+    ]
+  },
+  {
+    "english": "Yes, I see it.",
+    "somali": "Haa, waan arkaa.",
+    "sources": [
+      "challenge:phone-calls.json:ph-4"
+    ]
+  },
+  {
+    "english": "Yes, I went in the morning.",
+    "somali": "Haa, subaxdii waan tagay.",
+    "sources": [
+      "challenge:time-and-days.json:td-9"
+    ]
+  },
+  {
+    "english": "Yes, I'd like a cup of tea.",
+    "somali": "Haa, koob shaah ah baan doonayaa.",
+    "sources": [
+      "challenge:food-and-drink.json:fd-2"
+    ]
+  },
+  {
+    "english": "Yoonis, how are you?",
+    "somali": "Yoonisow, is ka warran?",
+    "sources": [
+      "challenge:wellbeing.json:wb-1",
+      "challenge:wellbeing.json:wb-2"
+    ]
+  },
+  {
+    "english": "You can call me Ali.",
+    "somali": "Waxaad iigu yeedhi kartaa Cali.",
+    "sources": [
+      "challenge:introductions.json:in-12",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "You must protect your health.",
+    "somali": "Waa inaad caafimaadkaaga ilaaliso.",
+    "sources": [
+      "challenge:health-and-illness.json:hl-7"
+    ]
+  },
+  {
+    "english": "You're welcome.",
+    "somali": "Adaa mudan.",
+    "sources": [
+      "challenge:common-phrases.json:cp-3",
+      "challenge:leave-takings.json:lt-6"
+    ]
+  },
+  {
+    "english": "Your room number eighteen.",
+    "somali": "qolkaaga nambarkiisu waa siddeed iyo toban",
+    "sources": [
+      "challenge:hotel-check-in.json:ht-8"
+    ]
+  }
+]

@@ -110,6 +110,23 @@
       "group": "room-number"
     },
     {
+      "type": "options",
+      "formInTargetLanguage": "Waxaan rabaa qol keligiis ah.",
+      "meaningInSourceLanguage": "I would like a single room.",
+      "id": "ht-9",
+      "priority": 0,
+      "group": "single-room"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Waxaan rabaa inaan arko maamulaha, fadlan.",
+      "meaningInSourceLanguage": "I would like to see the manager, please.",
+      "id": "ht-10",
+      "priority": 0,
+      "group": "manager"
+    },
+    {
       "type": "freeWriting",
       "id": "ht-fw-1",
       "priority": 3,
