@@ -212,6 +212,48 @@
       ]
     },
     {
+      "title": "Family Dinner",
+      "skills": [
+        {
+          "summary": [
+            "Casho waa diyaar.",
+            "Miisku waa halkan.",
+            "Saxan baan rabaa.",
+            "Bariis iyo hilib miiska keen."
+          ],
+          "practiceHref": "dinner-vocabulary",
+          "id": "e2d8b65a7f31",
+          "title": "Dinner Vocabulary",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Ma rabtaa wax aad cunto?",
+            "Koob shaah ah ma doonaysaa?",
+            "Fadlan fadhiiso.",
+            "Mahadsanid. Adaa mudan."
+          ],
+          "practiceHref": "dinner-phrases",
+          "id": "fd9a1c6e4b72",
+          "title": "Dinner Phrases",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Write a short family dinner exchange.",
+            "Use `oo` to add detail.",
+            "Use `ka` for from or taking from.",
+            "Use `uu` in a he-clause."
+          ],
+          "kind": "write",
+          "practiceHref": "family-dinner-writing",
+          "id": "c81f4a39e2d6",
+          "title": "Write: Family Dinner",
+          "levels": 2
+        }
+      ]
+    },
+    {
       "title": "Travel and Stay",
       "skills": [
         {

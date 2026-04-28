@@ -1,0 +1,130 @@
+{
+  "id": "fd9a1c6e4b72",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ma rabtaa wax aad cunto?",
+      "meaningInSourceLanguage": "Do you want something to eat?",
+      "id": "dp-1",
+      "priority": 0,
+      "group": "offer-food"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Koob shaah ah ma doonaysaa?",
+      "meaningInSourceLanguage": "Would you like a cup of tea?",
+      "id": "dp-2",
+      "priority": 0,
+      "group": "offer-tea"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haa, koob shaah ah baan doonayaa.",
+      "meaningInSourceLanguage": "Yes, I would like a cup of tea.",
+      "id": "dp-3",
+      "priority": 0,
+      "group": "accept-tea"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Ii keen hilib iyo bariis.",
+      "meaningInSourceLanguage": "Bring me meat and rice.",
+      "id": "dp-4",
+      "priority": 0,
+      "group": "meal-request"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Fadlan fadhiiso.",
+      "meaningInSourceLanguage": "Please sit down.",
+      "id": "dp-5",
+      "priority": 0,
+      "group": "sit-down"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Mahadsanid. Adaa mudan.",
+      "meaningInSourceLanguage": "Thank you. You are welcome.",
+      "id": "dp-6",
+      "priority": 0,
+      "group": "thanks"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Do you want",
+          "definition": "ma rabtaa"
+        },
+        {
+          "word": "something to eat?",
+          "definition": "wax aad cunto"
+        }
+      ],
+      "chips": [
+        "Ma",
+        "rabtaa",
+        "wax",
+        "aad",
+        "cunto?",
+        "fadhiiso"
+      ],
+      "solutions": [
+        [
+          "Ma",
+          "rabtaa",
+          "wax",
+          "aad",
+          "cunto?"
+        ]
+      ],
+      "formattedSolution": "Ma rabtaa wax aad cunto?",
+      "id": "dp-7",
+      "priority": 2,
+      "group": "offer-food"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "fadlan fadhiiso"
+      ],
+      "phrase": [
+        {
+          "word": "Please",
+          "definition": "fadlan"
+        },
+        {
+          "word": "sit down.",
+          "definition": "fadhiiso"
+        }
+      ],
+      "id": "dp-8",
+      "priority": 1,
+      "group": "sit-down"
+    },
+    {
+      "type": "freeWriting",
+      "id": "dp-fw-1",
+      "priority": 3,
+      "group": "writing-dinner-phrases",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a polite Somali dinner exchange.",
+      "promptLines": [
+        "Write 2-3 short lines offering food or tea and replying politely."
+      ],
+      "placeholder": "Use phrases like `Ma rabtaa wax aad cunto?`, `Fadlan fadhiiso`, or `Mahadsanid`.",
+      "gradingNotes": [
+        "Reward polite dinner phrases from this lesson.",
+        "Accept short dialogue-style answers.",
+        "Keep corrections concise and focused on reusable phrases."
+      ],
+      "sampleAnswer": "Fadlan fadhiiso. Ma rabtaa wax aad cunto? Haa, koob shaah ah baan doonayaa. Mahadsanid."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "e2d8b65a7f31",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Casho waa diyaar.",
+      "meaningInSourceLanguage": "Dinner is ready.",
+      "id": "dv-1",
+      "priority": 0,
+      "group": "dinner-ready"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Miisku waa halkan.",
+      "meaningInSourceLanguage": "The table is here.",
+      "id": "dv-2",
+      "priority": 0,
+      "group": "table"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Saxan baan rabaa.",
+      "meaningInSourceLanguage": "I want a plate.",
+      "id": "dv-3",
+      "priority": 0,
+      "group": "plate"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Qaaddo baan rabaa.",
+      "meaningInSourceLanguage": "I want a spoon.",
+      "id": "dv-4",
+      "priority": 0,
+      "group": "spoon"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bariis iyo hilib miiska keen.",
+      "meaningInSourceLanguage": "Bring rice and meat to the table.",
+      "id": "dv-5",
+      "priority": 0,
+      "group": "bring-food"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bring",
+          "definition": "keen"
+        },
+        {
+          "word": "rice and meat",
+          "definition": "bariis iyo hilib"
+        },
+        {
+          "word": "to the table.",
+          "definition": "miiska"
+        }
+      ],
+      "chips": [
+        "Bariis",
+        "iyo",
+        "hilib",
+        "miiska",
+        "keen.",
+        "shaah"
+      ],
+      "solutions": [
+        [
+          "Bariis",
+          "iyo",
+          "hilib",
+          "miiska",
+          "keen."
+        ]
+      ],
+      "formattedSolution": "Bariis iyo hilib miiska keen.",
+      "id": "dv-6",
+      "priority": 2,
+      "group": "bring-food"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "casho waa diyaar"
+      ],
+      "phrase": [
+        {
+          "word": "Dinner",
+          "definition": "casho"
+        },
+        {
+          "word": "is ready.",
+          "definition": "waa diyaar"
+        }
+      ],
+      "id": "dv-7",
+      "priority": 1,
+      "group": "dinner-ready"
+    },
+    {
+      "type": "freeWriting",
+      "id": "dv-fw-1",
+      "priority": 3,
+      "group": "writing-dinner-vocab",
+      "promptKind": "guidedProduction",
+      "instruction": "Write a short Somali dinner note.",
+      "promptLines": [
+        "Write 2 short Somali sentences using dinner vocabulary."
+      ],
+      "placeholder": "Mention dinner, the table, a plate, a spoon, rice, or meat.",
+      "gradingNotes": [
+        "Reward active use of the new dinner vocabulary.",
+        "Accept simple present-tense sentences and short requests.",
+        "Keep corrections practical and phrase-level."
+      ],
+      "sampleAnswer": "Casho waa diyaar. Bariis iyo hilib miiska keen."
+    }
+  ]
+}

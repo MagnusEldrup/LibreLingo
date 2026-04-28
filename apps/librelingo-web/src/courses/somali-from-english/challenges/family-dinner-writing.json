@@ -1,0 +1,81 @@
+{
+  "id": "c81f4a39e2d6",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "write",
+      "id": "fdw-1",
+      "priority": 1,
+      "group": "family-dinner-checkpoint",
+      "instruction": "Write a short family dinner conversation using `oo`, `ka`, and `uu`.",
+      "promptLines": [
+        "Write 4-5 short Somali lines for a family dinner.",
+        "Mention who is at the table, ask for or offer food, and include one line about a brother, father, or guest."
+      ],
+      "placeholder": "Example flow: dinner is ready, someone sits, someone brings food from the kitchen, and he says he is hungry.",
+      "requirements": [
+        {
+          "id": "req-oo",
+          "label": "`oo` descriptive linker",
+          "kind": "structure",
+          "expectedForms": [
+            "oo"
+          ],
+          "explanation": "Use `oo` to add a description, such as `qoyska oo miiska fadhiya`."
+        },
+        {
+          "id": "req-ka",
+          "label": "`ka` for from",
+          "kind": "structure",
+          "expectedForms": [
+            "ka"
+          ],
+          "explanation": "Use `ka` for `from`, such as bringing food from the kitchen or coming from the market."
+        },
+        {
+          "id": "req-uu",
+          "label": "`uu` he-clause",
+          "kind": "structure",
+          "expectedForms": [
+            "uu"
+          ],
+          "explanation": "Use `uu` in a clause about what he does or says."
+        },
+        {
+          "id": "req-dinner-vocab",
+          "label": "Dinner vocabulary",
+          "kind": "word",
+          "expectedForms": [
+            "casho",
+            "miiska",
+            "bariis",
+            "hilib",
+            "shaah"
+          ],
+          "explanation": "Use at least one dinner word from the new vocabulary lessons."
+        },
+        {
+          "id": "req-family-word",
+          "label": "Family word",
+          "kind": "word",
+          "expectedForms": [
+            "qoyska",
+            "hooyaday",
+            "aabbahay",
+            "walaalkay",
+            "walaashay",
+            "carruurta"
+          ],
+          "explanation": "Mention at least one family member or the family as a group."
+        }
+      ],
+      "gradingNotes": [
+        "This task should combine family words, dinner phrases, and the linking patterns `oo`, `ka`, and `uu`.",
+        "Reward clear beginner Somali even if the dialogue is simple.",
+        "Check that `oo` links extra description, `ka` carries a from/source meaning, and `uu` appears in a he-clause.",
+        "Be lenient with punctuation, capitalization, and minor spelling variation."
+      ],
+      "sampleAnswer": "Casho waa diyaar. Qoyska oo miiska fadhiya ayaa shaah cabbaya. Hooyaday bariis iyo hilib jikada ka keentay. Walaalkay wuxuu sheegay inuu gaajaysan yahay. Fadlan fadhiiso."
+    }
+  ]
+}
