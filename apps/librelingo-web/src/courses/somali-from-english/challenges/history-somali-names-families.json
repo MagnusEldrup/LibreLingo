@@ -1,0 +1,142 @@
+{
+  "id": "b8e5f7a23091",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Qoyska Soomaaliyeed waa muhiim.",
+      "meaningInSourceLanguage": "The Somali family is important.",
+      "id": "hnf-1",
+      "priority": 0,
+      "group": "family"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Qoyska Soomaaliyeed waa muhiim."
+      ],
+      "phrase": [
+        {
+          "word": "Somali family",
+          "definition": "Qoyska Soomaaliyeed"
+        },
+        {
+          "word": "is important.",
+          "definition": "waa muhiim"
+        }
+      ],
+      "id": "hnf-2",
+      "priority": 1,
+      "group": "family"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Magacyadu macne bay leeyihiin.",
+      "meaningInSourceLanguage": "Names have meaning.",
+      "id": "hnf-3",
+      "priority": 0,
+      "group": "names"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Names",
+          "definition": "Magacyadu"
+        },
+        {
+          "word": "have meaning.",
+          "definition": "macne bay leeyihiin"
+        }
+      ],
+      "chips": [
+        "Magacyadu",
+        "macne",
+        "bay",
+        "leeyihiin."
+      ],
+      "solutions": [
+        [
+          "Magacyadu",
+          "macne",
+          "bay",
+          "leeyihiin."
+        ]
+      ],
+      "formattedSolution": "Magacyadu macne bay leeyihiin.",
+      "id": "hnf-4",
+      "priority": 2,
+      "group": "names"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Carruurtu qoyska bay joogaan.",
+      "meaningInSourceLanguage": "The children are with the family.",
+      "id": "hnf-5",
+      "priority": 0,
+      "group": "children"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The children",
+          "definition": "Carruurtu"
+        },
+        {
+          "word": "are with the family.",
+          "definition": "qoyska bay joogaan"
+        }
+      ],
+      "chips": [
+        "Carruurtu",
+        "qoyska",
+        "bay",
+        "joogaan."
+      ],
+      "solutions": [
+        [
+          "Carruurtu",
+          "qoyska",
+          "bay",
+          "joogaan."
+        ]
+      ],
+      "formattedSolution": "Carruurtu qoyska bay joogaan.",
+      "id": "hnf-6",
+      "priority": 2,
+      "group": "children"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Walaal waa eray muhiim ah.",
+      "meaningInSourceLanguage": "Sibling is an important word.",
+      "id": "hnf-7",
+      "priority": 0,
+      "group": "sibling"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Walaal waa eray muhiim ah."
+      ],
+      "phrase": [
+        {
+          "word": "Sibling",
+          "definition": "Walaal"
+        },
+        {
+          "word": "is an important word.",
+          "definition": "waa eray muhiim ah"
+        }
+      ],
+      "id": "hnf-8",
+      "priority": 1,
+      "group": "sibling"
+    }
+  ]
+}

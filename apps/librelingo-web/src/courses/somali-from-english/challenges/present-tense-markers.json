@@ -189,75 +189,76 @@
         {
           "id": "pt-practice-1",
           "label": "I",
-          "prompt": "I am going today.",
-          "rule": "Use `waan` for `I`, then add the present-tense verb.",
+          "prompt": "I am going to greet Amina today.",
+          "rule": "Use `waan` with a first-person present-tense action from the greetings context.",
           "answers": [
-            "Waan tagayaa maanta."
+            "Waan salaamayaa Amina maanta."
           ]
         },
         {
           "id": "pt-practice-2",
           "label": "You",
-          "prompt": "You are going now.",
-          "rule": "Use `waad` for `you`, then add the present-tense verb.",
+          "prompt": "You are going home after saying goodbye.",
+          "rule": "Use `waad` for `you`, then keep the sentence in the leave-taking context.",
           "answers": [
-            "Waad tagaysaa hadda."
+            "Waad tagaysaa guriga."
           ]
         },
         {
           "id": "pt-practice-3",
           "label": "He",
-          "prompt": "He is going to the market.",
-          "rule": "Use `wuu` for `he`, then add the present-tense verb.",
+          "prompt": "He is asking about the family.",
+          "rule": "Use `wuu` with a family check-in action from the early conversation lessons.",
           "answers": [
-            "Wuu tagayaa suuqa."
+            "Wuu weydiinayaa qoyska."
           ]
         },
         {
           "id": "pt-practice-4",
           "label": "She",
-          "prompt": "She is going home.",
-          "rule": "Use `way` for `she`, then add the present-tense verb.",
+          "prompt": "She is coming from London.",
+          "rule": "Use `way` for `she` with the introduction phrase.",
           "answers": [
-            "Way tagaysaa guriga."
+            "Way ka imanaysaa Landhan."
           ]
         },
         {
           "id": "pt-practice-5",
           "label": "We (including you)",
-          "prompt": "We are going together, including you.",
+          "prompt": "We are greeting Khadija together, including you.",
           "rule": "Use `waynu` when `we` includes the person you are speaking to.",
           "answers": [
-            "Waynu wada tagaynaa.",
-            "Waynu wada tagayna."
+            "Waynu wada salaamaynaa Khadija.",
+            "Waynu wada salaamaynaynaa Khadija."
           ]
         },
         {
           "id": "pt-practice-6",
           "label": "We (not including you)",
-          "prompt": "We are going together, not including you.",
+          "prompt": "We are welcoming the guest together, not including you.",
           "rule": "Use `waannu` when `we` does not include the person you are speaking to.",
           "answers": [
-            "Waannu wada tagaynaa.",
-            "Waannu wada tagayna."
+            "Waannu wada soo dhowaynaynaa martida.",
+            "Waannu wada soo dhoweynaynaa martida."
           ]
         },
         {
           "id": "pt-practice-7",
           "label": "You all",
-          "prompt": "You all are going to school.",
-          "rule": "Use `waydin` for `you all`, then add the present-tense verb.",
+          "prompt": "You all are asking names.",
+          "rule": "Use `waydin` for `you all` with a names/introduction action.",
           "answers": [
-            "Waydin tagaysaan dugsiga."
+            "Waydin weydiinaysaan magacyada."
           ]
         },
         {
           "id": "pt-practice-8",
           "label": "They",
-          "prompt": "They are going tomorrow.",
-          "rule": "Use `way` for `they` here, then add the plural present-tense verb.",
+          "prompt": "They are saying goodbye tomorrow.",
+          "rule": "Use `way` for `they` with a leave-taking phrase.",
           "answers": [
-            "Way tagayaan berri."
+            "Way nabad gelyeynayaan berri.",
+            "Way nabad gelyaynayaan berri."
           ]
         }
       ]

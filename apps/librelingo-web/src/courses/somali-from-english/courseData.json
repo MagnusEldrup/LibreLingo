@@ -155,6 +155,58 @@
           "id": "c6ff4c4d8a77",
           "title": "Colours and Descriptions",
           "levels": 2
+        },
+        {
+          "summary": [
+            "Qoyska waa weyn yahay.",
+            "Hal walaal baan leeyahay.",
+            "Laba carruur ah baa halkan jooga.",
+            "Ninku waa dheer yahay."
+          ],
+          "kind": "grammar",
+          "practiceHref": "people-singular-plural",
+          "id": "2f4b8a91c703",
+          "title": "Grammar: Singular and Plural People",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Reply through a family chat.",
+            "Ask about family and children.",
+            "Use numbers with people.",
+            "Describe one person simply."
+          ],
+          "kind": "conversation",
+          "practiceHref": "people-family-conversation",
+          "id": "9d16f3b8a204",
+          "title": "Conversation: Talking About Family",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Write 4 short Somali sentences about people.",
+            "Mention family, a number, and one description.",
+            "Use `waa` and one plural people word.",
+            "Keep each sentence short."
+          ],
+          "kind": "write",
+          "practiceHref": "people-writing-descriptions",
+          "id": "7a6e05c2d9bf",
+          "title": "Write: People and Descriptions",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Qoyska Soomaaliyeed waa muhiim.",
+            "Magacyadu macne bay leeyihiin.",
+            "Carruurtu qoyska bay joogaan.",
+            "Walaal waa eray muhiim ah."
+          ],
+          "kind": "history",
+          "practiceHref": "history-somali-names-families",
+          "id": "b8e5f7a23091",
+          "title": "History: Somali Names and Families",
+          "levels": 2
         }
       ]
     },
@@ -208,6 +260,58 @@
           "id": "7f31d465e93c",
           "title": "Places and Directions",
           "levels": 2
+        },
+        {
+          "summary": [
+            "Ma doonaysaa shaah?",
+            "Maanta waa isniin?",
+            "Xaggee baad tagaysaa?",
+            "Boosta xaggee bay ku taal?"
+          ],
+          "kind": "grammar",
+          "practiceHref": "daily-questions-ma-xaggee",
+          "id": "d6f940b8132a",
+          "title": "Grammar: Questions with Ma and Xaggee",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Reply through a daily errand chat.",
+            "Ask for tea or food.",
+            "Ask where someone is going.",
+            "Give one simple direction."
+          ],
+          "kind": "conversation",
+          "practiceHref": "daily-food-directions-conversation",
+          "id": "e41b7a6c35d0",
+          "title": "Conversation: Asking for Food and Directions",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Write 4 short Somali sentences about a day.",
+            "Use one time word and one food word.",
+            "Include one place or direction.",
+            "Use one polite phrase."
+          ],
+          "kind": "write",
+          "practiceHref": "daily-writing-my-day",
+          "id": "a04c78f1e6bb",
+          "title": "Write: My Day in Simple Somali",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Martidu waa muhiim.",
+            "Shaah waa la bixiyaa.",
+            "Suuqa cunto baa yaal.",
+            "Dadku way is salaamaan."
+          ],
+          "kind": "history",
+          "practiceHref": "history-everyday-hospitality",
+          "id": "f02a51e4b8c7",
+          "title": "History: Everyday Life and Hospitality",
+          "levels": 2
         }
       ]
     },
@@ -240,6 +344,32 @@
         },
         {
           "summary": [
+            "Qoyska oo miiska fadhiya.",
+            "Shaah oo kulul.",
+            "Bariis oo diyaar ah.",
+            "Marti oo guriga joogta."
+          ],
+          "kind": "grammar",
+          "practiceHref": "dinner-grammar-oo-detail",
+          "id": "4c3a9071de65",
+          "title": "Grammar: Using oo to Add Detail",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Reply through a dinner table chat.",
+            "Offer tea and food.",
+            "Ask someone to sit.",
+            "Use polite replies."
+          ],
+          "kind": "conversation",
+          "practiceHref": "dinner-table-conversation",
+          "id": "6bb41a0e582d",
+          "title": "Conversation: At the Dinner Table",
+          "levels": 2
+        },
+        {
+          "summary": [
             "Write a short family dinner exchange.",
             "Use `oo` to add detail.",
             "Use `ka` for from or taking from.",
@@ -249,6 +379,19 @@
           "practiceHref": "family-dinner-writing",
           "id": "c81f4a39e2d6",
           "title": "Write: Family Dinner",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Somalia ganacsi bay lahayd.",
+            "Cunto badan suuqa bay timid.",
+            "Martida shaah baa la siiyaa.",
+            "Qoyska casho bay wada cunaan."
+          ],
+          "kind": "history",
+          "practiceHref": "history-food-trade-hospitality",
+          "id": "8a17d5b2c904",
+          "title": "History: Food, Trade, and Somali Hospitality",
           "levels": 2
         }
       ]

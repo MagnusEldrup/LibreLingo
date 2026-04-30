@@ -134,7 +134,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Good morning, Amina. Good night."
+        "You meet Amina in the morning and leave her with a night blessing."
       ],
       "placeholder": "Write 1-2 short Somali greeting lines.",
       "gradingNotes": [
@@ -152,7 +152,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali greeting sequence.",
       "promptLines": [
-        "Write 2-3 short Somali greeting lines for different times of day."
+        "Write 2-3 short Somali greeting lines for people you meet at different times of day."
       ],
       "placeholder": "You can use morning, afternoon, evening, or good night phrases.",
       "gradingNotes": [
@@ -160,7 +160,7 @@
         "Do not over-penalize grammar when the greeting phrases are correct.",
         "Keep feedback brief and phrase-focused."
       ],
-      "sampleAnswer": "Subax wanaagsan. Galab wanaagsan. Nabad ku bari."
+      "sampleAnswer": "Subax wanaagsan, Amina. Galab wanaagsan, Yoonis. Nabad ku bari."
     }
   ]
 }

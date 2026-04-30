@@ -128,49 +128,50 @@
         {
           "id": "lp-practice-1",
           "label": "oo",
-          "prompt": "the woman who is called Caasha",
+          "prompt": "the guest who is called Caasha",
           "rule": "Use `oo` to add descriptive information to the noun phrase.",
           "answers": [
-            "naagta oo Caasha la yidhaahdo."
+            "martida oo Caasha la yidhaahdo.",
+            "marti oo Caasha la yidhaahdo."
           ]
         },
         {
           "id": "lp-practice-2",
           "label": "inuu",
-          "prompt": "that he arrived early",
-          "rule": "Use `inuu` for a clause meaning `that he ...`.",
+          "prompt": "that he arrived at the village early",
+          "rule": "Use `inuu` for a clause meaning `that he ...` in a travel context.",
           "answers": [
-            "inuu goor hore yimid.",
-            "inuu goor hore yimi."
+            "inuu tuulada goor hore yimid.",
+            "inuu tuulada goor hore yimi."
           ]
         },
         {
           "id": "lp-practice-3",
           "label": "ka",
-          "prompt": "I came from Mogadishu.",
+          "prompt": "I came from the market.",
           "rule": "Use `ka` for `from`, with `baan` or `ayaan` for `I` in a full sentence.",
           "answers": [
-            "Muqdisho baan ka imi.",
-            "Muqdisho ayaan ka imi."
+            "Suuqa baan ka imi.",
+            "Suuqa ayaan ka imi."
           ]
         },
         {
           "id": "lp-practice-4",
           "label": "si uu u",
-          "prompt": "so that he may learn Somali",
-          "rule": "Use `si uu u` for `so that he may ...`.",
+          "prompt": "so that he may call Yoonis",
+          "rule": "Use `si uu u` for purpose in a phone-call context.",
           "answers": [
-            "si uu u barto Af-Soomaali."
+            "si uu u waco Yoonis."
           ]
         },
         {
           "id": "lp-practice-5",
           "label": "uu + ka",
-          "prompt": "he came from Hargeisa.",
+          "prompt": "he came from the hotel.",
           "rule": "Use `ayuu ka` in a full sentence for `he ... from ...`.",
           "answers": [
-            "Hargeysa ayuu ka yimid.",
-            "Hargaysa ayuu ka yimid."
+            "Hudheelka ayuu ka yimid.",
+            "Hudheelka ayuu ka yimi."
           ]
         }
       ]

@@ -227,6 +227,15 @@
     ]
   },
   {
+    "english": "Bring",
+    "somali": [
+      "keen"
+    ],
+    "sources": [
+      "challenge:dinner-vocabulary.json:dv-6"
+    ]
+  },
+  {
     "english": "Britain",
     "somali": [
       "Britain"
@@ -345,6 +354,15 @@
       "draft:01_hello_and_goodbye.md",
       "supplement:wordDictionarySupplement.json",
       "yaml:time_greetings.yaml"
+    ]
+  },
+  {
+    "english": "Dinner",
+    "somali": [
+      "casho"
+    ],
+    "sources": [
+      "challenge:dinner-vocabulary.json:dv-7"
     ]
   },
   {
@@ -685,6 +703,17 @@
     "sources": [
       "draft:06_colours_and_descriptions.md",
       "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Guests",
+    "somali": [
+      "Martida",
+      "Martidu"
+    ],
+    "sources": [
+      "challenge:history-everyday-hospitality.json:heh-2",
+      "challenge:history-food-trade-hospitality.json:hfth-6"
     ]
   },
   {
@@ -1146,6 +1175,15 @@
     ]
   },
   {
+    "english": "Names",
+    "somali": [
+      "Magacyadu"
+    ],
+    "sources": [
+      "challenge:history-somali-names-families.json:hnf-4"
+    ]
+  },
+  {
     "english": "narrow",
     "somali": [
       "ciriiri"
@@ -1279,6 +1317,24 @@
       "draft:02_how_are_you.md",
       "yaml:leave_takings.yaml",
       "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "People",
+    "somali": [
+      "Dadku"
+    ],
+    "sources": [
+      "challenge:history-everyday-hospitality.json:heh-8"
+    ]
+  },
+  {
+    "english": "Please",
+    "somali": [
+      "fadlan"
+    ],
+    "sources": [
+      "challenge:dinner-phrases.json:dp-8"
     ]
   },
   {
@@ -1460,6 +1516,15 @@
     ]
   },
   {
+    "english": "Sibling",
+    "somali": [
+      "Walaal"
+    ],
+    "sources": [
+      "challenge:history-somali-names-families.json:hnf-8"
+    ]
+  },
+  {
     "english": "sister",
     "somali": [
       "walaal"
@@ -1539,6 +1604,7 @@
       "Soomaaliya"
     ],
     "sources": [
+      "challenge:history-food-trade-hospitality.json:hfth-2",
       "challenge:history-independence.json:hi-8"
     ]
   },
@@ -1654,9 +1720,10 @@
   {
     "english": "tea",
     "somali": [
-      "shaah"
+      "Shaah"
     ],
     "sources": [
+      "challenge:history-everyday-hospitality.json:heh-4",
       "draft:07_food_and_drink.md"
     ]
   },

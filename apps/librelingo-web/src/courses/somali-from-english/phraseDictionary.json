@@ -62,8 +62,17 @@
     "english": "Bring me meat and rice.",
     "somali": "Ii keen hilib iyo bariis.",
     "sources": [
+      "challenge:dinner-phrases.json:dp-4",
       "challenge:food-and-drink.json:fd-7",
       "challenge:food-and-drink.json:fd-8"
+    ]
+  },
+  {
+    "english": "Bring rice and meat to the table.",
+    "somali": "Bariis iyo hilib miiska keen.",
+    "sources": [
+      "challenge:dinner-vocabulary.json:dv-5",
+      "challenge:dinner-vocabulary.json:dv-6"
     ]
   },
   {
@@ -102,6 +111,14 @@
     "somali": "Shaleyto jaamacadda miyaad tagtay?",
     "sources": [
       "challenge:time-and-days.json:td-8"
+    ]
+  },
+  {
+    "english": "Dinner is ready.",
+    "somali": "Casho waa diyaar.",
+    "sources": [
+      "challenge:dinner-vocabulary.json:dv-1",
+      "challenge:dinner-vocabulary.json:dv-7"
     ]
   },
   {
@@ -144,6 +161,14 @@
     "somali": "Qol musqulleh ma rabtaa?",
     "sources": [
       "challenge:hotel-check-in.json:ht-7"
+    ]
+  },
+  {
+    "english": "Do you want something to eat?",
+    "somali": "Ma rabtaa wax aad cunto?",
+    "sources": [
+      "challenge:dinner-phrases.json:dp-1",
+      "challenge:dinner-phrases.json:dp-7"
     ]
   },
   {
@@ -225,6 +250,22 @@
     "somali": "Nabad gelyo.",
     "sources": [
       "challenge:common-phrases.json:cp-9"
+    ]
+  },
+  {
+    "english": "Guests are given tea.",
+    "somali": "Martida shaah baa la siiyaa.",
+    "sources": [
+      "challenge:history-food-trade-hospitality.json:hfth-5",
+      "challenge:history-food-trade-hospitality.json:hfth-6"
+    ]
+  },
+  {
+    "english": "Guests are important.",
+    "somali": "Martidu waa muhiim.",
+    "sources": [
+      "challenge:history-everyday-hospitality.json:heh-1",
+      "challenge:history-everyday-hospitality.json:heh-2"
     ]
   },
   {
@@ -493,6 +534,20 @@
     ]
   },
   {
+    "english": "I want a plate.",
+    "somali": "Saxan baan rabaa.",
+    "sources": [
+      "challenge:dinner-vocabulary.json:dv-3"
+    ]
+  },
+  {
+    "english": "I want a spoon.",
+    "somali": "Qaaddo baan rabaa.",
+    "sources": [
+      "challenge:dinner-vocabulary.json:dv-4"
+    ]
+  },
+  {
     "english": "I want blue trousers.",
     "somali": "Surwaal buluug ah baan rabaa.",
     "sources": [
@@ -587,6 +642,13 @@
     "sources": [
       "challenge:history-ancient-trade.json:ha1-1",
       "challenge:history-ancient-trade.json:ha1-2"
+    ]
+  },
+  {
+    "english": "In the market there is food.",
+    "somali": "Suuqa cunto baa yaal.",
+    "sources": [
+      "challenge:history-everyday-hospitality.json:heh-6"
     ]
   },
   {
@@ -718,6 +780,14 @@
     ]
   },
   {
+    "english": "Much food came to the market.",
+    "somali": "Cunto badan suuqa bay timid.",
+    "sources": [
+      "challenge:history-food-trade-hospitality.json:hfth-3",
+      "challenge:history-food-trade-hospitality.json:hfth-4"
+    ]
+  },
+  {
     "english": "My brother is at home.",
     "somali": "Walaalkay waa guriga.",
     "sources": [
@@ -783,6 +853,14 @@
     ]
   },
   {
+    "english": "Names have meaning.",
+    "somali": "Magacyadu macne bay leeyihiin.",
+    "sources": [
+      "challenge:history-somali-names-families.json:hnf-3",
+      "challenge:history-somali-names-families.json:hnf-4"
+    ]
+  },
+  {
     "english": "OK.",
     "somali": "Waa yahay.",
     "sources": [
@@ -825,6 +903,14 @@
     ]
   },
   {
+    "english": "People greet each other.",
+    "somali": "Dadku way is salaamaan.",
+    "sources": [
+      "challenge:history-everyday-hospitality.json:heh-7",
+      "challenge:history-everyday-hospitality.json:heh-8"
+    ]
+  },
+  {
     "english": "Please come in.",
     "somali": "Fadlan soo gal.",
     "sources": [
@@ -844,6 +930,8 @@
     "somali": "Fadlan fadhiiso.",
     "sources": [
       "challenge:common-phrases.json:cp-13",
+      "challenge:dinner-phrases.json:dp-5",
+      "challenge:dinner-phrases.json:dp-8",
       "supplement:phraseDictionarySupplement.json"
     ]
   },
@@ -891,6 +979,21 @@
     ]
   },
   {
+    "english": "Sibling is an important word.",
+    "somali": "Walaal waa eray muhiim ah.",
+    "sources": [
+      "challenge:history-somali-names-families.json:hnf-7",
+      "challenge:history-somali-names-families.json:hnf-8"
+    ]
+  },
+  {
+    "english": "Somali family is important.",
+    "somali": "Qoyska Soomaaliyeed waa muhiim.",
+    "sources": [
+      "challenge:history-somali-names-families.json:hnf-2"
+    ]
+  },
+  {
     "english": "Somali people traveled by sea.",
     "somali": "Dadka Soomaaliyeed badda way mari jireen.",
     "sources": [
@@ -904,6 +1007,14 @@
     "sources": [
       "challenge:history-independence.json:hi-7",
       "challenge:history-independence.json:hi-8"
+    ]
+  },
+  {
+    "english": "Somalia had trade.",
+    "somali": "Soomaaliya ganacsi bay lahayd.",
+    "sources": [
+      "challenge:history-food-trade-hospitality.json:hfth-1",
+      "challenge:history-food-trade-hospitality.json:hfth-2"
     ]
   },
   {
@@ -942,6 +1053,14 @@
     ]
   },
   {
+    "english": "Tea is served.",
+    "somali": "Shaah waa la bixiyaa.",
+    "sources": [
+      "challenge:history-everyday-hospitality.json:heh-3",
+      "challenge:history-everyday-hospitality.json:heh-4"
+    ]
+  },
+  {
     "english": "Thank you, Canab.",
     "somali": "Mahadsanid, Canab.",
     "sources": [
@@ -971,6 +1090,13 @@
     ]
   },
   {
+    "english": "Thank you. You are welcome.",
+    "somali": "Mahadsanid. Adaa mudan.",
+    "sources": [
+      "challenge:dinner-phrases.json:dp-6"
+    ]
+  },
+  {
     "english": "The airport is far.",
     "somali": "Garoonka dayuuradaha waa fog yahay.",
     "sources": [
@@ -983,6 +1109,22 @@
     "sources": [
       "challenge:family-members.json:fm-5",
       "challenge:family-members.json:fm-6"
+    ]
+  },
+  {
+    "english": "The children are with the family.",
+    "somali": "Carruurtu qoyska bay joogaan.",
+    "sources": [
+      "challenge:history-somali-names-families.json:hnf-5",
+      "challenge:history-somali-names-families.json:hnf-6"
+    ]
+  },
+  {
+    "english": "The family eats dinner together.",
+    "somali": "Qoyska casho bay wada cunaan.",
+    "sources": [
+      "challenge:history-food-trade-hospitality.json:hfth-7",
+      "challenge:history-food-trade-hospitality.json:hfth-8"
     ]
   },
   {
@@ -1012,6 +1154,20 @@
     "somali": "Ninku waa dheer yahay.",
     "sources": [
       "challenge:colours-and-descriptions.json:co-5"
+    ]
+  },
+  {
+    "english": "The Somali family is important.",
+    "somali": "Qoyska Soomaaliyeed waa muhiim.",
+    "sources": [
+      "challenge:history-somali-names-families.json:hnf-1"
+    ]
+  },
+  {
+    "english": "The table is here.",
+    "somali": "Miisku waa halkan.",
+    "sources": [
+      "challenge:dinner-vocabulary.json:dv-2"
     ]
   },
   {
@@ -1054,6 +1210,13 @@
     "somali": "Halkan waxaa yaal laba buug.",
     "sources": [
       "challenge:numbers-and-counting.json:nu-2"
+    ]
+  },
+  {
+    "english": "There is food in the market.",
+    "somali": "Suuqa cunto baa yaal.",
+    "sources": [
+      "challenge:history-everyday-hospitality.json:heh-5"
     ]
   },
   {
@@ -1406,6 +1569,7 @@
     "english": "Would you like a cup of tea?",
     "somali": "Koob shaah ah ma doonaysaa?",
     "sources": [
+      "challenge:dinner-phrases.json:dp-2",
       "challenge:food-and-drink.json:fd-1"
     ]
   },
@@ -1449,6 +1613,13 @@
     "somali": "Haa, subaxdii waan tagay.",
     "sources": [
       "challenge:time-and-days.json:td-9"
+    ]
+  },
+  {
+    "english": "Yes, I would like a cup of tea.",
+    "somali": "Haa, koob shaah ah baan doonayaa.",
+    "sources": [
+      "challenge:dinner-phrases.json:dp-3"
     ]
   },
   {

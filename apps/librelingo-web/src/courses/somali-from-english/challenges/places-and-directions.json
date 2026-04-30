@@ -148,7 +148,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "I am going to the market. Turn left."
+        "Someone asks where you are going; say you are going to the market and tell them to turn left."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -166,7 +166,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short directions answer in Somali.",
       "promptLines": [
-        "Write 2 short Somali sentences about where you are going and one direction."
+        "Write 2 short Somali sentences for asking or giving directions during an errand."
       ],
       "placeholder": "You can mention the market, post office, left, right, or straight on.",
       "gradingNotes": [

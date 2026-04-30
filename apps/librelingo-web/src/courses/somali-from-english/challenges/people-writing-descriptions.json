@@ -1,0 +1,79 @@
+{
+  "id": "7a6e05c2d9bf",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "write",
+      "id": "pwd-1",
+      "priority": 1,
+      "group": "people-description-checkpoint",
+      "instruction": "Write a short Somali description using the People module.",
+      "promptLines": [
+        "Write 4 short Somali sentences about family or people.",
+        "Mention family, one number, one description, and one school or home sentence."
+      ],
+      "placeholder": "Example flow: family check-in, one sibling, a description, children going somewhere.",
+      "requirements": [
+        {
+          "id": "req-family",
+          "label": "Family word",
+          "kind": "word",
+          "expectedForms": [
+            "qoyska",
+            "qoysku",
+            "hooyaday",
+            "aabbahay",
+            "walaalkay",
+            "walaashay",
+            "carruurta"
+          ],
+          "explanation": "Use at least one family word from the People module."
+        },
+        {
+          "id": "req-number",
+          "label": "Number word",
+          "kind": "word",
+          "expectedForms": [
+            "hal",
+            "laba",
+            "saddex",
+            "afar",
+            "shan"
+          ],
+          "explanation": "Use one number word with a person or object."
+        },
+        {
+          "id": "req-description",
+          "label": "Description word",
+          "kind": "word",
+          "expectedForms": [
+            "dheer",
+            "gaaban",
+            "weyn",
+            "yar",
+            "cusub",
+            "cagaaran",
+            "buluug"
+          ],
+          "explanation": "Use one description or colour word."
+        },
+        {
+          "id": "req-waa",
+          "label": "`waa` sentence",
+          "kind": "structure",
+          "expectedForms": [
+            "waa"
+          ],
+          "explanation": "Include one simple `waa` sentence."
+        }
+      ],
+      "gradingNotes": [
+        "Reward active use of People-module vocabulary rather than length.",
+        "Accept short sentence fragments if the required targets are clear.",
+        "Be lenient with spelling variation around doubled letters.",
+        "Keep feedback concrete and phrase-level."
+      ],
+      "sampleAnswer": "Qoyska waa nabad. Hal walaal baan leeyahay. Ninku waa dheer yahay. Carruurtu dugsiga way tagayaan."
+    }
+  ]
+}

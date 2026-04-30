@@ -117,7 +117,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "I want to go to the bank. Here is your money."
+        "At the bank, say you want to go there and hand over the money."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -135,7 +135,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali money-exchange exchange.",
       "promptLines": [
-        "Write 2 short Somali lines about going to the bank or changing money."
+        "Write 2 short Somali lines for going to the bank and changing money."
       ],
       "placeholder": "You can mention dollars, francs, counting, or directions.",
       "gradingNotes": [

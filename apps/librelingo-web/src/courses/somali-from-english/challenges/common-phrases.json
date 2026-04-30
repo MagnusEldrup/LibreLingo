@@ -156,7 +156,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Excuse me. Thank you. Goodbye."
+        "You interrupt someone politely, thank them, and then say goodbye."
       ],
       "placeholder": "Write 3 short Somali phrases.",
       "gradingNotes": [
@@ -174,7 +174,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short polite greeting and farewell in Somali.",
       "promptLines": [
-        "Write 2-3 short Somali lines for a polite greeting and goodbye."
+        "Write 2-3 short Somali lines for a polite mini-exchange from greeting to goodbye."
       ],
       "placeholder": "You can use peace greetings, thanks, welcome, or goodbye phrases.",
       "gradingNotes": [

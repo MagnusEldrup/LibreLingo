@@ -116,7 +116,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a polite Somali dinner exchange.",
       "promptLines": [
-        "Write 2-3 short lines offering food or tea and replying politely."
+        "Write 2-3 short lines offering someone food or tea at dinner and replying politely."
       ],
       "placeholder": "Use phrases like `Ma rabtaa wax aad cunto?`, `Fadlan fadhiiso`, or `Mahadsanid`.",
       "gradingNotes": [

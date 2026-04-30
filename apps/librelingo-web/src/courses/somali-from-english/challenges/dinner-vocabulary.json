@@ -111,7 +111,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali dinner note.",
       "promptLines": [
-        "Write 2 short Somali sentences using dinner vocabulary."
+        "Write 2 short Somali sentences for getting dinner onto the table."
       ],
       "placeholder": "Mention dinner, the table, a plate, a spoon, rice, or meat.",
       "gradingNotes": [

@@ -11,7 +11,7 @@
         "somali": [
           "Waan tagayaa."
         ],
-        "note": "Use `waan` for `I`, then add the present-tense verb."
+        "note": "Use `waan` with a first-person present-tense action from the greetings context."
       },
       {
         "label": "You",
@@ -19,7 +19,7 @@
         "somali": [
           "Waad tagaysaa."
         ],
-        "note": "Use `waad` for `you`, then add the present-tense verb."
+        "note": "Use `waad` for `you`, then keep the sentence in the leave-taking context."
       },
       {
         "label": "He",
@@ -27,7 +27,7 @@
         "somali": [
           "Wuu tagayaa."
         ],
-        "note": "Use `wuu` for `he`, then add the present-tense verb."
+        "note": "Use `wuu` with a family check-in action from the early conversation lessons."
       },
       {
         "label": "She",
@@ -35,7 +35,7 @@
         "somali": [
           "Way tagaysaa."
         ],
-        "note": "Use `way` for `she`, then add the present-tense verb."
+        "note": "Use `way` for `she` with the introduction phrase."
       },
       {
         "label": "We (including you)",
@@ -61,7 +61,7 @@
         "somali": [
           "Waydin tagaysaan."
         ],
-        "note": "Use `waydin` for `you all`, then add the present-tense verb."
+        "note": "Use `waydin` for `you all` with a names/introduction action."
       },
       {
         "label": "They",
@@ -69,7 +69,7 @@
         "somali": [
           "Way tagayaan."
         ],
-        "note": "Use `way` for `they` here, then add the plural present-tense verb."
+        "note": "Use `way` for `they` with a leave-taking phrase."
       }
     ],
     "sources": [
@@ -89,7 +89,7 @@
           "imi",
           "imid"
         ],
-        "note": "Use `imi/imid` for the `I` form in this past-tense pattern."
+        "note": "Use the past form with the village-stay context."
       },
       {
         "label": "You",
@@ -98,7 +98,7 @@
           "timi",
           "timid"
         ],
-        "note": "Use `timi/timid` for `you` in this past-tense pattern."
+        "note": "Use the past form with a communication lesson noun."
       },
       {
         "label": "He",
@@ -107,7 +107,7 @@
           "yimi",
           "yimid"
         ],
-        "note": "Use `yimi/yimid` for `he` in this past-tense pattern."
+        "note": "Use the past form with `safarka` from the journey lessons."
       },
       {
         "label": "She",
@@ -116,7 +116,7 @@
           "timi",
           "timid"
         ],
-        "note": "Use `timi/timid` for `she` in this past-tense pattern."
+        "note": "Use the past form with the village-stay context."
       },
       {
         "label": "We",
@@ -125,7 +125,7 @@
           "nimi",
           "nimid"
         ],
-        "note": "Use `nimi/nimid` for `we` in this past-tense pattern."
+        "note": "Use the past form with the journey context."
       },
       {
         "label": "You all",
@@ -133,7 +133,7 @@
         "somali": [
           "timaaddeen"
         ],
-        "note": "Use `timaaddeen` for `you all` in this past-tense pattern."
+        "note": "Use the past form with the village-stay context."
       },
       {
         "label": "They",
@@ -141,7 +141,7 @@
         "somali": [
           "yimaaddeen"
         ],
-        "note": "Use `yimaaddeen` for `they` in this past-tense pattern."
+        "note": "Use the past form with `tuulada` and `ka`."
       }
     ],
     "sources": [

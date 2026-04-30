@@ -151,7 +151,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "I am thirsty. Bring me meat and rice."
+        "You are at a meal: say you are thirsty and ask someone to bring meat and rice."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -169,7 +169,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali food request.",
       "promptLines": [
-        "Write 2 short Somali sentences about what you want to eat or drink."
+        "Write 2 short Somali sentences ordering food or drink at a simple meal."
       ],
       "placeholder": "You can use tea, water, meat, rice, hungry, or thirsty.",
       "gradingNotes": [

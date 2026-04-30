@@ -2,7 +2,7 @@
 
 Generated from the Somali YAML skills, lesson draft core vocabulary, a supplemental word list, and compact single-word mappings already present in the live challenge files.
 
-Total entries: 275
+Total entries: 282
 
 | English | Somali |
 | --- | --- |
@@ -30,6 +30,7 @@ Total entries: 275
 | bread | kibis |
 | breakfast | quraac |
 | breast | xabad |
+| Bring | keen |
 | Britain | Britain |
 | brother | walaal |
 | called | yidhaahdaa |
@@ -43,6 +44,7 @@ Total entries: 275
 | come | soo |
 | correct | sax |
 | day | maalin |
+| Dinner | casho |
 | dirty | wasakh |
 | dog | ay |
 | dry | qalaayl |
@@ -79,6 +81,7 @@ Total entries: 275
 | goodbye | nabad gelyo |
 | grass | caws |
 | green | cagaar / cagaaran |
+| Guests | Martida / Martidu |
 | hair | timo |
 | hand | gacan |
 | he | asaga / isagu |
@@ -127,6 +130,7 @@ Total entries: 275
 | mouth | af |
 | my | kayga |
 | name | magac |
+| Names | Magacyadu |
 | narrow | ciriiri |
 | near | dhow |
 | neck | duun |
@@ -141,6 +145,8 @@ Total entries: 275
 | Open | fur |
 | other | kale |
 | peace | nabad |
+| People | Dadku |
+| Please | fadlan |
 | plural | jamac |
 | question | ma |
 | rain | roob |
@@ -160,6 +166,7 @@ Total entries: 275
 | seven | toddoba |
 | she | iyadu |
 | short | gaaban |
+| Sibling | Walaal |
 | sister | walaal |
 | six | lix |
 | skin | jir |
@@ -181,7 +188,7 @@ Total entries: 275
 | sweet | macaan |
 | tail | seyn |
 | tall | dheer |
-| tea | shaah |
+| tea | Shaah |
 | ten | toban |
 | that | kaas |
 | there | halkaas / halkaasna / xaggaas |

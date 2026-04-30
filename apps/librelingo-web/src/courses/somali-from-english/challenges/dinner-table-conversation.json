@@ -1,0 +1,71 @@
+{
+  "id": "6bb41a0e582d",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "conversation",
+      "id": "dtc-1",
+      "priority": 1,
+      "group": "dinner-table-chat",
+      "instruction": "Work through a short Somali dinner table chat.",
+      "introductionLines": [
+        "Read the Somali message first.",
+        "Hover over the Somali line if you need the English meaning.",
+        "Then answer the English cue in Somali and keep the conversation moving."
+      ],
+      "placeholder": "Write a short Somali reply.",
+      "turns": [
+        {
+          "id": "dtc-turn-1",
+          "partnerMessage": "Casho waa diyaar. Fadlan fadhiiso.",
+          "partnerMessageHint": "Dinner is ready. Please sit.",
+          "englishReplyPrompt": "Thank them politely.",
+          "expectedReplies": [
+            "Mahadsanid.",
+            "Mahadsanid. Adaa mudan."
+          ],
+          "sampleReply": "Mahadsanid."
+        },
+        {
+          "id": "dtc-turn-2",
+          "partnerMessage": "Ma rabtaa wax aad cunto?",
+          "partnerMessageHint": "Do you want something to eat?",
+          "englishReplyPrompt": "Say you want rice and meat.",
+          "expectedReplies": [
+            "Bariis iyo hilib baan rabaa.",
+            "Bariis iyo hilib ayaan rabaa."
+          ],
+          "sampleReply": "Bariis iyo hilib baan rabaa."
+        },
+        {
+          "id": "dtc-turn-3",
+          "partnerMessage": "Koob shaah ah ma doonaysaa?",
+          "partnerMessageHint": "Would you like a cup of tea?",
+          "englishReplyPrompt": "Say yes and thank them.",
+          "expectedReplies": [
+            "Haa, mahadsanid.",
+            "Haa. Mahadsanid."
+          ],
+          "sampleReply": "Haa, mahadsanid."
+        },
+        {
+          "id": "dtc-turn-4",
+          "partnerMessage": "Adaa mudan. Qoyska ka warran?",
+          "partnerMessageHint": "You're welcome. How is the family?",
+          "englishReplyPrompt": "Say the family is well.",
+          "expectedReplies": [
+            "Qoysku waa nabad.",
+            "Qoyska waa nabad."
+          ],
+          "sampleReply": "Qoysku waa nabad."
+        }
+      ],
+      "gradingNotes": [
+        "Stay within dinner vocabulary, polite phrases, and family check-ins.",
+        "Reward short natural replies that fit the dinner table context.",
+        "Be lenient with punctuation and minor spelling variation.",
+        "Keep feedback practical and phrase-level."
+      ]
+    }
+  ]
+}

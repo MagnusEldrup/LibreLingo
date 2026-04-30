@@ -1,0 +1,133 @@
+{
+  "id": "4c3a9071de65",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "grammarTable",
+      "id": "dgod-1",
+      "priority": 1,
+      "group": "oo-detail",
+      "instruction": "Learn how `oo` adds a small detail to dinner and family phrases, then answer mixed prompts one at a time.",
+      "tableTitle": "`oo` for extra detail",
+      "columnHeaders": {
+        "label": "Pattern",
+        "prompt": "English cue",
+        "answer": "Somali form"
+      },
+      "rows": [
+        {
+          "id": "dgod-lesson-1",
+          "label": "family",
+          "prompt": "the family sitting at the table",
+          "answers": [
+            "qoyska oo miiska fadhiya"
+          ]
+        },
+        {
+          "id": "dgod-lesson-2",
+          "label": "tea",
+          "prompt": "hot tea",
+          "answers": [
+            "shaah oo kulul"
+          ]
+        },
+        {
+          "id": "dgod-lesson-3",
+          "label": "rice",
+          "prompt": "rice that is ready",
+          "answers": [
+            "bariis oo diyaar ah"
+          ]
+        },
+        {
+          "id": "dgod-lesson-4",
+          "label": "guest",
+          "prompt": "a guest who is in the house",
+          "answers": [
+            "marti oo guriga joogta"
+          ]
+        }
+      ],
+      "lessonSlides": [
+        {
+          "id": "dgod-slide-1",
+          "title": "`oo` adds a useful detail",
+          "description": "Use `oo` to attach one extra idea to a noun phrase. Keep the phrase short.",
+          "focusPoints": [
+            "`qoyska oo miiska fadhiya` adds what the family is doing",
+            "`shaah oo kulul` adds a description",
+            "`bariis oo diyaar ah` adds the state of the food"
+          ],
+          "rows": [
+            {
+              "id": "dgod-lesson-1",
+              "label": "family",
+              "prompt": "the family sitting at the table",
+              "answers": [
+                "qoyska oo miiska fadhiya"
+              ]
+            },
+            {
+              "id": "dgod-lesson-2",
+              "label": "tea",
+              "prompt": "hot tea",
+              "answers": [
+                "shaah oo kulul"
+              ]
+            },
+            {
+              "id": "dgod-lesson-3",
+              "label": "rice",
+              "prompt": "rice that is ready",
+              "answers": [
+                "bariis oo diyaar ah"
+              ]
+            }
+          ]
+        }
+      ],
+      "practiceRows": [
+        {
+          "id": "dgod-practice-1",
+          "label": "family",
+          "prompt": "the family sitting at the dinner table",
+          "rule": "Use `oo` to add the dinner-table action.",
+          "answers": [
+            "qoyska oo miiska cashada fadhiya",
+            "qoyska oo miiska fadhiya"
+          ]
+        },
+        {
+          "id": "dgod-practice-2",
+          "label": "food",
+          "prompt": "meat that is ready for dinner",
+          "rule": "Use `oo` to add a dinner-related state.",
+          "answers": [
+            "hilib oo casho u diyaar ah",
+            "hilib oo diyaar ah"
+          ]
+        },
+        {
+          "id": "dgod-practice-3",
+          "label": "drink",
+          "prompt": "sweet tea for the guest",
+          "rule": "Use `oo` with the tea phrase from the dinner lesson.",
+          "answers": [
+            "shaah oo martida u macaan",
+            "shaah oo macaan"
+          ]
+        },
+        {
+          "id": "dgod-practice-4",
+          "label": "guest",
+          "prompt": "a guest sitting at the dinner table",
+          "rule": "Use `oo` to connect the guest and the dinner-table action.",
+          "answers": [
+            "marti oo miiska cashada fadhida",
+            "marti oo miiska fadhida"
+          ]
+        }
+      ]
+    }
+  ]
+}

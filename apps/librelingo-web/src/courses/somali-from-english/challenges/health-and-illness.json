@@ -136,7 +136,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "My head hurts. I feel dizzy."
+        "At a clinic, say your head hurts and that you feel dizzy."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -154,7 +154,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali health exchange.",
       "promptLines": [
-        "Write 2 short Somali lines about not feeling well or talking to a doctor."
+        "Write 2 short Somali lines for telling a doctor how you feel."
       ],
       "placeholder": "You can mention pain, coughing, dizziness, or protecting your health.",
       "gradingNotes": [

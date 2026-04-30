@@ -134,7 +134,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "I want blue trousers. This book is small."
+        "You are shopping: you want blue trousers, and this book is small."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -152,7 +152,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Describe things in Somali.",
       "promptLines": [
-        "Write 2 short Somali sentences describing color, size, or quality."
+        "Write 2 short Somali sentences describing things you might point to while shopping or at home."
       ],
       "placeholder": "You can use words like cagaaran, buluug, weyn, yar, cusub, or macaan.",
       "gradingNotes": [

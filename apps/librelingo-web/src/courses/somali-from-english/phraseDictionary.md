@@ -2,7 +2,7 @@
 
 Generated from the live Somali challenge files plus a curated supplement from the OCR-cleaned phrasebook EPUB.
 
-Total entries: 206
+Total entries: 228
 
 | English | Somali |
 | --- | --- |
@@ -15,17 +15,20 @@ Total entries: 206
 | Armed groups fought. | Kooxo hubaysan way dagaallameen. |
 | At that time, Somali sultanates existed. | Markaas saldanado Soomaaliyeed baa jiray. |
 | Bring me meat and rice. | Ii keen hilib iyo bariis. |
+| Bring rice and meat to the table. | Bariis iyo hilib miiska keen. |
 | Britain took the north. | Britain waxay qabsatay waqooyi. |
 | Bureo is a place far from Djibouti. | Bureo waa meel Djibouti ka fog. |
 | Civil war began. | Dagaal sokeeye baa bilowday. |
 | Could you send a cab, please? | Ma u soo diri kartaa tagsi, fadlan? |
 | Did you go to the university yesterday? | Shaleyto jaamacadda miyaad tagtay? |
+| Dinner is ready. | Casho waa diyaar. |
 | Do you have anything for a cough? | Ma haysaa wax qufaca loo qaato? |
 | Do you have health insurance? | Miyaad leedahay caymiska caafimaadka? |
 | Do you have your passport? | Baasaboorkaaga ma haysataa? |
 | Do you know it? | Ma taqaan? |
 | Do you see the bank? | Ma aragtaa bangiga? |
 | Do you want a room with a bathroom? | Qol musqulleh ma rabtaa? |
+| Do you want something to eat? | Ma rabtaa wax aad cunto? |
 | Do you want to stay here? | Halkan ma joogi rabtaa? |
 | Excuse me. | Raalli ahow. |
 | For here or to go? | Halkan mise qaadasho? |
@@ -37,6 +40,8 @@ Total entries: 206
 | Good morning. Are things well? | Subax wanaagsan. Ma nabad baa? |
 | Good night. | Nabad ku bari. |
 | Goodbye. | Nabad gelyo. |
+| Guests are given tea. | Martida shaah baa la siiyaa. |
+| Guests are important. | Martidu waa muhiim. |
 | Here is your money. | waa tan lacagtaadii |
 | Here you can speak Somali. | halkan af soomaaliga baad ku hadli kartaa |
 | Hi Yoonis, are things well? | Waryaa Yoonis, ma nabad baa? |
@@ -74,6 +79,8 @@ Total entries: 206
 | I put petrol in the car. | Gaadhiga bansiin waan ku shubay. |
 | I see four countries. | Waxaan arkayaa afar dal. |
 | I think you have a cold. | Waxaan u maleynayaa in durey kugu dhacay. |
+| I want a plate. | Saxan baan rabaa. |
+| I want a spoon. | Qaaddo baan rabaa. |
 | I want blue trousers. | Surwaal buluug ah baan rabaa. |
 | I want five cups. | Shan koob baan rabaa. |
 | I want tea with milk and sugar. | Shaah caano iyo sonkor leh baan rabaa. |
@@ -87,6 +94,7 @@ Total entries: 206
 | In 1960, the two parts united. | 1960 labadii qaybood way midoobeen. |
 | In 1991, the government collapsed. | 1991 dowladdii way burburtay. |
 | In earlier times, Somalia had trade. | Waagii hore Soomaaliya ganacsi bay lahayd. |
+| In the market there is food. | Suuqa cunto baa yaal. |
 | International organizations help. | Ururada caalamiga ah way caawiyaan. |
 | Is there a pharmacy near here? | Ma jiraa farmasi u dhow halkan? |
 | Is there a telephone around here? | Telefoon ma jiraa agagaarkan? |
@@ -104,6 +112,7 @@ Total entries: 206
 | May I have a cup of coffee? | Ma isiin kartaa koob bun ah? |
 | May I help you? | Ma ku caawiyaa? |
 | Mogadishu was a large trade city. | Muqdisho waxay ahayd magaalo ganacsi oo weyn. |
+| Much food came to the market. | Cunto badan suuqa bay timid. |
 | My brother is at home. | Walaalkay waa guriga. |
 | My father is here. | Aabbahay waa halkan. |
 | My goodness, it is hot. | Wallaah waa kulayl. |
@@ -113,12 +122,14 @@ Total entries: 206
 | My name is Bill. I came from London. | Magacaygu waa Bill. Landhan baan ka imi. |
 | My sister is here. | Walaashay waa halkan. |
 | My stomach is fine. | Calooshu way fiicantahay. |
+| Names have meaning. | Magacyadu macne bay leeyihiin. |
 | OK. | Waa yahay. |
 | Okay then, goodbye. | Waa yahay, nabad gelyo. |
 | One way or round trip? | Mid socod keliya ah mise mid sii socod iyo soo socodba ah? |
 | Open your mouth and say, "Aaaah." | Afkaaga fur oo dheh, "Aaaah." |
 | Open your mouth. | afkaa fur |
 | Peace be upon you. | Assalaamu calaykum. |
+| People greet each other. | Dadku way is salaamaan. |
 | Please come in. | Fadlan soo gal. |
 | Please say that again. | Fadlan mar kale dheh. |
 | Please sit down. | Fadlan fadhiiso. |
@@ -128,29 +139,39 @@ Total entries: 206
 | Shall I wrap it up for you? | Miyaan kuu duubaa? |
 | She lives nearby. | Meel dhow bay deggentahay. |
 | Show me your passport. | Baasaboorkaaga i tus. |
+| Sibling is an important word. | Walaal waa eray muhiim ah. |
+| Somali family is important. | Qoyska Soomaaliyeed waa muhiim. |
 | Somali people traveled by sea. | Dadka Soomaaliyeed badda way mari jireen. |
 | Somalia became independent. | Soomaaliya madax bannaan bay noqotay. |
+| Somalia had trade. | Soomaaliya ganacsi bay lahayd. |
 | Speak to Bill, he is calling you from Djibouti. | Bill la hadal, Djibouti buu kaaga soo dirayaa. |
 | Sue has arrived. | Sue ayaa timid. |
 | Sugar is very sweet. | Sonkor aad bay u macaan tahay. |
 | Take care. | Is ilaali. |
 | Take me to the Djibouti Hotel. | Hudheel Djibouti i gee. |
+| Tea is served. | Shaah waa la bixiyaa. |
 | Thank you, Canab. | Mahadsanid, Canab. |
 | Thank you. | Mahadsanid. |
 | Thank you. Goodbye. | mahadsanid nabad gelyo |
 | Thank you. How are you? | Mahadsanid. Is ka warran. |
+| Thank you. You are welcome. | Mahadsanid. Adaa mudan. |
 | The airport is far. | Garoonka dayuuradaha waa fog yahay. |
 | The children are going to school. | Carruurtu dugsiga way tagayaan. |
+| The children are with the family. | Carruurtu qoyska bay joogaan. |
+| The family eats dinner together. | Qoyska casho bay wada cunaan. |
 | The government is rebuilding the country. | Dowladdu dib bay u dhisaysaa dalka. |
 | The hotel is here. | hudheelku halkan buu ku yaal |
 | The knife is new. | Mindidu waa cusub tahay. |
 | The man is tall. | Ninku waa dheer yahay. |
+| The Somali family is important. | Qoyska Soomaaliyeed waa muhiim. |
+| The table is here. | Miisku waa halkan. |
 | There are nine students in the class. | Fasalka waxaa jooga sagaal arday. |
 | There are seven men there. | Halkaas waxaa jooga toddoba nin. |
 | There are six chairs. | halkan waxaa yaal lix kursi |
 | There are ten shoes here. | Halkan waxaa yaal toban kab. |
 | There are three books here. | Halkan waxaa yaal saddex buug. |
 | There are two books. | Halkan waxaa yaal laba buug. |
+| There is food in the market. | Suuqa cunto baa yaal. |
 | There is one by the post office. | Boostada agteeda mid baa jira. |
 | There they will spend the night. | halkaasna way ku baryi doonaan |
 | They are drinking tea and eating bread. | Shaah way cabbayaan, kibisna way cunayaan. |
@@ -206,6 +227,7 @@ Total entries: 206
 | Yes, I know it. | Haa, waan aqaan. |
 | Yes, I see it. | Haa, waan arkaa. |
 | Yes, I went in the morning. | Haa, subaxdii waan tagay. |
+| Yes, I would like a cup of tea. | Haa, koob shaah ah baan doonayaa. |
 | Yes, I'd like a cup of tea. | Haa, koob shaah ah baan doonayaa. |
 | Yoonis, how are you? | Yoonisow, is ka warran? |
 | You can call me Ali. | Waxaad iigu yeedhi kartaa Cali. |

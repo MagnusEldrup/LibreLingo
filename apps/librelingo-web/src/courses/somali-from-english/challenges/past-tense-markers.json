@@ -178,69 +178,72 @@
         {
           "id": "pa-practice-1",
           "label": "I",
-          "prompt": "I came today.",
-          "rule": "Use `imi/imid` for the `I` form in this past-tense pattern.",
+          "prompt": "I came to the village today.",
+          "rule": "Use the past form with the village-stay context.",
           "answers": [
-            "imid maanta.",
-            "imi maanta."
+            "tuulada imid maanta.",
+            "tuulada imi maanta.",
+            "imid tuulada maanta.",
+            "imi tuulada maanta."
           ]
         },
         {
           "id": "pa-practice-2",
           "label": "You",
-          "prompt": "You came early.",
-          "rule": "Use `timi/timid` for `you` in this past-tense pattern.",
+          "prompt": "You came for the telephone early.",
+          "rule": "Use the past form with a communication lesson noun.",
           "answers": [
-            "timid goor hore.",
-            "timi goor hore."
+            "telefoonka u timid goor hore.",
+            "telefoonka u timi goor hore."
           ]
         },
         {
           "id": "pa-practice-3",
           "label": "He",
-          "prompt": "He came home.",
-          "rule": "Use `yimi/yimid` for `he` in this past-tense pattern.",
+          "prompt": "He came from the journey.",
+          "rule": "Use the past form with `safarka` from the journey lessons.",
           "answers": [
-            "yimid guriga.",
-            "yimi guriga."
+            "safarka ayuu ka yimid.",
+            "safarka ayuu ka yimi."
           ]
         },
         {
           "id": "pa-practice-4",
           "label": "She",
-          "prompt": "She came yesterday.",
-          "rule": "Use `timi/timid` for `she` in this past-tense pattern.",
+          "prompt": "She came to the village yesterday.",
+          "rule": "Use the past form with the village-stay context.",
           "answers": [
-            "timid shalay.",
-            "timi shalay."
+            "tuulada timid shalay.",
+            "tuulada timi shalay."
           ]
         },
         {
           "id": "pa-practice-5",
           "label": "We",
-          "prompt": "We came here.",
-          "rule": "Use `nimi/nimid` for `we` in this past-tense pattern.",
+          "prompt": "We came here after the journey.",
+          "rule": "Use the past form with the journey context.",
           "answers": [
-            "nimid halkan.",
-            "nimi halkan."
+            "safarka ka dib halkan nimid.",
+            "safarka ka dib halkan nimi."
           ]
         },
         {
           "id": "pa-practice-6",
           "label": "You all",
-          "prompt": "You all came to school.",
-          "rule": "Use `timaaddeen` for `you all` in this past-tense pattern.",
+          "prompt": "You all came to the village.",
+          "rule": "Use the past form with the village-stay context.",
           "answers": [
-            "timaaddeen dugsiga."
+            "tuulada timaaddeen."
           ]
         },
         {
           "id": "pa-practice-7",
           "label": "They",
-          "prompt": "They came last night.",
-          "rule": "Use `yimaaddeen` for `they` in this past-tense pattern.",
+          "prompt": "They came from the village last night.",
+          "rule": "Use the past form with `tuulada` and `ka`.",
           "answers": [
-            "yimaaddeen xalay."
+            "tuulada ayay ka yimaaddeen xalay.",
+            "tuulada way ka yimaaddeen xalay."
           ]
         }
       ]

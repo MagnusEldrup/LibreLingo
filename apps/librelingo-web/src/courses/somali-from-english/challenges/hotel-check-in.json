@@ -134,7 +134,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "I would like a room. Do you have my passport?"
+        "At the hotel desk, say you would like a room and ask about your passport."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -152,7 +152,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali hotel check-in exchange.",
       "promptLines": [
-        "Write 2 short Somali lines about asking for a room or talking about a passport."
+        "Write 2 short Somali lines for checking into a hotel and handling a passport."
       ],
       "placeholder": "You can mention the room, bathroom, room number, or passport.",
       "gradingNotes": [

@@ -1,0 +1,69 @@
+{
+  "id": "9d16f3b8a204",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "conversation",
+      "id": "pfc-1",
+      "priority": 1,
+      "group": "family-chat",
+      "instruction": "Work through a short Somali chat about family, numbers, and descriptions.",
+      "introductionLines": [
+        "Read the Somali message first.",
+        "Hover over the Somali line if you need the English meaning.",
+        "Then answer the English cue in Somali and keep the conversation moving."
+      ],
+      "placeholder": "Write a short Somali reply.",
+      "turns": [
+        {
+          "id": "pfc-turn-1",
+          "partnerMessage": "Qoyska ka warran?",
+          "partnerMessageHint": "How is the family?",
+          "englishReplyPrompt": "Say the family is well and thank them.",
+          "expectedReplies": [
+            "Qoysku waa nabad, mahadsanid.",
+            "Qoyska waa nabad, mahadsanid."
+          ],
+          "sampleReply": "Qoysku waa nabad, mahadsanid."
+        },
+        {
+          "id": "pfc-turn-2",
+          "partnerMessage": "Carruurta ka warran?",
+          "partnerMessageHint": "How are the children?",
+          "englishReplyPrompt": "Say the children are going to school.",
+          "expectedReplies": [
+            "Carruurtu dugsiga way tagayaan."
+          ],
+          "sampleReply": "Carruurtu dugsiga way tagayaan."
+        },
+        {
+          "id": "pfc-turn-3",
+          "partnerMessage": "Immisa walaal baad leedahay?",
+          "partnerMessageHint": "How many siblings do you have?",
+          "englishReplyPrompt": "Say you have one sibling.",
+          "expectedReplies": [
+            "Hal walaal baan leeyahay.",
+            "Hal walaal ayaan leeyahay."
+          ],
+          "sampleReply": "Hal walaal baan leeyahay."
+        },
+        {
+          "id": "pfc-turn-4",
+          "partnerMessage": "Ninku sidee buu yahay?",
+          "partnerMessageHint": "What is the man like?",
+          "englishReplyPrompt": "Say the man is tall.",
+          "expectedReplies": [
+            "Ninku waa dheer yahay."
+          ],
+          "sampleReply": "Ninku waa dheer yahay."
+        }
+      ],
+      "gradingNotes": [
+        "Stay within family, numbers, and descriptions from the People module.",
+        "Reward short complete replies over long invented sentences.",
+        "Be lenient with punctuation and minor spelling variation.",
+        "Keep corrections practical and phrase-level."
+      ]
+    }
+  ]
+}

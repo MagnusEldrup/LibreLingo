@@ -181,7 +181,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "My name is Amina. I came from London."
+        "Amina introduces herself and says she came from London."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -199,7 +199,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Introduce yourself in Somali.",
       "promptLines": [
-        "Write 2-3 short Somali sentences about your name and where you come from."
+        "Write 2-3 short Somali sentences for meeting someone: your name, where you came from, and one greeting or check-in."
       ],
       "placeholder": "Example topics: your name, where you come from, a simple greeting.",
       "gradingNotes": [

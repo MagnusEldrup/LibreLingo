@@ -1,0 +1,146 @@
+{
+  "id": "8a17d5b2c904",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Soomaaliya ganacsi bay lahayd.",
+      "meaningInSourceLanguage": "Somalia had trade.",
+      "id": "hfth-1",
+      "priority": 0,
+      "group": "trade"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Soomaaliya ganacsi bay lahayd."
+      ],
+      "phrase": [
+        {
+          "word": "Somalia",
+          "definition": "Soomaaliya"
+        },
+        {
+          "word": "had trade.",
+          "definition": "ganacsi bay lahayd"
+        }
+      ],
+      "id": "hfth-2",
+      "priority": 1,
+      "group": "trade"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Cunto badan suuqa bay timid.",
+      "meaningInSourceLanguage": "Much food came to the market.",
+      "id": "hfth-3",
+      "priority": 0,
+      "group": "market-food"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Much food",
+          "definition": "Cunto badan"
+        },
+        {
+          "word": "came to the market.",
+          "definition": "suuqa bay timid"
+        }
+      ],
+      "chips": [
+        "Cunto",
+        "badan",
+        "suuqa",
+        "bay",
+        "timid."
+      ],
+      "solutions": [
+        [
+          "Cunto",
+          "badan",
+          "suuqa",
+          "bay",
+          "timid."
+        ]
+      ],
+      "formattedSolution": "Cunto badan suuqa bay timid.",
+      "id": "hfth-4",
+      "priority": 2,
+      "group": "market-food"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Martida shaah baa la siiyaa.",
+      "meaningInSourceLanguage": "Guests are given tea.",
+      "id": "hfth-5",
+      "priority": 0,
+      "group": "tea-guests"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Guests",
+          "definition": "Martida"
+        },
+        {
+          "word": "are given tea.",
+          "definition": "shaah baa la siiyaa"
+        }
+      ],
+      "chips": [
+        "Martida",
+        "shaah",
+        "baa",
+        "la",
+        "siiyaa."
+      ],
+      "solutions": [
+        [
+          "Martida",
+          "shaah",
+          "baa",
+          "la",
+          "siiyaa."
+        ]
+      ],
+      "formattedSolution": "Martida shaah baa la siiyaa.",
+      "id": "hfth-6",
+      "priority": 2,
+      "group": "tea-guests"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Qoyska casho bay wada cunaan.",
+      "meaningInSourceLanguage": "The family eats dinner together.",
+      "id": "hfth-7",
+      "priority": 0,
+      "group": "family-dinner"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Qoyska casho bay wada cunaan."
+      ],
+      "phrase": [
+        {
+          "word": "The family",
+          "definition": "Qoyska"
+        },
+        {
+          "word": "eats dinner together.",
+          "definition": "casho bay wada cunaan"
+        }
+      ],
+      "id": "hfth-8",
+      "priority": 1,
+      "group": "family-dinner"
+    }
+  ]
+}

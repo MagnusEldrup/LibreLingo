@@ -113,7 +113,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "It was a good journey. We saw hyenas."
+        "After arriving in the village, say it was a good journey and that you saw hyenas."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -131,7 +131,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali village-stay summary.",
       "promptLines": [
-        "Write 2 short Somali lines about the journey, the village, or what you saw there."
+        "Write 2 short Somali lines about arriving in a village or what you saw on the journey."
       ],
       "placeholder": "You can mention the village, interesting things, or animals.",
       "gradingNotes": [

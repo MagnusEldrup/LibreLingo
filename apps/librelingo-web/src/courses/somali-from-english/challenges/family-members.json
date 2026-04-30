@@ -112,7 +112,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "My mother is here. The children are going to school."
+        "You are checking in with someone: your mother is here, and the children are going to school."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -130,7 +130,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Describe your family in Somali.",
       "promptLines": [
-        "Write 2-3 short Somali sentences about your family."
+        "Write 2-3 short Somali sentences about where family members are today."
       ],
       "placeholder": "You can mention your mother, father, children, or where someone is.",
       "gradingNotes": [

@@ -112,7 +112,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Welcome, Khadija. Thank you. Goodbye."
+        "Khadija arrives, you welcome her, thank her, and then say goodbye."
       ],
       "placeholder": "Write 2-3 short Somali lines.",
       "gradingNotes": [
@@ -130,7 +130,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali welcome and farewell exchange.",
       "promptLines": [
-        "Write 2-3 short Somali lines to welcome someone and end the exchange politely."
+        "Write 2-3 short Somali lines for welcoming someone into a room and ending politely."
       ],
       "placeholder": "You can use welcome, sit down, thank you, and goodbye phrases.",
       "gradingNotes": [

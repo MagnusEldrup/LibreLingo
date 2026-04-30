@@ -1,0 +1,82 @@
+{
+  "id": "a04c78f1e6bb",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "write",
+      "id": "dwmd-1",
+      "priority": 1,
+      "group": "my-day-checkpoint",
+      "instruction": "Write a short Somali daily-life note.",
+      "promptLines": [
+        "Write 4 short Somali sentences about your day.",
+        "Use one time word, one food or drink word, one place or direction, and one polite phrase."
+      ],
+      "placeholder": "Example flow: today, food or drink, where you are going, polite ending.",
+      "requirements": [
+        {
+          "id": "req-time",
+          "label": "Time word",
+          "kind": "word",
+          "expectedForms": [
+            "maanta",
+            "berrito",
+            "shaleyto",
+            "subax",
+            "galab",
+            "habeen"
+          ],
+          "explanation": "Use one time word from Time and Days."
+        },
+        {
+          "id": "req-food",
+          "label": "Food or drink",
+          "kind": "word",
+          "expectedForms": [
+            "shaah",
+            "biyo",
+            "bariis",
+            "hilib",
+            "kibis",
+            "caano"
+          ],
+          "explanation": "Use one food or drink word."
+        },
+        {
+          "id": "req-place",
+          "label": "Place or direction",
+          "kind": "word",
+          "expectedForms": [
+            "suuqa",
+            "boosta",
+            "guriga",
+            "waddadan",
+            "bidixda",
+            "midigta"
+          ],
+          "explanation": "Mention a place or direction."
+        },
+        {
+          "id": "req-politeness",
+          "label": "Polite phrase",
+          "kind": "word",
+          "expectedForms": [
+            "mahadsanid",
+            "raalli ahow",
+            "adaa mudan",
+            "waa hagaag",
+            "waa yahay"
+          ],
+          "explanation": "Use one polite phrase from Common Phrases."
+        }
+      ],
+      "gradingNotes": [
+        "Reward short daily-life sentences that reuse module vocabulary.",
+        "Accept beginner grammar if the required targets are present.",
+        "Be lenient with punctuation, capitalization, and minor spelling variation.",
+        "Keep feedback concrete and brief."
+      ],
+      "sampleAnswer": "Maanta waa isniin. Koob shaah ah baan rabaa. Suuqa baan tagayaa. Mahadsanid."
+    }
+  ]
+}

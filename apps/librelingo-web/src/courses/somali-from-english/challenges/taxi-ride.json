@@ -112,7 +112,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Take me to the hotel. I know a little French."
+        "In a taxi, ask to be taken to the hotel and say you know a little French."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -130,7 +130,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali taxi exchange.",
       "promptLines": [
-        "Write 2 short Somali lines about where you want to go and whether the driver knows it."
+        "Write 2 short Somali lines for a taxi ride: destination plus whether the driver knows it."
       ],
       "placeholder": "You can mention the hotel, knowing a place, or speaking Somali.",
       "gradingNotes": [

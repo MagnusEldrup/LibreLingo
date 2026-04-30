@@ -129,7 +129,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Today is Monday. Tomorrow is Tuesday."
+        "You are making a simple plan: today is Monday, and tomorrow is Tuesday."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -147,7 +147,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write short Somali time sentences.",
       "promptLines": [
-        "Write 2 short Somali sentences about today, tomorrow, or yesterday."
+        "Write 2 short Somali sentences about a simple today-and-tomorrow plan."
       ],
       "placeholder": "You can use day names or simple time phrases from the lesson.",
       "gradingNotes": [

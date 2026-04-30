@@ -168,64 +168,71 @@
         {
           "id": "fu-practice-1",
           "label": "I",
-          "prompt": "I will go tomorrow.",
-          "rule": "Use `doonaa` with `I` in this future pattern.",
+          "prompt": "I will go on the journey tomorrow.",
+          "rule": "Use the future form with a journey-planning sentence.",
           "answers": [
-            "tegi doonaa berri."
+            "safarka tegi doonaa berri.",
+            "tegi doonaa safarka berri."
           ]
         },
         {
           "id": "fu-practice-2",
           "label": "You",
-          "prompt": "You will come tomorrow.",
-          "rule": "Use `doontaa` with `you` in this future pattern.",
+          "prompt": "You will come to the car tomorrow.",
+          "rule": "Use the future form with a travel-preparation noun.",
           "answers": [
-            "iman doontaa berri."
+            "iman doontaa gaadhiga berri.",
+            "gaadhiga iman doontaa berri."
           ]
         },
         {
           "id": "fu-practice-3",
           "label": "He",
-          "prompt": "He will come soon.",
-          "rule": "Use `doonaa` with `he` in this future pattern.",
+          "prompt": "He will check the tires soon.",
+          "rule": "Use the future form with the journey-planning context.",
           "answers": [
-            "iman doonaa dhowaan."
+            "jeeg garayn doonaa shaagagga dhowaan.",
+            "shaagagga jeeg garayn doonaa dhowaan."
           ]
         },
         {
           "id": "fu-practice-4",
           "label": "She",
-          "prompt": "She will sleep tonight.",
-          "rule": "Use `doontaa` with `she` in this future pattern.",
+          "prompt": "She will stay in the village tonight.",
+          "rule": "Use the future form with the village-stay context.",
           "answers": [
-            "seexan doontaa caawa."
+            "joogi doontaa tuulada caawa.",
+            "tuulada joogi doontaa caawa."
           ]
         },
         {
           "id": "fu-practice-5",
           "label": "We",
-          "prompt": "We will go later.",
-          "rule": "Use `doonnaa` with `we` in this future pattern.",
+          "prompt": "We will leave later today.",
+          "rule": "Use the future form with a leaving/travel sentence.",
           "answers": [
-            "tegi doonnaa goor dambe."
+            "bixi doonnaa goor dambe maanta.",
+            "maanta goor dambe bixi doonnaa."
           ]
         },
         {
           "id": "fu-practice-6",
           "label": "You all",
-          "prompt": "You all will learn Somali.",
-          "rule": "Use `doontaan` with `you all` in this future pattern.",
+          "prompt": "You all will prepare for the journey.",
+          "rule": "Use the future form with `safar` or `safarka`.",
           "answers": [
-            "baran doontaan Af-Soomaali."
+            "safarka u diyaargaroobi doontaan.",
+            "u diyaargaroobi doontaan safarka."
           ]
         },
         {
           "id": "fu-practice-7",
           "label": "They",
-          "prompt": "They will come later.",
-          "rule": "Use `doonaan` with `they` in this future pattern.",
+          "prompt": "They will arrive at the village later.",
+          "rule": "Use the future form with the village-stay context.",
           "answers": [
-            "iman doonaan goor dambe."
+            "tuulada iman doonaan goor dambe.",
+            "iman doonaan tuulada goor dambe."
           ]
         }
       ]

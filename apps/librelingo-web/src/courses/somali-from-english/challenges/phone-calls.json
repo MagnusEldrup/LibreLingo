@@ -129,7 +129,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "I am looking for a telephone. Is Yoonis there?"
+        "You need to make a call: say you are looking for a telephone and ask whether Yoonis is there."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -147,7 +147,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali phone-call exchange.",
       "promptLines": [
-        "Write 2 short Somali lines about finding a phone or asking for someone on the call."
+        "Write 2 short Somali lines for finding a phone or asking for someone on a call."
       ],
       "placeholder": "You can mention a telephone, waiting a moment, or speaking to Bill or Yoonis.",
       "gradingNotes": [

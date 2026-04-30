@@ -114,7 +114,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "Yoonis, how are you? I am well, thank you."
+        "Yoonis asks how you are; answer that you are well and thank him."
       ],
       "placeholder": "Write 1-2 short Somali lines.",
       "gradingNotes": [
@@ -132,7 +132,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali wellbeing exchange.",
       "promptLines": [
-        "Write 2 short Somali lines asking how someone is and answering."
+        "Write a tiny Somali check-in: ask how someone is and answer politely."
       ],
       "placeholder": "You can use is ka warran, ma nabad baa, waa nabad, or mahadsanid.",
       "gradingNotes": [

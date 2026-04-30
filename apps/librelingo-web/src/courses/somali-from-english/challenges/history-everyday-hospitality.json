@@ -1,0 +1,142 @@
+{
+  "id": "f02a51e4b8c7",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Martidu waa muhiim.",
+      "meaningInSourceLanguage": "Guests are important.",
+      "id": "heh-1",
+      "priority": 0,
+      "group": "guests"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Martidu waa muhiim."
+      ],
+      "phrase": [
+        {
+          "word": "Guests",
+          "definition": "Martidu"
+        },
+        {
+          "word": "are important.",
+          "definition": "waa muhiim"
+        }
+      ],
+      "id": "heh-2",
+      "priority": 1,
+      "group": "guests"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Shaah waa la bixiyaa.",
+      "meaningInSourceLanguage": "Tea is served.",
+      "id": "heh-3",
+      "priority": 0,
+      "group": "tea"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Tea",
+          "definition": "Shaah"
+        },
+        {
+          "word": "is served.",
+          "definition": "waa la bixiyaa"
+        }
+      ],
+      "chips": [
+        "Shaah",
+        "waa",
+        "la",
+        "bixiyaa."
+      ],
+      "solutions": [
+        [
+          "Shaah",
+          "waa",
+          "la",
+          "bixiyaa."
+        ]
+      ],
+      "formattedSolution": "Shaah waa la bixiyaa.",
+      "id": "heh-4",
+      "priority": 2,
+      "group": "tea"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Suuqa cunto baa yaal.",
+      "meaningInSourceLanguage": "There is food in the market.",
+      "id": "heh-5",
+      "priority": 0,
+      "group": "market"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "In the market",
+          "definition": "Suuqa"
+        },
+        {
+          "word": "there is food.",
+          "definition": "cunto baa yaal"
+        }
+      ],
+      "chips": [
+        "Suuqa",
+        "cunto",
+        "baa",
+        "yaal."
+      ],
+      "solutions": [
+        [
+          "Suuqa",
+          "cunto",
+          "baa",
+          "yaal."
+        ]
+      ],
+      "formattedSolution": "Suuqa cunto baa yaal.",
+      "id": "heh-6",
+      "priority": 2,
+      "group": "market"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Dadku way is salaamaan.",
+      "meaningInSourceLanguage": "People greet each other.",
+      "id": "heh-7",
+      "priority": 0,
+      "group": "greetings"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Dadku way is salaamaan."
+      ],
+      "phrase": [
+        {
+          "word": "People",
+          "definition": "Dadku"
+        },
+        {
+          "word": "greet each other.",
+          "definition": "way is salaamaan"
+        }
+      ],
+      "id": "heh-8",
+      "priority": 1,
+      "group": "greetings"
+    }
+  ]
+}

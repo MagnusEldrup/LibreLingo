@@ -1,0 +1,178 @@
+{
+  "id": "2f4b8a91c703",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "grammarTable",
+      "id": "psp-1",
+      "priority": 1,
+      "group": "people-singular-plural",
+      "instruction": "Learn a few singular and plural people patterns, then answer mixed prompts one at a time.",
+      "tableTitle": "People words in short sentences",
+      "columnHeaders": {
+        "label": "Pattern",
+        "prompt": "English cue",
+        "answer": "Somali form"
+      },
+      "rows": [
+        {
+          "id": "psp-lesson-1",
+          "label": "family",
+          "prompt": "How is the family?",
+          "answers": [
+            "Qoyska ka warran?"
+          ]
+        },
+        {
+          "id": "psp-lesson-2",
+          "label": "children",
+          "prompt": "How are the children?",
+          "answers": [
+            "Carruurta ka warran?"
+          ]
+        },
+        {
+          "id": "psp-lesson-3",
+          "label": "one sibling",
+          "prompt": "I have one sibling.",
+          "answers": [
+            "Hal walaal baan leeyahay.",
+            "Hal walaal ayaan leeyahay."
+          ]
+        },
+        {
+          "id": "psp-lesson-4",
+          "label": "two children",
+          "prompt": "Two children are here.",
+          "answers": [
+            "Laba carruur ah baa halkan jooga."
+          ]
+        },
+        {
+          "id": "psp-lesson-5",
+          "label": "description",
+          "prompt": "The man is tall.",
+          "answers": [
+            "Ninku waa dheer yahay."
+          ]
+        }
+      ],
+      "lessonSlides": [
+        {
+          "id": "psp-slide-1",
+          "title": "People words stay in short sentences",
+          "description": "Use the family words from the People module inside complete beginner sentences.",
+          "focusPoints": [
+            "`qoyska` asks about the family as a group",
+            "`carruurta` asks about children",
+            "`hal` and `laba` can count people"
+          ],
+          "rows": [
+            {
+              "id": "psp-lesson-1",
+              "label": "family",
+              "prompt": "How is the family?",
+              "answers": [
+                "Qoyska ka warran?"
+              ]
+            },
+            {
+              "id": "psp-lesson-2",
+              "label": "children",
+              "prompt": "How are the children?",
+              "answers": [
+                "Carruurta ka warran?"
+              ]
+            },
+            {
+              "id": "psp-lesson-3",
+              "label": "one sibling",
+              "prompt": "I have one sibling.",
+              "answers": [
+                "Hal walaal baan leeyahay.",
+                "Hal walaal ayaan leeyahay."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "psp-slide-2",
+          "title": "Add numbers and descriptions",
+          "description": "The same people words combine with numbers and simple adjectives from the module.",
+          "focusPoints": [
+            "Use `laba` for two",
+            "Use `waa ... yahay` for a simple description",
+            "Keep the sentence short before adding more detail"
+          ],
+          "rows": [
+            {
+              "id": "psp-lesson-4",
+              "label": "two children",
+              "prompt": "Two children are here.",
+              "answers": [
+                "Laba carruur ah baa halkan jooga."
+              ]
+            },
+            {
+              "id": "psp-lesson-5",
+              "label": "description",
+              "prompt": "The man is tall.",
+              "answers": [
+                "Ninku waa dheer yahay."
+              ]
+            }
+          ]
+        }
+      ],
+      "practiceRows": [
+        {
+          "id": "psp-practice-1",
+          "label": "family",
+          "prompt": "How is the family?",
+          "rule": "Use the family check-in phrase from this module.",
+          "answers": [
+            "Qoyska ka warran?"
+          ]
+        },
+        {
+          "id": "psp-practice-2",
+          "label": "children",
+          "prompt": "The children are going to school.",
+          "rule": "Use `carruurtu` for the children.",
+          "answers": [
+            "Carruurtu dugsiga way tagayaan."
+          ]
+        },
+        {
+          "id": "psp-practice-3",
+          "label": "one",
+          "prompt": "One sibling is at home.",
+          "rule": "Use `hal` with a people word from this module.",
+          "answers": [
+            "Hal walaal baa guriga jooga.",
+            "Hal walaal ayaa guriga jooga."
+          ]
+        },
+        {
+          "id": "psp-practice-4",
+          "label": "two",
+          "prompt": "Two children are at school.",
+          "rule": "Use `laba` with a people word from this module.",
+          "answers": [
+            "Laba carruur ah baa dugsiga jooga.",
+            "Laba carruur ah ayaa dugsiga jooga."
+          ]
+        },
+        {
+          "id": "psp-practice-5",
+          "label": "description",
+          "prompt": "My father is tall.",
+          "rule": "Use a family word with a simple description.",
+          "answers": [
+            "Aabbahay waa dheer yahay."
+          ]
+        }
+      ]
+    }
+  ]
+}

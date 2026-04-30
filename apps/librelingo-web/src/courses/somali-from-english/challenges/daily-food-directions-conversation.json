@@ -1,0 +1,70 @@
+{
+  "id": "e41b7a6c35d0",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "conversation",
+      "id": "dfdc-1",
+      "priority": 1,
+      "group": "food-directions-chat",
+      "instruction": "Work through a short Somali chat about food, time, and directions.",
+      "introductionLines": [
+        "Read the Somali message first.",
+        "Hover over the Somali line if you need the English meaning.",
+        "Then answer the English cue in Somali and keep the conversation moving."
+      ],
+      "placeholder": "Write a short Somali reply.",
+      "turns": [
+        {
+          "id": "dfdc-turn-1",
+          "partnerMessage": "Koob shaah ah ma doonaysaa?",
+          "partnerMessageHint": "Would you like a cup of tea?",
+          "englishReplyPrompt": "Say yes and thank them.",
+          "expectedReplies": [
+            "Haa, mahadsanid.",
+            "Haa. Mahadsanid."
+          ],
+          "sampleReply": "Haa, mahadsanid."
+        },
+        {
+          "id": "dfdc-turn-2",
+          "partnerMessage": "Maanta xaggee baad tagaysaa?",
+          "partnerMessageHint": "Where are you going today?",
+          "englishReplyPrompt": "Say you are going to the market.",
+          "expectedReplies": [
+            "Suuqa baan tagayaa.",
+            "Suuqa ayaan tagayaa."
+          ],
+          "sampleReply": "Suuqa baan tagayaa."
+        },
+        {
+          "id": "dfdc-turn-3",
+          "partnerMessage": "Boosta xaggee bay ku taal?",
+          "partnerMessageHint": "Where is the post office?",
+          "englishReplyPrompt": "Say go straight on this road.",
+          "expectedReplies": [
+            "Waddadan si toos ah u raac."
+          ],
+          "sampleReply": "Waddadan si toos ah u raac."
+        },
+        {
+          "id": "dfdc-turn-4",
+          "partnerMessage": "Raalli ahow. Mahadsanid.",
+          "partnerMessageHint": "Excuse me. Thank you.",
+          "englishReplyPrompt": "Reply politely: you're welcome.",
+          "expectedReplies": [
+            "Adaa mudan.",
+            "Waa hagaag. Adaa mudan."
+          ],
+          "sampleReply": "Adaa mudan."
+        }
+      ],
+      "gradingNotes": [
+        "Stay within food, common phrases, time, places, and directions from Daily Basics.",
+        "Reward natural short replies.",
+        "Be lenient with punctuation and small spelling variation.",
+        "Keep corrections tied to reusable daily phrases."
+      ]
+    }
+  ]
+}

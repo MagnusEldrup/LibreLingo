@@ -117,7 +117,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "We are leaving today. Water must be taken."
+        "Before a trip, say you are leaving today and that water must be taken."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -135,7 +135,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali journey-preparation note.",
       "promptLines": [
-        "Write 2 short Somali lines about leaving, checking the car, or being ready."
+        "Write 2 short Somali lines for preparing a car or supplies before a journey."
       ],
       "placeholder": "You can mention petrol, tyres, water, or being ready.",
       "gradingNotes": [

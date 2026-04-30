@@ -1,0 +1,152 @@
+{
+  "id": "d6f940b8132a",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "grammarTable",
+      "id": "dqm-1",
+      "priority": 1,
+      "group": "ma-xaggee-questions",
+      "instruction": "Learn simple Somali question patterns with `ma` and `xaggee`, then answer mixed prompts one at a time.",
+      "tableTitle": "Daily questions",
+      "columnHeaders": {
+        "label": "Pattern",
+        "prompt": "English cue",
+        "answer": "Somali form"
+      },
+      "rows": [
+        {
+          "id": "dqm-lesson-1",
+          "label": "ma",
+          "prompt": "Do you want tea?",
+          "answers": [
+            "Shaah ma doonaysaa?",
+            "Koob shaah ah ma doonaysaa?"
+          ]
+        },
+        {
+          "id": "dqm-lesson-2",
+          "label": "ma",
+          "prompt": "Are you thirsty?",
+          "answers": [
+            "Ma harraadsan tahay?"
+          ]
+        },
+        {
+          "id": "dqm-lesson-3",
+          "label": "xaggee",
+          "prompt": "Where are you going?",
+          "answers": [
+            "Xaggee baad tagaysaa?"
+          ]
+        },
+        {
+          "id": "dqm-lesson-4",
+          "label": "xaggee",
+          "prompt": "Where is the post office?",
+          "answers": [
+            "Boosta xaggee bay ku taal?"
+          ]
+        }
+      ],
+      "lessonSlides": [
+        {
+          "id": "dqm-slide-1",
+          "title": "`ma` makes yes-no questions",
+          "description": "Use `ma` when the answer can be yes or no. Keep the rest of the sentence familiar.",
+          "focusPoints": [
+            "`ma doonaysaa?` asks `do you want?`",
+            "`ma ... tahay?` asks `are you?`",
+            "Food and drink phrases are good practice"
+          ],
+          "rows": [
+            {
+              "id": "dqm-lesson-1",
+              "label": "ma",
+              "prompt": "Do you want tea?",
+              "answers": [
+                "Shaah ma doonaysaa?",
+                "Koob shaah ah ma doonaysaa?"
+              ]
+            },
+            {
+              "id": "dqm-lesson-2",
+              "label": "ma",
+              "prompt": "Are you thirsty?",
+              "answers": [
+                "Ma harraadsan tahay?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dqm-slide-2",
+          "title": "`xaggee` asks where",
+          "description": "Use `xaggee` for where-questions with places and directions.",
+          "focusPoints": [
+            "`Xaggee baad tagaysaa?` is useful for errands",
+            "`ku taal` asks where a place is located",
+            "Reuse place words like `boosta` and `suuqa`"
+          ],
+          "rows": [
+            {
+              "id": "dqm-lesson-3",
+              "label": "xaggee",
+              "prompt": "Where are you going?",
+              "answers": [
+                "Xaggee baad tagaysaa?"
+              ]
+            },
+            {
+              "id": "dqm-lesson-4",
+              "label": "xaggee",
+              "prompt": "Where is the post office?",
+              "answers": [
+                "Boosta xaggee bay ku taal?"
+              ]
+            }
+          ]
+        }
+      ],
+      "practiceRows": [
+        {
+          "id": "dqm-practice-1",
+          "label": "ma",
+          "prompt": "Do you want a cup of tea?",
+          "rule": "Use `ma doonaysaa` with the tea phrase.",
+          "answers": [
+            "Koob shaah ah ma doonaysaa?"
+          ]
+        },
+        {
+          "id": "dqm-practice-2",
+          "label": "ma",
+          "prompt": "Are you hungry before lunch?",
+          "rule": "Use `ma ... tahay` with a food-and-drink phrase.",
+          "answers": [
+            "Ma gaajaysan tahay qado ka hor?"
+          ]
+        },
+        {
+          "id": "dqm-practice-3",
+          "label": "xaggee",
+          "prompt": "Where are you going today?",
+          "rule": "Use `xaggee` with the familiar going pattern.",
+          "answers": [
+            "Maanta xaggee baad tagaysaa?"
+          ]
+        },
+        {
+          "id": "dqm-practice-4",
+          "label": "xaggee",
+          "prompt": "Where is the market after you leave the post office?",
+          "rule": "Use the place word `suuqa` with `xaggee` in a directions context.",
+          "answers": [
+            "Suuqa xaggee buu ku yaal?",
+            "Suuqa xaggee bay ku taal?"
+          ]
+        }
+      ]
+    }
+  ]
+}

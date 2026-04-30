@@ -112,7 +112,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "What is your name? I have come from London."
+        "At the airport desk, ask someone their name and say you have come from London."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -130,7 +130,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write a short Somali airport exchange.",
       "promptLines": [
-        "Write 2 short Somali lines for an arrival or passport-control conversation."
+        "Write 2 short Somali lines for an arrival or passport-control conversation. Include a name or origin."
       ],
       "placeholder": "You can mention your name, where you came from, or showing a passport.",
       "gradingNotes": [

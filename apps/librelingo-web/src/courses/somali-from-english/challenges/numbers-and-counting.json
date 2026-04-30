@@ -132,7 +132,7 @@
       "promptKind": "translate",
       "instruction": "Translate this as best you can in Somali.",
       "promptLines": [
-        "There are three books here. I want five cups."
+        "You are setting up a class table: there are three books here, and you want five cups."
       ],
       "placeholder": "Write 1-2 short Somali sentences.",
       "gradingNotes": [
@@ -150,7 +150,7 @@
       "promptKind": "guidedProduction",
       "instruction": "Write short Somali counting sentences.",
       "promptLines": [
-        "Write 2 short Somali sentences using numbers from this lesson."
+        "Write 2 short Somali sentences counting useful things in a room or class."
       ],
       "placeholder": "You can mention books, cups, chairs, students, or shoes.",
       "gradingNotes": [
