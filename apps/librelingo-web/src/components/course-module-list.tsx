@@ -43,6 +43,7 @@ function SkillCard({
     const isHistorySkill = skillKind === 'history'
     const isWriteSkill = skillKind === 'write'
     const isConversationSkill = skillKind === 'conversation'
+    const isYourLifeSkill = skillKind === 'yourLife'
     let cardClasses = 'h-full border-[#bfd7f8] bg-white/95 shadow-sm'
     let moduleLabelClasses = 'text-[#4189dd]'
 
@@ -62,9 +63,16 @@ function SkillCard({
         cardClasses =
             'h-full border-[#8a5aa5] bg-[linear-gradient(180deg,#f7edff_0%,#fffafd_100%)] shadow-[0_18px_50px_-36px_rgba(138,90,165,0.45)]'
         moduleLabelClasses = 'text-[#6b3d86]'
+    } else if (isYourLifeSkill) {
+        cardClasses =
+            'h-full border-[#268b8f] bg-[linear-gradient(180deg,#e9fbfb_0%,#fbffff_100%)] shadow-[0_18px_50px_-36px_rgba(38,139,143,0.45)]'
+        moduleLabelClasses = 'text-[#176d72]'
     }
 
-    const buttonVariant = isGrammarSkill || isWriteSkill ? 'default' : 'outline'
+    const buttonVariant =
+        isGrammarSkill || isWriteSkill || isYourLifeSkill
+            ? 'default'
+            : 'outline'
 
     return (
         <Card className={cardClasses}>
@@ -92,6 +100,11 @@ function SkillCard({
                         {isConversationSkill && (
                             <div className="rounded-full bg-[#6b3d86] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">
                                 Conversation lab
+                            </div>
+                        )}
+                        {isYourLifeSkill && (
+                            <div className="rounded-full bg-[#176d72] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">
+                                Your Life
                             </div>
                         )}
                     </div>
@@ -250,7 +263,8 @@ function ExpandedModule({
                         )}
                     </div>
                     <p className="text-sm leading-6 text-slate-600">
-                        {meta.completedSkillCount} of {module.skills.length} lesson
+                        {meta.completedSkillCount} of {module.skills.length}{' '}
+                        lesson
                         {module.skills.length === 1 ? '' : 's'} completed.
                     </p>
                 </div>
@@ -272,12 +286,7 @@ function ExpandedModule({
 }
 
 export default function CourseModuleList(props: Props) {
-    const {
-        courseId,
-        modules,
-        sourceLanguageCode,
-        targetLanguageCode,
-    } = props
+    const { courseId, modules, sourceLanguageCode, targetLanguageCode } = props
     const [progressByKey, setProgressByKey] = useState<
         Record<string, StoredSkillProgress>
     >({})

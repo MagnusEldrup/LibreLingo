@@ -112,10 +112,11 @@
         {
           "id": "dqm-practice-1",
           "label": "ma",
-          "prompt": "Do you want a cup of tea?",
-          "rule": "Use `ma doonaysaa` with the tea phrase.",
+          "prompt": "Do you want water with lunch?",
+          "rule": "Use `ma doonaysaa` with a food-and-drink noun from Daily Basics.",
           "answers": [
-            "Koob shaah ah ma doonaysaa?"
+            "Biyo ma doonaysaa qado la socota?",
+            "Qado biyo ma doonaysaa?"
           ]
         },
         {
@@ -130,10 +131,10 @@
         {
           "id": "dqm-practice-3",
           "label": "xaggee",
-          "prompt": "Where are you going today?",
-          "rule": "Use `xaggee` with the familiar going pattern.",
+          "prompt": "Where are you going after tea?",
+          "rule": "Use `xaggee` with a daily-life errand context.",
           "answers": [
-            "Maanta xaggee baad tagaysaa?"
+            "Shaah ka dib xaggee baad tagaysaa?"
           ]
         },
         {

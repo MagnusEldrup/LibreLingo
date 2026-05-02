@@ -32,7 +32,15 @@
     "english": "Are you coughing?",
     "somali": "Ma qufcaysaa?",
     "sources": [
-      "challenge:health-and-illness.json:hl-4"
+      "challenge:health-and-illness.json:hl-4",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Are you hungry before lunch?",
+    "somali": "Ma gaajaysan tahay qado ka hor?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -72,7 +80,8 @@
     "somali": "Bariis iyo hilib miiska keen.",
     "sources": [
       "challenge:dinner-vocabulary.json:dv-5",
-      "challenge:dinner-vocabulary.json:dv-6"
+      "challenge:dinner-vocabulary.json:dv-6",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -118,7 +127,8 @@
     "somali": "Casho waa diyaar.",
     "sources": [
       "challenge:dinner-vocabulary.json:dv-1",
-      "challenge:dinner-vocabulary.json:dv-7"
+      "challenge:dinner-vocabulary.json:dv-7",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -179,6 +189,13 @@
     ]
   },
   {
+    "english": "Do you want water with lunch?",
+    "somali": "Qado biyo ma doonaysaa?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "Excuse me.",
     "somali": "Raalli ahow.",
     "sources": [
@@ -198,6 +215,13 @@
     "sources": [
       "challenge:changing-money.json:cm-2",
       "challenge:places-and-directions.json:pd-5"
+    ]
+  },
+  {
+    "english": "Go straight on this road.",
+    "somali": "Waddadan si toos ah u raac.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -257,7 +281,8 @@
     "somali": "Martida shaah baa la siiyaa.",
     "sources": [
       "challenge:history-food-trade-hospitality.json:hfth-5",
-      "challenge:history-food-trade-hospitality.json:hfth-6"
+      "challenge:history-food-trade-hospitality.json:hfth-6",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -266,6 +291,20 @@
     "sources": [
       "challenge:history-everyday-hospitality.json:heh-1",
       "challenge:history-everyday-hospitality.json:heh-2"
+    ]
+  },
+  {
+    "english": "He came from the journey.",
+    "somali": "Safarka ayuu ka yimid.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "He will check the tires soon.",
+    "somali": "Shaagagga jeeg garayn doonaa dhowaan.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -318,10 +357,24 @@
     ]
   },
   {
+    "english": "How is my mother?",
+    "somali": "Hooyaday ka warran?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "How is the family?",
     "somali": "Qoyska ka warran?",
     "sources": [
       "challenge:family-members.json:fm-1"
+    ]
+  },
+  {
+    "english": "How is your family?",
+    "somali": "Qoyskaaga ka warran?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -361,6 +414,13 @@
     ]
   },
   {
+    "english": "I am going to the market today.",
+    "somali": "Maanta suuqa baan tagayaa.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "I am going to the market.",
     "somali": "Suuqa baan tagayaa.",
     "sources": [
@@ -385,7 +445,8 @@
     "english": "I am looking for a telephone.",
     "somali": "Waxaan doondoonayaa telefoon.",
     "sources": [
-      "challenge:phone-calls.json:ph-1"
+      "challenge:phone-calls.json:ph-1",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -435,6 +496,13 @@
     ]
   },
   {
+    "english": "I came to the village today.",
+    "somali": "Tuulada imid maanta.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "I checked the tyres.",
     "somali": "Shaagagga waan jeeg gareeyay.",
     "sources": [
@@ -452,7 +520,8 @@
     "english": "I feel dizzy.",
     "somali": "Waan warwareerayaa.",
     "sources": [
-      "challenge:health-and-illness.json:hl-3"
+      "challenge:health-and-illness.json:hl-3",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -496,6 +565,13 @@
     "somali": "Baasaboorkayga baa iga lumay!",
     "sources": [
       "challenge:hotel-check-in.json:ht-5"
+    ]
+  },
+  {
+    "english": "I have one sibling.",
+    "somali": "Hal walaal baan leeyahay.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -590,6 +666,13 @@
     ]
   },
   {
+    "english": "I will go on the journey tomorrow.",
+    "somali": "Berri safarka tegi doonaa.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "I would like a cup of hot tea.",
     "somali": "Waxaan rabaa koob kulul oo shaah ah.",
     "sources": [
@@ -609,6 +692,13 @@
     "somali": "Waxaan rabaa qol keligiis ah.",
     "sources": [
       "challenge:hotel-check-in.json:ht-9",
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "I would like rice and meat.",
+    "somali": "Bariis iyo hilib baan rabaa.",
+    "sources": [
       "supplement:phraseDictionarySupplement.json"
     ]
   },
@@ -678,7 +768,8 @@
     "english": "Is Yoonis there?",
     "somali": "Yoonis ma joogaa?",
     "sources": [
-      "challenge:phone-calls.json:ph-5"
+      "challenge:phone-calls.json:ph-5",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -772,6 +863,13 @@
     ]
   },
   {
+    "english": "Meat is ready for dinner.",
+    "somali": "Hilib oo casho u diyaar ah.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "Mogadishu was a large trade city.",
     "somali": "Muqdisho waxay ahayd magaalo ganacsi oo weyn.",
     "sources": [
@@ -802,6 +900,13 @@
     ]
   },
   {
+    "english": "My father is tall.",
+    "somali": "Aabbahay waa dheer yahay.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "My goodness, it is hot.",
     "somali": "Wallaah waa kulayl.",
     "sources": [
@@ -812,7 +917,8 @@
     "english": "My head hurts.",
     "somali": "Madaxa ayaa i xanuunaya.",
     "sources": [
-      "challenge:health-and-illness.json:hl-2"
+      "challenge:health-and-illness.json:hl-2",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -857,7 +963,8 @@
     "somali": "Magacyadu macne bay leeyihiin.",
     "sources": [
       "challenge:history-somali-names-families.json:hnf-3",
-      "challenge:history-somali-names-families.json:hnf-4"
+      "challenge:history-somali-names-families.json:hnf-4",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -907,7 +1014,8 @@
     "somali": "Dadku way is salaamaan.",
     "sources": [
       "challenge:history-everyday-hospitality.json:heh-7",
-      "challenge:history-everyday-hospitality.json:heh-8"
+      "challenge:history-everyday-hospitality.json:heh-8",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -1014,7 +1122,8 @@
     "somali": "Soomaaliya ganacsi bay lahayd.",
     "sources": [
       "challenge:history-food-trade-hospitality.json:hfth-1",
-      "challenge:history-food-trade-hospitality.json:hfth-2"
+      "challenge:history-food-trade-hospitality.json:hfth-2",
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -1036,6 +1145,13 @@
     "somali": "Sonkor aad bay u macaan tahay.",
     "sources": [
       "challenge:colours-and-descriptions.json:co-9"
+    ]
+  },
+  {
+    "english": "Sweet tea for the guest.",
+    "somali": "Shaah oo martida u macaan.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -1104,6 +1220,13 @@
     ]
   },
   {
+    "english": "The children are at school.",
+    "somali": "Carruurtu dugsiga bay joogaan.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "The children are going to school.",
     "somali": "Carruurtu dugsiga way tagayaan.",
     "sources": [
@@ -1125,6 +1248,20 @@
     "sources": [
       "challenge:history-food-trade-hospitality.json:hfth-7",
       "challenge:history-food-trade-hospitality.json:hfth-8"
+    ]
+  },
+  {
+    "english": "The family is sitting at the dinner table.",
+    "somali": "Qoyska oo miiska cashada fadhiya.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "The family is well.",
+    "somali": "Qoysku waa nabad.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -1239,6 +1376,20 @@
     "sources": [
       "challenge:food-and-drink.json:fd-3",
       "challenge:food-and-drink.json:fd-4"
+    ]
+  },
+  {
+    "english": "They came from the village last night.",
+    "somali": "Tuulada ayay ka yimaaddeen xalay.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "They will arrive at the village later.",
+    "somali": "Tuulada iman doonaan goor dambe.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -1370,6 +1521,20 @@
     ]
   },
   {
+    "english": "Turn left.",
+    "somali": "Xagga bidixda u leexo.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "Turn right.",
+    "somali": "Xagga midigta u leexo.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "Turn to the left.",
     "somali": "Xagga bidixda u leexo.",
     "sources": [
@@ -1383,6 +1548,13 @@
     "sources": [
       "challenge:changing-money.json:cm-4",
       "challenge:places-and-directions.json:pd-7"
+    ]
+  },
+  {
+    "english": "Wait a little.",
+    "somali": "In yar u kaadi.",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {
@@ -1506,6 +1678,13 @@
     "somali": "Magacaa?",
     "sources": [
       "challenge:airport-arrival.json:aa-3"
+    ]
+  },
+  {
+    "english": "Where are you going after tea?",
+    "somali": "Shaah ka dib xaggee baad tagaysaa?",
+    "sources": [
+      "supplement:phraseDictionarySupplement.json"
     ]
   },
   {

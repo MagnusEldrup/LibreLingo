@@ -128,10 +128,10 @@
         {
           "id": "psp-practice-1",
           "label": "family",
-          "prompt": "How is the family?",
-          "rule": "Use the family check-in phrase from this module.",
+          "prompt": "Ask how my mother is.",
+          "rule": "Use a family check-in phrase from this module, but with a different family word from the study examples.",
           "answers": [
-            "Qoyska ka warran?"
+            "Hooyaday ka warran?"
           ]
         },
         {

@@ -1,0 +1,103 @@
+{
+  "id": "yl-learning-somali-01",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "yourLife",
+      "id": "ylls-1",
+      "priority": 1,
+      "group": "your-life-learning-somali",
+      "instruction": "Describe your real experience learning Somali, then make a very simple Somali version.",
+      "englishPromptLines": [
+        "Write 4-5 short English sentences about your actual experience learning Somali.",
+        "Mention why you are learning, what feels easy or hard, and what you want to do next.",
+        "The AI will give you Somali words and phrase fragments, but not a full translation."
+      ],
+      "englishPlaceholder": "Example: I am learning Somali because my family speaks Somali. The sounds are hard for me. I know a few greetings. I study a little every day. I want to speak with people.",
+      "somaliPlaceholder": "Use the fragments to write 4-5 very short Somali sentences about your Somali learning experience.",
+      "scaffoldNotes": [
+        "Focus on learning, difficulty, family, speaking, daily practice, and future wants.",
+        "Give partial Somali fragments that help the learner build their own simple sentences.",
+        "Prefer beginner forms such as waan baranayaa, way adag tahay, waan rabaa, qoyskeyga, maalin kasta."
+      ],
+      "gradingNotes": [
+        "Compare the Somali draft to the learner's English notes, not to a fixed sample.",
+        "Reward simple Somali that preserves the learner's actual meaning.",
+        "A 4/5 can be short and beginner-like if it is understandable and covers most English notes.",
+        "Scores below 4 must include concrete hints for revision."
+      ],
+      "starterFragments": [
+        {
+          "somali": "Somali baan baranayaa",
+          "english": "I am learning Somali",
+          "note": "A useful opening sentence."
+        },
+        {
+          "somali": "waxaan baranayaa",
+          "english": "I am learning",
+          "note": "Add Somali or another thing after it."
+        },
+        {
+          "somali": "qoyskeyga",
+          "english": "my family",
+          "note": "Use if family is part of your reason."
+        },
+        {
+          "somali": "saaxiibbaday",
+          "english": "my friends",
+          "note": "Use if friends are part of your reason."
+        },
+        {
+          "somali": "waan rabaa",
+          "english": "I want",
+          "note": "Use before a goal."
+        },
+        {
+          "somali": "inaan hadlo",
+          "english": "to speak",
+          "note": "Use after waan rabaa."
+        },
+        {
+          "somali": "waan fahmayaa",
+          "english": "I understand",
+          "note": "Use for things that are getting easier."
+        },
+        {
+          "somali": "way fudud tahay",
+          "english": "it is easy",
+          "note": "Use for an easy part."
+        },
+        {
+          "somali": "way adag tahay",
+          "english": "it is hard",
+          "note": "Use for a hard part."
+        },
+        {
+          "somali": "codadka",
+          "english": "the sounds",
+          "note": "Useful for pronunciation."
+        },
+        {
+          "somali": "erayada",
+          "english": "the words",
+          "note": "Useful for vocabulary."
+        },
+        {
+          "somali": "maalin kasta",
+          "english": "every day",
+          "note": "Use for regular study."
+        },
+        {
+          "somali": "wax yar",
+          "english": "a little",
+          "note": "Use for beginner ability."
+        },
+        {
+          "somali": "waan ku celceliyaa",
+          "english": "I practice",
+          "note": "Use for study habits."
+        }
+      ]
+    }
+  ]
+}

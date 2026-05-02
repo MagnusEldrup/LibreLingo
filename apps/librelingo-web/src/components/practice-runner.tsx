@@ -22,6 +22,8 @@ import type {
     GrammarTableRow,
     SkillChallenge,
     SkillChallengeFile,
+    YourLifeFeedback,
+    YourLifeScaffold,
     WriteFeedback,
 } from '@/data/course'
 import {
@@ -130,6 +132,12 @@ function isAnswerablePracticeChallenge(challenge: SkillChallenge) {
                 turn.expectedReplies.every(
                     (expectedReply) => !containsPromptPlaceholder(expectedReply)
                 )
+        )
+    }
+
+    if (challenge.type === 'yourLife') {
+        return challenge.englishPromptLines.every(
+            (promptLine) => !containsPromptPlaceholder(promptLine)
         )
     }
 
@@ -488,6 +496,7 @@ function getChallengeBasePoints(challenge: SkillChallenge) {
         freeWriting: 0,
         write: 0,
         conversation: 0,
+        yourLife: 0,
     } as const
 
     return pointMap[challenge.type]
@@ -572,6 +581,7 @@ function ChallengeTypeLabel({ challenge }: { challenge: SkillChallenge }) {
         freeWriting: 'Writing feedback',
         write: 'Write module',
         conversation: 'Conversation chat',
+        yourLife: 'Your Life',
     } as const
 
     return (
@@ -585,7 +595,8 @@ function usesFloatingDictionary(challenge: SkillChallenge) {
     return (
         challenge.type === 'freeWriting' ||
         challenge.type === 'write' ||
-        challenge.type === 'conversation'
+        challenge.type === 'conversation' ||
+        challenge.type === 'yourLife'
     )
 }
 
@@ -1706,7 +1717,7 @@ function FreeWritingChallengeView({
 
                     <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
                         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                            Suggested Somali rewrite
+                            Corrected Somali version
                         </p>
                         <p className="text-slate-900">
                             {feedback.suggestedAnswer}
@@ -1721,7 +1732,7 @@ function FreeWritingChallengeView({
                                         Type the corrected Somali for +5 XP
                                     </p>
                                     <p className="text-sm text-slate-600">
-                                        Copy the suggested rewrite as closely as
+                                        Copy the corrected version as closely as
                                         you can. Minor spelling variation is
                                         still accepted.
                                     </p>
@@ -1812,6 +1823,400 @@ function FreeWritingChallengeView({
                         lessonTitle={lessonTitle}
                         practiceHref={practiceHref}
                     />
+                </div>
+            )}
+        </div>
+    )
+}
+
+type YourLifeApiResponse =
+    | { scaffold: YourLifeScaffold }
+    | { feedback: YourLifeFeedback }
+    | { refusal?: string }
+    | { error?: string }
+
+function countSentenceLikeLines(value: string) {
+    return value
+        .split(/(?:[.!?]+|\n+)/)
+        .map((item) => item.trim())
+        .filter(Boolean).length
+}
+
+function YourLifeChallengeView({
+    courseId,
+    moduleTitle,
+    lessonTitle,
+    practiceHref,
+    challenge,
+    answer,
+    setAnswer,
+    onComplete,
+}: {
+    courseId: string
+    moduleTitle: string
+    lessonTitle: string
+    practiceHref: string
+    challenge: Extract<SkillChallenge, { type: 'yourLife' }>
+    answer: string
+    setAnswer: (value: string) => void
+    onComplete: (completion: ChallengeCompletion) => void
+}) {
+    const [englishAnswer, setEnglishAnswer] = useState('')
+    const [scaffold, setScaffold] = useState<YourLifeScaffold | undefined>()
+    const [feedback, setFeedback] = useState<YourLifeFeedback | undefined>()
+    const [requestError, setRequestError] = useState<string | undefined>()
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [lastStage, setLastStage] = useState<'scaffold' | 'feedback'>(
+        'scaffold'
+    )
+    const englishSentenceCount = countSentenceLikeLines(englishAnswer)
+    const hasEnoughEnglish = englishSentenceCount >= 4
+    const hasCompleted = (feedback?.score ?? 0) >= 4
+    const feedbackErrorDetails = requestError
+        ? getWritingFeedbackErrorDetails(
+              requestError,
+              'Your Life feedback is not available yet.'
+          )
+        : undefined
+
+    useEffect(() => {
+        setEnglishAnswer('')
+        setScaffold(undefined)
+        setFeedback(undefined)
+        setRequestError(undefined)
+        setIsSubmitting(false)
+        setLastStage('scaffold')
+    }, [challenge.id])
+
+    async function requestYourLifeSupport(stage: 'scaffold' | 'feedback') {
+        if (normalizeText(englishAnswer).length === 0) {
+            return
+        }
+
+        if (stage === 'feedback' && normalizeText(answer).length === 0) {
+            return
+        }
+
+        setLastStage(stage)
+        setIsSubmitting(true)
+        setRequestError(undefined)
+
+        try {
+            const response = await fetch('/api/your-life-feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    courseId,
+                    practiceHref,
+                    challengeId: challenge.id,
+                    stage,
+                    englishAnswer,
+                    somaliAnswer: answer,
+                }),
+            })
+            const payload = (await response.json()) as YourLifeApiResponse
+
+            if (!response.ok) {
+                throw new Error(
+                    'error' in payload && payload.error
+                        ? payload.error
+                        : 'Unable to get Your Life feedback right now.'
+                )
+            }
+
+            if ('refusal' in payload && payload.refusal) {
+                throw new Error(payload.refusal)
+            }
+
+            if ('scaffold' in payload) {
+                setScaffold(payload.scaffold)
+                setFeedback(undefined)
+                return
+            }
+
+            if ('feedback' in payload) {
+                setFeedback(payload.feedback)
+                return
+            }
+
+            throw new Error('Your Life feedback was not returned.')
+        } catch (error) {
+            setRequestError(
+                error instanceof Error
+                    ? error.message
+                    : 'Unable to get Your Life feedback right now.'
+            )
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
+
+    return (
+        <div className="space-y-6">
+            <div className="space-y-3">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+                    {challenge.instruction}
+                </p>
+                <div className="space-y-3 rounded-2xl border border-[#c8dbfb] bg-[#f6faff] p-5">
+                    {challenge.englishPromptLines.map((line) => (
+                        <p key={line} className="text-lg text-slate-900">
+                            {line}
+                        </p>
+                    ))}
+                </div>
+            </div>
+
+            <div className="space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                    <label className="text-sm font-medium text-slate-700">
+                        Your real-life notes in English
+                    </label>
+                    <span className="text-sm text-slate-500">
+                        {Math.min(englishSentenceCount, 5)}/5 sentences
+                    </span>
+                </div>
+                <textarea
+                    value={englishAnswer}
+                    disabled={scaffold !== undefined || hasCompleted}
+                    onChange={(event) => setEnglishAnswer(event.target.value)}
+                    placeholder={challenge.englishPlaceholder}
+                    rows={6}
+                    className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
+                />
+                {!hasEnoughEnglish && !scaffold && (
+                    <p className="text-sm text-slate-600">
+                        Write at least 4 short English sentences about your
+                        actual life before asking for Somali help.
+                    </p>
+                )}
+            </div>
+
+            {!scaffold && (
+                <Button
+                    disabled={!hasEnoughEnglish || isSubmitting}
+                    onClick={() => {
+                        void requestYourLifeSupport('scaffold')
+                    }}
+                >
+                    {isSubmitting
+                        ? 'Building Somali fragments...'
+                        : 'Get Somali fragments'}
+                </Button>
+            )}
+
+            {scaffold && (
+                <div className="space-y-5 rounded-2xl border border-[#b7d4fb] bg-[#eef6ff] p-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                        <p className="text-lg font-semibold text-[#2f6db8]">
+                            Somali building blocks
+                        </p>
+                        {!hasCompleted && (
+                            <Button
+                                variant="outline"
+                                disabled={isSubmitting}
+                                onClick={() => {
+                                    setScaffold(undefined)
+                                    setFeedback(undefined)
+                                    setRequestError(undefined)
+                                    setAnswer('')
+                                }}
+                            >
+                                Edit English notes
+                            </Button>
+                        )}
+                    </div>
+                    <p className="text-slate-700">{scaffold.summary}</p>
+
+                    <div className="grid gap-3 md:grid-cols-2">
+                        {scaffold.fragments.map((fragment) => (
+                            <div
+                                key={`${fragment.somali}-${fragment.english}`}
+                                className="rounded-2xl bg-white p-4 shadow-sm"
+                            >
+                                <p className="text-lg font-semibold text-slate-900">
+                                    {fragment.somali}
+                                </p>
+                                <p className="mt-1 text-sm text-slate-600">
+                                    {fragment.english}
+                                </p>
+                                {fragment.note && (
+                                    <p className="mt-2 text-xs uppercase tracking-[0.14em] text-[#4189dd]">
+                                        {fragment.note}
+                                    </p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+
+                    {scaffold.starterFrames.length > 0 && (
+                        <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                Starter frames
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                {scaffold.starterFrames.map((frame) => (
+                                    <span
+                                        key={frame}
+                                        className="rounded-full bg-[#f6faff] px-3 py-2 text-sm text-slate-800 ring-1 ring-[#d6e6fb]"
+                                    >
+                                        {frame}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            )}
+
+            {scaffold && (
+                <div className="space-y-3">
+                    <label className="text-sm font-medium text-slate-700">
+                        Your simple Somali version
+                    </label>
+                    <textarea
+                        value={answer}
+                        disabled={hasCompleted}
+                        onChange={(event) => setAnswer(event.target.value)}
+                        placeholder={challenge.somaliPlaceholder}
+                        rows={8}
+                        {...somaliTextInputProps}
+                        className="w-full rounded-2xl border border-[#aac8f3] px-4 py-3 text-lg text-slate-900 outline-none transition focus:border-[#4189dd]"
+                    />
+                    <Button
+                        disabled={
+                            isSubmitting || normalizeText(answer).length === 0
+                        }
+                        onClick={() => {
+                            void requestYourLifeSupport('feedback')
+                        }}
+                    >
+                        {isSubmitting
+                            ? 'Checking your Somali...'
+                            : feedback && feedback.score < 4
+                              ? 'Check revised Somali'
+                              : 'Get score and hints'}
+                    </Button>
+                </div>
+            )}
+
+            {requestError && feedbackErrorDetails && (
+                <FeedbackPanel
+                    state="incorrect"
+                    message={feedbackErrorDetails.message}
+                    supportingText={feedbackErrorDetails.supportingText}
+                    primaryLabel="Try again"
+                    onPrimary={() => {
+                        setRequestError(undefined)
+                        void requestYourLifeSupport(lastStage)
+                    }}
+                    secondaryLabel="Keep editing"
+                    onSecondary={() => setRequestError(undefined)}
+                />
+            )}
+
+            {feedback && (
+                <div className="space-y-5 rounded-2xl border border-[#b7d4fb] bg-[#eef6ff] p-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                        <p className="text-lg font-semibold text-[#2f6db8]">
+                            Your Life feedback
+                        </p>
+                        <span className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-[#1f5ea6] shadow-sm">
+                            Score {feedback.score}/5
+                        </span>
+                    </div>
+                    <p className="text-slate-700">{feedback.summary}</p>
+
+                    <div className="grid gap-4 md:grid-cols-2">
+                        <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                What worked
+                            </p>
+                            {feedback.strengths.length > 0 ? (
+                                <ul className="space-y-2 text-slate-700">
+                                    {feedback.strengths.map((item) => (
+                                        <li key={item}>- {item}</li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className="text-slate-600">
+                                    You started connecting Somali to your own
+                                    life.
+                                </p>
+                            )}
+                        </div>
+                        <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                Targeted corrections
+                            </p>
+                            {feedback.improvements.length > 0 ? (
+                                <ul className="space-y-2 text-slate-700">
+                                    {feedback.improvements.map((item) => (
+                                        <li key={item}>- {item}</li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className="text-slate-600">
+                                    No major correction needed.
+                                </p>
+                            )}
+                        </div>
+                    </div>
+
+                    {feedback.hints.length > 0 && (
+                        <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                More hints for revision
+                            </p>
+                            <ul className="space-y-2 text-slate-700">
+                                {feedback.hints.map((hint) => (
+                                    <li key={hint}>- {hint}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {feedback.correctedVersion && (
+                        <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
+                            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
+                                Corrected Somali version
+                            </p>
+                            <p className="text-slate-900">
+                                {feedback.correctedVersion}
+                            </p>
+                        </div>
+                    )}
+
+                    {feedback.score < 4 ? (
+                        <p className="rounded-2xl bg-white p-4 text-sm leading-6 text-slate-700 shadow-sm">
+                            Use the new hints to revise your Somali, then check
+                            it again. This lesson completes at 4/5 or 5/5.
+                        </p>
+                    ) : (
+                        <div className="space-y-4">
+                            <FeedbackPanel
+                                state="correct"
+                                message="Your Life lesson complete"
+                                supportingText="Your Somali is clear enough to move on."
+                                primaryLabel="Continue"
+                                onPrimary={() =>
+                                    onComplete({
+                                        solved: true,
+                                        firstTry: false,
+                                        attempts: 2,
+                                        points: feedback.score * 5,
+                                    })
+                                }
+                            />
+                            <LessonFeedback
+                                courseId={courseId}
+                                moduleTitle={moduleTitle}
+                                lessonTitle={lessonTitle}
+                                practiceHref={practiceHref}
+                            />
+                        </div>
+                    )}
                 </div>
             )}
         </div>
@@ -1931,7 +2336,7 @@ function WriteFeedbackPanel({
 
             <div className="space-y-2 rounded-2xl bg-white p-4 shadow-sm">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                    Suggested Somali revision
+                    Corrected Somali version
                 </p>
                 <p className="text-slate-900">{feedback.suggestedAnswer}</p>
             </div>
@@ -2356,6 +2761,9 @@ function ConversationTranscript({
                                 className="w-full text-left text-base text-slate-900 underline decoration-dotted underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4189dd] focus-visible:ring-offset-2"
                                 tooltipClassName="max-w-[min(28rem,calc(100vw-3rem))]"
                             />
+                            <p className="mt-3 border-t border-[#dbeafb] pt-3 text-sm leading-6 text-slate-600">
+                                {currentTurn.englishReplyPrompt}
+                            </p>
                         </div>
                     </div>
 
@@ -2530,34 +2938,6 @@ function ConversationChallengeView({
                 currentTurn={currentTurn}
                 currentAnswer={answer}
             />
-
-            <div className="rounded-2xl border border-[#d6e6fb] bg-white p-5">
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                        Somali message
-                    </p>
-                    <span className="text-xs uppercase tracking-[0.16em] text-slate-500">
-                        Hover or tap for meaning
-                    </span>
-                </div>
-                <div className="mt-3">
-                    <MeaningTooltip
-                        text={currentTurn.partnerMessage}
-                        meaning={currentTurn.partnerMessageHint}
-                        align="left"
-                        className="w-full rounded-2xl bg-[#f8fbff] p-4 text-left text-xl text-slate-900 underline decoration-dotted underline-offset-4 transition hover:bg-[#eef6ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4189dd] focus-visible:ring-offset-2"
-                        tooltipClassName="max-w-[min(28rem,calc(100vw-3rem))]"
-                    />
-                </div>
-                <div className="mt-4 space-y-1">
-                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4189dd]">
-                        Reply in Somali
-                    </p>
-                    <p className="text-base text-slate-700">
-                        {currentTurn.englishReplyPrompt}
-                    </p>
-                </div>
-            </div>
 
             <div className="space-y-3">
                 <label className="text-sm font-medium text-slate-700">
@@ -3578,6 +3958,19 @@ export default function PracticeRunner(props: Props) {
                             />
                         )}
 
+                        {currentChallenge.type === 'yourLife' && (
+                            <YourLifeChallengeView
+                                courseId={courseId}
+                                moduleTitle={moduleTitle}
+                                lessonTitle={skillTitle}
+                                practiceHref={practiceHref}
+                                challenge={currentChallenge}
+                                answer={textAnswer}
+                                setAnswer={setTextAnswer}
+                                onComplete={completeChallenge}
+                            />
+                        )}
+
                         {shouldShowLessonFeedback && (
                             <LessonFeedback
                                 courseId={courseId}
@@ -3631,8 +4024,10 @@ export default function PracticeRunner(props: Props) {
                                         Today
                                     </p>
                                     <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
-                                        {courseProgress.todayCompletedChallenges}/
-                                        {courseProgress.dailyGoal}
+                                        {
+                                            courseProgress.todayCompletedChallenges
+                                        }
+                                        /{courseProgress.dailyGoal}
                                     </p>
                                     <p className="mt-1 text-xs leading-5 text-slate-500">
                                         {courseProgress.todayGoalReached

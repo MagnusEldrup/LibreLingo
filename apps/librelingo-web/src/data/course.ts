@@ -27,7 +27,13 @@ export type CourseSkill = {
     levels: number
     practiceHref: string
     summary: string[]
-    kind?: 'standard' | 'grammar' | 'history' | 'write' | 'conversation'
+    kind?:
+        | 'standard'
+        | 'grammar'
+        | 'history'
+        | 'write'
+        | 'conversation'
+        | 'yourLife'
 }
 
 export type CourseModule = {
@@ -123,6 +129,29 @@ export type ConversationTurnFeedback = {
     refusal?: string
 }
 
+export type YourLifeFragment = {
+    somali: string
+    english: string
+    note: string
+}
+
+export type YourLifeScaffold = {
+    summary: string
+    fragments: YourLifeFragment[]
+    starterFrames: string[]
+    refusal?: string
+}
+
+export type YourLifeFeedback = {
+    score: number
+    summary: string
+    strengths: string[]
+    improvements: string[]
+    hints: string[]
+    correctedVersion: string
+    refusal?: string
+}
+
 export type SkillChallenge =
     | {
           type: 'options'
@@ -214,6 +243,19 @@ export type SkillChallenge =
           turns: ConversationTurn[]
           gradingNotes: string[]
       }
+    | {
+          type: 'yourLife'
+          id: string
+          priority: number
+          group: string
+          instruction: string
+          englishPromptLines: string[]
+          englishPlaceholder: string
+          somaliPlaceholder: string
+          scaffoldNotes: string[]
+          gradingNotes: string[]
+          starterFragments: YourLifeFragment[]
+      }
 
 export type SkillChallengeFile = {
     id: string
@@ -290,7 +332,13 @@ function getFullChallengeDirectoryPath(jsonPath: string) {
 }
 
 function getFullDictionaryPath(jsonPath: string) {
-    return path.join(process.cwd(), 'src', 'courses', jsonPath, 'wordDictionary.json')
+    return path.join(
+        process.cwd(),
+        'src',
+        'courses',
+        jsonPath,
+        'wordDictionary.json'
+    )
 }
 
 function getFullPhraseDictionaryPath(jsonPath: string) {
@@ -423,13 +471,8 @@ export async function getCourseId(
 
 export async function getCourseDetail(courseId: string): Promise<CourseDetail> {
     const data = await getCourseMetadataByJsonPath(courseId)
-    const {
-        languageName,
-        languageCode,
-        uiLanguage,
-        repositoryURL,
-        modules,
-    } = data
+    const { languageName, languageCode, uiLanguage, repositoryURL, modules } =
+        data
     const skillCount = modules.reduce(
         (total: number, courseModule: CourseModule) =>
             total + courseModule.skills.length,
@@ -514,7 +557,9 @@ export async function listCourseSkillParameters() {
         const challengeDirectoryPath = getFullChallengeDirectoryPath(course.id)
 
         if (fs.existsSync(challengeDirectoryPath)) {
-            const challengeFiles = await fs.promises.readdir(challengeDirectoryPath)
+            const challengeFiles = await fs.promises.readdir(
+                challengeDirectoryPath
+            )
 
             for (const challengeFile of challengeFiles) {
                 if (!challengeFile.endsWith('.json')) {

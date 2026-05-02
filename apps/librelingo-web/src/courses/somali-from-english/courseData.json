@@ -65,6 +65,19 @@
         },
         {
           "summary": [
+            "Somali often puts the verb at the end.",
+            "Nin shaah wuu cabbay.",
+            "Shalayto bariis waan cunay.",
+            "`baa` and `ayaa` can both be natural."
+          ],
+          "kind": "grammar",
+          "practiceHref": "word-order-basics",
+          "id": "8a72c4d1e5b9",
+          "title": "Word Order Basics",
+          "levels": 2
+        },
+        {
+          "summary": [
             "Present tense of `tag-`",
             "Waan tagayaa.",
             "Waad tagaysaa.",
@@ -311,6 +324,37 @@
           "practiceHref": "history-everyday-hospitality",
           "id": "f02a51e4b8c7",
           "title": "History: Everyday Life and Hospitality",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "Your Life",
+      "skills": [
+        {
+          "summary": [
+            "Write 4-5 true English sentences about your day.",
+            "Get Somali words and phrase fragments.",
+            "Build a very simple Somali version.",
+            "Revise with more hints until you reach 4/5."
+          ],
+          "kind": "yourLife",
+          "practiceHref": "your-life-my-day",
+          "id": "yl-my-day-01",
+          "title": "Your Life: My Day",
+          "levels": 2
+        },
+        {
+          "summary": [
+            "Write 4-5 true English sentences about learning Somali.",
+            "Get simple Somali fragments for your own ideas.",
+            "Describe what is easy, hard, and next.",
+            "Revise with more hints until you reach 4/5."
+          ],
+          "kind": "yourLife",
+          "practiceHref": "your-life-learning-somali",
+          "id": "yl-learning-somali-01",
+          "title": "Your Life: My Experience Learning Somali",
           "levels": 2
         }
       ]

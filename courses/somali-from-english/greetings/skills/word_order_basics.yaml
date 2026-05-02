@@ -1,0 +1,69 @@
+Skill:
+  Id: 8a72c4d1-e5b9-4b0d-8d64-8a8f30d3273a
+  Name: Word Order Basics
+
+New words: []
+
+Phrases: []
+
+Custom challenges:
+  - Type: grammarTable
+    Prompt: Learn the usual Somali word order, then practise choosing a natural sentence shape.
+    Table title: Basic Somali word order
+    Row header: Pattern
+    Prompt header: English cue
+    Answer header: Somali form
+    Rows:
+      - Label: subject + verb
+        Prompt: A man went.
+        Answer: Nin waa tegey.
+        Also accepted:
+          - Nin baa tegey.
+          - Nin ayaa tegey.
+
+      - Label: subject + object + verb
+        Prompt: A man drank tea.
+        Answer: Nin shaah wuu cabbay.
+        Also accepted:
+          - Nin shaah buu cabbay.
+          - Nin shaah ayuu cabbay.
+
+      - Label: time + object + verb
+        Prompt: Yesterday I ate rice.
+        Answer: Shalayto bariis waan cunay.
+        Also accepted:
+          - Bariis waan cunay shalayto.
+
+      - Label: object + command
+        Prompt: Bring a cup.
+        Answer: Koob keen.
+
+      - Label: focus the place
+        Prompt: I came from London.
+        Answer: Landhan baan ka imi.
+        Also accepted:
+          - Landhan ayaan ka imi.
+
+Two-way-dictionary:
+  - word order: habka erayada
+  - subject: falaha
+  - object: layeele
+  - verb: fal
+  - man: nin
+  - girl: gabadh
+  - tea: shaah
+  - rice: bariis
+  - cup: koob
+  - drank: cabbay
+  - ate: cunay
+  - went: tegey
+  - bring: keen
+  - yesterday: shalayto
+  - today: maanta
+  - London: Landhan
+  - post office: boosta
+  - A man went: Nin waa tegey
+  - A man drank tea: Nin shaah wuu cabbay
+  - Yesterday I ate rice: Shalayto bariis waan cunay
+  - Bring a cup: Koob keen
+  - I came from London: Landhan baan ka imi

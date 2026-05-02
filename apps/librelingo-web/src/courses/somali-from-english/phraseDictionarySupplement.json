@@ -271,5 +271,250 @@
     "theme": "housing",
     "sourcePage": 98,
     "lessonHints": ["hotel-check-in"]
+  },
+  {
+    "english": "How is your family?",
+    "somali": "Qoyskaaga ka warran?",
+    "theme": "family",
+    "sourcePage": null,
+    "lessonHints": ["family-members", "people-family-conversation"]
+  },
+  {
+    "english": "How is my mother?",
+    "somali": "Hooyaday ka warran?",
+    "theme": "family",
+    "sourcePage": null,
+    "lessonHints": ["family-members", "people-singular-plural"]
+  },
+  {
+    "english": "The family is well.",
+    "somali": "Qoysku waa nabad.",
+    "theme": "family",
+    "sourcePage": null,
+    "lessonHints": ["family-members", "people-family-conversation"]
+  },
+  {
+    "english": "I have one sibling.",
+    "somali": "Hal walaal baan leeyahay.",
+    "theme": "family",
+    "sourcePage": null,
+    "lessonHints": ["family-members", "people-singular-plural"]
+  },
+  {
+    "english": "My father is tall.",
+    "somali": "Aabbahay waa dheer yahay.",
+    "theme": "descriptions",
+    "sourcePage": null,
+    "lessonHints": ["colours-and-descriptions", "people-singular-plural"]
+  },
+  {
+    "english": "The children are at school.",
+    "somali": "Carruurtu dugsiga bay joogaan.",
+    "theme": "family",
+    "sourcePage": null,
+    "lessonHints": ["family-members", "people-singular-plural"]
+  },
+  {
+    "english": "Where are you going after tea?",
+    "somali": "Shaah ka dib xaggee baad tagaysaa?",
+    "theme": "daily-life",
+    "sourcePage": null,
+    "lessonHints": ["daily-questions-ma-xaggee", "food-and-drink"]
+  },
+  {
+    "english": "Do you want water with lunch?",
+    "somali": "Qado biyo ma doonaysaa?",
+    "theme": "food",
+    "sourcePage": null,
+    "lessonHints": ["daily-questions-ma-xaggee", "food-and-drink"]
+  },
+  {
+    "english": "Are you hungry before lunch?",
+    "somali": "Ma gaajaysan tahay qado ka hor?",
+    "theme": "food",
+    "sourcePage": null,
+    "lessonHints": ["daily-questions-ma-xaggee", "food-and-drink"]
+  },
+  {
+    "english": "I am going to the market today.",
+    "somali": "Maanta suuqa baan tagayaa.",
+    "theme": "errands",
+    "sourcePage": null,
+    "lessonHints": ["places-and-directions", "daily-writing-my-day"]
+  },
+  {
+    "english": "Go straight on this road.",
+    "somali": "Waddadan si toos ah u raac.",
+    "theme": "directions",
+    "sourcePage": null,
+    "lessonHints": ["places-and-directions", "daily-food-directions-conversation"]
+  },
+  {
+    "english": "Turn left.",
+    "somali": "Xagga bidixda u leexo.",
+    "theme": "directions",
+    "sourcePage": null,
+    "lessonHints": ["places-and-directions"]
+  },
+  {
+    "english": "Turn right.",
+    "somali": "Xagga midigta u leexo.",
+    "theme": "directions",
+    "sourcePage": null,
+    "lessonHints": ["places-and-directions"]
+  },
+  {
+    "english": "Dinner is ready.",
+    "somali": "Casho waa diyaar.",
+    "theme": "dinner",
+    "sourcePage": null,
+    "lessonHints": ["dinner-vocabulary", "dinner-table-conversation"]
+  },
+  {
+    "english": "The family is sitting at the dinner table.",
+    "somali": "Qoyska oo miiska cashada fadhiya.",
+    "theme": "dinner",
+    "sourcePage": null,
+    "lessonHints": ["dinner-grammar-oo-detail", "family-dinner-writing"]
+  },
+  {
+    "english": "Meat is ready for dinner.",
+    "somali": "Hilib oo casho u diyaar ah.",
+    "theme": "dinner",
+    "sourcePage": null,
+    "lessonHints": ["dinner-grammar-oo-detail", "dinner-vocabulary"]
+  },
+  {
+    "english": "Sweet tea for the guest.",
+    "somali": "Shaah oo martida u macaan.",
+    "theme": "dinner",
+    "sourcePage": null,
+    "lessonHints": ["dinner-grammar-oo-detail", "dinner-phrases"]
+  },
+  {
+    "english": "I would like rice and meat.",
+    "somali": "Bariis iyo hilib baan rabaa.",
+    "theme": "dinner",
+    "sourcePage": null,
+    "lessonHints": ["dinner-vocabulary", "dinner-table-conversation"]
+  },
+  {
+    "english": "Bring rice and meat to the table.",
+    "somali": "Bariis iyo hilib miiska keen.",
+    "theme": "dinner",
+    "sourcePage": null,
+    "lessonHints": ["dinner-vocabulary"]
+  },
+  {
+    "english": "I will go on the journey tomorrow.",
+    "somali": "Berri safarka tegi doonaa.",
+    "theme": "journey",
+    "sourcePage": null,
+    "lessonHints": ["future-tense-markers", "journey-planning"]
+  },
+  {
+    "english": "He will check the tires soon.",
+    "somali": "Shaagagga jeeg garayn doonaa dhowaan.",
+    "theme": "journey",
+    "sourcePage": null,
+    "lessonHints": ["future-tense-markers", "journey-planning"]
+  },
+  {
+    "english": "They will arrive at the village later.",
+    "somali": "Tuulada iman doonaan goor dambe.",
+    "theme": "journey",
+    "sourcePage": null,
+    "lessonHints": ["future-tense-markers", "village-stay"]
+  },
+  {
+    "english": "I came to the village today.",
+    "somali": "Tuulada imid maanta.",
+    "theme": "journey",
+    "sourcePage": null,
+    "lessonHints": ["past-tense-markers", "village-stay"]
+  },
+  {
+    "english": "He came from the journey.",
+    "somali": "Safarka ayuu ka yimid.",
+    "theme": "journey",
+    "sourcePage": null,
+    "lessonHints": ["past-tense-markers", "journey-planning"]
+  },
+  {
+    "english": "They came from the village last night.",
+    "somali": "Tuulada ayay ka yimaaddeen xalay.",
+    "theme": "journey",
+    "sourcePage": null,
+    "lessonHints": ["past-tense-markers", "village-stay"]
+  },
+  {
+    "english": "I am looking for a telephone.",
+    "somali": "Waxaan doondoonayaa telefoon.",
+    "theme": "phone",
+    "sourcePage": null,
+    "lessonHints": ["phone-calls"]
+  },
+  {
+    "english": "Is Yoonis there?",
+    "somali": "Yoonis ma joogaa?",
+    "theme": "phone",
+    "sourcePage": null,
+    "lessonHints": ["phone-calls"]
+  },
+  {
+    "english": "Wait a little.",
+    "somali": "In yar u kaadi.",
+    "theme": "phone",
+    "sourcePage": null,
+    "lessonHints": ["phone-calls"]
+  },
+  {
+    "english": "My head hurts.",
+    "somali": "Madaxa ayaa i xanuunaya.",
+    "theme": "health",
+    "sourcePage": null,
+    "lessonHints": ["health-and-illness"]
+  },
+  {
+    "english": "I feel dizzy.",
+    "somali": "Waan warwareerayaa.",
+    "theme": "health",
+    "sourcePage": null,
+    "lessonHints": ["health-and-illness"]
+  },
+  {
+    "english": "Are you coughing?",
+    "somali": "Ma qufcaysaa?",
+    "theme": "health",
+    "sourcePage": null,
+    "lessonHints": ["health-and-illness"]
+  },
+  {
+    "english": "Somalia had trade.",
+    "somali": "Soomaaliya ganacsi bay lahayd.",
+    "theme": "history",
+    "sourcePage": null,
+    "lessonHints": ["history-ancient-trade", "history-food-trade-hospitality"]
+  },
+  {
+    "english": "Guests are given tea.",
+    "somali": "Martida shaah baa la siiyaa.",
+    "theme": "history",
+    "sourcePage": null,
+    "lessonHints": ["history-food-trade-hospitality"]
+  },
+  {
+    "english": "Names have meaning.",
+    "somali": "Magacyadu macne bay leeyihiin.",
+    "theme": "history",
+    "sourcePage": null,
+    "lessonHints": ["history-somali-names-families"]
+  },
+  {
+    "english": "People greet each other.",
+    "somali": "Dadku way is salaamaan.",
+    "theme": "history",
+    "sourcePage": null,
+    "lessonHints": ["history-everyday-hospitality"]
   }
 ]

@@ -1,0 +1,202 @@
+{
+  "id": "8a72c4d1e5b9",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "grammarTable",
+      "id": "wo-1",
+      "priority": 1,
+      "group": "word-order-basics",
+      "instruction": "Learn the usual Somali word order, then practise choosing a natural sentence shape.",
+      "tableTitle": "Basic Somali word order",
+      "columnHeaders": {
+        "label": "Pattern",
+        "prompt": "English cue",
+        "answer": "Somali form"
+      },
+      "rows": [
+        {
+          "id": "wo-lesson-1",
+          "label": "subject + verb",
+          "prompt": "A man went.",
+          "answers": [
+            "Nin waa tegey.",
+            "Nin baa tegey.",
+            "Nin ayaa tegey."
+          ]
+        },
+        {
+          "id": "wo-lesson-2",
+          "label": "subject + object + verb",
+          "prompt": "A man drank tea.",
+          "answers": [
+            "Nin shaah wuu cabbay.",
+            "Nin shaah buu cabbay.",
+            "Nin shaah ayuu cabbay."
+          ]
+        },
+        {
+          "id": "wo-lesson-3",
+          "label": "time + object + verb",
+          "prompt": "Yesterday I ate rice.",
+          "answers": [
+            "Shalayto bariis waan cunay.",
+            "Bariis waan cunay shalayto."
+          ]
+        },
+        {
+          "id": "wo-lesson-4",
+          "label": "object + command",
+          "prompt": "Bring a cup.",
+          "answers": [
+            "Koob keen."
+          ]
+        },
+        {
+          "id": "wo-lesson-5",
+          "label": "focus the place",
+          "prompt": "I came from London.",
+          "answers": [
+            "Landhan baan ka imi.",
+            "Landhan ayaan ka imi."
+          ]
+        }
+      ],
+      "lessonSlides": [
+        {
+          "id": "wo-slide-1",
+          "title": "The verb often comes last",
+          "description": "A useful beginner pattern is subject, then object, then verb. Somali still needs `waa` or a focus marker such as `baa` or `ayaa` in many positive statements.",
+          "focusPoints": [
+            "English often says subject, verb, object",
+            "Somali often says subject, object, verb",
+            "`waa`, `baa`, and `ayaa` sit close to the verb"
+          ],
+          "rows": [
+            {
+              "id": "wo-lesson-1",
+              "label": "subject + verb",
+              "prompt": "A man went.",
+              "answers": [
+                "Nin waa tegey.",
+                "Nin baa tegey.",
+                "Nin ayaa tegey."
+              ]
+            },
+            {
+              "id": "wo-lesson-2",
+              "label": "subject + object + verb",
+              "prompt": "A man drank tea.",
+              "answers": [
+                "Nin shaah wuu cabbay.",
+                "Nin shaah buu cabbay.",
+                "Nin shaah ayuu cabbay."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wo-slide-2",
+          "title": "Many sentences have more than one good order",
+          "description": "Time words often come at the beginning, but they can also come later. Focus markers also give you more than one natural answer.",
+          "focusPoints": [
+            "`shalayto` can come before or after the main sentence",
+            "`baa` and `ayaa` are often both accepted",
+            "The focused word usually comes just before `baa` or `ayaa`"
+          ],
+          "rows": [
+            {
+              "id": "wo-lesson-3",
+              "label": "time + object + verb",
+              "prompt": "Yesterday I ate rice.",
+              "answers": [
+                "Shalayto bariis waan cunay.",
+                "Bariis waan cunay shalayto."
+              ]
+            },
+            {
+              "id": "wo-lesson-5",
+              "label": "focus the place",
+              "prompt": "I came from London.",
+              "answers": [
+                "Landhan baan ka imi.",
+                "Landhan ayaan ka imi."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wo-slide-3",
+          "title": "Commands are short",
+          "description": "In a command, the subject is understood. The object can come before the verb, as in `Koob keen.`",
+          "focusPoints": [
+            "Use the object first when you are asking for a thing",
+            "Put the command verb at the end",
+            "Keep early command sentences short"
+          ],
+          "rows": [
+            {
+              "id": "wo-lesson-4",
+              "label": "object + command",
+              "prompt": "Bring a cup.",
+              "answers": [
+                "Koob keen."
+              ]
+            }
+          ]
+        }
+      ],
+      "practiceRows": [
+        {
+          "id": "wo-practice-1",
+          "label": "subject + verb",
+          "prompt": "Bill went.",
+          "rule": "Put the subject first and the verb at the end.",
+          "answers": [
+            "Bill waa tegey.",
+            "Bill baa tegey.",
+            "Bill ayaa tegey."
+          ]
+        },
+        {
+          "id": "wo-practice-2",
+          "label": "object before verb",
+          "prompt": "I drank tea.",
+          "rule": "Put `shaah` before the verb.",
+          "answers": [
+            "Shaah waan cabbay."
+          ]
+        },
+        {
+          "id": "wo-practice-3",
+          "label": "time word",
+          "prompt": "Today I am going.",
+          "rule": "Place `maanta` at the beginning or the end.",
+          "answers": [
+            "Maanta waan tagayaa.",
+            "Waan tagayaa maanta."
+          ]
+        },
+        {
+          "id": "wo-practice-4",
+          "label": "command",
+          "prompt": "Bring tea.",
+          "rule": "Use the object before the command verb.",
+          "answers": [
+            "Shaah keen."
+          ]
+        },
+        {
+          "id": "wo-practice-5",
+          "label": "focused place",
+          "prompt": "I am going to the post office.",
+          "rule": "Put the place before `baan` or `ayaan`.",
+          "answers": [
+            "Boosta baan tagayaa.",
+            "Boosta ayaan tagayaa."
+          ]
+        }
+      ]
+    }
+  ]
+}

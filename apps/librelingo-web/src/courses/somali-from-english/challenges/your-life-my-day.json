@@ -1,0 +1,103 @@
+{
+  "id": "yl-my-day-01",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "yourLife",
+      "id": "ylmd-1",
+      "priority": 1,
+      "group": "your-life-my-day",
+      "instruction": "Describe your real day, then turn it into very simple Somali.",
+      "englishPromptLines": [
+        "Write 4-5 short English sentences about your actual day.",
+        "Mention what you did, one time of day, one place, and one thing you ate, drank, studied, or wanted.",
+        "The AI will give you Somali words and phrase fragments, but not a full translation."
+      ],
+      "englishPlaceholder": "Example: Today I woke up early. I drank coffee. I went to work. In the evening I studied Somali. I want to sleep soon.",
+      "somaliPlaceholder": "Use the fragments to write 4-5 very short Somali sentences about your real day.",
+      "scaffoldNotes": [
+        "Focus on daily routine, time words, food or drink, places, and simple wants.",
+        "Give partial Somali fragments that help the learner build their own simple sentences.",
+        "Prefer beginner forms such as maanta, subaxdii, galabtii, waan, waxaan, rabaa, tagay, cunay, cabbay, bartay."
+      ],
+      "gradingNotes": [
+        "Compare the Somali draft to the learner's English notes, not to a fixed sample.",
+        "Reward simple Somali that preserves the learner's actual meaning.",
+        "A 4/5 can be short and beginner-like if it is understandable and covers most English notes.",
+        "Scores below 4 must include concrete hints for revision."
+      ],
+      "starterFragments": [
+        {
+          "somali": "maanta",
+          "english": "today",
+          "note": "Good for starting a day sentence."
+        },
+        {
+          "somali": "subaxdii",
+          "english": "in the morning",
+          "note": "Use for morning activities."
+        },
+        {
+          "somali": "galabtii",
+          "english": "in the afternoon/evening",
+          "note": "Use for later in the day."
+        },
+        {
+          "somali": "waan kacay",
+          "english": "I woke up / got up",
+          "note": "Simple first-person past action."
+        },
+        {
+          "somali": "waan tagay",
+          "english": "I went",
+          "note": "Add a place after it."
+        },
+        {
+          "somali": "guriga",
+          "english": "home / the house",
+          "note": "A useful place word."
+        },
+        {
+          "somali": "shaqada",
+          "english": "work",
+          "note": "Use if work is part of your day."
+        },
+        {
+          "somali": "dugsiga",
+          "english": "school",
+          "note": "Use for school or class."
+        },
+        {
+          "somali": "waan cunay",
+          "english": "I ate",
+          "note": "Add food after it."
+        },
+        {
+          "somali": "waan cabbay",
+          "english": "I drank",
+          "note": "Add tea, water, or coffee after it."
+        },
+        {
+          "somali": "shaah",
+          "english": "tea",
+          "note": "A common drink word."
+        },
+        {
+          "somali": "biyo",
+          "english": "water",
+          "note": "A simple drink word."
+        },
+        {
+          "somali": "Somali baan bartay",
+          "english": "I studied/learned Somali",
+          "note": "Useful for a study sentence."
+        },
+        {
+          "somali": "waxaan rabaa",
+          "english": "I want",
+          "note": "Add a simple noun or action."
+        }
+      ]
+    }
+  ]
+}

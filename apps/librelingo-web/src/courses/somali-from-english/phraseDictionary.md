@@ -2,7 +2,7 @@
 
 Generated from the live Somali challenge files plus a curated supplement from the OCR-cleaned phrasebook EPUB.
 
-Total entries: 228
+Total entries: 252
 
 | English | Somali |
 | --- | --- |
@@ -11,6 +11,7 @@ Total entries: 228
 | And peace be upon you. | Calaykum assalaam. |
 | Are things well? | Ma nabad baa? |
 | Are you coughing? | Ma qufcaysaa? |
+| Are you hungry before lunch? | Ma gaajaysan tahay qado ka hor? |
 | Are you ready? | Ma diyaar tahay? |
 | Armed groups fought. | Kooxo hubaysan way dagaallameen. |
 | At that time, Somali sultanates existed. | Markaas saldanado Soomaaliyeed baa jiray. |
@@ -30,9 +31,11 @@ Total entries: 228
 | Do you want a room with a bathroom? | Qol musqulleh ma rabtaa? |
 | Do you want something to eat? | Ma rabtaa wax aad cunto? |
 | Do you want to stay here? | Halkan ma joogi rabtaa? |
+| Do you want water with lunch? | Qado biyo ma doonaysaa? |
 | Excuse me. | Raalli ahow. |
 | For here or to go? | Halkan mise qaadasho? |
 | Go straight along this road. | Waddadan si toos ah u raac. |
+| Go straight on this road. | Waddadan si toos ah u raac. |
 | Good afternoon, Canab. | Canabay, galab wanaagsan. |
 | Good day. | Maalin wanaagsan. |
 | Good evening. | Habeen wanaagsan. |
@@ -42,6 +45,8 @@ Total entries: 228
 | Goodbye. | Nabad gelyo. |
 | Guests are given tea. | Martida shaah baa la siiyaa. |
 | Guests are important. | Martidu waa muhiim. |
+| He came from the journey. | Safarka ayuu ka yimid. |
+| He will check the tires soon. | Shaagagga jeeg garayn doonaa dhowaan. |
 | Here is your money. | waa tan lacagtaadii |
 | Here you can speak Somali. | halkan af soomaaliga baad ku hadli kartaa |
 | Hi Yoonis, are things well? | Waryaa Yoonis, ma nabad baa? |
@@ -49,12 +54,15 @@ Total entries: 228
 | How are the children? | Carruurta ka warran? |
 | How are you all? | Is ka warrama. |
 | How do you spell your name? | Sidee u higgaadisaa magacaaga? |
+| How is my mother? | Hooyaday ka warran? |
 | How is the family? | Qoyska ka warran? |
+| How is your family? | Qoyskaaga ka warran? |
 | How long do I have to wait? | Intee in le'eg baan sugayaa? |
 | How much will it cost? | Imisa weeye qiimuhu? |
 | I am called Khadija. | Khadija baa la yidhaahdaa. |
 | I am drinking water. | Biyo baan cabbayaa. |
 | I am glad that you are a doctor. | Waan ku faraxsanahay inaad dhakhtar tahay. |
+| I am going to the market today. | Maanta suuqa baan tagayaa. |
 | I am going to the market. | Suuqa baan tagayaa. |
 | I am going to the post office. | Boosta baan tagayaa. |
 | I am hungry. | Waan gaajaysanahay. |
@@ -65,6 +73,7 @@ Total entries: 228
 | I am thirsty. | Waan harraadsanahay. |
 | I am well, thank you. | Waa la fiicanyahay, mahadsanid. |
 | I came from London. | Landhan baan ka imi. |
+| I came to the village today. | Tuulada imid maanta. |
 | I checked the tyres. | Shaagagga waan jeeg gareeyay. |
 | I don't understand. | Ma fahmin. |
 | I feel dizzy. | Waan warwareerayaa. |
@@ -74,6 +83,7 @@ Total entries: 228
 | I have come from London. | Landhan ayaan ka imi. |
 | I have eight books. | Waxaan hayaa siddeed buug. |
 | I have lost my passport! | Baasaboorkayga baa iga lumay! |
+| I have one sibling. | Hal walaal baan leeyahay. |
 | I know a little French. | Af Faransiiska in yar ayaan ka aqaan. |
 | I learned it in London. | Landhan ayaan ku bartay. |
 | I put petrol in the car. | Gaadhiga bansiin waan ku shubay. |
@@ -87,9 +97,11 @@ Total entries: 228
 | I want to change these dollars into Djibouti francs. | Doollarkan ayaan rabaa inaan u beddelo faranka Djibouti. |
 | I want to go to the bank. | Waxaan doonayaa inaan bangiga tago. |
 | I will count it. | Waan tirin doonaa. |
+| I will go on the journey tomorrow. | Berri safarka tegi doonaa. |
 | I would like a cup of hot tea. | Waxaan rabaa koob kulul oo shaah ah. |
 | I would like a room. | Qol baan doonayaa. |
 | I would like a single room. | Waxaan rabaa qol keligiis ah. |
+| I would like rice and meat. | Bariis iyo hilib baan rabaa. |
 | I would like to see the manager, please. | Waxaan rabaa inaan arko maamulaha, fadlan. |
 | In 1960, the two parts united. | 1960 labadii qaybood way midoobeen. |
 | In 1991, the government collapsed. | 1991 dowladdii way burburtay. |
@@ -111,10 +123,12 @@ Total entries: 228
 | Many ships used to arrive. | Maraakiib badan way iman jireen. |
 | May I have a cup of coffee? | Ma isiin kartaa koob bun ah? |
 | May I help you? | Ma ku caawiyaa? |
+| Meat is ready for dinner. | Hilib oo casho u diyaar ah. |
 | Mogadishu was a large trade city. | Muqdisho waxay ahayd magaalo ganacsi oo weyn. |
 | Much food came to the market. | Cunto badan suuqa bay timid. |
 | My brother is at home. | Walaalkay waa guriga. |
 | My father is here. | Aabbahay waa halkan. |
+| My father is tall. | Aabbahay waa dheer yahay. |
 | My goodness, it is hot. | Wallaah waa kulayl. |
 | My head hurts. | Madaxa ayaa i xanuunaya. |
 | My mother is here. | Hooyaday waa halkan. |
@@ -147,6 +161,7 @@ Total entries: 228
 | Speak to Bill, he is calling you from Djibouti. | Bill la hadal, Djibouti buu kaaga soo dirayaa. |
 | Sue has arrived. | Sue ayaa timid. |
 | Sugar is very sweet. | Sonkor aad bay u macaan tahay. |
+| Sweet tea for the guest. | Shaah oo martida u macaan. |
 | Take care. | Is ilaali. |
 | Take me to the Djibouti Hotel. | Hudheel Djibouti i gee. |
 | Tea is served. | Shaah waa la bixiyaa. |
@@ -156,9 +171,12 @@ Total entries: 228
 | Thank you. How are you? | Mahadsanid. Is ka warran. |
 | Thank you. You are welcome. | Mahadsanid. Adaa mudan. |
 | The airport is far. | Garoonka dayuuradaha waa fog yahay. |
+| The children are at school. | Carruurtu dugsiga bay joogaan. |
 | The children are going to school. | Carruurtu dugsiga way tagayaan. |
 | The children are with the family. | Carruurtu qoyska bay joogaan. |
 | The family eats dinner together. | Qoyska casho bay wada cunaan. |
+| The family is sitting at the dinner table. | Qoyska oo miiska cashada fadhiya. |
+| The family is well. | Qoysku waa nabad. |
 | The government is rebuilding the country. | Dowladdu dib bay u dhisaysaa dalka. |
 | The hotel is here. | hudheelku halkan buu ku yaal |
 | The knife is new. | Mindidu waa cusub tahay. |
@@ -175,6 +193,8 @@ Total entries: 228
 | There is one by the post office. | Boostada agteeda mid baa jira. |
 | There they will spend the night. | halkaasna way ku baryi doonaan |
 | They are drinking tea and eating bread. | Shaah way cabbayaan, kibisna way cunayaan. |
+| They came from the village last night. | Tuulada ayay ka yimaaddeen xalay. |
+| They will arrive at the village later. | Tuulada iman doonaan goor dambe. |
 | Things are well. | Waa nabad. |
 | Things are well. And you? | Waa nabad. Maxaad sheegtay? |
 | This book is small. | Buuggan waa yar yahay. |
@@ -193,8 +213,11 @@ Total entries: 228
 | Tomorrow is Tuesday. | Berrito waa salaasa. |
 | Tomorrow the students will go to the university. | berrito ardeydu waxay tegi doonaan jaamacadda |
 | Traders used to come from Egypt and Arabia. | Ganacsato waxay ka iman jireen Masar iyo Carabta. |
+| Turn left. | Xagga bidixda u leexo. |
+| Turn right. | Xagga midigta u leexo. |
 | Turn to the left. | Xagga bidixda u leexo. |
 | Turn to the right. | Xagga midigta u leexo. |
+| Wait a little. | In yar u kaadi. |
 | Wait a moment. | In yar u kaadi. |
 | Water must be taken. | Biyo waa in la qaado. |
 | We are leaving today. | Maanta baa la baxayaa. |
@@ -212,6 +235,7 @@ Total entries: 228
 | What is the checkout time? | Goorma ayaa laga baxayaa? |
 | What is your name? | Magacaa adiga? |
 | What is your name? | Magacaa? |
+| Where are you going after tea? | Shaah ka dib xaggee baad tagaysaa? |
 | Where are you going? | Xaggee baad tagaysaa? |
 | Where do I pay? | Xagee ka bixiyaa? |
 | Where do you want to go? | Xaggee baad tegi rabtaa? |

@@ -2,21 +2,22 @@
 
 Generated from the Somali YAML skills, lesson draft core vocabulary, a supplemental word list, and compact single-word mappings already present in the live challenge files.
 
-Total entries: 282
+Total entries: 335
 
 | English | Somali |
 | --- | --- |
 | about | ka |
-| afternoon | galab |
+| afternoon | galab / galabtii |
 | airport | garoonka dayuuradaha |
 | all | dan / dhammaan |
 | am | ahay |
 | animal | xoolo |
 | are | waa / yihiin |
 | ash | danbas |
+| ate | cunay |
 | back | dabar |
 | bad | xun |
-| bank | bangi |
+| bank | bangi / bangiga |
 | bark (of a tree) | qolfo |
 | beautiful | quruxsan |
 | belly | calool |
@@ -30,23 +31,31 @@ Total entries: 282
 | bread | kibis |
 | breakfast | quraac |
 | breast | xabad |
-| Bring | keen |
+| bring | keen |
 | Britain | Britain |
 | brother | walaal |
 | called | yidhaahdaa |
 | came | imi |
 | Canab | Canabay |
+| car | gaadhi / gaadhiga |
 | cheap | jaban |
 | child | cunug |
-| children | carruur |
+| children | carruur / carruurta / carruurtu |
+| civil war | dagaal sokeeye |
 | cloud | cadhar / daruur |
 | cold | qabow |
 | come | soo |
 | correct | sax |
+| cough | qufac |
+| cup | koob |
 | day | maalin |
-| Dinner | casho |
+| dinner | cashada / casho |
 | dirty | wasakh |
+| doctor | dhakhtar |
 | dog | ay |
+| dollar | doollar / doollarkan |
+| drank | cabbay |
+| drink | cabbitaan |
 | dry | qalaayl |
 | dust | bus |
 | ear | deg |
@@ -56,11 +65,13 @@ Total entries: 282
 | evening | habeen |
 | expensive | qaali |
 | eye | il |
-| family | qoys |
+| family | qoys / qoyska |
 | far | fog |
 | fat (noun) | baruur |
 | father | aabbe / aabo |
 | feather | baal |
+| federal | federaal |
+| fever | qandho |
 | few | wax yer |
 | fine | fiicanyahay |
 | fingernail | ciddi |
@@ -68,6 +79,7 @@ Total entries: 282
 | fish | malay |
 | five | shan |
 | flower | ubax |
+| food | cuntada / cuntadani / cunto |
 | foot | cag |
 | forest | duur |
 | four | afar |
@@ -75,37 +87,46 @@ Total entries: 282
 | from | ka |
 | fruit | furuut / miro |
 | full | buux |
+| girl | gabadh |
 | go | tag |
 | going | tagaya |
 | good | fiican / wanaagsan |
 | goodbye | nabad gelyo |
+| government | dowlad / dowladda |
 | grass | caws |
 | green | cagaar / cagaaran |
+| guest | marti / martida |
 | Guests | Martida / Martidu |
 | hair | timo |
 | hand | gacan |
 | he | asaga / isagu |
 | head | madax |
+| headache | madax xanuun |
+| health | caafimaad / caafimaadka |
 | heart | galb / wadno |
 | heavy | culeys |
 | here | halkan / inta |
 | horn | gees |
-| hotel | hudheel |
-| house | guri |
+| hot | kulul |
+| hotel | hudheel / hudheelka |
+| house | guri / guriga |
 | how | is / see |
 | hungry | gaajaysan |
 | husband | nin |
+| hyenas | waraabayaal |
 | I | aniga / baan |
 | ice | baraf |
 | impersonal | la |
+| important | muhiim |
 | including | ku jira |
 | is | waa |
 | Islam | Islaamku |
 | Italy | Talyaani |
+| journey | safar / safarka |
 | Khadija | Khadija |
 | knee | jilib |
 | leaf | caleen |
-| left | bidix |
+| left | bidix / bidixda |
 | leg | lug |
 | liver | beer |
 | London | Landhan |
@@ -117,20 +138,27 @@ Total entries: 282
 | man (human being) | beni adam |
 | many | badan |
 | marker | baa |
-| market | suuq |
+| market | suuq / suuqa |
+| meaning | macne |
 | meat | hilib |
 | milk | caano |
 | Mogadishu | Muqdisho |
 | Monday | isniin |
+| money | lacag / lacagta |
 | month | bil |
 | moon | dayax |
-| morning | subax |
+| morning | subax / subaxdii / subaxnimo |
 | mother | hooyo |
 | mountain | buur |
 | mouth | af |
 | my | kayga |
-| name | magac |
-| Names | Magacyadu |
+| my brother | walaalkay |
+| my father | aabbahay |
+| my mother | hooyaday |
+| my name | magacaygu |
+| my sister | walaashay |
+| name | magac / magaca |
+| names | magacyada / Magacyadu / magacyo |
 | narrow | ciriiri |
 | near | dhow |
 | neck | duun |
@@ -140,33 +168,41 @@ Total entries: 282
 | nine | sagaal |
 | nose | san |
 | not | ma |
+| object | layeele |
 | old | duug |
 | one | hal / kow |
 | Open | fur |
 | other | kale |
+| passport | baasaboor / baasaboorka / baasaboorkaaga |
 | peace | nabad |
 | People | Dadku |
+| plate | saxan |
 | Please | fadlan |
 | plural | jamac |
+| post office | boosta / boosto |
 | question | ma |
 | rain | roob |
+| ready | diyaar |
 | red | cas / casaan / gaduud |
-| Regions | Gobollo |
+| region | gobol |
+| regions | Gobollo |
 | rice | bariis |
 | right | midig |
 | river | webi |
 | road | jid / waddo |
+| room | qol / qolka |
 | rope | xarig |
 | rotten | balal |
 | safety | gelyo |
 | salt | cusbo |
 | Saturday | sabti |
+| school | dugsi / dugsiga |
 | sea | bad |
 | seed | miro |
 | seven | toddoba |
 | she | iyadu |
 | short | gaaban |
-| Sibling | Walaal |
+| sibling | Walaal |
 | sister | walaal |
 | six | lix |
 | skin | jir |
@@ -181,15 +217,22 @@ Total entries: 282
 | stick | ul |
 | stone | dagax |
 | straight | toos |
-| street | waddo |
+| straight ahead | si toos ah |
+| street | waddada / waddadan / waddo |
+| subject | falaha |
 | sugar | sonkor |
+| sultanate | saldanad |
+| sultanates | saldanado |
 | sun | cadceedeed / qorrax |
 | Sunday | axad |
 | sweet | macaan |
+| table | miis / miiska |
 | tail | seyn |
 | tall | dheer |
 | tea | Shaah |
+| telephone | telefoon / telefoonka |
 | ten | toban |
+| thank you | mahadsanid |
 | that | kaas |
 | there | halkaas / halkaasna / xaggaas |
 | they | ayaga / iyaga |
@@ -199,6 +242,8 @@ Total entries: 282
 | this | kan |
 | three | saddex / sadex |
 | Thursday | khamiis |
+| tires | shaagag / shaagagga |
+| to ask | weydiin / weydiinayaa |
 | to bite | qaniin |
 | to blow | afuuf |
 | to breathe | neefsan |
@@ -216,6 +261,7 @@ Total entries: 282
 | to flow | soocan |
 | to fly | duulid |
 | to give | siin |
+| to greet | salaam / salaamayaa |
 | to hear | maqlid |
 | to hit | ku dufan |
 | to hold | hay |
@@ -252,22 +298,28 @@ Total entries: 282
 | to wash | dhiqid |
 | to wipe | tirtirid |
 | today | Maanta |
-| tomorrow | berrito |
+| tomorrow | berri / berrito |
 | tongue (organ) | carab |
 | tooth | ilig |
-| Traders | Ganacsato |
+| trade | ganacsi |
+| trader | ganacsade |
+| traders | ganacsatadu / Ganacsato |
 | tree | geed |
 | Tuesday | salaasa |
 | two | laba / labo |
 | vegetables | khudrad |
+| verb | fal |
+| village | tuulada / tuulo |
+| war | dagaal |
 | warm | dugsi |
 | water | biyo |
 | we | anaga / annaga |
 | Wednesday | arbaca |
 | week | toddobaad |
 | welcome | dhowow / soo dhowow |
-| well | fiican |
+| well | fiican / nabad |
 | well-being | nabad |
+| went | tegey |
 | wet | qoyaan |
 | what | maxaa |
 | when | markee |
@@ -279,10 +331,11 @@ Total entries: 282
 | wind | dabayl |
 | wing | baal |
 | woman | naag |
+| word | eray |
 | year | sanad |
 | yellow | huruud / jaale |
 | Yes | haa |
-| yesterday | shaleyto |
+| yesterday | shalay / shalayto / shaleyto |
 | Yoonis | Yoonisow |
 | you | adiga |
 | you (plural) | idinka |

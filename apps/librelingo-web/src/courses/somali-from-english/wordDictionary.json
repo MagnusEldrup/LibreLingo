@@ -11,11 +11,13 @@
   {
     "english": "afternoon",
     "somali": [
-      "galab"
+      "galab",
+      "galabtii"
     ],
     "sources": [
       "draft:01_hello_and_goodbye.md",
       "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json",
       "yaml:time_greetings.yaml"
     ]
   },
@@ -25,7 +27,8 @@
       "garoonka dayuuradaha"
     ],
     "sources": [
-      "draft:08_places_and_directions.md"
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -80,6 +83,15 @@
     ]
   },
   {
+    "english": "ate",
+    "somali": [
+      "cunay"
+    ],
+    "sources": [
+      "yaml:word_order_basics.yaml"
+    ]
+  },
+  {
     "english": "back",
     "somali": [
       "dabar"
@@ -100,10 +112,12 @@
   {
     "english": "bank",
     "somali": [
-      "bangi"
+      "bangi",
+      "bangiga"
     ],
     "sources": [
-      "draft:08_places_and_directions.md"
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -205,7 +219,8 @@
       "kibis"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -214,7 +229,8 @@
       "quraac"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -227,12 +243,13 @@
     ]
   },
   {
-    "english": "Bring",
+    "english": "bring",
     "somali": [
       "keen"
     ],
     "sources": [
-      "challenge:dinner-vocabulary.json:dv-6"
+      "challenge:dinner-vocabulary.json:dv-6",
+      "yaml:word_order_basics.yaml"
     ]
   },
   {
@@ -281,6 +298,16 @@
     ]
   },
   {
+    "english": "car",
+    "somali": [
+      "gaadhi",
+      "gaadhiga"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "cheap",
     "somali": [
       "jaban"
@@ -301,10 +328,22 @@
   {
     "english": "children",
     "somali": [
-      "carruur"
+      "carruur",
+      "carruurta",
+      "carruurtu"
     ],
     "sources": [
-      "draft:04_family_members.md"
+      "draft:04_family_members.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "civil war",
+    "somali": [
+      "dagaal sokeeye"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -345,6 +384,24 @@
     ]
   },
   {
+    "english": "cough",
+    "somali": [
+      "qufac"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "cup",
+    "somali": [
+      "koob"
+    ],
+    "sources": [
+      "yaml:word_order_basics.yaml"
+    ]
+  },
+  {
     "english": "day",
     "somali": [
       "maalin"
@@ -357,12 +414,14 @@
     ]
   },
   {
-    "english": "Dinner",
+    "english": "dinner",
     "somali": [
+      "cashada",
       "casho"
     ],
     "sources": [
-      "challenge:dinner-vocabulary.json:dv-7"
+      "challenge:dinner-vocabulary.json:dv-7",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -375,9 +434,46 @@
     ]
   },
   {
+    "english": "doctor",
+    "somali": [
+      "dhakhtar"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "dog",
     "somali": [
       "ay"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "dollar",
+    "somali": [
+      "doollar",
+      "doollarkan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "drank",
+    "somali": [
+      "cabbay"
+    ],
+    "sources": [
+      "yaml:word_order_basics.yaml"
+    ]
+  },
+  {
+    "english": "drink",
+    "somali": [
+      "cabbitaan"
     ],
     "sources": [
       "supplement:wordDictionarySupplement.json"
@@ -445,6 +541,7 @@
     "sources": [
       "draft:01_hello_and_goodbye.md",
       "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json",
       "yaml:time_greetings.yaml"
     ]
   },
@@ -469,10 +566,12 @@
   {
     "english": "family",
     "somali": [
-      "qoys"
+      "qoys",
+      "qoyska"
     ],
     "sources": [
-      "draft:04_family_members.md"
+      "draft:04_family_members.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -509,6 +608,24 @@
     "english": "feather",
     "somali": [
       "baal"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "federal",
+    "somali": [
+      "federaal"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "fever",
+    "somali": [
+      "qandho"
     ],
     "sources": [
       "supplement:wordDictionarySupplement.json"
@@ -579,6 +696,17 @@
     ]
   },
   {
+    "english": "food",
+    "somali": [
+      "cuntada",
+      "cuntadani",
+      "cunto"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "foot",
     "somali": [
       "cag"
@@ -612,7 +740,8 @@
       "jimce"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -641,6 +770,15 @@
     ],
     "sources": [
       "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "girl",
+    "somali": [
+      "gabadh"
+    ],
+    "sources": [
+      "yaml:word_order_basics.yaml"
     ]
   },
   {
@@ -682,7 +820,18 @@
     ],
     "sources": [
       "draft:01_hello_and_goodbye.md",
+      "supplement:wordDictionarySupplement.json",
       "yaml:leave_takings.yaml"
+    ]
+  },
+  {
+    "english": "government",
+    "somali": [
+      "dowlad",
+      "dowladda"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -702,6 +851,16 @@
     ],
     "sources": [
       "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "guest",
+    "somali": [
+      "marti",
+      "martida"
+    ],
+    "sources": [
       "supplement:wordDictionarySupplement.json"
     ]
   },
@@ -755,6 +914,25 @@
     ]
   },
   {
+    "english": "headache",
+    "somali": [
+      "madax xanuun"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "health",
+    "somali": [
+      "caafimaad",
+      "caafimaadka"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "heart",
     "somali": [
       "galb",
@@ -795,21 +973,34 @@
     ]
   },
   {
-    "english": "hotel",
+    "english": "hot",
     "somali": [
-      "hudheel"
+      "kulul"
     ],
     "sources": [
-      "draft:08_places_and_directions.md"
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "hotel",
+    "somali": [
+      "hudheel",
+      "hudheelka"
+    ],
+    "sources": [
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
     "english": "house",
     "somali": [
-      "guri"
+      "guri",
+      "guriga"
     ],
     "sources": [
-      "draft:08_places_and_directions.md"
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -829,7 +1020,8 @@
       "gaajaysan"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -839,6 +1031,15 @@
     ],
     "sources": [
       "draft:04_family_members.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "hyenas",
+    "somali": [
+      "waraabayaal"
+    ],
+    "sources": [
       "supplement:wordDictionarySupplement.json"
     ]
   },
@@ -872,6 +1073,15 @@
     "sources": [
       "yaml:introductions.yaml",
       "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "important",
+    "somali": [
+      "muhiim"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -912,6 +1122,16 @@
     ]
   },
   {
+    "english": "journey",
+    "somali": [
+      "safar",
+      "safarka"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "Khadija",
     "somali": [
       "Khadija"
@@ -943,10 +1163,12 @@
   {
     "english": "left",
     "somali": [
-      "bidix"
+      "bidix",
+      "bidixda"
     ],
     "sources": [
-      "draft:08_places_and_directions.md"
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -975,7 +1197,8 @@
     "sources": [
       "challenge:introductions.json:in-10",
       "draft:03_my_name_is.md",
-      "yaml:introductions.yaml"
+      "yaml:introductions.yaml",
+      "yaml:word_order_basics.yaml"
     ]
   },
   {
@@ -1003,7 +1226,8 @@
       "qado"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1012,7 +1236,8 @@
       "nin"
     ],
     "sources": [
-      "draft:04_family_members.md"
+      "draft:04_family_members.md",
+      "yaml:word_order_basics.yaml"
     ]
   },
   {
@@ -1055,10 +1280,21 @@
   {
     "english": "market",
     "somali": [
-      "suuq"
+      "suuq",
+      "suuqa"
     ],
     "sources": [
-      "draft:08_places_and_directions.md"
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "meaning",
+    "somali": [
+      "macne"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1077,7 +1313,8 @@
       "caano"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1095,7 +1332,18 @@
       "isniin"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "money",
+    "somali": [
+      "lacag",
+      "lacagta"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1104,7 +1352,8 @@
       "bil"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1119,11 +1368,14 @@
   {
     "english": "morning",
     "somali": [
-      "subax"
+      "subax",
+      "subaxdii",
+      "subaxnimo"
     ],
     "sources": [
       "draft:01_hello_and_goodbye.md",
       "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json",
       "yaml:time_greetings.yaml"
     ]
   },
@@ -1165,22 +1417,72 @@
     ]
   },
   {
+    "english": "my brother",
+    "somali": [
+      "walaalkay"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "my father",
+    "somali": [
+      "aabbahay"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "my mother",
+    "somali": [
+      "hooyaday"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "my name",
+    "somali": [
+      "magacaygu"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "my sister",
+    "somali": [
+      "walaashay"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "name",
     "somali": [
-      "magac"
+      "magac",
+      "magaca"
     ],
     "sources": [
       "draft:03_my_name_is.md",
+      "supplement:wordDictionarySupplement.json",
       "yaml:introductions.yaml"
     ]
   },
   {
-    "english": "Names",
+    "english": "names",
     "somali": [
-      "Magacyadu"
+      "magacyada",
+      "Magacyadu",
+      "magacyo"
     ],
     "sources": [
-      "challenge:history-somali-names-families.json:hnf-4"
+      "challenge:history-somali-names-families.json:hnf-4",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1271,6 +1573,15 @@
     ]
   },
   {
+    "english": "object",
+    "somali": [
+      "layeele"
+    ],
+    "sources": [
+      "yaml:word_order_basics.yaml"
+    ]
+  },
+  {
     "english": "old",
     "somali": [
       "duug"
@@ -1309,6 +1620,17 @@
     ]
   },
   {
+    "english": "passport",
+    "somali": [
+      "baasaboor",
+      "baasaboorka",
+      "baasaboorkaaga"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "peace",
     "somali": [
       "nabad"
@@ -1326,6 +1648,15 @@
     ],
     "sources": [
       "challenge:history-everyday-hospitality.json:heh-8"
+    ]
+  },
+  {
+    "english": "plate",
+    "somali": [
+      "saxan"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1347,6 +1678,16 @@
     ]
   },
   {
+    "english": "post office",
+    "somali": [
+      "boosta",
+      "boosto"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "question",
     "somali": [
       "ma"
@@ -1365,6 +1706,15 @@
     ]
   },
   {
+    "english": "ready",
+    "somali": [
+      "diyaar"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "red",
     "somali": [
       "cas",
@@ -1377,12 +1727,22 @@
     ]
   },
   {
-    "english": "Regions",
+    "english": "region",
+    "somali": [
+      "gobol"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "regions",
     "somali": [
       "Gobollo"
     ],
     "sources": [
-      "challenge:history-recovery.json:hr-4"
+      "challenge:history-recovery.json:hr-4",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1391,7 +1751,9 @@
       "bariis"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json",
+      "yaml:word_order_basics.yaml"
     ]
   },
   {
@@ -1421,6 +1783,16 @@
     ],
     "sources": [
       "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "room",
+    "somali": [
+      "qol",
+      "qolka"
+    ],
+    "sources": [
       "supplement:wordDictionarySupplement.json"
     ]
   },
@@ -1466,7 +1838,18 @@
       "sabti"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "school",
+    "somali": [
+      "dugsi",
+      "dugsiga"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1516,12 +1899,13 @@
     ]
   },
   {
-    "english": "Sibling",
+    "english": "sibling",
     "somali": [
       "Walaal"
     ],
     "sources": [
-      "challenge:history-somali-names-families.json:hnf-8"
+      "challenge:history-somali-names-families.json:hnf-8",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1654,12 +2038,33 @@
     ]
   },
   {
+    "english": "straight ahead",
+    "somali": [
+      "si toos ah"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "street",
     "somali": [
+      "waddada",
+      "waddadan",
       "waddo"
     ],
     "sources": [
-      "draft:08_places_and_directions.md"
+      "draft:08_places_and_directions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "subject",
+    "somali": [
+      "falaha"
+    ],
+    "sources": [
+      "yaml:word_order_basics.yaml"
     ]
   },
   {
@@ -1668,7 +2073,26 @@
       "sonkor"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "sultanate",
+    "somali": [
+      "saldanad"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "sultanates",
+    "somali": [
+      "saldanado"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1687,7 +2111,8 @@
       "axad"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1696,7 +2121,18 @@
       "macaan"
     ],
     "sources": [
-      "draft:06_colours_and_descriptions.md"
+      "draft:06_colours_and_descriptions.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "table",
+    "somali": [
+      "miis",
+      "miiska"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1724,7 +2160,19 @@
     ],
     "sources": [
       "challenge:history-everyday-hospitality.json:heh-4",
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json",
+      "yaml:word_order_basics.yaml"
+    ]
+  },
+  {
+    "english": "telephone",
+    "somali": [
+      "telefoon",
+      "telefoonka"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1734,6 +2182,15 @@
     ],
     "sources": [
       "draft:05_numbers_1_to_10.md"
+    ]
+  },
+  {
+    "english": "thank you",
+    "somali": [
+      "mahadsanid"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1793,7 +2250,8 @@
       "harraadsan"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1822,7 +2280,28 @@
       "khamiis"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "tires",
+    "somali": [
+      "shaagag",
+      "shaagagga"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to ask",
+    "somali": [
+      "weydiin",
+      "weydiinayaa"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -1974,6 +2453,16 @@
     "english": "to give",
     "somali": [
       "siin"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "to greet",
+    "somali": [
+      "salaam",
+      "salaamayaa"
     ],
     "sources": [
       "supplement:wordDictionarySupplement.json"
@@ -2301,17 +2790,21 @@
     ],
     "sources": [
       "challenge:history-recovery.json:hr-2",
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json",
+      "yaml:word_order_basics.yaml"
     ]
   },
   {
     "english": "tomorrow",
     "somali": [
+      "berri",
       "berrito"
     ],
     "sources": [
       "challenge:time-and-days.json:td-10",
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -2333,12 +2826,32 @@
     ]
   },
   {
-    "english": "Traders",
+    "english": "trade",
     "somali": [
+      "ganacsi"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "trader",
+    "somali": [
+      "ganacsade"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "traders",
+    "somali": [
+      "ganacsatadu",
       "Ganacsato"
     ],
     "sources": [
-      "challenge:history-ancient-trade.json:ha1-4"
+      "challenge:history-ancient-trade.json:ha1-4",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -2357,7 +2870,8 @@
     ],
     "sources": [
       "challenge:time-and-days.json:td-2",
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -2377,7 +2891,36 @@
       "khudrad"
     ],
     "sources": [
-      "draft:07_food_and_drink.md"
+      "draft:07_food_and_drink.md",
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "verb",
+    "somali": [
+      "fal"
+    ],
+    "sources": [
+      "yaml:word_order_basics.yaml"
+    ]
+  },
+  {
+    "english": "village",
+    "somali": [
+      "tuulada",
+      "tuulo"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
+    "english": "war",
+    "somali": [
+      "dagaal"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -2416,7 +2959,8 @@
       "arbaca"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -2425,7 +2969,8 @@
       "toddobaad"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json"
     ]
   },
   {
@@ -2436,16 +2981,19 @@
     ],
     "sources": [
       "draft:01_hello_and_goodbye.md",
+      "supplement:wordDictionarySupplement.json",
       "yaml:leave_takings.yaml"
     ]
   },
   {
     "english": "well",
     "somali": [
-      "fiican"
+      "fiican",
+      "nabad"
     ],
     "sources": [
       "draft:02_how_are_you.md",
+      "supplement:wordDictionarySupplement.json",
       "yaml:wellbeing.yaml"
     ]
   },
@@ -2457,6 +3005,15 @@
     "sources": [
       "draft:02_how_are_you.md",
       "yaml:wellbeing.yaml"
+    ]
+  },
+  {
+    "english": "went",
+    "somali": [
+      "tegey"
+    ],
+    "sources": [
+      "yaml:word_order_basics.yaml"
     ]
   },
   {
@@ -2565,6 +3122,15 @@
     ]
   },
   {
+    "english": "word",
+    "somali": [
+      "eray"
+    ],
+    "sources": [
+      "supplement:wordDictionarySupplement.json"
+    ]
+  },
+  {
     "english": "year",
     "somali": [
       "sanad"
@@ -2597,10 +3163,14 @@
   {
     "english": "yesterday",
     "somali": [
+      "shalay",
+      "shalayto",
       "shaleyto"
     ],
     "sources": [
-      "draft:09_time_and_days.md"
+      "draft:09_time_and_days.md",
+      "supplement:wordDictionarySupplement.json",
+      "yaml:word_order_basics.yaml"
     ]
   },
   {

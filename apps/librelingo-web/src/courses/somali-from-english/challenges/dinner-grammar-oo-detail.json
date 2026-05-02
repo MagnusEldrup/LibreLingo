@@ -91,40 +91,36 @@
           "id": "dgod-practice-1",
           "label": "family",
           "prompt": "the family sitting at the dinner table",
-          "rule": "Use `oo` to add the dinner-table action.",
+          "rule": "Use `oo` to add the dinner-table action. Do not repeat the plain study example.",
           "answers": [
-            "qoyska oo miiska cashada fadhiya",
-            "qoyska oo miiska fadhiya"
+            "qoyska oo miiska cashada fadhiya"
           ]
         },
         {
           "id": "dgod-practice-2",
           "label": "food",
           "prompt": "meat that is ready for dinner",
-          "rule": "Use `oo` to add a dinner-related state.",
+          "rule": "Use `oo` to add a dinner-related state. Do not repeat the plain study example.",
           "answers": [
-            "hilib oo casho u diyaar ah",
-            "hilib oo diyaar ah"
+            "hilib oo casho u diyaar ah"
           ]
         },
         {
           "id": "dgod-practice-3",
           "label": "drink",
           "prompt": "sweet tea for the guest",
-          "rule": "Use `oo` with the tea phrase from the dinner lesson.",
+          "rule": "Use `oo` with the tea phrase from the dinner lesson. Do not repeat the plain study example.",
           "answers": [
-            "shaah oo martida u macaan",
-            "shaah oo macaan"
+            "shaah oo martida u macaan"
           ]
         },
         {
           "id": "dgod-practice-4",
           "label": "guest",
           "prompt": "a guest sitting at the dinner table",
-          "rule": "Use `oo` to connect the guest and the dinner-table action.",
+          "rule": "Use `oo` to connect the guest and the dinner-table action. Do not repeat the plain study example.",
           "answers": [
-            "marti oo miiska cashada fadhida",
-            "marti oo miiska fadhida"
+            "marti oo miiska cashada fadhida"
           ]
         }
       ]
