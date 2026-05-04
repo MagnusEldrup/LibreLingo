@@ -21,9 +21,14 @@ type CourseDailyActivity = {
     challengeCountsByDate: Record<string, number>
 }
 
+type CourseDailyLessonActivity = {
+    lessonCountsByDate: Record<string, number>
+}
+
 export type ProgressStore = {
     skills: Record<string, StoredSkillProgress>
     dailyActivityByCourse: Record<string, CourseDailyActivity>
+    dailyLessonActivityByCourse: Record<string, CourseDailyLessonActivity>
 }
 
 export type CourseProgressSummary = {
@@ -36,7 +41,7 @@ export type CourseProgressSummary = {
     completedRuns: number
     currentDailyStreak: number
     bestDailyStreak: number
-    todayCompletedChallenges: number
+    todayCompletedLessons: number
     dailyGoal: number
     todayGoalReached: boolean
     lastPlayedAt?: string
@@ -62,7 +67,7 @@ function createEmptyCourseSummary(): CourseProgressSummary {
         completedRuns: 0,
         currentDailyStreak: 0,
         bestDailyStreak: 0,
-        todayCompletedChallenges: 0,
+        todayCompletedLessons: 0,
         dailyGoal: DAILY_STREAK_GOAL,
         todayGoalReached: false,
     }
@@ -76,6 +81,7 @@ function createEmptyStore(): ProgressStore {
     return {
         skills: {},
         dailyActivityByCourse: {},
+        dailyLessonActivityByCourse: {},
     }
 }
 
@@ -147,6 +153,7 @@ export function saveSkillProgress(
     progress: StoredSkillProgress,
     options?: {
         recordExerciseCompletion?: boolean
+        recordLessonCompletion?: boolean
         completedAt?: Date
     }
 ) {
@@ -159,6 +166,17 @@ export function saveSkillProgress(
 
         courseActivity.challengeCountsByDate[dateKey] =
             (courseActivity.challengeCountsByDate[dateKey] ?? 0) + 1
+    }
+
+    if (options?.recordLessonCompletion) {
+        const dateKey = getLocalDateKey(options.completedAt ?? new Date())
+        const courseActivity = getOrCreateCourseDailyLessonActivity(
+            store,
+            progress.courseId
+        )
+
+        courseActivity.lessonCountsByDate[dateKey] =
+            (courseActivity.lessonCountsByDate[dateKey] ?? 0) + 1
     }
 
     writeProgressStore(store)
@@ -253,6 +271,9 @@ function normalizeProgressStore(value: unknown): ProgressStore {
         dailyActivityByCourse: normalizeDailyActivityByCourse(
             candidate.dailyActivityByCourse
         ),
+        dailyLessonActivityByCourse: normalizeDailyLessonActivityByCourse(
+            candidate.dailyLessonActivityByCourse
+        ),
     }
 }
 
@@ -266,6 +287,9 @@ export function mergeProgressStores(
         },
         dailyActivityByCourse: {
             ...stored.dailyActivityByCourse,
+        },
+        dailyLessonActivityByCourse: {
+            ...stored.dailyLessonActivityByCourse,
         },
     }
 
@@ -288,6 +312,21 @@ export function mergeProgressStores(
             challengeCountsByDate: mergeDailyChallengeCounts(
                 storedActivity.challengeCountsByDate,
                 incomingActivity.challengeCountsByDate
+            ),
+        }
+    }
+
+    for (const [courseId, incomingActivity] of Object.entries(
+        incoming.dailyLessonActivityByCourse
+    )) {
+        const storedActivity = merged.dailyLessonActivityByCourse[courseId] ?? {
+            lessonCountsByDate: {},
+        }
+
+        merged.dailyLessonActivityByCourse[courseId] = {
+            lessonCountsByDate: mergeDailyChallengeCounts(
+                storedActivity.lessonCountsByDate,
+                incomingActivity.lessonCountsByDate
             ),
         }
     }
@@ -411,6 +450,27 @@ function normalizeDailyActivityByCourse(
     )
 }
 
+function normalizeDailyLessonActivityByCourse(
+    value: ProgressStore['dailyLessonActivityByCourse'] | undefined
+) {
+    if (!value || typeof value !== 'object') {
+        return {}
+    }
+
+    return Object.fromEntries(
+        Object.entries(value).map(([courseId, activity]) => [
+            courseId,
+            {
+                lessonCountsByDate:
+                    activity?.lessonCountsByDate &&
+                    typeof activity.lessonCountsByDate === 'object'
+                        ? activity.lessonCountsByDate
+                        : {},
+            },
+        ])
+    )
+}
+
 function getOrCreateCourseDailyActivity(store: ProgressStore, courseId: string) {
     const existingActivity = store.dailyActivityByCourse[courseId]
 
@@ -422,6 +482,23 @@ function getOrCreateCourseDailyActivity(store: ProgressStore, courseId: string) 
         challengeCountsByDate: {},
     }
     store.dailyActivityByCourse[courseId] = emptyActivity
+    return emptyActivity
+}
+
+function getOrCreateCourseDailyLessonActivity(
+    store: ProgressStore,
+    courseId: string
+) {
+    const existingActivity = store.dailyLessonActivityByCourse[courseId]
+
+    if (existingActivity) {
+        return existingActivity
+    }
+
+    const emptyActivity: CourseDailyLessonActivity = {
+        lessonCountsByDate: {},
+    }
+    store.dailyLessonActivityByCourse[courseId] = emptyActivity
     return emptyActivity
 }
 
@@ -521,23 +598,23 @@ function summarizeCourseDailyActivity(
     CourseProgressSummary,
     | 'currentDailyStreak'
     | 'bestDailyStreak'
-    | 'todayCompletedChallenges'
+    | 'todayCompletedLessons'
     | 'dailyGoal'
     | 'todayGoalReached'
 > {
-    const challengeCountsByDate =
-        store.dailyActivityByCourse[courseId]?.challengeCountsByDate ?? {}
+    const lessonCountsByDate =
+        store.dailyLessonActivityByCourse[courseId]?.lessonCountsByDate ?? {}
     const todayKey = getLocalDateKey(new Date())
-    const todayCompletedChallenges = challengeCountsByDate[todayKey] ?? 0
+    const todayCompletedLessons = lessonCountsByDate[todayKey] ?? 0
 
     return {
         currentDailyStreak: calculateCurrentDailyStreak(
-            challengeCountsByDate,
+            lessonCountsByDate,
             new Date()
         ),
-        bestDailyStreak: calculateBestDailyStreak(challengeCountsByDate),
-        todayCompletedChallenges,
+        bestDailyStreak: calculateBestDailyStreak(lessonCountsByDate),
+        todayCompletedLessons,
         dailyGoal: DAILY_STREAK_GOAL,
-        todayGoalReached: todayCompletedChallenges >= DAILY_STREAK_GOAL,
+        todayGoalReached: todayCompletedLessons >= DAILY_STREAK_GOAL,
     }
 }

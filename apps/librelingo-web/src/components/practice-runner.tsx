@@ -3474,7 +3474,7 @@ function createEmptyCourseSummary(): CourseProgressSummary {
         completedRuns: 0,
         currentDailyStreak: 0,
         bestDailyStreak: 0,
-        todayCompletedChallenges: 0,
+        todayCompletedLessons: 0,
         dailyGoal: 2,
         todayGoalReached: false,
     }
@@ -3639,6 +3639,7 @@ export default function PracticeRunner(props: Props) {
 
         saveSkillProgress(updatedProgress, {
             recordExerciseCompletion: updatesProgress,
+            recordLessonCompletion: isFinalChallenge,
             completedAt: completionTimestamp,
         })
         setSavedProgress(updatedProgress)
@@ -3697,8 +3698,8 @@ export default function PracticeRunner(props: Props) {
                                     </p>
                                     <p className="text-base leading-7 text-slate-600">
                                         {courseProgress.todayGoalReached
-                                            ? `Daily streak secured. You have completed ${courseProgress.todayCompletedChallenges} exercise${courseProgress.todayCompletedChallenges === 1 ? '' : 's'} today and your streak is now ${courseProgress.currentDailyStreak} day${courseProgress.currentDailyStreak === 1 ? '' : 's'}.`
-                                            : `You are ${courseProgress.todayCompletedChallenges}/${courseProgress.dailyGoal} of the way to today’s streak goal.`}
+                                            ? `Daily streak secured. You finished ${courseProgress.todayCompletedLessons} lesson${courseProgress.todayCompletedLessons === 1 ? '' : 's'} today and your streak is now ${courseProgress.currentDailyStreak} day${courseProgress.currentDailyStreak === 1 ? '' : 's'}.`
+                                            : `You are ${courseProgress.todayCompletedLessons}/${courseProgress.dailyGoal} lessons into today's streak goal.`}
                                     </p>
                                 </div>
                                 <div className="flex justify-center">
@@ -4025,14 +4026,14 @@ export default function PracticeRunner(props: Props) {
                                     </p>
                                     <p className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
                                         {
-                                            courseProgress.todayCompletedChallenges
+                                            courseProgress.todayCompletedLessons
                                         }
                                         /{courseProgress.dailyGoal}
                                     </p>
                                     <p className="mt-1 text-xs leading-5 text-slate-500">
                                         {courseProgress.todayGoalReached
                                             ? 'Qualified for today'
-                                            : 'Exercises needed for streak'}
+                                            : 'Lessons needed for streak'}
                                     </p>
                                 </div>
                             </div>

@@ -84,5 +84,10 @@ function normalizeProgressPayload(value: unknown): ProgressStore | undefined {
             typeof candidate.dailyActivityByCourse === 'object'
                 ? candidate.dailyActivityByCourse
                 : {},
+        dailyLessonActivityByCourse:
+            candidate.dailyLessonActivityByCourse &&
+            typeof candidate.dailyLessonActivityByCourse === 'object'
+                ? candidate.dailyLessonActivityByCourse
+                : {},
     }
 }

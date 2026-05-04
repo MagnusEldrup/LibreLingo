@@ -84,7 +84,7 @@ export async function ensureAccountTables() {
         sql`
             CREATE TABLE IF NOT EXISTS learn_somali_progress (
                 user_id TEXT PRIMARY KEY REFERENCES learn_somali_users(id) ON DELETE CASCADE,
-                progress_json JSONB NOT NULL DEFAULT '{"skills":{},"dailyActivityByCourse":{}}'::jsonb,
+                progress_json JSONB NOT NULL DEFAULT '{"skills":{},"dailyActivityByCourse":{},"dailyLessonActivityByCourse":{}}'::jsonb,
                 updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
             )
         `,
@@ -363,6 +363,7 @@ function createEmptyProgressStore(): ProgressStore {
     return {
         skills: {},
         dailyActivityByCourse: {},
+        dailyLessonActivityByCourse: {},
     }
 }
 

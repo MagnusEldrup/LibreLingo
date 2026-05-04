@@ -26,7 +26,7 @@ function createEmptySummary(): CourseProgressSummary {
         completedRuns: 0,
         currentDailyStreak: 0,
         bestDailyStreak: 0,
-        todayCompletedChallenges: 0,
+        todayCompletedLessons: 0,
         dailyGoal: 2,
         todayGoalReached: false,
     }
@@ -57,8 +57,8 @@ export default function CourseProgressSummary(props: Props) {
     const hasProgress = summary.totalSkillsTracked > 0
     const levelProgress = getLevelProgress(summary.totalPoints)
     const todayProgressLabel = summary.todayGoalReached
-        ? `Qualified today with ${summary.todayCompletedChallenges} exercise${summary.todayCompletedChallenges === 1 ? '' : 's'}.`
-        : `${summary.todayCompletedChallenges}/${summary.dailyGoal} exercises today to keep your streak going.`
+        ? `Streak qualified today with ${summary.todayCompletedLessons} lesson${summary.todayCompletedLessons === 1 ? '' : 's'}.`
+        : `${summary.todayCompletedLessons}/${summary.dailyGoal} lessons finished today to keep your streak going.`
 
     return (
         <div className="space-y-3 text-sm leading-7 text-slate-700 sm:space-y-4">
@@ -117,7 +117,7 @@ export default function CourseProgressSummary(props: Props) {
 
             <p className="text-sm leading-6 sm:text-base sm:leading-7">
                 {hasProgress
-                    ? `You have completed ${summary.completedRuns} run${summary.completedRuns === 1 ? '' : 's'} across ${summary.completedSkills} finished skill${summary.completedSkills === 1 ? '' : 's'} and reached the title ${levelProgress.title}. ${todayProgressLabel}`
+                    ? `You have reached the title ${levelProgress.title}. ${todayProgressLabel}`
                     : `No saved progress yet. Start a skill to begin tracking your overall course XP, accuracy, and daily streak. ${todayProgressLabel}`}
             </p>
         </div>
